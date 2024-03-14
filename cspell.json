@@ -1,0 +1,42 @@
+{
+    "version": "0.2",
+    "dictionaryDefinitions": [],
+    "dictionaries": [],
+    "words": [
+        "Logfile",
+        "nauseum",
+        "Sethi",
+        "Struct",
+        "Tablespace",
+        "Ullman",
+        "whitespaces"
+    ],
+    "ignoreWords": [
+        "Evals",
+        "Harwell",
+        "Runtimes",
+        "SQUOTE",
+        "Whitebox",
+        "ambig",
+        "antlr",
+        "antlrcpp",
+        "bitrix",
+        "embind",
+        "emscripten",
+        "localctx",
+        "nvae",
+        "parentctx",
+        "precpred",
+        "rdbms",
+        "recog",
+        "sakila",
+        "seealso",
+        "sempred",
+        "sempreds"
+    ],
+    "import": [],
+    "ignorePaths": [
+        "wasm/antlr4-runtime-wasm.js",
+        "benchmarks/**/targets"
+    ]
+}
