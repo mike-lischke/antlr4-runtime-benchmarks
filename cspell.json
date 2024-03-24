@@ -23,6 +23,7 @@
         "bitrix",
         "embind",
         "emscripten",
+        "interp",
         "localctx",
         "nvae",
         "parentctx",

@@ -15,8 +15,25 @@
                 "--no-warnings=ExperimentalWarning",
                 "--loader",
                 "ts-node/esm",
-                "./src/mysql/targets/antlr4-cpp-wasm/run-benchmark.ts",
+                "./run-all-benchmarks.ts",
             ],
+            "console": "integratedTerminal",
+            "cwd": "${workspaceFolder}/src/mysql",
+        },
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "Launch Single Benchmark",
+            "skipFiles": [
+                "<node_internals>/**"
+            ],
+            "runtimeArgs": [
+                "--no-warnings=ExperimentalWarning",
+                "--loader",
+                "ts-node/esm",
+                "src/mysql/targets/antlr4/run-benchmark.ts",
+            ],
+            "console": "integratedTerminal"
         }
     ]
 }

@@ -10,8 +10,6 @@
 // Generated from ./targets/antlr4-cpp/MySQLParser.g4 by ANTLR 4.13.1
 
 
-#include "MySQLParserListener.h"
-#include "MySQLParserVisitor.h"
 
 #include "MySQLParser.h"
 
@@ -4503,25 +4501,6 @@ size_t MySQLParser::QueryContext::getRuleIndex() const {
   return MySQLParser::RuleQuery;
 }
 
-void MySQLParser::QueryContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterQuery(this);
-}
-
-void MySQLParser::QueryContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitQuery(this);
-}
-
-
-std::any MySQLParser::QueryContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitQuery(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::QueryContext* MySQLParser::query() {
   QueryContext *_localctx = _tracker.createInstance<QueryContext>(_ctx, getState());
@@ -4902,25 +4881,6 @@ size_t MySQLParser::SimpleStatementContext::getRuleIndex() const {
   return MySQLParser::RuleSimpleStatement;
 }
 
-void MySQLParser::SimpleStatementContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterSimpleStatement(this);
-}
-
-void MySQLParser::SimpleStatementContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitSimpleStatement(this);
-}
-
-
-std::any MySQLParser::SimpleStatementContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitSimpleStatement(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::SimpleStatementContext* MySQLParser::simpleStatement() {
   SimpleStatementContext *_localctx = _tracker.createInstance<SimpleStatementContext>(_ctx, getState());
@@ -5554,25 +5514,6 @@ size_t MySQLParser::AlterStatementContext::getRuleIndex() const {
   return MySQLParser::RuleAlterStatement;
 }
 
-void MySQLParser::AlterStatementContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterAlterStatement(this);
-}
-
-void MySQLParser::AlterStatementContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitAlterStatement(this);
-}
-
-
-std::any MySQLParser::AlterStatementContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitAlterStatement(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::AlterStatementContext* MySQLParser::alterStatement() {
   AlterStatementContext *_localctx = _tracker.createInstance<AlterStatementContext>(_ctx, getState());
@@ -5727,25 +5668,6 @@ size_t MySQLParser::AlterDatabaseContext::getRuleIndex() const {
   return MySQLParser::RuleAlterDatabase;
 }
 
-void MySQLParser::AlterDatabaseContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterAlterDatabase(this);
-}
-
-void MySQLParser::AlterDatabaseContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitAlterDatabase(this);
-}
-
-
-std::any MySQLParser::AlterDatabaseContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitAlterDatabase(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::AlterDatabaseContext* MySQLParser::alterDatabase() {
   AlterDatabaseContext *_localctx = _tracker.createInstance<AlterDatabaseContext>(_ctx, getState());
@@ -5825,25 +5747,6 @@ size_t MySQLParser::AlterDatabaseOptionContext::getRuleIndex() const {
   return MySQLParser::RuleAlterDatabaseOption;
 }
 
-void MySQLParser::AlterDatabaseOptionContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterAlterDatabaseOption(this);
-}
-
-void MySQLParser::AlterDatabaseOptionContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitAlterDatabaseOption(this);
-}
-
-
-std::any MySQLParser::AlterDatabaseOptionContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitAlterDatabaseOption(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::AlterDatabaseOptionContext* MySQLParser::alterDatabaseOption() {
   AlterDatabaseOptionContext *_localctx = _tracker.createInstance<AlterDatabaseOptionContext>(_ctx, getState());
@@ -5992,25 +5895,6 @@ size_t MySQLParser::AlterEventContext::getRuleIndex() const {
   return MySQLParser::RuleAlterEvent;
 }
 
-void MySQLParser::AlterEventContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterAlterEvent(this);
-}
-
-void MySQLParser::AlterEventContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitAlterEvent(this);
-}
-
-
-std::any MySQLParser::AlterEventContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitAlterEvent(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::AlterEventContext* MySQLParser::alterEvent() {
   AlterEventContext *_localctx = _tracker.createInstance<AlterEventContext>(_ctx, getState());
@@ -6192,25 +6076,6 @@ size_t MySQLParser::AlterLogfileGroupContext::getRuleIndex() const {
   return MySQLParser::RuleAlterLogfileGroup;
 }
 
-void MySQLParser::AlterLogfileGroupContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterAlterLogfileGroup(this);
-}
-
-void MySQLParser::AlterLogfileGroupContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitAlterLogfileGroup(this);
-}
-
-
-std::any MySQLParser::AlterLogfileGroupContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitAlterLogfileGroup(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::AlterLogfileGroupContext* MySQLParser::alterLogfileGroup() {
   AlterLogfileGroupContext *_localctx = _tracker.createInstance<AlterLogfileGroupContext>(_ctx, getState());
@@ -6284,25 +6149,6 @@ size_t MySQLParser::AlterLogfileGroupOptionsContext::getRuleIndex() const {
   return MySQLParser::RuleAlterLogfileGroupOptions;
 }
 
-void MySQLParser::AlterLogfileGroupOptionsContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterAlterLogfileGroupOptions(this);
-}
-
-void MySQLParser::AlterLogfileGroupOptionsContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitAlterLogfileGroupOptions(this);
-}
-
-
-std::any MySQLParser::AlterLogfileGroupOptionsContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitAlterLogfileGroupOptions(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::AlterLogfileGroupOptionsContext* MySQLParser::alterLogfileGroupOptions() {
   AlterLogfileGroupOptionsContext *_localctx = _tracker.createInstance<AlterLogfileGroupOptionsContext>(_ctx, getState());
@@ -6372,25 +6218,6 @@ size_t MySQLParser::AlterLogfileGroupOptionContext::getRuleIndex() const {
   return MySQLParser::RuleAlterLogfileGroupOption;
 }
 
-void MySQLParser::AlterLogfileGroupOptionContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterAlterLogfileGroupOption(this);
-}
-
-void MySQLParser::AlterLogfileGroupOptionContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitAlterLogfileGroupOption(this);
-}
-
-
-std::any MySQLParser::AlterLogfileGroupOptionContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitAlterLogfileGroupOption(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::AlterLogfileGroupOptionContext* MySQLParser::alterLogfileGroupOption() {
   AlterLogfileGroupOptionContext *_localctx = _tracker.createInstance<AlterLogfileGroupOptionContext>(_ctx, getState());
@@ -6467,25 +6294,6 @@ size_t MySQLParser::AlterServerContext::getRuleIndex() const {
   return MySQLParser::RuleAlterServer;
 }
 
-void MySQLParser::AlterServerContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterAlterServer(this);
-}
-
-void MySQLParser::AlterServerContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitAlterServer(this);
-}
-
-
-std::any MySQLParser::AlterServerContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitAlterServer(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::AlterServerContext* MySQLParser::alterServer() {
   AlterServerContext *_localctx = _tracker.createInstance<AlterServerContext>(_ctx, getState());
@@ -6544,25 +6352,6 @@ size_t MySQLParser::AlterTableContext::getRuleIndex() const {
   return MySQLParser::RuleAlterTable;
 }
 
-void MySQLParser::AlterTableContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterAlterTable(this);
-}
-
-void MySQLParser::AlterTableContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitAlterTable(this);
-}
-
-
-std::any MySQLParser::AlterTableContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitAlterTable(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::AlterTableContext* MySQLParser::alterTable() {
   AlterTableContext *_localctx = _tracker.createInstance<AlterTableContext>(_ctx, getState());
@@ -6651,25 +6440,6 @@ size_t MySQLParser::AlterTableActionsContext::getRuleIndex() const {
   return MySQLParser::RuleAlterTableActions;
 }
 
-void MySQLParser::AlterTableActionsContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterAlterTableActions(this);
-}
-
-void MySQLParser::AlterTableActionsContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitAlterTableActions(this);
-}
-
-
-std::any MySQLParser::AlterTableActionsContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitAlterTableActions(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::AlterTableActionsContext* MySQLParser::alterTableActions() {
   AlterTableActionsContext *_localctx = _tracker.createInstance<AlterTableActionsContext>(_ctx, getState());
@@ -6789,25 +6559,6 @@ size_t MySQLParser::AlterCommandListContext::getRuleIndex() const {
   return MySQLParser::RuleAlterCommandList;
 }
 
-void MySQLParser::AlterCommandListContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterAlterCommandList(this);
-}
-
-void MySQLParser::AlterCommandListContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitAlterCommandList(this);
-}
-
-
-std::any MySQLParser::AlterCommandListContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitAlterCommandList(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::AlterCommandListContext* MySQLParser::alterCommandList() {
   AlterCommandListContext *_localctx = _tracker.createInstance<AlterCommandListContext>(_ctx, getState());
@@ -6894,25 +6645,6 @@ size_t MySQLParser::AlterCommandsModifierListContext::getRuleIndex() const {
   return MySQLParser::RuleAlterCommandsModifierList;
 }
 
-void MySQLParser::AlterCommandsModifierListContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterAlterCommandsModifierList(this);
-}
-
-void MySQLParser::AlterCommandsModifierListContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitAlterCommandsModifierList(this);
-}
-
-
-std::any MySQLParser::AlterCommandsModifierListContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitAlterCommandsModifierList(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::AlterCommandsModifierListContext* MySQLParser::alterCommandsModifierList() {
   AlterCommandsModifierListContext *_localctx = _tracker.createInstance<AlterCommandsModifierListContext>(_ctx, getState());
@@ -6990,25 +6722,6 @@ size_t MySQLParser::StandaloneAlterCommandsContext::getRuleIndex() const {
   return MySQLParser::RuleStandaloneAlterCommands;
 }
 
-void MySQLParser::StandaloneAlterCommandsContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterStandaloneAlterCommands(this);
-}
-
-void MySQLParser::StandaloneAlterCommandsContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitStandaloneAlterCommands(this);
-}
-
-
-std::any MySQLParser::StandaloneAlterCommandsContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitStandaloneAlterCommands(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::StandaloneAlterCommandsContext* MySQLParser::standaloneAlterCommands() {
   StandaloneAlterCommandsContext *_localctx = _tracker.createInstance<StandaloneAlterCommandsContext>(_ctx, getState());
@@ -7223,25 +6936,6 @@ size_t MySQLParser::AlterPartitionContext::getRuleIndex() const {
   return MySQLParser::RuleAlterPartition;
 }
 
-void MySQLParser::AlterPartitionContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterAlterPartition(this);
-}
-
-void MySQLParser::AlterPartitionContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitAlterPartition(this);
-}
-
-
-std::any MySQLParser::AlterPartitionContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitAlterPartition(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::AlterPartitionContext* MySQLParser::alterPartition() {
   AlterPartitionContext *_localctx = _tracker.createInstance<AlterPartitionContext>(_ctx, getState());
@@ -7622,25 +7316,6 @@ size_t MySQLParser::AlterListContext::getRuleIndex() const {
   return MySQLParser::RuleAlterList;
 }
 
-void MySQLParser::AlterListContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterAlterList(this);
-}
-
-void MySQLParser::AlterListContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitAlterList(this);
-}
-
-
-std::any MySQLParser::AlterListContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitAlterList(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::AlterListContext* MySQLParser::alterList() {
   AlterListContext *_localctx = _tracker.createInstance<AlterListContext>(_ctx, getState());
@@ -7742,25 +7417,6 @@ size_t MySQLParser::AlterCommandsModifierContext::getRuleIndex() const {
   return MySQLParser::RuleAlterCommandsModifier;
 }
 
-void MySQLParser::AlterCommandsModifierContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterAlterCommandsModifier(this);
-}
-
-void MySQLParser::AlterCommandsModifierContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitAlterCommandsModifier(this);
-}
-
-
-std::any MySQLParser::AlterCommandsModifierContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitAlterCommandsModifier(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::AlterCommandsModifierContext* MySQLParser::alterCommandsModifier() {
   AlterCommandsModifierContext *_localctx = _tracker.createInstance<AlterCommandsModifierContext>(_ctx, getState());
@@ -8008,25 +7664,6 @@ size_t MySQLParser::AlterListItemContext::getRuleIndex() const {
   return MySQLParser::RuleAlterListItem;
 }
 
-void MySQLParser::AlterListItemContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterAlterListItem(this);
-}
-
-void MySQLParser::AlterListItemContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitAlterListItem(this);
-}
-
-
-std::any MySQLParser::AlterListItemContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitAlterListItem(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::AlterListItemContext* MySQLParser::alterListItem() {
   AlterListItemContext *_localctx = _tracker.createInstance<AlterListItemContext>(_ctx, getState());
@@ -8565,25 +8202,6 @@ size_t MySQLParser::PlaceContext::getRuleIndex() const {
   return MySQLParser::RulePlace;
 }
 
-void MySQLParser::PlaceContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterPlace(this);
-}
-
-void MySQLParser::PlaceContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitPlace(this);
-}
-
-
-std::any MySQLParser::PlaceContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitPlace(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::PlaceContext* MySQLParser::place() {
   PlaceContext *_localctx = _tracker.createInstance<PlaceContext>(_ctx, getState());
@@ -8649,25 +8267,6 @@ size_t MySQLParser::RestrictContext::getRuleIndex() const {
   return MySQLParser::RuleRestrict;
 }
 
-void MySQLParser::RestrictContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterRestrict(this);
-}
-
-void MySQLParser::RestrictContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitRestrict(this);
-}
-
-
-std::any MySQLParser::RestrictContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitRestrict(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::RestrictContext* MySQLParser::restrict() {
   RestrictContext *_localctx = _tracker.createInstance<RestrictContext>(_ctx, getState());
@@ -8738,25 +8337,6 @@ size_t MySQLParser::AlterOrderListContext::getRuleIndex() const {
   return MySQLParser::RuleAlterOrderList;
 }
 
-void MySQLParser::AlterOrderListContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterAlterOrderList(this);
-}
-
-void MySQLParser::AlterOrderListContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitAlterOrderList(this);
-}
-
-
-std::any MySQLParser::AlterOrderListContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitAlterOrderList(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::AlterOrderListContext* MySQLParser::alterOrderList() {
   AlterOrderListContext *_localctx = _tracker.createInstance<AlterOrderListContext>(_ctx, getState());
@@ -8843,25 +8423,6 @@ size_t MySQLParser::AlterAlgorithmOptionContext::getRuleIndex() const {
   return MySQLParser::RuleAlterAlgorithmOption;
 }
 
-void MySQLParser::AlterAlgorithmOptionContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterAlterAlgorithmOption(this);
-}
-
-void MySQLParser::AlterAlgorithmOptionContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitAlterAlgorithmOption(this);
-}
-
-
-std::any MySQLParser::AlterAlgorithmOptionContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitAlterAlgorithmOption(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::AlterAlgorithmOptionContext* MySQLParser::alterAlgorithmOption() {
   AlterAlgorithmOptionContext *_localctx = _tracker.createInstance<AlterAlgorithmOptionContext>(_ctx, getState());
@@ -8947,25 +8508,6 @@ size_t MySQLParser::AlterLockOptionContext::getRuleIndex() const {
   return MySQLParser::RuleAlterLockOption;
 }
 
-void MySQLParser::AlterLockOptionContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterAlterLockOption(this);
-}
-
-void MySQLParser::AlterLockOptionContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitAlterLockOption(this);
-}
-
-
-std::any MySQLParser::AlterLockOptionContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitAlterLockOption(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::AlterLockOptionContext* MySQLParser::alterLockOption() {
   AlterLockOptionContext *_localctx = _tracker.createInstance<AlterLockOptionContext>(_ctx, getState());
@@ -9043,25 +8585,6 @@ size_t MySQLParser::IndexLockAndAlgorithmContext::getRuleIndex() const {
   return MySQLParser::RuleIndexLockAndAlgorithm;
 }
 
-void MySQLParser::IndexLockAndAlgorithmContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterIndexLockAndAlgorithm(this);
-}
-
-void MySQLParser::IndexLockAndAlgorithmContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitIndexLockAndAlgorithm(this);
-}
-
-
-std::any MySQLParser::IndexLockAndAlgorithmContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitIndexLockAndAlgorithm(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::IndexLockAndAlgorithmContext* MySQLParser::indexLockAndAlgorithm() {
   IndexLockAndAlgorithmContext *_localctx = _tracker.createInstance<IndexLockAndAlgorithmContext>(_ctx, getState());
@@ -9146,25 +8669,6 @@ size_t MySQLParser::WithValidationContext::getRuleIndex() const {
   return MySQLParser::RuleWithValidation;
 }
 
-void MySQLParser::WithValidationContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterWithValidation(this);
-}
-
-void MySQLParser::WithValidationContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitWithValidation(this);
-}
-
-
-std::any MySQLParser::WithValidationContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitWithValidation(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::WithValidationContext* MySQLParser::withValidation() {
   WithValidationContext *_localctx = _tracker.createInstance<WithValidationContext>(_ctx, getState());
@@ -9223,25 +8727,6 @@ size_t MySQLParser::RemovePartitioningContext::getRuleIndex() const {
   return MySQLParser::RuleRemovePartitioning;
 }
 
-void MySQLParser::RemovePartitioningContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterRemovePartitioning(this);
-}
-
-void MySQLParser::RemovePartitioningContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitRemovePartitioning(this);
-}
-
-
-std::any MySQLParser::RemovePartitioningContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitRemovePartitioning(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::RemovePartitioningContext* MySQLParser::removePartitioning() {
   RemovePartitioningContext *_localctx = _tracker.createInstance<RemovePartitioningContext>(_ctx, getState());
@@ -9290,25 +8775,6 @@ size_t MySQLParser::AllOrPartitionNameListContext::getRuleIndex() const {
   return MySQLParser::RuleAllOrPartitionNameList;
 }
 
-void MySQLParser::AllOrPartitionNameListContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterAllOrPartitionNameList(this);
-}
-
-void MySQLParser::AllOrPartitionNameListContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitAllOrPartitionNameList(this);
-}
-
-
-std::any MySQLParser::AllOrPartitionNameListContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitAllOrPartitionNameList(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::AllOrPartitionNameListContext* MySQLParser::allOrPartitionNameList() {
   AllOrPartitionNameListContext *_localctx = _tracker.createInstance<AllOrPartitionNameListContext>(_ctx, getState());
@@ -9404,25 +8870,6 @@ size_t MySQLParser::AlterTablespaceContext::getRuleIndex() const {
   return MySQLParser::RuleAlterTablespace;
 }
 
-void MySQLParser::AlterTablespaceContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterAlterTablespace(this);
-}
-
-void MySQLParser::AlterTablespaceContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitAlterTablespace(this);
-}
-
-
-std::any MySQLParser::AlterTablespaceContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitAlterTablespace(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::AlterTablespaceContext* MySQLParser::alterTablespace() {
   AlterTablespaceContext *_localctx = _tracker.createInstance<AlterTablespaceContext>(_ctx, getState());
@@ -9547,25 +8994,6 @@ size_t MySQLParser::AlterUndoTablespaceContext::getRuleIndex() const {
   return MySQLParser::RuleAlterUndoTablespace;
 }
 
-void MySQLParser::AlterUndoTablespaceContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterAlterUndoTablespace(this);
-}
-
-void MySQLParser::AlterUndoTablespaceContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitAlterUndoTablespace(this);
-}
-
-
-std::any MySQLParser::AlterUndoTablespaceContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitAlterUndoTablespace(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::AlterUndoTablespaceContext* MySQLParser::alterUndoTablespace() {
   AlterUndoTablespaceContext *_localctx = _tracker.createInstance<AlterUndoTablespaceContext>(_ctx, getState());
@@ -9646,25 +9074,6 @@ size_t MySQLParser::UndoTableSpaceOptionsContext::getRuleIndex() const {
   return MySQLParser::RuleUndoTableSpaceOptions;
 }
 
-void MySQLParser::UndoTableSpaceOptionsContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterUndoTableSpaceOptions(this);
-}
-
-void MySQLParser::UndoTableSpaceOptionsContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitUndoTableSpaceOptions(this);
-}
-
-
-std::any MySQLParser::UndoTableSpaceOptionsContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitUndoTableSpaceOptions(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::UndoTableSpaceOptionsContext* MySQLParser::undoTableSpaceOptions() {
   UndoTableSpaceOptionsContext *_localctx = _tracker.createInstance<UndoTableSpaceOptionsContext>(_ctx, getState());
@@ -9726,25 +9135,6 @@ size_t MySQLParser::UndoTableSpaceOptionContext::getRuleIndex() const {
   return MySQLParser::RuleUndoTableSpaceOption;
 }
 
-void MySQLParser::UndoTableSpaceOptionContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterUndoTableSpaceOption(this);
-}
-
-void MySQLParser::UndoTableSpaceOptionContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitUndoTableSpaceOption(this);
-}
-
-
-std::any MySQLParser::UndoTableSpaceOptionContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitUndoTableSpaceOption(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::UndoTableSpaceOptionContext* MySQLParser::undoTableSpaceOption() {
   UndoTableSpaceOptionContext *_localctx = _tracker.createInstance<UndoTableSpaceOptionContext>(_ctx, getState());
@@ -9799,25 +9189,6 @@ size_t MySQLParser::AlterTablespaceOptionsContext::getRuleIndex() const {
   return MySQLParser::RuleAlterTablespaceOptions;
 }
 
-void MySQLParser::AlterTablespaceOptionsContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterAlterTablespaceOptions(this);
-}
-
-void MySQLParser::AlterTablespaceOptionsContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitAlterTablespaceOptions(this);
-}
-
-
-std::any MySQLParser::AlterTablespaceOptionsContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitAlterTablespaceOptions(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::AlterTablespaceOptionsContext* MySQLParser::alterTablespaceOptions() {
   AlterTablespaceOptionsContext *_localctx = _tracker.createInstance<AlterTablespaceOptionsContext>(_ctx, getState());
@@ -9918,25 +9289,6 @@ size_t MySQLParser::AlterTablespaceOptionContext::getRuleIndex() const {
   return MySQLParser::RuleAlterTablespaceOption;
 }
 
-void MySQLParser::AlterTablespaceOptionContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterAlterTablespaceOption(this);
-}
-
-void MySQLParser::AlterTablespaceOptionContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitAlterTablespaceOption(this);
-}
-
-
-std::any MySQLParser::AlterTablespaceOptionContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitAlterTablespaceOption(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::AlterTablespaceOptionContext* MySQLParser::alterTablespaceOption() {
   AlterTablespaceOptionContext *_localctx = _tracker.createInstance<AlterTablespaceOptionContext>(_ctx, getState());
@@ -10065,25 +9417,6 @@ size_t MySQLParser::ChangeTablespaceOptionContext::getRuleIndex() const {
   return MySQLParser::RuleChangeTablespaceOption;
 }
 
-void MySQLParser::ChangeTablespaceOptionContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterChangeTablespaceOption(this);
-}
-
-void MySQLParser::ChangeTablespaceOptionContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitChangeTablespaceOption(this);
-}
-
-
-std::any MySQLParser::ChangeTablespaceOptionContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitChangeTablespaceOption(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::ChangeTablespaceOptionContext* MySQLParser::changeTablespaceOption() {
   ChangeTablespaceOptionContext *_localctx = _tracker.createInstance<ChangeTablespaceOptionContext>(_ctx, getState());
@@ -10185,25 +9518,6 @@ size_t MySQLParser::AlterViewContext::getRuleIndex() const {
   return MySQLParser::RuleAlterView;
 }
 
-void MySQLParser::AlterViewContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterAlterView(this);
-}
-
-void MySQLParser::AlterViewContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitAlterView(this);
-}
-
-
-std::any MySQLParser::AlterViewContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitAlterView(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::AlterViewContext* MySQLParser::alterView() {
   AlterViewContext *_localctx = _tracker.createInstance<AlterViewContext>(_ctx, getState());
@@ -10283,25 +9597,6 @@ size_t MySQLParser::ViewTailContext::getRuleIndex() const {
   return MySQLParser::RuleViewTail;
 }
 
-void MySQLParser::ViewTailContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterViewTail(this);
-}
-
-void MySQLParser::ViewTailContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitViewTail(this);
-}
-
-
-std::any MySQLParser::ViewTailContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitViewTail(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::ViewTailContext* MySQLParser::viewTail() {
   ViewTailContext *_localctx = _tracker.createInstance<ViewTailContext>(_ctx, getState());
@@ -10359,25 +9654,6 @@ size_t MySQLParser::ViewQueryBlockContext::getRuleIndex() const {
   return MySQLParser::RuleViewQueryBlock;
 }
 
-void MySQLParser::ViewQueryBlockContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterViewQueryBlock(this);
-}
-
-void MySQLParser::ViewQueryBlockContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitViewQueryBlock(this);
-}
-
-
-std::any MySQLParser::ViewQueryBlockContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitViewQueryBlock(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::ViewQueryBlockContext* MySQLParser::viewQueryBlock() {
   ViewQueryBlockContext *_localctx = _tracker.createInstance<ViewQueryBlockContext>(_ctx, getState());
@@ -10445,25 +9721,6 @@ size_t MySQLParser::ViewCheckOptionContext::getRuleIndex() const {
   return MySQLParser::RuleViewCheckOption;
 }
 
-void MySQLParser::ViewCheckOptionContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterViewCheckOption(this);
-}
-
-void MySQLParser::ViewCheckOptionContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitViewCheckOption(this);
-}
-
-
-std::any MySQLParser::ViewCheckOptionContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitViewCheckOption(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::ViewCheckOptionContext* MySQLParser::viewCheckOption() {
   ViewCheckOptionContext *_localctx = _tracker.createInstance<ViewCheckOptionContext>(_ctx, getState());
@@ -10594,25 +9851,6 @@ size_t MySQLParser::AlterInstanceStatementContext::getRuleIndex() const {
   return MySQLParser::RuleAlterInstanceStatement;
 }
 
-void MySQLParser::AlterInstanceStatementContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterAlterInstanceStatement(this);
-}
-
-void MySQLParser::AlterInstanceStatementContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitAlterInstanceStatement(this);
-}
-
-
-std::any MySQLParser::AlterInstanceStatementContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitAlterInstanceStatement(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::AlterInstanceStatementContext* MySQLParser::alterInstanceStatement() {
   AlterInstanceStatementContext *_localctx = _tracker.createInstance<AlterInstanceStatementContext>(_ctx, getState());
@@ -10825,25 +10063,6 @@ size_t MySQLParser::CreateStatementContext::getRuleIndex() const {
   return MySQLParser::RuleCreateStatement;
 }
 
-void MySQLParser::CreateStatementContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterCreateStatement(this);
-}
-
-void MySQLParser::CreateStatementContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitCreateStatement(this);
-}
-
-
-std::any MySQLParser::CreateStatementContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitCreateStatement(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::CreateStatementContext* MySQLParser::createStatement() {
   CreateStatementContext *_localctx = _tracker.createInstance<CreateStatementContext>(_ctx, getState());
@@ -11004,25 +10223,6 @@ size_t MySQLParser::CreateDatabaseContext::getRuleIndex() const {
   return MySQLParser::RuleCreateDatabase;
 }
 
-void MySQLParser::CreateDatabaseContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterCreateDatabase(this);
-}
-
-void MySQLParser::CreateDatabaseContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitCreateDatabase(this);
-}
-
-
-std::any MySQLParser::CreateDatabaseContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitCreateDatabase(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::CreateDatabaseContext* MySQLParser::createDatabase() {
   CreateDatabaseContext *_localctx = _tracker.createInstance<CreateDatabaseContext>(_ctx, getState());
@@ -11101,25 +10301,6 @@ size_t MySQLParser::CreateDatabaseOptionContext::getRuleIndex() const {
   return MySQLParser::RuleCreateDatabaseOption;
 }
 
-void MySQLParser::CreateDatabaseOptionContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterCreateDatabaseOption(this);
-}
-
-void MySQLParser::CreateDatabaseOptionContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitCreateDatabaseOption(this);
-}
-
-
-std::any MySQLParser::CreateDatabaseOptionContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitCreateDatabaseOption(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::CreateDatabaseOptionContext* MySQLParser::createDatabaseOption() {
   CreateDatabaseOptionContext *_localctx = _tracker.createInstance<CreateDatabaseOptionContext>(_ctx, getState());
@@ -11225,25 +10406,6 @@ size_t MySQLParser::CreateTableContext::getRuleIndex() const {
   return MySQLParser::RuleCreateTable;
 }
 
-void MySQLParser::CreateTableContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterCreateTable(this);
-}
-
-void MySQLParser::CreateTableContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitCreateTable(this);
-}
-
-
-std::any MySQLParser::CreateTableContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitCreateTable(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::CreateTableContext* MySQLParser::createTable() {
   CreateTableContext *_localctx = _tracker.createInstance<CreateTableContext>(_ctx, getState());
@@ -11382,25 +10544,6 @@ size_t MySQLParser::TableElementListContext::getRuleIndex() const {
   return MySQLParser::RuleTableElementList;
 }
 
-void MySQLParser::TableElementListContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterTableElementList(this);
-}
-
-void MySQLParser::TableElementListContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitTableElementList(this);
-}
-
-
-std::any MySQLParser::TableElementListContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitTableElementList(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::TableElementListContext* MySQLParser::tableElementList() {
   TableElementListContext *_localctx = _tracker.createInstance<TableElementListContext>(_ctx, getState());
@@ -11460,25 +10603,6 @@ size_t MySQLParser::TableElementContext::getRuleIndex() const {
   return MySQLParser::RuleTableElement;
 }
 
-void MySQLParser::TableElementContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterTableElement(this);
-}
-
-void MySQLParser::TableElementContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitTableElement(this);
-}
-
-
-std::any MySQLParser::TableElementContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitTableElement(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::TableElementContext* MySQLParser::tableElement() {
   TableElementContext *_localctx = _tracker.createInstance<TableElementContext>(_ctx, getState());
@@ -11546,25 +10670,6 @@ size_t MySQLParser::DuplicateAsQeContext::getRuleIndex() const {
   return MySQLParser::RuleDuplicateAsQe;
 }
 
-void MySQLParser::DuplicateAsQeContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterDuplicateAsQe(this);
-}
-
-void MySQLParser::DuplicateAsQeContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitDuplicateAsQe(this);
-}
-
-
-std::any MySQLParser::DuplicateAsQeContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitDuplicateAsQe(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::DuplicateAsQeContext* MySQLParser::duplicateAsQe() {
   DuplicateAsQeContext *_localctx = _tracker.createInstance<DuplicateAsQeContext>(_ctx, getState());
@@ -11632,25 +10737,6 @@ size_t MySQLParser::AsCreateQueryExpressionContext::getRuleIndex() const {
   return MySQLParser::RuleAsCreateQueryExpression;
 }
 
-void MySQLParser::AsCreateQueryExpressionContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterAsCreateQueryExpression(this);
-}
-
-void MySQLParser::AsCreateQueryExpressionContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitAsCreateQueryExpression(this);
-}
-
-
-std::any MySQLParser::AsCreateQueryExpressionContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitAsCreateQueryExpression(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::AsCreateQueryExpressionContext* MySQLParser::asCreateQueryExpression() {
   AsCreateQueryExpressionContext *_localctx = _tracker.createInstance<AsCreateQueryExpressionContext>(_ctx, getState());
@@ -11714,25 +10800,6 @@ size_t MySQLParser::QueryExpressionOrParensContext::getRuleIndex() const {
   return MySQLParser::RuleQueryExpressionOrParens;
 }
 
-void MySQLParser::QueryExpressionOrParensContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterQueryExpressionOrParens(this);
-}
-
-void MySQLParser::QueryExpressionOrParensContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitQueryExpressionOrParens(this);
-}
-
-
-std::any MySQLParser::QueryExpressionOrParensContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitQueryExpressionOrParens(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::QueryExpressionOrParensContext* MySQLParser::queryExpressionOrParens() {
   QueryExpressionOrParensContext *_localctx = _tracker.createInstance<QueryExpressionOrParensContext>(_ctx, getState());
@@ -11809,25 +10876,6 @@ size_t MySQLParser::QueryExpressionWithOptLockingClausesContext::getRuleIndex() 
   return MySQLParser::RuleQueryExpressionWithOptLockingClauses;
 }
 
-void MySQLParser::QueryExpressionWithOptLockingClausesContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterQueryExpressionWithOptLockingClauses(this);
-}
-
-void MySQLParser::QueryExpressionWithOptLockingClausesContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitQueryExpressionWithOptLockingClauses(this);
-}
-
-
-std::any MySQLParser::QueryExpressionWithOptLockingClausesContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitQueryExpressionWithOptLockingClauses(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::QueryExpressionWithOptLockingClausesContext* MySQLParser::queryExpressionWithOptLockingClauses() {
   QueryExpressionWithOptLockingClausesContext *_localctx = _tracker.createInstance<QueryExpressionWithOptLockingClausesContext>(_ctx, getState());
@@ -11903,25 +10951,6 @@ size_t MySQLParser::CreateRoutineContext::getRuleIndex() const {
   return MySQLParser::RuleCreateRoutine;
 }
 
-void MySQLParser::CreateRoutineContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterCreateRoutine(this);
-}
-
-void MySQLParser::CreateRoutineContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitCreateRoutine(this);
-}
-
-
-std::any MySQLParser::CreateRoutineContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitCreateRoutine(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::CreateRoutineContext* MySQLParser::createRoutine() {
   CreateRoutineContext *_localctx = _tracker.createInstance<CreateRoutineContext>(_ctx, getState());
@@ -12047,25 +11076,6 @@ size_t MySQLParser::CreateProcedureContext::getRuleIndex() const {
   return MySQLParser::RuleCreateProcedure;
 }
 
-void MySQLParser::CreateProcedureContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterCreateProcedure(this);
-}
-
-void MySQLParser::CreateProcedureContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitCreateProcedure(this);
-}
-
-
-std::any MySQLParser::CreateProcedureContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitCreateProcedure(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::CreateProcedureContext* MySQLParser::createProcedure() {
   CreateProcedureContext *_localctx = _tracker.createInstance<CreateProcedureContext>(_ctx, getState());
@@ -12180,25 +11190,6 @@ size_t MySQLParser::RoutineStringContext::getRuleIndex() const {
   return MySQLParser::RuleRoutineString;
 }
 
-void MySQLParser::RoutineStringContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterRoutineString(this);
-}
-
-void MySQLParser::RoutineStringContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitRoutineString(this);
-}
-
-
-std::any MySQLParser::RoutineStringContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitRoutineString(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::RoutineStringContext* MySQLParser::routineString() {
   RoutineStringContext *_localctx = _tracker.createInstance<RoutineStringContext>(_ctx, getState());
@@ -12258,25 +11249,6 @@ size_t MySQLParser::StoredRoutineBodyContext::getRuleIndex() const {
   return MySQLParser::RuleStoredRoutineBody;
 }
 
-void MySQLParser::StoredRoutineBodyContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterStoredRoutineBody(this);
-}
-
-void MySQLParser::StoredRoutineBodyContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitStoredRoutineBody(this);
-}
-
-
-std::any MySQLParser::StoredRoutineBodyContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitStoredRoutineBody(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::StoredRoutineBodyContext* MySQLParser::storedRoutineBody() {
   StoredRoutineBodyContext *_localctx = _tracker.createInstance<StoredRoutineBodyContext>(_ctx, getState());
@@ -12375,25 +11347,6 @@ size_t MySQLParser::CreateFunctionContext::getRuleIndex() const {
   return MySQLParser::RuleCreateFunction;
 }
 
-void MySQLParser::CreateFunctionContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterCreateFunction(this);
-}
-
-void MySQLParser::CreateFunctionContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitCreateFunction(this);
-}
-
-
-std::any MySQLParser::CreateFunctionContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitCreateFunction(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::CreateFunctionContext* MySQLParser::createFunction() {
   CreateFunctionContext *_localctx = _tracker.createInstance<CreateFunctionContext>(_ctx, getState());
@@ -12548,25 +11501,6 @@ size_t MySQLParser::CreateUdfContext::getRuleIndex() const {
   return MySQLParser::RuleCreateUdf;
 }
 
-void MySQLParser::CreateUdfContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterCreateUdf(this);
-}
-
-void MySQLParser::CreateUdfContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitCreateUdf(this);
-}
-
-
-std::any MySQLParser::CreateUdfContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitCreateUdf(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::CreateUdfContext* MySQLParser::createUdf() {
   CreateUdfContext *_localctx = _tracker.createInstance<CreateUdfContext>(_ctx, getState());
@@ -12657,25 +11591,6 @@ size_t MySQLParser::RoutineCreateOptionContext::getRuleIndex() const {
   return MySQLParser::RuleRoutineCreateOption;
 }
 
-void MySQLParser::RoutineCreateOptionContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterRoutineCreateOption(this);
-}
-
-void MySQLParser::RoutineCreateOptionContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitRoutineCreateOption(this);
-}
-
-
-std::any MySQLParser::RoutineCreateOptionContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitRoutineCreateOption(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::RoutineCreateOptionContext* MySQLParser::routineCreateOption() {
   RoutineCreateOptionContext *_localctx = _tracker.createInstance<RoutineCreateOptionContext>(_ctx, getState());
@@ -12755,25 +11670,6 @@ size_t MySQLParser::RoutineAlterOptionsContext::getRuleIndex() const {
   return MySQLParser::RuleRoutineAlterOptions;
 }
 
-void MySQLParser::RoutineAlterOptionsContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterRoutineAlterOptions(this);
-}
-
-void MySQLParser::RoutineAlterOptionsContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitRoutineAlterOptions(this);
-}
-
-
-std::any MySQLParser::RoutineAlterOptionsContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitRoutineAlterOptions(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::RoutineAlterOptionsContext* MySQLParser::routineAlterOptions() {
   RoutineAlterOptionsContext *_localctx = _tracker.createInstance<RoutineAlterOptionsContext>(_ctx, getState());
@@ -12875,25 +11771,6 @@ size_t MySQLParser::RoutineOptionContext::getRuleIndex() const {
   return MySQLParser::RuleRoutineOption;
 }
 
-void MySQLParser::RoutineOptionContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterRoutineOption(this);
-}
-
-void MySQLParser::RoutineOptionContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitRoutineOption(this);
-}
-
-
-std::any MySQLParser::RoutineOptionContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitRoutineOption(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::RoutineOptionContext* MySQLParser::routineOption() {
   RoutineOptionContext *_localctx = _tracker.createInstance<RoutineOptionContext>(_ctx, getState());
@@ -13092,25 +11969,6 @@ size_t MySQLParser::CreateIndexContext::getRuleIndex() const {
   return MySQLParser::RuleCreateIndex;
 }
 
-void MySQLParser::CreateIndexContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterCreateIndex(this);
-}
-
-void MySQLParser::CreateIndexContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitCreateIndex(this);
-}
-
-
-std::any MySQLParser::CreateIndexContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitCreateIndex(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::CreateIndexContext* MySQLParser::createIndex() {
   CreateIndexContext *_localctx = _tracker.createInstance<CreateIndexContext>(_ctx, getState());
@@ -13278,25 +12136,6 @@ size_t MySQLParser::IndexNameAndTypeContext::getRuleIndex() const {
   return MySQLParser::RuleIndexNameAndType;
 }
 
-void MySQLParser::IndexNameAndTypeContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterIndexNameAndType(this);
-}
-
-void MySQLParser::IndexNameAndTypeContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitIndexNameAndType(this);
-}
-
-
-std::any MySQLParser::IndexNameAndTypeContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitIndexNameAndType(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::IndexNameAndTypeContext* MySQLParser::indexNameAndType() {
   IndexNameAndTypeContext *_localctx = _tracker.createInstance<IndexNameAndTypeContext>(_ctx, getState());
@@ -13390,25 +12229,6 @@ size_t MySQLParser::CreateIndexTargetContext::getRuleIndex() const {
   return MySQLParser::RuleCreateIndexTarget;
 }
 
-void MySQLParser::CreateIndexTargetContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterCreateIndexTarget(this);
-}
-
-void MySQLParser::CreateIndexTargetContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitCreateIndexTarget(this);
-}
-
-
-std::any MySQLParser::CreateIndexTargetContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitCreateIndexTarget(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::CreateIndexTargetContext* MySQLParser::createIndexTarget() {
   CreateIndexTargetContext *_localctx = _tracker.createInstance<CreateIndexTargetContext>(_ctx, getState());
@@ -13479,25 +12299,6 @@ size_t MySQLParser::CreateLogfileGroupContext::getRuleIndex() const {
   return MySQLParser::RuleCreateLogfileGroup;
 }
 
-void MySQLParser::CreateLogfileGroupContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterCreateLogfileGroup(this);
-}
-
-void MySQLParser::CreateLogfileGroupContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitCreateLogfileGroup(this);
-}
-
-
-std::any MySQLParser::CreateLogfileGroupContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitCreateLogfileGroup(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::CreateLogfileGroupContext* MySQLParser::createLogfileGroup() {
   CreateLogfileGroupContext *_localctx = _tracker.createInstance<CreateLogfileGroupContext>(_ctx, getState());
@@ -13575,25 +12376,6 @@ size_t MySQLParser::LogfileGroupOptionsContext::getRuleIndex() const {
   return MySQLParser::RuleLogfileGroupOptions;
 }
 
-void MySQLParser::LogfileGroupOptionsContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterLogfileGroupOptions(this);
-}
-
-void MySQLParser::LogfileGroupOptionsContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitLogfileGroupOptions(this);
-}
-
-
-std::any MySQLParser::LogfileGroupOptionsContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitLogfileGroupOptions(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::LogfileGroupOptionsContext* MySQLParser::logfileGroupOptions() {
   LogfileGroupOptionsContext *_localctx = _tracker.createInstance<LogfileGroupOptionsContext>(_ctx, getState());
@@ -13679,25 +12461,6 @@ size_t MySQLParser::LogfileGroupOptionContext::getRuleIndex() const {
   return MySQLParser::RuleLogfileGroupOption;
 }
 
-void MySQLParser::LogfileGroupOptionContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterLogfileGroupOption(this);
-}
-
-void MySQLParser::LogfileGroupOptionContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitLogfileGroupOption(this);
-}
-
-
-std::any MySQLParser::LogfileGroupOptionContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitLogfileGroupOption(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::LogfileGroupOptionContext* MySQLParser::logfileGroupOption() {
   LogfileGroupOptionContext *_localctx = _tracker.createInstance<LogfileGroupOptionContext>(_ctx, getState());
@@ -13812,25 +12575,6 @@ size_t MySQLParser::CreateServerContext::getRuleIndex() const {
   return MySQLParser::RuleCreateServer;
 }
 
-void MySQLParser::CreateServerContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterCreateServer(this);
-}
-
-void MySQLParser::CreateServerContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitCreateServer(this);
-}
-
-
-std::any MySQLParser::CreateServerContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitCreateServer(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::CreateServerContext* MySQLParser::createServer() {
   CreateServerContext *_localctx = _tracker.createInstance<CreateServerContext>(_ctx, getState());
@@ -13909,25 +12653,6 @@ size_t MySQLParser::ServerOptionsContext::getRuleIndex() const {
   return MySQLParser::RuleServerOptions;
 }
 
-void MySQLParser::ServerOptionsContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterServerOptions(this);
-}
-
-void MySQLParser::ServerOptionsContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitServerOptions(this);
-}
-
-
-std::any MySQLParser::ServerOptionsContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitServerOptions(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::ServerOptionsContext* MySQLParser::serverOptions() {
   ServerOptionsContext *_localctx = _tracker.createInstance<ServerOptionsContext>(_ctx, getState());
@@ -14021,25 +12746,6 @@ size_t MySQLParser::ServerOptionContext::getRuleIndex() const {
   return MySQLParser::RuleServerOption;
 }
 
-void MySQLParser::ServerOptionContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterServerOption(this);
-}
-
-void MySQLParser::ServerOptionContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitServerOption(this);
-}
-
-
-std::any MySQLParser::ServerOptionContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitServerOption(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::ServerOptionContext* MySQLParser::serverOption() {
   ServerOptionContext *_localctx = _tracker.createInstance<ServerOptionContext>(_ctx, getState());
@@ -14176,25 +12882,6 @@ size_t MySQLParser::CreateTablespaceContext::getRuleIndex() const {
   return MySQLParser::RuleCreateTablespace;
 }
 
-void MySQLParser::CreateTablespaceContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterCreateTablespace(this);
-}
-
-void MySQLParser::CreateTablespaceContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitCreateTablespace(this);
-}
-
-
-std::any MySQLParser::CreateTablespaceContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitCreateTablespace(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::CreateTablespaceContext* MySQLParser::createTablespace() {
   CreateTablespaceContext *_localctx = _tracker.createInstance<CreateTablespaceContext>(_ctx, getState());
@@ -14293,25 +12980,6 @@ size_t MySQLParser::CreateUndoTablespaceContext::getRuleIndex() const {
   return MySQLParser::RuleCreateUndoTablespace;
 }
 
-void MySQLParser::CreateUndoTablespaceContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterCreateUndoTablespace(this);
-}
-
-void MySQLParser::CreateUndoTablespaceContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitCreateUndoTablespace(this);
-}
-
-
-std::any MySQLParser::CreateUndoTablespaceContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitCreateUndoTablespace(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::CreateUndoTablespaceContext* MySQLParser::createUndoTablespace() {
   CreateUndoTablespaceContext *_localctx = _tracker.createInstance<CreateUndoTablespaceContext>(_ctx, getState());
@@ -14375,25 +13043,6 @@ size_t MySQLParser::TsDataFileNameContext::getRuleIndex() const {
   return MySQLParser::RuleTsDataFileName;
 }
 
-void MySQLParser::TsDataFileNameContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterTsDataFileName(this);
-}
-
-void MySQLParser::TsDataFileNameContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitTsDataFileName(this);
-}
-
-
-std::any MySQLParser::TsDataFileNameContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitTsDataFileName(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::TsDataFileNameContext* MySQLParser::tsDataFileName() {
   TsDataFileNameContext *_localctx = _tracker.createInstance<TsDataFileNameContext>(_ctx, getState());
@@ -14475,25 +13124,6 @@ size_t MySQLParser::TsDataFileContext::getRuleIndex() const {
   return MySQLParser::RuleTsDataFile;
 }
 
-void MySQLParser::TsDataFileContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterTsDataFile(this);
-}
-
-void MySQLParser::TsDataFileContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitTsDataFile(this);
-}
-
-
-std::any MySQLParser::TsDataFileContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitTsDataFile(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::TsDataFileContext* MySQLParser::tsDataFile() {
   TsDataFileContext *_localctx = _tracker.createInstance<TsDataFileContext>(_ctx, getState());
@@ -14550,25 +13180,6 @@ size_t MySQLParser::TablespaceOptionsContext::getRuleIndex() const {
   return MySQLParser::RuleTablespaceOptions;
 }
 
-void MySQLParser::TablespaceOptionsContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterTablespaceOptions(this);
-}
-
-void MySQLParser::TablespaceOptionsContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitTablespaceOptions(this);
-}
-
-
-std::any MySQLParser::TablespaceOptionsContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitTablespaceOptions(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::TablespaceOptionsContext* MySQLParser::tablespaceOptions() {
   TablespaceOptionsContext *_localctx = _tracker.createInstance<TablespaceOptionsContext>(_ctx, getState());
@@ -14673,25 +13284,6 @@ size_t MySQLParser::TablespaceOptionContext::getRuleIndex() const {
   return MySQLParser::RuleTablespaceOption;
 }
 
-void MySQLParser::TablespaceOptionContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterTablespaceOption(this);
-}
-
-void MySQLParser::TablespaceOptionContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitTablespaceOption(this);
-}
-
-
-std::any MySQLParser::TablespaceOptionContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitTablespaceOption(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::TablespaceOptionContext* MySQLParser::tablespaceOption() {
   TablespaceOptionContext *_localctx = _tracker.createInstance<TablespaceOptionContext>(_ctx, getState());
@@ -14818,25 +13410,6 @@ size_t MySQLParser::TsOptionInitialSizeContext::getRuleIndex() const {
   return MySQLParser::RuleTsOptionInitialSize;
 }
 
-void MySQLParser::TsOptionInitialSizeContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterTsOptionInitialSize(this);
-}
-
-void MySQLParser::TsOptionInitialSizeContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitTsOptionInitialSize(this);
-}
-
-
-std::any MySQLParser::TsOptionInitialSizeContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitTsOptionInitialSize(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::TsOptionInitialSizeContext* MySQLParser::tsOptionInitialSize() {
   TsOptionInitialSizeContext *_localctx = _tracker.createInstance<TsOptionInitialSizeContext>(_ctx, getState());
@@ -14906,25 +13479,6 @@ size_t MySQLParser::TsOptionUndoRedoBufferSizeContext::getRuleIndex() const {
   return MySQLParser::RuleTsOptionUndoRedoBufferSize;
 }
 
-void MySQLParser::TsOptionUndoRedoBufferSizeContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterTsOptionUndoRedoBufferSize(this);
-}
-
-void MySQLParser::TsOptionUndoRedoBufferSizeContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitTsOptionUndoRedoBufferSize(this);
-}
-
-
-std::any MySQLParser::TsOptionUndoRedoBufferSizeContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitTsOptionUndoRedoBufferSize(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::TsOptionUndoRedoBufferSizeContext* MySQLParser::tsOptionUndoRedoBufferSize() {
   TsOptionUndoRedoBufferSizeContext *_localctx = _tracker.createInstance<TsOptionUndoRedoBufferSizeContext>(_ctx, getState());
@@ -14998,25 +13552,6 @@ size_t MySQLParser::TsOptionAutoextendSizeContext::getRuleIndex() const {
   return MySQLParser::RuleTsOptionAutoextendSize;
 }
 
-void MySQLParser::TsOptionAutoextendSizeContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterTsOptionAutoextendSize(this);
-}
-
-void MySQLParser::TsOptionAutoextendSizeContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitTsOptionAutoextendSize(this);
-}
-
-
-std::any MySQLParser::TsOptionAutoextendSizeContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitTsOptionAutoextendSize(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::TsOptionAutoextendSizeContext* MySQLParser::tsOptionAutoextendSize() {
   TsOptionAutoextendSizeContext *_localctx = _tracker.createInstance<TsOptionAutoextendSizeContext>(_ctx, getState());
@@ -15082,25 +13617,6 @@ size_t MySQLParser::TsOptionMaxSizeContext::getRuleIndex() const {
   return MySQLParser::RuleTsOptionMaxSize;
 }
 
-void MySQLParser::TsOptionMaxSizeContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterTsOptionMaxSize(this);
-}
-
-void MySQLParser::TsOptionMaxSizeContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitTsOptionMaxSize(this);
-}
-
-
-std::any MySQLParser::TsOptionMaxSizeContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitTsOptionMaxSize(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::TsOptionMaxSizeContext* MySQLParser::tsOptionMaxSize() {
   TsOptionMaxSizeContext *_localctx = _tracker.createInstance<TsOptionMaxSizeContext>(_ctx, getState());
@@ -15166,25 +13682,6 @@ size_t MySQLParser::TsOptionExtentSizeContext::getRuleIndex() const {
   return MySQLParser::RuleTsOptionExtentSize;
 }
 
-void MySQLParser::TsOptionExtentSizeContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterTsOptionExtentSize(this);
-}
-
-void MySQLParser::TsOptionExtentSizeContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitTsOptionExtentSize(this);
-}
-
-
-std::any MySQLParser::TsOptionExtentSizeContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitTsOptionExtentSize(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::TsOptionExtentSizeContext* MySQLParser::tsOptionExtentSize() {
   TsOptionExtentSizeContext *_localctx = _tracker.createInstance<TsOptionExtentSizeContext>(_ctx, getState());
@@ -15250,25 +13747,6 @@ size_t MySQLParser::TsOptionNodegroupContext::getRuleIndex() const {
   return MySQLParser::RuleTsOptionNodegroup;
 }
 
-void MySQLParser::TsOptionNodegroupContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterTsOptionNodegroup(this);
-}
-
-void MySQLParser::TsOptionNodegroupContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitTsOptionNodegroup(this);
-}
-
-
-std::any MySQLParser::TsOptionNodegroupContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitTsOptionNodegroup(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::TsOptionNodegroupContext* MySQLParser::tsOptionNodegroup() {
   TsOptionNodegroupContext *_localctx = _tracker.createInstance<TsOptionNodegroupContext>(_ctx, getState());
@@ -15334,25 +13812,6 @@ size_t MySQLParser::TsOptionEngineContext::getRuleIndex() const {
   return MySQLParser::RuleTsOptionEngine;
 }
 
-void MySQLParser::TsOptionEngineContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterTsOptionEngine(this);
-}
-
-void MySQLParser::TsOptionEngineContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitTsOptionEngine(this);
-}
-
-
-std::any MySQLParser::TsOptionEngineContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitTsOptionEngine(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::TsOptionEngineContext* MySQLParser::tsOptionEngine() {
   TsOptionEngineContext *_localctx = _tracker.createInstance<TsOptionEngineContext>(_ctx, getState());
@@ -15423,25 +13882,6 @@ size_t MySQLParser::TsOptionWaitContext::getRuleIndex() const {
   return MySQLParser::RuleTsOptionWait;
 }
 
-void MySQLParser::TsOptionWaitContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterTsOptionWait(this);
-}
-
-void MySQLParser::TsOptionWaitContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitTsOptionWait(this);
-}
-
-
-std::any MySQLParser::TsOptionWaitContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitTsOptionWait(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::TsOptionWaitContext* MySQLParser::tsOptionWait() {
   TsOptionWaitContext *_localctx = _tracker.createInstance<TsOptionWaitContext>(_ctx, getState());
@@ -15500,25 +13940,6 @@ size_t MySQLParser::TsOptionCommentContext::getRuleIndex() const {
   return MySQLParser::RuleTsOptionComment;
 }
 
-void MySQLParser::TsOptionCommentContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterTsOptionComment(this);
-}
-
-void MySQLParser::TsOptionCommentContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitTsOptionComment(this);
-}
-
-
-std::any MySQLParser::TsOptionCommentContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitTsOptionComment(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::TsOptionCommentContext* MySQLParser::tsOptionComment() {
   TsOptionCommentContext *_localctx = _tracker.createInstance<TsOptionCommentContext>(_ctx, getState());
@@ -15584,25 +14005,6 @@ size_t MySQLParser::TsOptionFileblockSizeContext::getRuleIndex() const {
   return MySQLParser::RuleTsOptionFileblockSize;
 }
 
-void MySQLParser::TsOptionFileblockSizeContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterTsOptionFileblockSize(this);
-}
-
-void MySQLParser::TsOptionFileblockSizeContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitTsOptionFileblockSize(this);
-}
-
-
-std::any MySQLParser::TsOptionFileblockSizeContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitTsOptionFileblockSize(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::TsOptionFileblockSizeContext* MySQLParser::tsOptionFileblockSize() {
   TsOptionFileblockSizeContext *_localctx = _tracker.createInstance<TsOptionFileblockSizeContext>(_ctx, getState());
@@ -15668,25 +14070,6 @@ size_t MySQLParser::TsOptionEncryptionContext::getRuleIndex() const {
   return MySQLParser::RuleTsOptionEncryption;
 }
 
-void MySQLParser::TsOptionEncryptionContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterTsOptionEncryption(this);
-}
-
-void MySQLParser::TsOptionEncryptionContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitTsOptionEncryption(this);
-}
-
-
-std::any MySQLParser::TsOptionEncryptionContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitTsOptionEncryption(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::TsOptionEncryptionContext* MySQLParser::tsOptionEncryption() {
   TsOptionEncryptionContext *_localctx = _tracker.createInstance<TsOptionEncryptionContext>(_ctx, getState());
@@ -15752,25 +14135,6 @@ size_t MySQLParser::TsOptionEngineAttributeContext::getRuleIndex() const {
   return MySQLParser::RuleTsOptionEngineAttribute;
 }
 
-void MySQLParser::TsOptionEngineAttributeContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterTsOptionEngineAttribute(this);
-}
-
-void MySQLParser::TsOptionEngineAttributeContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitTsOptionEngineAttribute(this);
-}
-
-
-std::any MySQLParser::TsOptionEngineAttributeContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitTsOptionEngineAttribute(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::TsOptionEngineAttributeContext* MySQLParser::tsOptionEngineAttribute() {
   TsOptionEngineAttributeContext *_localctx = _tracker.createInstance<TsOptionEngineAttributeContext>(_ctx, getState());
@@ -15848,25 +14212,6 @@ size_t MySQLParser::CreateViewContext::getRuleIndex() const {
   return MySQLParser::RuleCreateView;
 }
 
-void MySQLParser::CreateViewContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterCreateView(this);
-}
-
-void MySQLParser::CreateViewContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitCreateView(this);
-}
-
-
-std::any MySQLParser::CreateViewContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitCreateView(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::CreateViewContext* MySQLParser::createView() {
   CreateViewContext *_localctx = _tracker.createInstance<CreateViewContext>(_ctx, getState());
@@ -15946,25 +14291,6 @@ size_t MySQLParser::ViewReplaceOrAlgorithmContext::getRuleIndex() const {
   return MySQLParser::RuleViewReplaceOrAlgorithm;
 }
 
-void MySQLParser::ViewReplaceOrAlgorithmContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterViewReplaceOrAlgorithm(this);
-}
-
-void MySQLParser::ViewReplaceOrAlgorithmContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitViewReplaceOrAlgorithm(this);
-}
-
-
-std::any MySQLParser::ViewReplaceOrAlgorithmContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitViewReplaceOrAlgorithm(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::ViewReplaceOrAlgorithmContext* MySQLParser::viewReplaceOrAlgorithm() {
   ViewReplaceOrAlgorithmContext *_localctx = _tracker.createInstance<ViewReplaceOrAlgorithmContext>(_ctx, getState());
@@ -16051,25 +14377,6 @@ size_t MySQLParser::ViewAlgorithmContext::getRuleIndex() const {
   return MySQLParser::RuleViewAlgorithm;
 }
 
-void MySQLParser::ViewAlgorithmContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterViewAlgorithm(this);
-}
-
-void MySQLParser::ViewAlgorithmContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitViewAlgorithm(this);
-}
-
-
-std::any MySQLParser::ViewAlgorithmContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitViewAlgorithm(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::ViewAlgorithmContext* MySQLParser::viewAlgorithm() {
   ViewAlgorithmContext *_localctx = _tracker.createInstance<ViewAlgorithmContext>(_ctx, getState());
@@ -16139,25 +14446,6 @@ size_t MySQLParser::ViewSuidContext::getRuleIndex() const {
   return MySQLParser::RuleViewSuid;
 }
 
-void MySQLParser::ViewSuidContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterViewSuid(this);
-}
-
-void MySQLParser::ViewSuidContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitViewSuid(this);
-}
-
-
-std::any MySQLParser::ViewSuidContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitViewSuid(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::ViewSuidContext* MySQLParser::viewSuid() {
   ViewSuidContext *_localctx = _tracker.createInstance<ViewSuidContext>(_ctx, getState());
@@ -16272,25 +14560,6 @@ size_t MySQLParser::CreateTriggerContext::getRuleIndex() const {
   return MySQLParser::RuleCreateTrigger;
 }
 
-void MySQLParser::CreateTriggerContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterCreateTrigger(this);
-}
-
-void MySQLParser::CreateTriggerContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitCreateTrigger(this);
-}
-
-
-std::any MySQLParser::CreateTriggerContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitCreateTrigger(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::CreateTriggerContext* MySQLParser::createTrigger() {
   CreateTriggerContext *_localctx = _tracker.createInstance<CreateTriggerContext>(_ctx, getState());
@@ -16412,25 +14681,6 @@ size_t MySQLParser::TriggerFollowsPrecedesClauseContext::getRuleIndex() const {
   return MySQLParser::RuleTriggerFollowsPrecedesClause;
 }
 
-void MySQLParser::TriggerFollowsPrecedesClauseContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterTriggerFollowsPrecedesClause(this);
-}
-
-void MySQLParser::TriggerFollowsPrecedesClauseContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitTriggerFollowsPrecedesClause(this);
-}
-
-
-std::any MySQLParser::TriggerFollowsPrecedesClauseContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitTriggerFollowsPrecedesClause(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::TriggerFollowsPrecedesClauseContext* MySQLParser::triggerFollowsPrecedesClause() {
   TriggerFollowsPrecedesClauseContext *_localctx = _tracker.createInstance<TriggerFollowsPrecedesClauseContext>(_ctx, getState());
@@ -16552,25 +14802,6 @@ size_t MySQLParser::CreateEventContext::getRuleIndex() const {
   return MySQLParser::RuleCreateEvent;
 }
 
-void MySQLParser::CreateEventContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterCreateEvent(this);
-}
-
-void MySQLParser::CreateEventContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitCreateEvent(this);
-}
-
-
-std::any MySQLParser::CreateEventContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitCreateEvent(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::CreateEventContext* MySQLParser::createEvent() {
   CreateEventContext *_localctx = _tracker.createInstance<CreateEventContext>(_ctx, getState());
@@ -16718,25 +14949,6 @@ size_t MySQLParser::CreateRoleContext::getRuleIndex() const {
   return MySQLParser::RuleCreateRole;
 }
 
-void MySQLParser::CreateRoleContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterCreateRole(this);
-}
-
-void MySQLParser::CreateRoleContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitCreateRole(this);
-}
-
-
-std::any MySQLParser::CreateRoleContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitCreateRole(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::CreateRoleContext* MySQLParser::createRole() {
   CreateRoleContext *_localctx = _tracker.createInstance<CreateRoleContext>(_ctx, getState());
@@ -16826,25 +15038,6 @@ size_t MySQLParser::CreateSpatialReferenceContext::getRuleIndex() const {
   return MySQLParser::RuleCreateSpatialReference;
 }
 
-void MySQLParser::CreateSpatialReferenceContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterCreateSpatialReference(this);
-}
-
-void MySQLParser::CreateSpatialReferenceContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitCreateSpatialReference(this);
-}
-
-
-std::any MySQLParser::CreateSpatialReferenceContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitCreateSpatialReference(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::CreateSpatialReferenceContext* MySQLParser::createSpatialReference() {
   CreateSpatialReferenceContext *_localctx = _tracker.createInstance<CreateSpatialReferenceContext>(_ctx, getState());
@@ -16988,25 +15181,6 @@ size_t MySQLParser::SrsAttributeContext::getRuleIndex() const {
   return MySQLParser::RuleSrsAttribute;
 }
 
-void MySQLParser::SrsAttributeContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterSrsAttribute(this);
-}
-
-void MySQLParser::SrsAttributeContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitSrsAttribute(this);
-}
-
-
-std::any MySQLParser::SrsAttributeContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitSrsAttribute(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::SrsAttributeContext* MySQLParser::srsAttribute() {
   SrsAttributeContext *_localctx = _tracker.createInstance<SrsAttributeContext>(_ctx, getState());
@@ -17156,25 +15330,6 @@ size_t MySQLParser::DropStatementContext::getRuleIndex() const {
   return MySQLParser::RuleDropStatement;
 }
 
-void MySQLParser::DropStatementContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterDropStatement(this);
-}
-
-void MySQLParser::DropStatementContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitDropStatement(this);
-}
-
-
-std::any MySQLParser::DropStatementContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitDropStatement(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::DropStatementContext* MySQLParser::dropStatement() {
   DropStatementContext *_localctx = _tracker.createInstance<DropStatementContext>(_ctx, getState());
@@ -17321,25 +15476,6 @@ size_t MySQLParser::DropDatabaseContext::getRuleIndex() const {
   return MySQLParser::RuleDropDatabase;
 }
 
-void MySQLParser::DropDatabaseContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterDropDatabase(this);
-}
-
-void MySQLParser::DropDatabaseContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitDropDatabase(this);
-}
-
-
-std::any MySQLParser::DropDatabaseContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitDropDatabase(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::DropDatabaseContext* MySQLParser::dropDatabase() {
   DropDatabaseContext *_localctx = _tracker.createInstance<DropDatabaseContext>(_ctx, getState());
@@ -17405,25 +15541,6 @@ size_t MySQLParser::DropEventContext::getRuleIndex() const {
   return MySQLParser::RuleDropEvent;
 }
 
-void MySQLParser::DropEventContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterDropEvent(this);
-}
-
-void MySQLParser::DropEventContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitDropEvent(this);
-}
-
-
-std::any MySQLParser::DropEventContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitDropEvent(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::DropEventContext* MySQLParser::dropEvent() {
   DropEventContext *_localctx = _tracker.createInstance<DropEventContext>(_ctx, getState());
@@ -17489,25 +15606,6 @@ size_t MySQLParser::DropFunctionContext::getRuleIndex() const {
   return MySQLParser::RuleDropFunction;
 }
 
-void MySQLParser::DropFunctionContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterDropFunction(this);
-}
-
-void MySQLParser::DropFunctionContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitDropFunction(this);
-}
-
-
-std::any MySQLParser::DropFunctionContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitDropFunction(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::DropFunctionContext* MySQLParser::dropFunction() {
   DropFunctionContext *_localctx = _tracker.createInstance<DropFunctionContext>(_ctx, getState());
@@ -17573,25 +15671,6 @@ size_t MySQLParser::DropProcedureContext::getRuleIndex() const {
   return MySQLParser::RuleDropProcedure;
 }
 
-void MySQLParser::DropProcedureContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterDropProcedure(this);
-}
-
-void MySQLParser::DropProcedureContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitDropProcedure(this);
-}
-
-
-std::any MySQLParser::DropProcedureContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitDropProcedure(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::DropProcedureContext* MySQLParser::dropProcedure() {
   DropProcedureContext *_localctx = _tracker.createInstance<DropProcedureContext>(_ctx, getState());
@@ -17669,25 +15748,6 @@ size_t MySQLParser::DropIndexContext::getRuleIndex() const {
   return MySQLParser::RuleDropIndex;
 }
 
-void MySQLParser::DropIndexContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterDropIndex(this);
-}
-
-void MySQLParser::DropIndexContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitDropIndex(this);
-}
-
-
-std::any MySQLParser::DropIndexContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitDropIndex(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::DropIndexContext* MySQLParser::dropIndex() {
   DropIndexContext *_localctx = _tracker.createInstance<DropIndexContext>(_ctx, getState());
@@ -17779,25 +15839,6 @@ size_t MySQLParser::DropLogfileGroupContext::getRuleIndex() const {
   return MySQLParser::RuleDropLogfileGroup;
 }
 
-void MySQLParser::DropLogfileGroupContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterDropLogfileGroup(this);
-}
-
-void MySQLParser::DropLogfileGroupContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitDropLogfileGroup(this);
-}
-
-
-std::any MySQLParser::DropLogfileGroupContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitDropLogfileGroup(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::DropLogfileGroupContext* MySQLParser::dropLogfileGroup() {
   DropLogfileGroupContext *_localctx = _tracker.createInstance<DropLogfileGroupContext>(_ctx, getState());
@@ -17875,25 +15916,6 @@ size_t MySQLParser::DropLogfileGroupOptionContext::getRuleIndex() const {
   return MySQLParser::RuleDropLogfileGroupOption;
 }
 
-void MySQLParser::DropLogfileGroupOptionContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterDropLogfileGroupOption(this);
-}
-
-void MySQLParser::DropLogfileGroupOptionContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitDropLogfileGroupOption(this);
-}
-
-
-std::any MySQLParser::DropLogfileGroupOptionContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitDropLogfileGroupOption(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::DropLogfileGroupOptionContext* MySQLParser::dropLogfileGroupOption() {
   DropLogfileGroupOptionContext *_localctx = _tracker.createInstance<DropLogfileGroupOptionContext>(_ctx, getState());
@@ -17963,25 +15985,6 @@ size_t MySQLParser::DropServerContext::getRuleIndex() const {
   return MySQLParser::RuleDropServer;
 }
 
-void MySQLParser::DropServerContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterDropServer(this);
-}
-
-void MySQLParser::DropServerContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitDropServer(this);
-}
-
-
-std::any MySQLParser::DropServerContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitDropServer(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::DropServerContext* MySQLParser::dropServer() {
   DropServerContext *_localctx = _tracker.createInstance<DropServerContext>(_ctx, getState());
@@ -18063,25 +16066,6 @@ size_t MySQLParser::DropTableContext::getRuleIndex() const {
   return MySQLParser::RuleDropTable;
 }
 
-void MySQLParser::DropTableContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterDropTable(this);
-}
-
-void MySQLParser::DropTableContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitDropTable(this);
-}
-
-
-std::any MySQLParser::DropTableContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitDropTable(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::DropTableContext* MySQLParser::dropTable() {
   DropTableContext *_localctx = _tracker.createInstance<DropTableContext>(_ctx, getState());
@@ -18193,25 +16177,6 @@ size_t MySQLParser::DropTableSpaceContext::getRuleIndex() const {
   return MySQLParser::RuleDropTableSpace;
 }
 
-void MySQLParser::DropTableSpaceContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterDropTableSpace(this);
-}
-
-void MySQLParser::DropTableSpaceContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitDropTableSpace(this);
-}
-
-
-std::any MySQLParser::DropTableSpaceContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitDropTableSpace(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::DropTableSpaceContext* MySQLParser::dropTableSpace() {
   DropTableSpaceContext *_localctx = _tracker.createInstance<DropTableSpaceContext>(_ctx, getState());
@@ -18291,25 +16256,6 @@ size_t MySQLParser::DropTriggerContext::getRuleIndex() const {
   return MySQLParser::RuleDropTrigger;
 }
 
-void MySQLParser::DropTriggerContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterDropTrigger(this);
-}
-
-void MySQLParser::DropTriggerContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitDropTrigger(this);
-}
-
-
-std::any MySQLParser::DropTriggerContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitDropTrigger(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::DropTriggerContext* MySQLParser::dropTrigger() {
   DropTriggerContext *_localctx = _tracker.createInstance<DropTriggerContext>(_ctx, getState());
@@ -18383,25 +16329,6 @@ size_t MySQLParser::DropViewContext::getRuleIndex() const {
   return MySQLParser::RuleDropView;
 }
 
-void MySQLParser::DropViewContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterDropView(this);
-}
-
-void MySQLParser::DropViewContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitDropView(this);
-}
-
-
-std::any MySQLParser::DropViewContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitDropView(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::DropViewContext* MySQLParser::dropView() {
   DropViewContext *_localctx = _tracker.createInstance<DropViewContext>(_ctx, getState());
@@ -18483,25 +16410,6 @@ size_t MySQLParser::DropRoleContext::getRuleIndex() const {
   return MySQLParser::RuleDropRole;
 }
 
-void MySQLParser::DropRoleContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterDropRole(this);
-}
-
-void MySQLParser::DropRoleContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitDropRole(this);
-}
-
-
-std::any MySQLParser::DropRoleContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitDropRole(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::DropRoleContext* MySQLParser::dropRole() {
   DropRoleContext *_localctx = _tracker.createInstance<DropRoleContext>(_ctx, getState());
@@ -18575,25 +16483,6 @@ size_t MySQLParser::DropSpatialReferenceContext::getRuleIndex() const {
   return MySQLParser::RuleDropSpatialReference;
 }
 
-void MySQLParser::DropSpatialReferenceContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterDropSpatialReference(this);
-}
-
-void MySQLParser::DropSpatialReferenceContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitDropSpatialReference(this);
-}
-
-
-std::any MySQLParser::DropSpatialReferenceContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitDropSpatialReference(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::DropSpatialReferenceContext* MySQLParser::dropSpatialReference() {
   DropSpatialReferenceContext *_localctx = _tracker.createInstance<DropSpatialReferenceContext>(_ctx, getState());
@@ -18667,25 +16556,6 @@ size_t MySQLParser::DropUndoTablespaceContext::getRuleIndex() const {
   return MySQLParser::RuleDropUndoTablespace;
 }
 
-void MySQLParser::DropUndoTablespaceContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterDropUndoTablespace(this);
-}
-
-void MySQLParser::DropUndoTablespaceContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitDropUndoTablespace(this);
-}
-
-
-std::any MySQLParser::DropUndoTablespaceContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitDropUndoTablespace(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::DropUndoTablespaceContext* MySQLParser::dropUndoTablespace() {
   DropUndoTablespaceContext *_localctx = _tracker.createInstance<DropUndoTablespaceContext>(_ctx, getState());
@@ -18765,25 +16635,6 @@ size_t MySQLParser::RenameTableStatementContext::getRuleIndex() const {
   return MySQLParser::RuleRenameTableStatement;
 }
 
-void MySQLParser::RenameTableStatementContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterRenameTableStatement(this);
-}
-
-void MySQLParser::RenameTableStatementContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitRenameTableStatement(this);
-}
-
-
-std::any MySQLParser::RenameTableStatementContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitRenameTableStatement(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::RenameTableStatementContext* MySQLParser::renameTableStatement() {
   RenameTableStatementContext *_localctx = _tracker.createInstance<RenameTableStatementContext>(_ctx, getState());
@@ -18860,25 +16711,6 @@ size_t MySQLParser::RenamePairContext::getRuleIndex() const {
   return MySQLParser::RuleRenamePair;
 }
 
-void MySQLParser::RenamePairContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterRenamePair(this);
-}
-
-void MySQLParser::RenamePairContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitRenamePair(this);
-}
-
-
-std::any MySQLParser::RenamePairContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitRenamePair(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::RenamePairContext* MySQLParser::renamePair() {
   RenamePairContext *_localctx = _tracker.createInstance<RenamePairContext>(_ctx, getState());
@@ -18933,25 +16765,6 @@ size_t MySQLParser::TruncateTableStatementContext::getRuleIndex() const {
   return MySQLParser::RuleTruncateTableStatement;
 }
 
-void MySQLParser::TruncateTableStatementContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterTruncateTableStatement(this);
-}
-
-void MySQLParser::TruncateTableStatementContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitTruncateTableStatement(this);
-}
-
-
-std::any MySQLParser::TruncateTableStatementContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitTruncateTableStatement(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::TruncateTableStatementContext* MySQLParser::truncateTableStatement() {
   TruncateTableStatementContext *_localctx = _tracker.createInstance<TruncateTableStatementContext>(_ctx, getState());
@@ -19021,25 +16834,6 @@ size_t MySQLParser::ImportStatementContext::getRuleIndex() const {
   return MySQLParser::RuleImportStatement;
 }
 
-void MySQLParser::ImportStatementContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterImportStatement(this);
-}
-
-void MySQLParser::ImportStatementContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitImportStatement(this);
-}
-
-
-std::any MySQLParser::ImportStatementContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitImportStatement(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::ImportStatementContext* MySQLParser::importStatement() {
   ImportStatementContext *_localctx = _tracker.createInstance<ImportStatementContext>(_ctx, getState());
@@ -19104,25 +16898,6 @@ size_t MySQLParser::CallStatementContext::getRuleIndex() const {
   return MySQLParser::RuleCallStatement;
 }
 
-void MySQLParser::CallStatementContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterCallStatement(this);
-}
-
-void MySQLParser::CallStatementContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitCallStatement(this);
-}
-
-
-std::any MySQLParser::CallStatementContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitCallStatement(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::CallStatementContext* MySQLParser::callStatement() {
   CallStatementContext *_localctx = _tracker.createInstance<CallStatementContext>(_ctx, getState());
@@ -19243,25 +17018,6 @@ size_t MySQLParser::DeleteStatementContext::getRuleIndex() const {
   return MySQLParser::RuleDeleteStatement;
 }
 
-void MySQLParser::DeleteStatementContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterDeleteStatement(this);
-}
-
-void MySQLParser::DeleteStatementContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitDeleteStatement(this);
-}
-
-
-std::any MySQLParser::DeleteStatementContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitDeleteStatement(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::DeleteStatementContext* MySQLParser::deleteStatement() {
   DeleteStatementContext *_localctx = _tracker.createInstance<DeleteStatementContext>(_ctx, getState());
@@ -19446,25 +17202,6 @@ size_t MySQLParser::PartitionDeleteContext::getRuleIndex() const {
   return MySQLParser::RulePartitionDelete;
 }
 
-void MySQLParser::PartitionDeleteContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterPartitionDelete(this);
-}
-
-void MySQLParser::PartitionDeleteContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitPartitionDelete(this);
-}
-
-
-std::any MySQLParser::PartitionDeleteContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitPartitionDelete(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::PartitionDeleteContext* MySQLParser::partitionDelete() {
   PartitionDeleteContext *_localctx = _tracker.createInstance<PartitionDeleteContext>(_ctx, getState());
@@ -19521,25 +17258,6 @@ size_t MySQLParser::DeleteStatementOptionContext::getRuleIndex() const {
   return MySQLParser::RuleDeleteStatementOption;
 }
 
-void MySQLParser::DeleteStatementOptionContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterDeleteStatementOption(this);
-}
-
-void MySQLParser::DeleteStatementOptionContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitDeleteStatementOption(this);
-}
-
-
-std::any MySQLParser::DeleteStatementOptionContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitDeleteStatementOption(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::DeleteStatementOptionContext* MySQLParser::deleteStatementOption() {
   DeleteStatementOptionContext *_localctx = _tracker.createInstance<DeleteStatementOptionContext>(_ctx, getState());
@@ -19596,25 +17314,6 @@ size_t MySQLParser::DoStatementContext::getRuleIndex() const {
   return MySQLParser::RuleDoStatement;
 }
 
-void MySQLParser::DoStatementContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterDoStatement(this);
-}
-
-void MySQLParser::DoStatementContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitDoStatement(this);
-}
-
-
-std::any MySQLParser::DoStatementContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitDoStatement(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::DoStatementContext* MySQLParser::doStatement() {
   DoStatementContext *_localctx = _tracker.createInstance<DoStatementContext>(_ctx, getState());
@@ -19695,25 +17394,6 @@ size_t MySQLParser::HandlerStatementContext::getRuleIndex() const {
   return MySQLParser::RuleHandlerStatement;
 }
 
-void MySQLParser::HandlerStatementContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterHandlerStatement(this);
-}
-
-void MySQLParser::HandlerStatementContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitHandlerStatement(this);
-}
-
-
-std::any MySQLParser::HandlerStatementContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitHandlerStatement(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::HandlerStatementContext* MySQLParser::handlerStatement() {
   HandlerStatementContext *_localctx = _tracker.createInstance<HandlerStatementContext>(_ctx, getState());
@@ -19874,25 +17554,6 @@ size_t MySQLParser::HandlerReadOrScanContext::getRuleIndex() const {
   return MySQLParser::RuleHandlerReadOrScan;
 }
 
-void MySQLParser::HandlerReadOrScanContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterHandlerReadOrScan(this);
-}
-
-void MySQLParser::HandlerReadOrScanContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitHandlerReadOrScan(this);
-}
-
-
-std::any MySQLParser::HandlerReadOrScanContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitHandlerReadOrScan(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::HandlerReadOrScanContext* MySQLParser::handlerReadOrScan() {
   HandlerReadOrScanContext *_localctx = _tracker.createInstance<HandlerReadOrScanContext>(_ctx, getState());
@@ -20052,25 +17713,6 @@ size_t MySQLParser::InsertStatementContext::getRuleIndex() const {
   return MySQLParser::RuleInsertStatement;
 }
 
-void MySQLParser::InsertStatementContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterInsertStatement(this);
-}
-
-void MySQLParser::InsertStatementContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitInsertStatement(this);
-}
-
-
-std::any MySQLParser::InsertStatementContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitInsertStatement(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::InsertStatementContext* MySQLParser::insertStatement() {
   InsertStatementContext *_localctx = _tracker.createInstance<InsertStatementContext>(_ctx, getState());
@@ -20236,25 +17878,6 @@ size_t MySQLParser::InsertLockOptionContext::getRuleIndex() const {
   return MySQLParser::RuleInsertLockOption;
 }
 
-void MySQLParser::InsertLockOptionContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterInsertLockOption(this);
-}
-
-void MySQLParser::InsertLockOptionContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitInsertLockOption(this);
-}
-
-
-std::any MySQLParser::InsertLockOptionContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitInsertLockOption(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::InsertLockOptionContext* MySQLParser::insertLockOption() {
   InsertLockOptionContext *_localctx = _tracker.createInstance<InsertLockOptionContext>(_ctx, getState());
@@ -20317,25 +17940,6 @@ size_t MySQLParser::InsertFromConstructorContext::getRuleIndex() const {
   return MySQLParser::RuleInsertFromConstructor;
 }
 
-void MySQLParser::InsertFromConstructorContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterInsertFromConstructor(this);
-}
-
-void MySQLParser::InsertFromConstructorContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitInsertFromConstructor(this);
-}
-
-
-std::any MySQLParser::InsertFromConstructorContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitInsertFromConstructor(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::InsertFromConstructorContext* MySQLParser::insertFromConstructor() {
   InsertFromConstructorContext *_localctx = _tracker.createInstance<InsertFromConstructorContext>(_ctx, getState());
@@ -20414,25 +18018,6 @@ size_t MySQLParser::FieldsContext::getRuleIndex() const {
   return MySQLParser::RuleFields;
 }
 
-void MySQLParser::FieldsContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterFields(this);
-}
-
-void MySQLParser::FieldsContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitFields(this);
-}
-
-
-std::any MySQLParser::FieldsContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitFields(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::FieldsContext* MySQLParser::fields() {
   FieldsContext *_localctx = _tracker.createInstance<FieldsContext>(_ctx, getState());
@@ -20496,25 +18081,6 @@ size_t MySQLParser::InsertValuesContext::getRuleIndex() const {
   return MySQLParser::RuleInsertValues;
 }
 
-void MySQLParser::InsertValuesContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterInsertValues(this);
-}
-
-void MySQLParser::InsertValuesContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitInsertValues(this);
-}
-
-
-std::any MySQLParser::InsertValuesContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitInsertValues(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::InsertValuesContext* MySQLParser::insertValues() {
   InsertValuesContext *_localctx = _tracker.createInstance<InsertValuesContext>(_ctx, getState());
@@ -20589,25 +18155,6 @@ size_t MySQLParser::InsertQueryExpressionContext::getRuleIndex() const {
   return MySQLParser::RuleInsertQueryExpression;
 }
 
-void MySQLParser::InsertQueryExpressionContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterInsertQueryExpression(this);
-}
-
-void MySQLParser::InsertQueryExpressionContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitInsertQueryExpression(this);
-}
-
-
-std::any MySQLParser::InsertQueryExpressionContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitInsertQueryExpression(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::InsertQueryExpressionContext* MySQLParser::insertQueryExpression() {
   InsertQueryExpressionContext *_localctx = _tracker.createInstance<InsertQueryExpressionContext>(_ctx, getState());
@@ -20730,25 +18277,6 @@ size_t MySQLParser::ValueListContext::getRuleIndex() const {
   return MySQLParser::RuleValueList;
 }
 
-void MySQLParser::ValueListContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterValueList(this);
-}
-
-void MySQLParser::ValueListContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitValueList(this);
-}
-
-
-std::any MySQLParser::ValueListContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitValueList(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::ValueListContext* MySQLParser::valueList() {
   ValueListContext *_localctx = _tracker.createInstance<ValueListContext>(_ctx, getState());
@@ -20856,25 +18384,6 @@ size_t MySQLParser::ValuesContext::getRuleIndex() const {
   return MySQLParser::RuleValues;
 }
 
-void MySQLParser::ValuesContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterValues(this);
-}
-
-void MySQLParser::ValuesContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitValues(this);
-}
-
-
-std::any MySQLParser::ValuesContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitValues(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::ValuesContext* MySQLParser::values() {
   ValuesContext *_localctx = _tracker.createInstance<ValuesContext>(_ctx, getState());
@@ -20970,25 +18479,6 @@ size_t MySQLParser::ValuesReferenceContext::getRuleIndex() const {
   return MySQLParser::RuleValuesReference;
 }
 
-void MySQLParser::ValuesReferenceContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterValuesReference(this);
-}
-
-void MySQLParser::ValuesReferenceContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitValuesReference(this);
-}
-
-
-std::any MySQLParser::ValuesReferenceContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitValuesReference(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::ValuesReferenceContext* MySQLParser::valuesReference() {
   ValuesReferenceContext *_localctx = _tracker.createInstance<ValuesReferenceContext>(_ctx, getState());
@@ -21061,25 +18551,6 @@ size_t MySQLParser::InsertUpdateListContext::getRuleIndex() const {
   return MySQLParser::RuleInsertUpdateList;
 }
 
-void MySQLParser::InsertUpdateListContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterInsertUpdateList(this);
-}
-
-void MySQLParser::InsertUpdateListContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitInsertUpdateList(this);
-}
-
-
-std::any MySQLParser::InsertUpdateListContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitInsertUpdateList(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::InsertUpdateListContext* MySQLParser::insertUpdateList() {
   InsertUpdateListContext *_localctx = _tracker.createInstance<InsertUpdateListContext>(_ctx, getState());
@@ -21218,25 +18689,6 @@ size_t MySQLParser::LoadStatementContext::getRuleIndex() const {
   return MySQLParser::RuleLoadStatement;
 }
 
-void MySQLParser::LoadStatementContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterLoadStatement(this);
-}
-
-void MySQLParser::LoadStatementContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitLoadStatement(this);
-}
-
-
-std::any MySQLParser::LoadStatementContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitLoadStatement(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::LoadStatementContext* MySQLParser::loadStatement() {
   LoadStatementContext *_localctx = _tracker.createInstance<LoadStatementContext>(_ctx, getState());
@@ -21493,25 +18945,6 @@ size_t MySQLParser::DataOrXmlContext::getRuleIndex() const {
   return MySQLParser::RuleDataOrXml;
 }
 
-void MySQLParser::DataOrXmlContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterDataOrXml(this);
-}
-
-void MySQLParser::DataOrXmlContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitDataOrXml(this);
-}
-
-
-std::any MySQLParser::DataOrXmlContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitDataOrXml(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::DataOrXmlContext* MySQLParser::dataOrXml() {
   DataOrXmlContext *_localctx = _tracker.createInstance<DataOrXmlContext>(_ctx, getState());
@@ -21566,25 +18999,6 @@ size_t MySQLParser::LoadDataLockContext::getRuleIndex() const {
   return MySQLParser::RuleLoadDataLock;
 }
 
-void MySQLParser::LoadDataLockContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterLoadDataLock(this);
-}
-
-void MySQLParser::LoadDataLockContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitLoadDataLock(this);
-}
-
-
-std::any MySQLParser::LoadDataLockContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitLoadDataLock(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::LoadDataLockContext* MySQLParser::loadDataLock() {
   LoadDataLockContext *_localctx = _tracker.createInstance<LoadDataLockContext>(_ctx, getState());
@@ -21635,25 +19049,6 @@ size_t MySQLParser::LoadFromContext::getRuleIndex() const {
   return MySQLParser::RuleLoadFrom;
 }
 
-void MySQLParser::LoadFromContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterLoadFrom(this);
-}
-
-void MySQLParser::LoadFromContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitLoadFrom(this);
-}
-
-
-std::any MySQLParser::LoadFromContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitLoadFrom(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::LoadFromContext* MySQLParser::loadFrom() {
   LoadFromContext *_localctx = _tracker.createInstance<LoadFromContext>(_ctx, getState());
@@ -21707,25 +19102,6 @@ size_t MySQLParser::LoadSourceTypeContext::getRuleIndex() const {
   return MySQLParser::RuleLoadSourceType;
 }
 
-void MySQLParser::LoadSourceTypeContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterLoadSourceType(this);
-}
-
-void MySQLParser::LoadSourceTypeContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitLoadSourceType(this);
-}
-
-
-std::any MySQLParser::LoadSourceTypeContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitLoadSourceType(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::LoadSourceTypeContext* MySQLParser::loadSourceType() {
   LoadSourceTypeContext *_localctx = _tracker.createInstance<LoadSourceTypeContext>(_ctx, getState());
@@ -21806,25 +19182,6 @@ size_t MySQLParser::SourceCountContext::getRuleIndex() const {
   return MySQLParser::RuleSourceCount;
 }
 
-void MySQLParser::SourceCountContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterSourceCount(this);
-}
-
-void MySQLParser::SourceCountContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitSourceCount(this);
-}
-
-
-std::any MySQLParser::SourceCountContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitSourceCount(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::SourceCountContext* MySQLParser::sourceCount() {
   SourceCountContext *_localctx = _tracker.createInstance<SourceCountContext>(_ctx, getState());
@@ -21902,25 +19259,6 @@ size_t MySQLParser::SourceOrderContext::getRuleIndex() const {
   return MySQLParser::RuleSourceOrder;
 }
 
-void MySQLParser::SourceOrderContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterSourceOrder(this);
-}
-
-void MySQLParser::SourceOrderContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitSourceOrder(this);
-}
-
-
-std::any MySQLParser::SourceOrderContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitSourceOrder(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::SourceOrderContext* MySQLParser::sourceOrder() {
   SourceOrderContext *_localctx = _tracker.createInstance<SourceOrderContext>(_ctx, getState());
@@ -21984,25 +19322,6 @@ size_t MySQLParser::XmlRowsIdentifiedByContext::getRuleIndex() const {
   return MySQLParser::RuleXmlRowsIdentifiedBy;
 }
 
-void MySQLParser::XmlRowsIdentifiedByContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterXmlRowsIdentifiedBy(this);
-}
-
-void MySQLParser::XmlRowsIdentifiedByContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitXmlRowsIdentifiedBy(this);
-}
-
-
-std::any MySQLParser::XmlRowsIdentifiedByContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitXmlRowsIdentifiedBy(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::XmlRowsIdentifiedByContext* MySQLParser::xmlRowsIdentifiedBy() {
   XmlRowsIdentifiedByContext *_localctx = _tracker.createInstance<XmlRowsIdentifiedByContext>(_ctx, getState());
@@ -22075,25 +19394,6 @@ size_t MySQLParser::LoadDataFileTailContext::getRuleIndex() const {
   return MySQLParser::RuleLoadDataFileTail;
 }
 
-void MySQLParser::LoadDataFileTailContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterLoadDataFileTail(this);
-}
-
-void MySQLParser::LoadDataFileTailContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitLoadDataFileTail(this);
-}
-
-
-std::any MySQLParser::LoadDataFileTailContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitLoadDataFileTail(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::LoadDataFileTailContext* MySQLParser::loadDataFileTail() {
   LoadDataFileTailContext *_localctx = _tracker.createInstance<LoadDataFileTailContext>(_ctx, getState());
@@ -22195,25 +19495,6 @@ size_t MySQLParser::LoadDataFileTargetListContext::getRuleIndex() const {
   return MySQLParser::RuleLoadDataFileTargetList;
 }
 
-void MySQLParser::LoadDataFileTargetListContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterLoadDataFileTargetList(this);
-}
-
-void MySQLParser::LoadDataFileTargetListContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitLoadDataFileTargetList(this);
-}
-
-
-std::any MySQLParser::LoadDataFileTargetListContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitLoadDataFileTargetList(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::LoadDataFileTargetListContext* MySQLParser::loadDataFileTargetList() {
   LoadDataFileTargetListContext *_localctx = _tracker.createInstance<LoadDataFileTargetListContext>(_ctx, getState());
@@ -22315,25 +19596,6 @@ size_t MySQLParser::FieldOrVariableListContext::getRuleIndex() const {
   return MySQLParser::RuleFieldOrVariableList;
 }
 
-void MySQLParser::FieldOrVariableListContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterFieldOrVariableList(this);
-}
-
-void MySQLParser::FieldOrVariableListContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitFieldOrVariableList(this);
-}
-
-
-std::any MySQLParser::FieldOrVariableListContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitFieldOrVariableList(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::FieldOrVariableListContext* MySQLParser::fieldOrVariableList() {
   FieldOrVariableListContext *_localctx = _tracker.createInstance<FieldOrVariableListContext>(_ctx, getState());
@@ -22451,25 +19713,6 @@ size_t MySQLParser::LoadAlgorithmContext::getRuleIndex() const {
   return MySQLParser::RuleLoadAlgorithm;
 }
 
-void MySQLParser::LoadAlgorithmContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterLoadAlgorithm(this);
-}
-
-void MySQLParser::LoadAlgorithmContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitLoadAlgorithm(this);
-}
-
-
-std::any MySQLParser::LoadAlgorithmContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitLoadAlgorithm(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::LoadAlgorithmContext* MySQLParser::loadAlgorithm() {
   LoadAlgorithmContext *_localctx = _tracker.createInstance<LoadAlgorithmContext>(_ctx, getState());
@@ -22527,25 +19770,6 @@ size_t MySQLParser::LoadParallelContext::getRuleIndex() const {
   return MySQLParser::RuleLoadParallel;
 }
 
-void MySQLParser::LoadParallelContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterLoadParallel(this);
-}
-
-void MySQLParser::LoadParallelContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitLoadParallel(this);
-}
-
-
-std::any MySQLParser::LoadParallelContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitLoadParallel(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::LoadParallelContext* MySQLParser::loadParallel() {
   LoadParallelContext *_localctx = _tracker.createInstance<LoadParallelContext>(_ctx, getState());
@@ -22603,25 +19827,6 @@ size_t MySQLParser::LoadMemoryContext::getRuleIndex() const {
   return MySQLParser::RuleLoadMemory;
 }
 
-void MySQLParser::LoadMemoryContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterLoadMemory(this);
-}
-
-void MySQLParser::LoadMemoryContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitLoadMemory(this);
-}
-
-
-std::any MySQLParser::LoadMemoryContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitLoadMemory(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::LoadMemoryContext* MySQLParser::loadMemory() {
   LoadMemoryContext *_localctx = _tracker.createInstance<LoadMemoryContext>(_ctx, getState());
@@ -22707,25 +19912,6 @@ size_t MySQLParser::ReplaceStatementContext::getRuleIndex() const {
   return MySQLParser::RuleReplaceStatement;
 }
 
-void MySQLParser::ReplaceStatementContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterReplaceStatement(this);
-}
-
-void MySQLParser::ReplaceStatementContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitReplaceStatement(this);
-}
-
-
-std::any MySQLParser::ReplaceStatementContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitReplaceStatement(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::ReplaceStatementContext* MySQLParser::replaceStatement() {
   ReplaceStatementContext *_localctx = _tracker.createInstance<ReplaceStatementContext>(_ctx, getState());
@@ -22851,25 +20037,6 @@ size_t MySQLParser::SelectStatementContext::getRuleIndex() const {
   return MySQLParser::RuleSelectStatement;
 }
 
-void MySQLParser::SelectStatementContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterSelectStatement(this);
-}
-
-void MySQLParser::SelectStatementContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitSelectStatement(this);
-}
-
-
-std::any MySQLParser::SelectStatementContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitSelectStatement(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::SelectStatementContext* MySQLParser::selectStatement() {
   SelectStatementContext *_localctx = _tracker.createInstance<SelectStatementContext>(_ctx, getState());
@@ -22966,25 +20133,6 @@ size_t MySQLParser::SelectStatementWithIntoContext::getRuleIndex() const {
   return MySQLParser::RuleSelectStatementWithInto;
 }
 
-void MySQLParser::SelectStatementWithIntoContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterSelectStatementWithInto(this);
-}
-
-void MySQLParser::SelectStatementWithIntoContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitSelectStatementWithInto(this);
-}
-
-
-std::any MySQLParser::SelectStatementWithIntoContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitSelectStatementWithInto(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::SelectStatementWithIntoContext* MySQLParser::selectStatementWithInto() {
   SelectStatementWithIntoContext *_localctx = _tracker.createInstance<SelectStatementWithIntoContext>(_ctx, getState());
@@ -23098,25 +20246,6 @@ size_t MySQLParser::QueryExpressionContext::getRuleIndex() const {
   return MySQLParser::RuleQueryExpression;
 }
 
-void MySQLParser::QueryExpressionContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterQueryExpression(this);
-}
-
-void MySQLParser::QueryExpressionContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitQueryExpression(this);
-}
-
-
-std::any MySQLParser::QueryExpressionContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitQueryExpression(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::QueryExpressionContext* MySQLParser::queryExpression() {
   QueryExpressionContext *_localctx = _tracker.createInstance<QueryExpressionContext>(_ctx, getState());
@@ -23242,25 +20371,6 @@ size_t MySQLParser::QueryExpressionBodyContext::getRuleIndex() const {
   return MySQLParser::RuleQueryExpressionBody;
 }
 
-void MySQLParser::QueryExpressionBodyContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterQueryExpressionBody(this);
-}
-
-void MySQLParser::QueryExpressionBodyContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitQueryExpressionBody(this);
-}
-
-
-std::any MySQLParser::QueryExpressionBodyContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitQueryExpressionBody(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::QueryExpressionBodyContext* MySQLParser::queryExpressionBody() {
   QueryExpressionBodyContext *_localctx = _tracker.createInstance<QueryExpressionBodyContext>(_ctx, getState());
@@ -23386,25 +20496,6 @@ size_t MySQLParser::QueryExpressionParensContext::getRuleIndex() const {
   return MySQLParser::RuleQueryExpressionParens;
 }
 
-void MySQLParser::QueryExpressionParensContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterQueryExpressionParens(this);
-}
-
-void MySQLParser::QueryExpressionParensContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitQueryExpressionParens(this);
-}
-
-
-std::any MySQLParser::QueryExpressionParensContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitQueryExpressionParens(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::QueryExpressionParensContext* MySQLParser::queryExpressionParens() {
   QueryExpressionParensContext *_localctx = _tracker.createInstance<QueryExpressionParensContext>(_ctx, getState());
@@ -23475,25 +20566,6 @@ size_t MySQLParser::QueryPrimaryContext::getRuleIndex() const {
   return MySQLParser::RuleQueryPrimary;
 }
 
-void MySQLParser::QueryPrimaryContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterQueryPrimary(this);
-}
-
-void MySQLParser::QueryPrimaryContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitQueryPrimary(this);
-}
-
-
-std::any MySQLParser::QueryPrimaryContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitQueryPrimary(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::QueryPrimaryContext* MySQLParser::queryPrimary() {
   QueryPrimaryContext *_localctx = _tracker.createInstance<QueryPrimaryContext>(_ctx, getState());
@@ -23606,25 +20678,6 @@ size_t MySQLParser::QuerySpecificationContext::getRuleIndex() const {
   return MySQLParser::RuleQuerySpecification;
 }
 
-void MySQLParser::QuerySpecificationContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterQuerySpecification(this);
-}
-
-void MySQLParser::QuerySpecificationContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitQuerySpecification(this);
-}
-
-
-std::any MySQLParser::QuerySpecificationContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitQuerySpecification(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::QuerySpecificationContext* MySQLParser::querySpecification() {
   QuerySpecificationContext *_localctx = _tracker.createInstance<QuerySpecificationContext>(_ctx, getState());
@@ -23773,25 +20826,6 @@ size_t MySQLParser::SubqueryContext::getRuleIndex() const {
   return MySQLParser::RuleSubquery;
 }
 
-void MySQLParser::SubqueryContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterSubquery(this);
-}
-
-void MySQLParser::SubqueryContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitSubquery(this);
-}
-
-
-std::any MySQLParser::SubqueryContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitSubquery(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::SubqueryContext* MySQLParser::subquery() {
   SubqueryContext *_localctx = _tracker.createInstance<SubqueryContext>(_ctx, getState());
@@ -23862,25 +20896,6 @@ size_t MySQLParser::QuerySpecOptionContext::getRuleIndex() const {
   return MySQLParser::RuleQuerySpecOption;
 }
 
-void MySQLParser::QuerySpecOptionContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterQuerySpecOption(this);
-}
-
-void MySQLParser::QuerySpecOptionContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitQuerySpecOption(this);
-}
-
-
-std::any MySQLParser::QuerySpecOptionContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitQuerySpecOption(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::QuerySpecOptionContext* MySQLParser::querySpecOption() {
   QuerySpecOptionContext *_localctx = _tracker.createInstance<QuerySpecOptionContext>(_ctx, getState());
@@ -23936,25 +20951,6 @@ size_t MySQLParser::LimitClauseContext::getRuleIndex() const {
   return MySQLParser::RuleLimitClause;
 }
 
-void MySQLParser::LimitClauseContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterLimitClause(this);
-}
-
-void MySQLParser::LimitClauseContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitLimitClause(this);
-}
-
-
-std::any MySQLParser::LimitClauseContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitLimitClause(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::LimitClauseContext* MySQLParser::limitClause() {
   LimitClauseContext *_localctx = _tracker.createInstance<LimitClauseContext>(_ctx, getState());
@@ -24003,25 +20999,6 @@ size_t MySQLParser::SimpleLimitClauseContext::getRuleIndex() const {
   return MySQLParser::RuleSimpleLimitClause;
 }
 
-void MySQLParser::SimpleLimitClauseContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterSimpleLimitClause(this);
-}
-
-void MySQLParser::SimpleLimitClauseContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitSimpleLimitClause(this);
-}
-
-
-std::any MySQLParser::SimpleLimitClauseContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitSimpleLimitClause(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::SimpleLimitClauseContext* MySQLParser::simpleLimitClause() {
   SimpleLimitClauseContext *_localctx = _tracker.createInstance<SimpleLimitClauseContext>(_ctx, getState());
@@ -24078,25 +21055,6 @@ size_t MySQLParser::LimitOptionsContext::getRuleIndex() const {
   return MySQLParser::RuleLimitOptions;
 }
 
-void MySQLParser::LimitOptionsContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterLimitOptions(this);
-}
-
-void MySQLParser::LimitOptionsContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitLimitOptions(this);
-}
-
-
-std::any MySQLParser::LimitOptionsContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitLimitOptions(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::LimitOptionsContext* MySQLParser::limitOptions() {
   LimitOptionsContext *_localctx = _tracker.createInstance<LimitOptionsContext>(_ctx, getState());
@@ -24178,25 +21136,6 @@ size_t MySQLParser::LimitOptionContext::getRuleIndex() const {
   return MySQLParser::RuleLimitOption;
 }
 
-void MySQLParser::LimitOptionContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterLimitOption(this);
-}
-
-void MySQLParser::LimitOptionContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitLimitOption(this);
-}
-
-
-std::any MySQLParser::LimitOptionContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitLimitOption(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::LimitOptionContext* MySQLParser::limitOption() {
   LimitOptionContext *_localctx = _tracker.createInstance<LimitOptionContext>(_ctx, getState());
@@ -24313,25 +21252,6 @@ size_t MySQLParser::IntoClauseContext::getRuleIndex() const {
   return MySQLParser::RuleIntoClause;
 }
 
-void MySQLParser::IntoClauseContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterIntoClause(this);
-}
-
-void MySQLParser::IntoClauseContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitIntoClause(this);
-}
-
-
-std::any MySQLParser::IntoClauseContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitIntoClause(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::IntoClauseContext* MySQLParser::intoClause() {
   IntoClauseContext *_localctx = _tracker.createInstance<IntoClauseContext>(_ctx, getState());
@@ -24508,25 +21428,6 @@ size_t MySQLParser::ProcedureAnalyseClauseContext::getRuleIndex() const {
   return MySQLParser::RuleProcedureAnalyseClause;
 }
 
-void MySQLParser::ProcedureAnalyseClauseContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterProcedureAnalyseClause(this);
-}
-
-void MySQLParser::ProcedureAnalyseClauseContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitProcedureAnalyseClause(this);
-}
-
-
-std::any MySQLParser::ProcedureAnalyseClauseContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitProcedureAnalyseClause(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::ProcedureAnalyseClauseContext* MySQLParser::procedureAnalyseClause() {
   ProcedureAnalyseClauseContext *_localctx = _tracker.createInstance<ProcedureAnalyseClauseContext>(_ctx, getState());
@@ -24596,25 +21497,6 @@ size_t MySQLParser::HavingClauseContext::getRuleIndex() const {
   return MySQLParser::RuleHavingClause;
 }
 
-void MySQLParser::HavingClauseContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterHavingClause(this);
-}
-
-void MySQLParser::HavingClauseContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitHavingClause(this);
-}
-
-
-std::any MySQLParser::HavingClauseContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitHavingClause(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::HavingClauseContext* MySQLParser::havingClause() {
   HavingClauseContext *_localctx = _tracker.createInstance<HavingClauseContext>(_ctx, getState());
@@ -24663,25 +21545,6 @@ size_t MySQLParser::QualifyClauseContext::getRuleIndex() const {
   return MySQLParser::RuleQualifyClause;
 }
 
-void MySQLParser::QualifyClauseContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterQualifyClause(this);
-}
-
-void MySQLParser::QualifyClauseContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitQualifyClause(this);
-}
-
-
-std::any MySQLParser::QualifyClauseContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitQualifyClause(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::QualifyClauseContext* MySQLParser::qualifyClause() {
   QualifyClauseContext *_localctx = _tracker.createInstance<QualifyClauseContext>(_ctx, getState());
@@ -24745,25 +21608,6 @@ size_t MySQLParser::WindowClauseContext::getRuleIndex() const {
   return MySQLParser::RuleWindowClause;
 }
 
-void MySQLParser::WindowClauseContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterWindowClause(this);
-}
-
-void MySQLParser::WindowClauseContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitWindowClause(this);
-}
-
-
-std::any MySQLParser::WindowClauseContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitWindowClause(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::WindowClauseContext* MySQLParser::windowClause() {
   WindowClauseContext *_localctx = _tracker.createInstance<WindowClauseContext>(_ctx, getState());
@@ -24831,25 +21675,6 @@ size_t MySQLParser::WindowDefinitionContext::getRuleIndex() const {
   return MySQLParser::RuleWindowDefinition;
 }
 
-void MySQLParser::WindowDefinitionContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterWindowDefinition(this);
-}
-
-void MySQLParser::WindowDefinitionContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitWindowDefinition(this);
-}
-
-
-std::any MySQLParser::WindowDefinitionContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitWindowDefinition(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::WindowDefinitionContext* MySQLParser::windowDefinition() {
   WindowDefinitionContext *_localctx = _tracker.createInstance<WindowDefinitionContext>(_ctx, getState());
@@ -24904,25 +21729,6 @@ size_t MySQLParser::WindowSpecContext::getRuleIndex() const {
   return MySQLParser::RuleWindowSpec;
 }
 
-void MySQLParser::WindowSpecContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterWindowSpec(this);
-}
-
-void MySQLParser::WindowSpecContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitWindowSpec(this);
-}
-
-
-std::any MySQLParser::WindowSpecContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitWindowSpec(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::WindowSpecContext* MySQLParser::windowSpec() {
   WindowSpecContext *_localctx = _tracker.createInstance<WindowSpecContext>(_ctx, getState());
@@ -24989,25 +21795,6 @@ size_t MySQLParser::WindowSpecDetailsContext::getRuleIndex() const {
   return MySQLParser::RuleWindowSpecDetails;
 }
 
-void MySQLParser::WindowSpecDetailsContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterWindowSpecDetails(this);
-}
-
-void MySQLParser::WindowSpecDetailsContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitWindowSpecDetails(this);
-}
-
-
-std::any MySQLParser::WindowSpecDetailsContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitWindowSpecDetails(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::WindowSpecDetailsContext* MySQLParser::windowSpecDetails() {
   WindowSpecDetailsContext *_localctx = _tracker.createInstance<WindowSpecDetailsContext>(_ctx, getState());
@@ -25100,25 +21887,6 @@ size_t MySQLParser::WindowFrameClauseContext::getRuleIndex() const {
   return MySQLParser::RuleWindowFrameClause;
 }
 
-void MySQLParser::WindowFrameClauseContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterWindowFrameClause(this);
-}
-
-void MySQLParser::WindowFrameClauseContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitWindowFrameClause(this);
-}
-
-
-std::any MySQLParser::WindowFrameClauseContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitWindowFrameClause(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::WindowFrameClauseContext* MySQLParser::windowFrameClause() {
   WindowFrameClauseContext *_localctx = _tracker.createInstance<WindowFrameClauseContext>(_ctx, getState());
@@ -25180,25 +21948,6 @@ size_t MySQLParser::WindowFrameUnitsContext::getRuleIndex() const {
   return MySQLParser::RuleWindowFrameUnits;
 }
 
-void MySQLParser::WindowFrameUnitsContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterWindowFrameUnits(this);
-}
-
-void MySQLParser::WindowFrameUnitsContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitWindowFrameUnits(this);
-}
-
-
-std::any MySQLParser::WindowFrameUnitsContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitWindowFrameUnits(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::WindowFrameUnitsContext* MySQLParser::windowFrameUnits() {
   WindowFrameUnitsContext *_localctx = _tracker.createInstance<WindowFrameUnitsContext>(_ctx, getState());
@@ -25255,25 +22004,6 @@ size_t MySQLParser::WindowFrameExtentContext::getRuleIndex() const {
   return MySQLParser::RuleWindowFrameExtent;
 }
 
-void MySQLParser::WindowFrameExtentContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterWindowFrameExtent(this);
-}
-
-void MySQLParser::WindowFrameExtentContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitWindowFrameExtent(this);
-}
-
-
-std::any MySQLParser::WindowFrameExtentContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitWindowFrameExtent(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::WindowFrameExtentContext* MySQLParser::windowFrameExtent() {
   WindowFrameExtentContext *_localctx = _tracker.createInstance<WindowFrameExtentContext>(_ctx, getState());
@@ -25373,25 +22103,6 @@ size_t MySQLParser::WindowFrameStartContext::getRuleIndex() const {
   return MySQLParser::RuleWindowFrameStart;
 }
 
-void MySQLParser::WindowFrameStartContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterWindowFrameStart(this);
-}
-
-void MySQLParser::WindowFrameStartContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitWindowFrameStart(this);
-}
-
-
-std::any MySQLParser::WindowFrameStartContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitWindowFrameStart(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::WindowFrameStartContext* MySQLParser::windowFrameStart() {
   WindowFrameStartContext *_localctx = _tracker.createInstance<WindowFrameStartContext>(_ctx, getState());
@@ -25502,25 +22213,6 @@ size_t MySQLParser::WindowFrameBetweenContext::getRuleIndex() const {
   return MySQLParser::RuleWindowFrameBetween;
 }
 
-void MySQLParser::WindowFrameBetweenContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterWindowFrameBetween(this);
-}
-
-void MySQLParser::WindowFrameBetweenContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitWindowFrameBetween(this);
-}
-
-
-std::any MySQLParser::WindowFrameBetweenContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitWindowFrameBetween(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::WindowFrameBetweenContext* MySQLParser::windowFrameBetween() {
   WindowFrameBetweenContext *_localctx = _tracker.createInstance<WindowFrameBetweenContext>(_ctx, getState());
@@ -25597,25 +22289,6 @@ size_t MySQLParser::WindowFrameBoundContext::getRuleIndex() const {
   return MySQLParser::RuleWindowFrameBound;
 }
 
-void MySQLParser::WindowFrameBoundContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterWindowFrameBound(this);
-}
-
-void MySQLParser::WindowFrameBoundContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitWindowFrameBound(this);
-}
-
-
-std::any MySQLParser::WindowFrameBoundContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitWindowFrameBound(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::WindowFrameBoundContext* MySQLParser::windowFrameBound() {
   WindowFrameBoundContext *_localctx = _tracker.createInstance<WindowFrameBoundContext>(_ctx, getState());
@@ -25732,25 +22405,6 @@ size_t MySQLParser::WindowFrameExclusionContext::getRuleIndex() const {
   return MySQLParser::RuleWindowFrameExclusion;
 }
 
-void MySQLParser::WindowFrameExclusionContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterWindowFrameExclusion(this);
-}
-
-void MySQLParser::WindowFrameExclusionContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitWindowFrameExclusion(this);
-}
-
-
-std::any MySQLParser::WindowFrameExclusionContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitWindowFrameExclusion(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::WindowFrameExclusionContext* MySQLParser::windowFrameExclusion() {
   WindowFrameExclusionContext *_localctx = _tracker.createInstance<WindowFrameExclusionContext>(_ctx, getState());
@@ -25847,25 +22501,6 @@ size_t MySQLParser::WithClauseContext::getRuleIndex() const {
   return MySQLParser::RuleWithClause;
 }
 
-void MySQLParser::WithClauseContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterWithClause(this);
-}
-
-void MySQLParser::WithClauseContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitWithClause(this);
-}
-
-
-std::any MySQLParser::WithClauseContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitWithClause(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::WithClauseContext* MySQLParser::withClause() {
   WithClauseContext *_localctx = _tracker.createInstance<WithClauseContext>(_ctx, getState());
@@ -25950,25 +22585,6 @@ size_t MySQLParser::CommonTableExpressionContext::getRuleIndex() const {
   return MySQLParser::RuleCommonTableExpression;
 }
 
-void MySQLParser::CommonTableExpressionContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterCommonTableExpression(this);
-}
-
-void MySQLParser::CommonTableExpressionContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitCommonTableExpression(this);
-}
-
-
-std::any MySQLParser::CommonTableExpressionContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitCommonTableExpression(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::CommonTableExpressionContext* MySQLParser::commonTableExpression() {
   CommonTableExpressionContext *_localctx = _tracker.createInstance<CommonTableExpressionContext>(_ctx, getState());
@@ -26056,25 +22672,6 @@ size_t MySQLParser::GroupByClauseContext::getRuleIndex() const {
   return MySQLParser::RuleGroupByClause;
 }
 
-void MySQLParser::GroupByClauseContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterGroupByClause(this);
-}
-
-void MySQLParser::GroupByClauseContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitGroupByClause(this);
-}
-
-
-std::any MySQLParser::GroupByClauseContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitGroupByClause(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::GroupByClauseContext* MySQLParser::groupByClause() {
   GroupByClauseContext *_localctx = _tracker.createInstance<GroupByClauseContext>(_ctx, getState());
@@ -26176,25 +22773,6 @@ size_t MySQLParser::OlapOptionContext::getRuleIndex() const {
   return MySQLParser::RuleOlapOption;
 }
 
-void MySQLParser::OlapOptionContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterOlapOption(this);
-}
-
-void MySQLParser::OlapOptionContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitOlapOption(this);
-}
-
-
-std::any MySQLParser::OlapOptionContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitOlapOption(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::OlapOptionContext* MySQLParser::olapOption() {
   OlapOptionContext *_localctx = _tracker.createInstance<OlapOptionContext>(_ctx, getState());
@@ -26247,25 +22825,6 @@ size_t MySQLParser::OrderClauseContext::getRuleIndex() const {
   return MySQLParser::RuleOrderClause;
 }
 
-void MySQLParser::OrderClauseContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterOrderClause(this);
-}
-
-void MySQLParser::OrderClauseContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitOrderClause(this);
-}
-
-
-std::any MySQLParser::OrderClauseContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitOrderClause(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::OrderClauseContext* MySQLParser::orderClause() {
   OrderClauseContext *_localctx = _tracker.createInstance<OrderClauseContext>(_ctx, getState());
@@ -26316,25 +22875,6 @@ size_t MySQLParser::DirectionContext::getRuleIndex() const {
   return MySQLParser::RuleDirection;
 }
 
-void MySQLParser::DirectionContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterDirection(this);
-}
-
-void MySQLParser::DirectionContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitDirection(this);
-}
-
-
-std::any MySQLParser::DirectionContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitDirection(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::DirectionContext* MySQLParser::direction() {
   DirectionContext *_localctx = _tracker.createInstance<DirectionContext>(_ctx, getState());
@@ -26393,25 +22933,6 @@ size_t MySQLParser::FromClauseContext::getRuleIndex() const {
   return MySQLParser::RuleFromClause;
 }
 
-void MySQLParser::FromClauseContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterFromClause(this);
-}
-
-void MySQLParser::FromClauseContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitFromClause(this);
-}
-
-
-std::any MySQLParser::FromClauseContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitFromClause(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::FromClauseContext* MySQLParser::fromClause() {
   FromClauseContext *_localctx = _tracker.createInstance<FromClauseContext>(_ctx, getState());
@@ -26484,25 +23005,6 @@ size_t MySQLParser::TableReferenceListContext::getRuleIndex() const {
   return MySQLParser::RuleTableReferenceList;
 }
 
-void MySQLParser::TableReferenceListContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterTableReferenceList(this);
-}
-
-void MySQLParser::TableReferenceListContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitTableReferenceList(this);
-}
-
-
-std::any MySQLParser::TableReferenceListContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitTableReferenceList(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::TableReferenceListContext* MySQLParser::tableReferenceList() {
   TableReferenceListContext *_localctx = _tracker.createInstance<TableReferenceListContext>(_ctx, getState());
@@ -26576,25 +23078,6 @@ size_t MySQLParser::TableValueConstructorContext::getRuleIndex() const {
   return MySQLParser::RuleTableValueConstructor;
 }
 
-void MySQLParser::TableValueConstructorContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterTableValueConstructor(this);
-}
-
-void MySQLParser::TableValueConstructorContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitTableValueConstructor(this);
-}
-
-
-std::any MySQLParser::TableValueConstructorContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitTableValueConstructor(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::TableValueConstructorContext* MySQLParser::tableValueConstructor() {
   TableValueConstructorContext *_localctx = _tracker.createInstance<TableValueConstructorContext>(_ctx, getState());
@@ -26658,25 +23141,6 @@ size_t MySQLParser::ExplicitTableContext::getRuleIndex() const {
   return MySQLParser::RuleExplicitTable;
 }
 
-void MySQLParser::ExplicitTableContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterExplicitTable(this);
-}
-
-void MySQLParser::ExplicitTableContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitExplicitTable(this);
-}
-
-
-std::any MySQLParser::ExplicitTableContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitExplicitTable(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::ExplicitTableContext* MySQLParser::explicitTable() {
   ExplicitTableContext *_localctx = _tracker.createInstance<ExplicitTableContext>(_ctx, getState());
@@ -26733,25 +23197,6 @@ size_t MySQLParser::RowValueExplicitContext::getRuleIndex() const {
   return MySQLParser::RuleRowValueExplicit;
 }
 
-void MySQLParser::RowValueExplicitContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterRowValueExplicit(this);
-}
-
-void MySQLParser::RowValueExplicitContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitRowValueExplicit(this);
-}
-
-
-std::any MySQLParser::RowValueExplicitContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitRowValueExplicit(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::RowValueExplicitContext* MySQLParser::rowValueExplicit() {
   RowValueExplicitContext *_localctx = _tracker.createInstance<RowValueExplicitContext>(_ctx, getState());
@@ -26815,25 +23260,6 @@ size_t MySQLParser::SelectOptionContext::getRuleIndex() const {
   return MySQLParser::RuleSelectOption;
 }
 
-void MySQLParser::SelectOptionContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterSelectOption(this);
-}
-
-void MySQLParser::SelectOptionContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitSelectOption(this);
-}
-
-
-std::any MySQLParser::SelectOptionContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitSelectOption(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::SelectOptionContext* MySQLParser::selectOption() {
   SelectOptionContext *_localctx = _tracker.createInstance<SelectOptionContext>(_ctx, getState());
@@ -26904,25 +23330,6 @@ size_t MySQLParser::LockingClauseListContext::getRuleIndex() const {
   return MySQLParser::RuleLockingClauseList;
 }
 
-void MySQLParser::LockingClauseListContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterLockingClauseList(this);
-}
-
-void MySQLParser::LockingClauseListContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitLockingClauseList(this);
-}
-
-
-std::any MySQLParser::LockingClauseListContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitLockingClauseList(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::LockingClauseListContext* MySQLParser::lockingClauseList() {
   LockingClauseListContext *_localctx = _tracker.createInstance<LockingClauseListContext>(_ctx, getState());
@@ -27009,25 +23416,6 @@ size_t MySQLParser::LockingClauseContext::getRuleIndex() const {
   return MySQLParser::RuleLockingClause;
 }
 
-void MySQLParser::LockingClauseContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterLockingClause(this);
-}
-
-void MySQLParser::LockingClauseContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitLockingClause(this);
-}
-
-
-std::any MySQLParser::LockingClauseContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitLockingClause(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::LockingClauseContext* MySQLParser::lockingClause() {
   LockingClauseContext *_localctx = _tracker.createInstance<LockingClauseContext>(_ctx, getState());
@@ -27120,25 +23508,6 @@ size_t MySQLParser::LockStrenghContext::getRuleIndex() const {
   return MySQLParser::RuleLockStrengh;
 }
 
-void MySQLParser::LockStrenghContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterLockStrengh(this);
-}
-
-void MySQLParser::LockStrenghContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitLockStrengh(this);
-}
-
-
-std::any MySQLParser::LockStrenghContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitLockStrengh(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::LockStrenghContext* MySQLParser::lockStrengh() {
   LockStrenghContext *_localctx = _tracker.createInstance<LockStrenghContext>(_ctx, getState());
@@ -27197,25 +23566,6 @@ size_t MySQLParser::LockedRowActionContext::getRuleIndex() const {
   return MySQLParser::RuleLockedRowAction;
 }
 
-void MySQLParser::LockedRowActionContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterLockedRowAction(this);
-}
-
-void MySQLParser::LockedRowActionContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitLockedRowAction(this);
-}
-
-
-std::any MySQLParser::LockedRowActionContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitLockedRowAction(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::LockedRowActionContext* MySQLParser::lockedRowAction() {
   LockedRowActionContext *_localctx = _tracker.createInstance<LockedRowActionContext>(_ctx, getState());
@@ -27293,25 +23643,6 @@ size_t MySQLParser::SelectItemListContext::getRuleIndex() const {
   return MySQLParser::RuleSelectItemList;
 }
 
-void MySQLParser::SelectItemListContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterSelectItemList(this);
-}
-
-void MySQLParser::SelectItemListContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitSelectItemList(this);
-}
-
-
-std::any MySQLParser::SelectItemListContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitSelectItemList(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::SelectItemListContext* MySQLParser::selectItemList() {
   SelectItemListContext *_localctx = _tracker.createInstance<SelectItemListContext>(_ctx, getState());
@@ -27393,25 +23724,6 @@ size_t MySQLParser::SelectItemContext::getRuleIndex() const {
   return MySQLParser::RuleSelectItem;
 }
 
-void MySQLParser::SelectItemContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterSelectItem(this);
-}
-
-void MySQLParser::SelectItemContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitSelectItem(this);
-}
-
-
-std::any MySQLParser::SelectItemContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitSelectItem(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::SelectItemContext* MySQLParser::selectItem() {
   SelectItemContext *_localctx = _tracker.createInstance<SelectItemContext>(_ctx, getState());
@@ -27492,25 +23804,6 @@ size_t MySQLParser::SelectAliasContext::getRuleIndex() const {
   return MySQLParser::RuleSelectAlias;
 }
 
-void MySQLParser::SelectAliasContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterSelectAlias(this);
-}
-
-void MySQLParser::SelectAliasContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitSelectAlias(this);
-}
-
-
-std::any MySQLParser::SelectAliasContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitSelectAlias(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::SelectAliasContext* MySQLParser::selectAlias() {
   SelectAliasContext *_localctx = _tracker.createInstance<SelectAliasContext>(_ctx, getState());
@@ -27586,25 +23879,6 @@ size_t MySQLParser::WhereClauseContext::getRuleIndex() const {
   return MySQLParser::RuleWhereClause;
 }
 
-void MySQLParser::WhereClauseContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterWhereClause(this);
-}
-
-void MySQLParser::WhereClauseContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitWhereClause(this);
-}
-
-
-std::any MySQLParser::WhereClauseContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitWhereClause(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::WhereClauseContext* MySQLParser::whereClause() {
   WhereClauseContext *_localctx = _tracker.createInstance<WhereClauseContext>(_ctx, getState());
@@ -27677,25 +23951,6 @@ size_t MySQLParser::TableReferenceContext::getRuleIndex() const {
   return MySQLParser::RuleTableReference;
 }
 
-void MySQLParser::TableReferenceContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterTableReference(this);
-}
-
-void MySQLParser::TableReferenceContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitTableReference(this);
-}
-
-
-std::any MySQLParser::TableReferenceContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitTableReference(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::TableReferenceContext* MySQLParser::tableReference() {
   TableReferenceContext *_localctx = _tracker.createInstance<TableReferenceContext>(_ctx, getState());
@@ -27800,25 +24055,6 @@ size_t MySQLParser::EscapedTableReferenceContext::getRuleIndex() const {
   return MySQLParser::RuleEscapedTableReference;
 }
 
-void MySQLParser::EscapedTableReferenceContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterEscapedTableReference(this);
-}
-
-void MySQLParser::EscapedTableReferenceContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitEscapedTableReference(this);
-}
-
-
-std::any MySQLParser::EscapedTableReferenceContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitEscapedTableReference(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::EscapedTableReferenceContext* MySQLParser::escapedTableReference() {
   EscapedTableReferenceContext *_localctx = _tracker.createInstance<EscapedTableReferenceContext>(_ctx, getState());
@@ -27905,25 +24141,6 @@ size_t MySQLParser::JoinedTableContext::getRuleIndex() const {
   return MySQLParser::RuleJoinedTable;
 }
 
-void MySQLParser::JoinedTableContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterJoinedTable(this);
-}
-
-void MySQLParser::JoinedTableContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitJoinedTable(this);
-}
-
-
-std::any MySQLParser::JoinedTableContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitJoinedTable(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::JoinedTableContext* MySQLParser::joinedTable() {
   JoinedTableContext *_localctx = _tracker.createInstance<JoinedTableContext>(_ctx, getState());
@@ -28065,25 +24282,6 @@ size_t MySQLParser::NaturalJoinTypeContext::getRuleIndex() const {
   return MySQLParser::RuleNaturalJoinType;
 }
 
-void MySQLParser::NaturalJoinTypeContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterNaturalJoinType(this);
-}
-
-void MySQLParser::NaturalJoinTypeContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitNaturalJoinType(this);
-}
-
-
-std::any MySQLParser::NaturalJoinTypeContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitNaturalJoinType(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::NaturalJoinTypeContext* MySQLParser::naturalJoinType() {
   NaturalJoinTypeContext *_localctx = _tracker.createInstance<NaturalJoinTypeContext>(_ctx, getState());
@@ -28185,25 +24383,6 @@ size_t MySQLParser::InnerJoinTypeContext::getRuleIndex() const {
   return MySQLParser::RuleInnerJoinType;
 }
 
-void MySQLParser::InnerJoinTypeContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterInnerJoinType(this);
-}
-
-void MySQLParser::InnerJoinTypeContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitInnerJoinType(this);
-}
-
-
-std::any MySQLParser::InnerJoinTypeContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitInnerJoinType(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::InnerJoinTypeContext* MySQLParser::innerJoinType() {
   InnerJoinTypeContext *_localctx = _tracker.createInstance<InnerJoinTypeContext>(_ctx, getState());
@@ -28294,25 +24473,6 @@ size_t MySQLParser::OuterJoinTypeContext::getRuleIndex() const {
   return MySQLParser::RuleOuterJoinType;
 }
 
-void MySQLParser::OuterJoinTypeContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterOuterJoinType(this);
-}
-
-void MySQLParser::OuterJoinTypeContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitOuterJoinType(this);
-}
-
-
-std::any MySQLParser::OuterJoinTypeContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitOuterJoinType(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::OuterJoinTypeContext* MySQLParser::outerJoinType() {
   OuterJoinTypeContext *_localctx = _tracker.createInstance<OuterJoinTypeContext>(_ctx, getState());
@@ -28390,25 +24550,6 @@ size_t MySQLParser::TableFactorContext::getRuleIndex() const {
   return MySQLParser::RuleTableFactor;
 }
 
-void MySQLParser::TableFactorContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterTableFactor(this);
-}
-
-void MySQLParser::TableFactorContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitTableFactor(this);
-}
-
-
-std::any MySQLParser::TableFactorContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitTableFactor(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::TableFactorContext* MySQLParser::tableFactor() {
   TableFactorContext *_localctx = _tracker.createInstance<TableFactorContext>(_ctx, getState());
@@ -28508,25 +24649,6 @@ size_t MySQLParser::SingleTableContext::getRuleIndex() const {
   return MySQLParser::RuleSingleTable;
 }
 
-void MySQLParser::SingleTableContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterSingleTable(this);
-}
-
-void MySQLParser::SingleTableContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitSingleTable(this);
-}
-
-
-std::any MySQLParser::SingleTableContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitSingleTable(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::SingleTableContext* MySQLParser::singleTable() {
   SingleTableContext *_localctx = _tracker.createInstance<SingleTableContext>(_ctx, getState());
@@ -28633,25 +24755,6 @@ size_t MySQLParser::SingleTableParensContext::getRuleIndex() const {
   return MySQLParser::RuleSingleTableParens;
 }
 
-void MySQLParser::SingleTableParensContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterSingleTableParens(this);
-}
-
-void MySQLParser::SingleTableParensContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitSingleTableParens(this);
-}
-
-
-std::any MySQLParser::SingleTableParensContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitSingleTableParens(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::SingleTableParensContext* MySQLParser::singleTableParens() {
   SingleTableParensContext *_localctx = _tracker.createInstance<SingleTableParensContext>(_ctx, getState());
@@ -28726,25 +24829,6 @@ size_t MySQLParser::DerivedTableContext::getRuleIndex() const {
   return MySQLParser::RuleDerivedTable;
 }
 
-void MySQLParser::DerivedTableContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterDerivedTable(this);
-}
-
-void MySQLParser::DerivedTableContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitDerivedTable(this);
-}
-
-
-std::any MySQLParser::DerivedTableContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitDerivedTable(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::DerivedTableContext* MySQLParser::derivedTable() {
   DerivedTableContext *_localctx = _tracker.createInstance<DerivedTableContext>(_ctx, getState());
@@ -28873,25 +24957,6 @@ size_t MySQLParser::TableReferenceListParensContext::getRuleIndex() const {
   return MySQLParser::RuleTableReferenceListParens;
 }
 
-void MySQLParser::TableReferenceListParensContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterTableReferenceListParens(this);
-}
-
-void MySQLParser::TableReferenceListParensContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitTableReferenceListParens(this);
-}
-
-
-std::any MySQLParser::TableReferenceListParensContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitTableReferenceListParens(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::TableReferenceListParensContext* MySQLParser::tableReferenceListParens() {
   TableReferenceListParensContext *_localctx = _tracker.createInstance<TableReferenceListParensContext>(_ctx, getState());
@@ -28982,25 +25047,6 @@ size_t MySQLParser::TableFunctionContext::getRuleIndex() const {
   return MySQLParser::RuleTableFunction;
 }
 
-void MySQLParser::TableFunctionContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterTableFunction(this);
-}
-
-void MySQLParser::TableFunctionContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitTableFunction(this);
-}
-
-
-std::any MySQLParser::TableFunctionContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitTableFunction(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::TableFunctionContext* MySQLParser::tableFunction() {
   TableFunctionContext *_localctx = _tracker.createInstance<TableFunctionContext>(_ctx, getState());
@@ -29092,25 +25138,6 @@ size_t MySQLParser::ColumnsClauseContext::getRuleIndex() const {
   return MySQLParser::RuleColumnsClause;
 }
 
-void MySQLParser::ColumnsClauseContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterColumnsClause(this);
-}
-
-void MySQLParser::ColumnsClauseContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitColumnsClause(this);
-}
-
-
-std::any MySQLParser::ColumnsClauseContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitColumnsClause(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::ColumnsClauseContext* MySQLParser::columnsClause() {
   ColumnsClauseContext *_localctx = _tracker.createInstance<ColumnsClauseContext>(_ctx, getState());
@@ -29212,25 +25239,6 @@ size_t MySQLParser::JtColumnContext::getRuleIndex() const {
   return MySQLParser::RuleJtColumn;
 }
 
-void MySQLParser::JtColumnContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterJtColumn(this);
-}
-
-void MySQLParser::JtColumnContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitJtColumn(this);
-}
-
-
-std::any MySQLParser::JtColumnContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitJtColumn(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::JtColumnContext* MySQLParser::jtColumn() {
   JtColumnContext *_localctx = _tracker.createInstance<JtColumnContext>(_ctx, getState());
@@ -29352,25 +25360,6 @@ size_t MySQLParser::OnEmptyOrErrorContext::getRuleIndex() const {
   return MySQLParser::RuleOnEmptyOrError;
 }
 
-void MySQLParser::OnEmptyOrErrorContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterOnEmptyOrError(this);
-}
-
-void MySQLParser::OnEmptyOrErrorContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitOnEmptyOrError(this);
-}
-
-
-std::any MySQLParser::OnEmptyOrErrorContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitOnEmptyOrError(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::OnEmptyOrErrorContext* MySQLParser::onEmptyOrError() {
   OnEmptyOrErrorContext *_localctx = _tracker.createInstance<OnEmptyOrErrorContext>(_ctx, getState());
@@ -29449,25 +25438,6 @@ size_t MySQLParser::OnEmptyOrErrorJsonTableContext::getRuleIndex() const {
   return MySQLParser::RuleOnEmptyOrErrorJsonTable;
 }
 
-void MySQLParser::OnEmptyOrErrorJsonTableContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterOnEmptyOrErrorJsonTable(this);
-}
-
-void MySQLParser::OnEmptyOrErrorJsonTableContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitOnEmptyOrErrorJsonTable(this);
-}
-
-
-std::any MySQLParser::OnEmptyOrErrorJsonTableContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitOnEmptyOrErrorJsonTable(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::OnEmptyOrErrorJsonTableContext* MySQLParser::onEmptyOrErrorJsonTable() {
   OnEmptyOrErrorJsonTableContext *_localctx = _tracker.createInstance<OnEmptyOrErrorJsonTableContext>(_ctx, getState());
@@ -29537,25 +25507,6 @@ size_t MySQLParser::OnEmptyContext::getRuleIndex() const {
   return MySQLParser::RuleOnEmpty;
 }
 
-void MySQLParser::OnEmptyContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterOnEmpty(this);
-}
-
-void MySQLParser::OnEmptyContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitOnEmpty(this);
-}
-
-
-std::any MySQLParser::OnEmptyContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitOnEmpty(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::OnEmptyContext* MySQLParser::onEmpty() {
   OnEmptyContext *_localctx = _tracker.createInstance<OnEmptyContext>(_ctx, getState());
@@ -29610,25 +25561,6 @@ size_t MySQLParser::OnErrorContext::getRuleIndex() const {
   return MySQLParser::RuleOnError;
 }
 
-void MySQLParser::OnErrorContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterOnError(this);
-}
-
-void MySQLParser::OnErrorContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitOnError(this);
-}
-
-
-std::any MySQLParser::OnErrorContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitOnError(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::OnErrorContext* MySQLParser::onError() {
   OnErrorContext *_localctx = _tracker.createInstance<OnErrorContext>(_ctx, getState());
@@ -29687,25 +25619,6 @@ size_t MySQLParser::JsonOnResponseContext::getRuleIndex() const {
   return MySQLParser::RuleJsonOnResponse;
 }
 
-void MySQLParser::JsonOnResponseContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterJsonOnResponse(this);
-}
-
-void MySQLParser::JsonOnResponseContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitJsonOnResponse(this);
-}
-
-
-std::any MySQLParser::JsonOnResponseContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitJsonOnResponse(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::JsonOnResponseContext* MySQLParser::jsonOnResponse() {
   JsonOnResponseContext *_localctx = _tracker.createInstance<JsonOnResponseContext>(_ctx, getState());
@@ -29778,25 +25691,6 @@ size_t MySQLParser::UnionOptionContext::getRuleIndex() const {
   return MySQLParser::RuleUnionOption;
 }
 
-void MySQLParser::UnionOptionContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterUnionOption(this);
-}
-
-void MySQLParser::UnionOptionContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitUnionOption(this);
-}
-
-
-std::any MySQLParser::UnionOptionContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitUnionOption(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::UnionOptionContext* MySQLParser::unionOption() {
   UnionOptionContext *_localctx = _tracker.createInstance<UnionOptionContext>(_ctx, getState());
@@ -29855,25 +25749,6 @@ size_t MySQLParser::TableAliasContext::getRuleIndex() const {
   return MySQLParser::RuleTableAlias;
 }
 
-void MySQLParser::TableAliasContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterTableAlias(this);
-}
-
-void MySQLParser::TableAliasContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitTableAlias(this);
-}
-
-
-std::any MySQLParser::TableAliasContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitTableAlias(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::TableAliasContext* MySQLParser::tableAlias() {
   TableAliasContext *_localctx = _tracker.createInstance<TableAliasContext>(_ctx, getState());
@@ -29950,25 +25825,6 @@ size_t MySQLParser::IndexHintListContext::getRuleIndex() const {
   return MySQLParser::RuleIndexHintList;
 }
 
-void MySQLParser::IndexHintListContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterIndexHintList(this);
-}
-
-void MySQLParser::IndexHintListContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitIndexHintList(this);
-}
-
-
-std::any MySQLParser::IndexHintListContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitIndexHintList(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::IndexHintListContext* MySQLParser::indexHintList() {
   IndexHintListContext *_localctx = _tracker.createInstance<IndexHintListContext>(_ctx, getState());
@@ -30050,25 +25906,6 @@ size_t MySQLParser::IndexHintContext::getRuleIndex() const {
   return MySQLParser::RuleIndexHint;
 }
 
-void MySQLParser::IndexHintContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterIndexHint(this);
-}
-
-void MySQLParser::IndexHintContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitIndexHint(this);
-}
-
-
-std::any MySQLParser::IndexHintContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitIndexHint(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::IndexHintContext* MySQLParser::indexHint() {
   IndexHintContext *_localctx = _tracker.createInstance<IndexHintContext>(_ctx, getState());
@@ -30177,25 +26014,6 @@ size_t MySQLParser::IndexHintTypeContext::getRuleIndex() const {
   return MySQLParser::RuleIndexHintType;
 }
 
-void MySQLParser::IndexHintTypeContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterIndexHintType(this);
-}
-
-void MySQLParser::IndexHintTypeContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitIndexHintType(this);
-}
-
-
-std::any MySQLParser::IndexHintTypeContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitIndexHintType(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::IndexHintTypeContext* MySQLParser::indexHintType() {
   IndexHintTypeContext *_localctx = _tracker.createInstance<IndexHintTypeContext>(_ctx, getState());
@@ -30252,25 +26070,6 @@ size_t MySQLParser::KeyOrIndexContext::getRuleIndex() const {
   return MySQLParser::RuleKeyOrIndex;
 }
 
-void MySQLParser::KeyOrIndexContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterKeyOrIndex(this);
-}
-
-void MySQLParser::KeyOrIndexContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitKeyOrIndex(this);
-}
-
-
-std::any MySQLParser::KeyOrIndexContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitKeyOrIndex(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::KeyOrIndexContext* MySQLParser::keyOrIndex() {
   KeyOrIndexContext *_localctx = _tracker.createInstance<KeyOrIndexContext>(_ctx, getState());
@@ -30335,25 +26134,6 @@ size_t MySQLParser::ConstraintKeyTypeContext::getRuleIndex() const {
   return MySQLParser::RuleConstraintKeyType;
 }
 
-void MySQLParser::ConstraintKeyTypeContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterConstraintKeyType(this);
-}
-
-void MySQLParser::ConstraintKeyTypeContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitConstraintKeyType(this);
-}
-
-
-std::any MySQLParser::ConstraintKeyTypeContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitConstraintKeyType(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::ConstraintKeyTypeContext* MySQLParser::constraintKeyType() {
   ConstraintKeyTypeContext *_localctx = _tracker.createInstance<ConstraintKeyTypeContext>(_ctx, getState());
@@ -30442,25 +26222,6 @@ size_t MySQLParser::IndexHintClauseContext::getRuleIndex() const {
   return MySQLParser::RuleIndexHintClause;
 }
 
-void MySQLParser::IndexHintClauseContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterIndexHintClause(this);
-}
-
-void MySQLParser::IndexHintClauseContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitIndexHintClause(this);
-}
-
-
-std::any MySQLParser::IndexHintClauseContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitIndexHintClause(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::IndexHintClauseContext* MySQLParser::indexHintClause() {
   IndexHintClauseContext *_localctx = _tracker.createInstance<IndexHintClauseContext>(_ctx, getState());
@@ -30543,25 +26304,6 @@ size_t MySQLParser::IndexListContext::getRuleIndex() const {
   return MySQLParser::RuleIndexList;
 }
 
-void MySQLParser::IndexListContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterIndexList(this);
-}
-
-void MySQLParser::IndexListContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitIndexList(this);
-}
-
-
-std::any MySQLParser::IndexListContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitIndexList(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::IndexListContext* MySQLParser::indexList() {
   IndexListContext *_localctx = _tracker.createInstance<IndexListContext>(_ctx, getState());
@@ -30621,25 +26363,6 @@ size_t MySQLParser::IndexListElementContext::getRuleIndex() const {
   return MySQLParser::RuleIndexListElement;
 }
 
-void MySQLParser::IndexListElementContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterIndexListElement(this);
-}
-
-void MySQLParser::IndexListElementContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitIndexListElement(this);
-}
-
-
-std::any MySQLParser::IndexListElementContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitIndexListElement(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::IndexListElementContext* MySQLParser::indexListElement() {
   IndexListElementContext *_localctx = _tracker.createInstance<IndexListElementContext>(_ctx, getState());
@@ -30735,25 +26458,6 @@ size_t MySQLParser::UpdateStatementContext::getRuleIndex() const {
   return MySQLParser::RuleUpdateStatement;
 }
 
-void MySQLParser::UpdateStatementContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterUpdateStatement(this);
-}
-
-void MySQLParser::UpdateStatementContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitUpdateStatement(this);
-}
-
-
-std::any MySQLParser::UpdateStatementContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitUpdateStatement(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::UpdateStatementContext* MySQLParser::updateStatement() {
   UpdateStatementContext *_localctx = _tracker.createInstance<UpdateStatementContext>(_ctx, getState());
@@ -30873,25 +26577,6 @@ size_t MySQLParser::TransactionOrLockingStatementContext::getRuleIndex() const {
   return MySQLParser::RuleTransactionOrLockingStatement;
 }
 
-void MySQLParser::TransactionOrLockingStatementContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterTransactionOrLockingStatement(this);
-}
-
-void MySQLParser::TransactionOrLockingStatementContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitTransactionOrLockingStatement(this);
-}
-
-
-std::any MySQLParser::TransactionOrLockingStatementContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitTransactionOrLockingStatement(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::TransactionOrLockingStatementContext* MySQLParser::transactionOrLockingStatement() {
   TransactionOrLockingStatementContext *_localctx = _tracker.createInstance<TransactionOrLockingStatementContext>(_ctx, getState());
@@ -31009,25 +26694,6 @@ size_t MySQLParser::TransactionStatementContext::getRuleIndex() const {
   return MySQLParser::RuleTransactionStatement;
 }
 
-void MySQLParser::TransactionStatementContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterTransactionStatement(this);
-}
-
-void MySQLParser::TransactionStatementContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitTransactionStatement(this);
-}
-
-
-std::any MySQLParser::TransactionStatementContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitTransactionStatement(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::TransactionStatementContext* MySQLParser::transactionStatement() {
   TransactionStatementContext *_localctx = _tracker.createInstance<TransactionStatementContext>(_ctx, getState());
@@ -31146,25 +26812,6 @@ size_t MySQLParser::BeginWorkContext::getRuleIndex() const {
   return MySQLParser::RuleBeginWork;
 }
 
-void MySQLParser::BeginWorkContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterBeginWork(this);
-}
-
-void MySQLParser::BeginWorkContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitBeginWork(this);
-}
-
-
-std::any MySQLParser::BeginWorkContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitBeginWork(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::BeginWorkContext* MySQLParser::beginWork() {
   BeginWorkContext *_localctx = _tracker.createInstance<BeginWorkContext>(_ctx, getState());
@@ -31236,25 +26883,6 @@ size_t MySQLParser::StartTransactionOptionListContext::getRuleIndex() const {
   return MySQLParser::RuleStartTransactionOptionList;
 }
 
-void MySQLParser::StartTransactionOptionListContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterStartTransactionOptionList(this);
-}
-
-void MySQLParser::StartTransactionOptionListContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitStartTransactionOptionList(this);
-}
-
-
-std::any MySQLParser::StartTransactionOptionListContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitStartTransactionOptionList(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::StartTransactionOptionListContext* MySQLParser::startTransactionOptionList() {
   StartTransactionOptionListContext *_localctx = _tracker.createInstance<StartTransactionOptionListContext>(_ctx, getState());
@@ -31364,25 +26992,6 @@ size_t MySQLParser::SavepointStatementContext::getRuleIndex() const {
   return MySQLParser::RuleSavepointStatement;
 }
 
-void MySQLParser::SavepointStatementContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterSavepointStatement(this);
-}
-
-void MySQLParser::SavepointStatementContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitSavepointStatement(this);
-}
-
-
-std::any MySQLParser::SavepointStatementContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitSavepointStatement(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::SavepointStatementContext* MySQLParser::savepointStatement() {
   SavepointStatementContext *_localctx = _tracker.createInstance<SavepointStatementContext>(_ctx, getState());
@@ -31573,25 +27182,6 @@ size_t MySQLParser::LockStatementContext::getRuleIndex() const {
   return MySQLParser::RuleLockStatement;
 }
 
-void MySQLParser::LockStatementContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterLockStatement(this);
-}
-
-void MySQLParser::LockStatementContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitLockStatement(this);
-}
-
-
-std::any MySQLParser::LockStatementContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitLockStatement(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::LockStatementContext* MySQLParser::lockStatement() {
   LockStatementContext *_localctx = _tracker.createInstance<LockStatementContext>(_ctx, getState());
@@ -31709,25 +27299,6 @@ size_t MySQLParser::LockItemContext::getRuleIndex() const {
   return MySQLParser::RuleLockItem;
 }
 
-void MySQLParser::LockItemContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterLockItem(this);
-}
-
-void MySQLParser::LockItemContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitLockItem(this);
-}
-
-
-std::any MySQLParser::LockItemContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitLockItem(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::LockItemContext* MySQLParser::lockItem() {
   LockItemContext *_localctx = _tracker.createInstance<LockItemContext>(_ctx, getState());
@@ -31797,25 +27368,6 @@ size_t MySQLParser::LockOptionContext::getRuleIndex() const {
   return MySQLParser::RuleLockOption;
 }
 
-void MySQLParser::LockOptionContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterLockOption(this);
-}
-
-void MySQLParser::LockOptionContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitLockOption(this);
-}
-
-
-std::any MySQLParser::LockOptionContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitLockOption(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::LockOptionContext* MySQLParser::lockOption() {
   LockOptionContext *_localctx = _tracker.createInstance<LockOptionContext>(_ctx, getState());
@@ -31957,25 +27509,6 @@ size_t MySQLParser::XaStatementContext::getRuleIndex() const {
   return MySQLParser::RuleXaStatement;
 }
 
-void MySQLParser::XaStatementContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterXaStatement(this);
-}
-
-void MySQLParser::XaStatementContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitXaStatement(this);
-}
-
-
-std::any MySQLParser::XaStatementContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitXaStatement(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::XaStatementContext* MySQLParser::xaStatement() {
   XaStatementContext *_localctx = _tracker.createInstance<XaStatementContext>(_ctx, getState());
@@ -32134,25 +27667,6 @@ size_t MySQLParser::XaConvertContext::getRuleIndex() const {
   return MySQLParser::RuleXaConvert;
 }
 
-void MySQLParser::XaConvertContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterXaConvert(this);
-}
-
-void MySQLParser::XaConvertContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitXaConvert(this);
-}
-
-
-std::any MySQLParser::XaConvertContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitXaConvert(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::XaConvertContext* MySQLParser::xaConvert() {
   XaConvertContext *_localctx = _tracker.createInstance<XaConvertContext>(_ctx, getState());
@@ -32213,25 +27727,6 @@ size_t MySQLParser::XidContext::getRuleIndex() const {
   return MySQLParser::RuleXid;
 }
 
-void MySQLParser::XidContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterXid(this);
-}
-
-void MySQLParser::XidContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitXid(this);
-}
-
-
-std::any MySQLParser::XidContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitXid(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::XidContext* MySQLParser::xid() {
   XidContext *_localctx = _tracker.createInstance<XidContext>(_ctx, getState());
@@ -32351,25 +27846,6 @@ size_t MySQLParser::ReplicationStatementContext::getRuleIndex() const {
   return MySQLParser::RuleReplicationStatement;
 }
 
-void MySQLParser::ReplicationStatementContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterReplicationStatement(this);
-}
-
-void MySQLParser::ReplicationStatementContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitReplicationStatement(this);
-}
-
-
-std::any MySQLParser::ReplicationStatementContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitReplicationStatement(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::ReplicationStatementContext* MySQLParser::replicationStatement() {
   ReplicationStatementContext *_localctx = _tracker.createInstance<ReplicationStatementContext>(_ctx, getState());
@@ -32529,25 +28005,6 @@ size_t MySQLParser::PurgeOptionsContext::getRuleIndex() const {
   return MySQLParser::RulePurgeOptions;
 }
 
-void MySQLParser::PurgeOptionsContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterPurgeOptions(this);
-}
-
-void MySQLParser::PurgeOptionsContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitPurgeOptions(this);
-}
-
-
-std::any MySQLParser::PurgeOptionsContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitPurgeOptions(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::PurgeOptionsContext* MySQLParser::purgeOptions() {
   PurgeOptionsContext *_localctx = _tracker.createInstance<PurgeOptionsContext>(_ctx, getState());
@@ -32638,25 +28095,6 @@ size_t MySQLParser::ResetOptionContext::getRuleIndex() const {
   return MySQLParser::RuleResetOption;
 }
 
-void MySQLParser::ResetOptionContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterResetOption(this);
-}
-
-void MySQLParser::ResetOptionContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitResetOption(this);
-}
-
-
-std::any MySQLParser::ResetOptionContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitResetOption(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::ResetOptionContext* MySQLParser::resetOption() {
   ResetOptionContext *_localctx = _tracker.createInstance<ResetOptionContext>(_ctx, getState());
@@ -32757,25 +28195,6 @@ size_t MySQLParser::MasterOrBinaryLogsAndGtidsContext::getRuleIndex() const {
   return MySQLParser::RuleMasterOrBinaryLogsAndGtids;
 }
 
-void MySQLParser::MasterOrBinaryLogsAndGtidsContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterMasterOrBinaryLogsAndGtids(this);
-}
-
-void MySQLParser::MasterOrBinaryLogsAndGtidsContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitMasterOrBinaryLogsAndGtids(this);
-}
-
-
-std::any MySQLParser::MasterOrBinaryLogsAndGtidsContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitMasterOrBinaryLogsAndGtids(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::MasterOrBinaryLogsAndGtidsContext* MySQLParser::masterOrBinaryLogsAndGtids() {
   MasterOrBinaryLogsAndGtidsContext *_localctx = _tracker.createInstance<MasterOrBinaryLogsAndGtidsContext>(_ctx, getState());
@@ -32848,25 +28267,6 @@ size_t MySQLParser::SourceResetOptionsContext::getRuleIndex() const {
   return MySQLParser::RuleSourceResetOptions;
 }
 
-void MySQLParser::SourceResetOptionsContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterSourceResetOptions(this);
-}
-
-void MySQLParser::SourceResetOptionsContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitSourceResetOptions(this);
-}
-
-
-std::any MySQLParser::SourceResetOptionsContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitSourceResetOptions(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::SourceResetOptionsContext* MySQLParser::sourceResetOptions() {
   SourceResetOptionsContext *_localctx = _tracker.createInstance<SourceResetOptionsContext>(_ctx, getState());
@@ -32931,25 +28331,6 @@ size_t MySQLParser::ReplicationLoadContext::getRuleIndex() const {
   return MySQLParser::RuleReplicationLoad;
 }
 
-void MySQLParser::ReplicationLoadContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterReplicationLoad(this);
-}
-
-void MySQLParser::ReplicationLoadContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitReplicationLoad(this);
-}
-
-
-std::any MySQLParser::ReplicationLoadContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitReplicationLoad(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::ReplicationLoadContext* MySQLParser::replicationLoad() {
   ReplicationLoadContext *_localctx = _tracker.createInstance<ReplicationLoadContext>(_ctx, getState());
@@ -33024,25 +28405,6 @@ size_t MySQLParser::ChangeReplicationSourceContext::getRuleIndex() const {
   return MySQLParser::RuleChangeReplicationSource;
 }
 
-void MySQLParser::ChangeReplicationSourceContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterChangeReplicationSource(this);
-}
-
-void MySQLParser::ChangeReplicationSourceContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitChangeReplicationSource(this);
-}
-
-
-std::any MySQLParser::ChangeReplicationSourceContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitChangeReplicationSource(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::ChangeReplicationSourceContext* MySQLParser::changeReplicationSource() {
   ChangeReplicationSourceContext *_localctx = _tracker.createInstance<ChangeReplicationSourceContext>(_ctx, getState());
@@ -33123,25 +28485,6 @@ size_t MySQLParser::ChangeSourceContext::getRuleIndex() const {
   return MySQLParser::RuleChangeSource;
 }
 
-void MySQLParser::ChangeSourceContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterChangeSource(this);
-}
-
-void MySQLParser::ChangeSourceContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitChangeSource(this);
-}
-
-
-std::any MySQLParser::ChangeSourceContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitChangeSource(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::ChangeSourceContext* MySQLParser::changeSource() {
   ChangeSourceContext *_localctx = _tracker.createInstance<ChangeSourceContext>(_ctx, getState());
@@ -33211,25 +28554,6 @@ size_t MySQLParser::SourceDefinitionsContext::getRuleIndex() const {
   return MySQLParser::RuleSourceDefinitions;
 }
 
-void MySQLParser::SourceDefinitionsContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterSourceDefinitions(this);
-}
-
-void MySQLParser::SourceDefinitionsContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitSourceDefinitions(this);
-}
-
-
-std::any MySQLParser::SourceDefinitionsContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitSourceDefinitions(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::SourceDefinitionsContext* MySQLParser::sourceDefinitions() {
   SourceDefinitionsContext *_localctx = _tracker.createInstance<SourceDefinitionsContext>(_ctx, getState());
@@ -33461,25 +28785,6 @@ size_t MySQLParser::SourceDefinitionContext::getRuleIndex() const {
   return MySQLParser::RuleSourceDefinition;
 }
 
-void MySQLParser::SourceDefinitionContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterSourceDefinition(this);
-}
-
-void MySQLParser::SourceDefinitionContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitSourceDefinition(this);
-}
-
-
-std::any MySQLParser::SourceDefinitionContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitSourceDefinition(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::SourceDefinitionContext* MySQLParser::sourceDefinition() {
   SourceDefinitionContext *_localctx = _tracker.createInstance<SourceDefinitionContext>(_ctx, getState());
@@ -33908,25 +29213,6 @@ size_t MySQLParser::ChangeReplicationSourceAutoPositionContext::getRuleIndex() c
   return MySQLParser::RuleChangeReplicationSourceAutoPosition;
 }
 
-void MySQLParser::ChangeReplicationSourceAutoPositionContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterChangeReplicationSourceAutoPosition(this);
-}
-
-void MySQLParser::ChangeReplicationSourceAutoPositionContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitChangeReplicationSourceAutoPosition(this);
-}
-
-
-std::any MySQLParser::ChangeReplicationSourceAutoPositionContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitChangeReplicationSourceAutoPosition(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::ChangeReplicationSourceAutoPositionContext* MySQLParser::changeReplicationSourceAutoPosition() {
   ChangeReplicationSourceAutoPositionContext *_localctx = _tracker.createInstance<ChangeReplicationSourceAutoPositionContext>(_ctx, getState());
@@ -33981,25 +29267,6 @@ size_t MySQLParser::ChangeReplicationSourceHostContext::getRuleIndex() const {
   return MySQLParser::RuleChangeReplicationSourceHost;
 }
 
-void MySQLParser::ChangeReplicationSourceHostContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterChangeReplicationSourceHost(this);
-}
-
-void MySQLParser::ChangeReplicationSourceHostContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitChangeReplicationSourceHost(this);
-}
-
-
-std::any MySQLParser::ChangeReplicationSourceHostContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitChangeReplicationSourceHost(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::ChangeReplicationSourceHostContext* MySQLParser::changeReplicationSourceHost() {
   ChangeReplicationSourceHostContext *_localctx = _tracker.createInstance<ChangeReplicationSourceHostContext>(_ctx, getState());
@@ -34054,25 +29321,6 @@ size_t MySQLParser::ChangeReplicationSourceBindContext::getRuleIndex() const {
   return MySQLParser::RuleChangeReplicationSourceBind;
 }
 
-void MySQLParser::ChangeReplicationSourceBindContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterChangeReplicationSourceBind(this);
-}
-
-void MySQLParser::ChangeReplicationSourceBindContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitChangeReplicationSourceBind(this);
-}
-
-
-std::any MySQLParser::ChangeReplicationSourceBindContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitChangeReplicationSourceBind(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::ChangeReplicationSourceBindContext* MySQLParser::changeReplicationSourceBind() {
   ChangeReplicationSourceBindContext *_localctx = _tracker.createInstance<ChangeReplicationSourceBindContext>(_ctx, getState());
@@ -34127,25 +29375,6 @@ size_t MySQLParser::ChangeReplicationSourceUserContext::getRuleIndex() const {
   return MySQLParser::RuleChangeReplicationSourceUser;
 }
 
-void MySQLParser::ChangeReplicationSourceUserContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterChangeReplicationSourceUser(this);
-}
-
-void MySQLParser::ChangeReplicationSourceUserContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitChangeReplicationSourceUser(this);
-}
-
-
-std::any MySQLParser::ChangeReplicationSourceUserContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitChangeReplicationSourceUser(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::ChangeReplicationSourceUserContext* MySQLParser::changeReplicationSourceUser() {
   ChangeReplicationSourceUserContext *_localctx = _tracker.createInstance<ChangeReplicationSourceUserContext>(_ctx, getState());
@@ -34200,25 +29429,6 @@ size_t MySQLParser::ChangeReplicationSourcePasswordContext::getRuleIndex() const
   return MySQLParser::RuleChangeReplicationSourcePassword;
 }
 
-void MySQLParser::ChangeReplicationSourcePasswordContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterChangeReplicationSourcePassword(this);
-}
-
-void MySQLParser::ChangeReplicationSourcePasswordContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitChangeReplicationSourcePassword(this);
-}
-
-
-std::any MySQLParser::ChangeReplicationSourcePasswordContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitChangeReplicationSourcePassword(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::ChangeReplicationSourcePasswordContext* MySQLParser::changeReplicationSourcePassword() {
   ChangeReplicationSourcePasswordContext *_localctx = _tracker.createInstance<ChangeReplicationSourcePasswordContext>(_ctx, getState());
@@ -34273,25 +29483,6 @@ size_t MySQLParser::ChangeReplicationSourcePortContext::getRuleIndex() const {
   return MySQLParser::RuleChangeReplicationSourcePort;
 }
 
-void MySQLParser::ChangeReplicationSourcePortContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterChangeReplicationSourcePort(this);
-}
-
-void MySQLParser::ChangeReplicationSourcePortContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitChangeReplicationSourcePort(this);
-}
-
-
-std::any MySQLParser::ChangeReplicationSourcePortContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitChangeReplicationSourcePort(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::ChangeReplicationSourcePortContext* MySQLParser::changeReplicationSourcePort() {
   ChangeReplicationSourcePortContext *_localctx = _tracker.createInstance<ChangeReplicationSourcePortContext>(_ctx, getState());
@@ -34346,25 +29537,6 @@ size_t MySQLParser::ChangeReplicationSourceConnectRetryContext::getRuleIndex() c
   return MySQLParser::RuleChangeReplicationSourceConnectRetry;
 }
 
-void MySQLParser::ChangeReplicationSourceConnectRetryContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterChangeReplicationSourceConnectRetry(this);
-}
-
-void MySQLParser::ChangeReplicationSourceConnectRetryContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitChangeReplicationSourceConnectRetry(this);
-}
-
-
-std::any MySQLParser::ChangeReplicationSourceConnectRetryContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitChangeReplicationSourceConnectRetry(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::ChangeReplicationSourceConnectRetryContext* MySQLParser::changeReplicationSourceConnectRetry() {
   ChangeReplicationSourceConnectRetryContext *_localctx = _tracker.createInstance<ChangeReplicationSourceConnectRetryContext>(_ctx, getState());
@@ -34419,25 +29591,6 @@ size_t MySQLParser::ChangeReplicationSourceRetryCountContext::getRuleIndex() con
   return MySQLParser::RuleChangeReplicationSourceRetryCount;
 }
 
-void MySQLParser::ChangeReplicationSourceRetryCountContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterChangeReplicationSourceRetryCount(this);
-}
-
-void MySQLParser::ChangeReplicationSourceRetryCountContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitChangeReplicationSourceRetryCount(this);
-}
-
-
-std::any MySQLParser::ChangeReplicationSourceRetryCountContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitChangeReplicationSourceRetryCount(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::ChangeReplicationSourceRetryCountContext* MySQLParser::changeReplicationSourceRetryCount() {
   ChangeReplicationSourceRetryCountContext *_localctx = _tracker.createInstance<ChangeReplicationSourceRetryCountContext>(_ctx, getState());
@@ -34492,25 +29645,6 @@ size_t MySQLParser::ChangeReplicationSourceDelayContext::getRuleIndex() const {
   return MySQLParser::RuleChangeReplicationSourceDelay;
 }
 
-void MySQLParser::ChangeReplicationSourceDelayContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterChangeReplicationSourceDelay(this);
-}
-
-void MySQLParser::ChangeReplicationSourceDelayContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitChangeReplicationSourceDelay(this);
-}
-
-
-std::any MySQLParser::ChangeReplicationSourceDelayContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitChangeReplicationSourceDelay(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::ChangeReplicationSourceDelayContext* MySQLParser::changeReplicationSourceDelay() {
   ChangeReplicationSourceDelayContext *_localctx = _tracker.createInstance<ChangeReplicationSourceDelayContext>(_ctx, getState());
@@ -34565,25 +29699,6 @@ size_t MySQLParser::ChangeReplicationSourceSSLContext::getRuleIndex() const {
   return MySQLParser::RuleChangeReplicationSourceSSL;
 }
 
-void MySQLParser::ChangeReplicationSourceSSLContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterChangeReplicationSourceSSL(this);
-}
-
-void MySQLParser::ChangeReplicationSourceSSLContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitChangeReplicationSourceSSL(this);
-}
-
-
-std::any MySQLParser::ChangeReplicationSourceSSLContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitChangeReplicationSourceSSL(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::ChangeReplicationSourceSSLContext* MySQLParser::changeReplicationSourceSSL() {
   ChangeReplicationSourceSSLContext *_localctx = _tracker.createInstance<ChangeReplicationSourceSSLContext>(_ctx, getState());
@@ -34638,25 +29753,6 @@ size_t MySQLParser::ChangeReplicationSourceSSLCAContext::getRuleIndex() const {
   return MySQLParser::RuleChangeReplicationSourceSSLCA;
 }
 
-void MySQLParser::ChangeReplicationSourceSSLCAContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterChangeReplicationSourceSSLCA(this);
-}
-
-void MySQLParser::ChangeReplicationSourceSSLCAContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitChangeReplicationSourceSSLCA(this);
-}
-
-
-std::any MySQLParser::ChangeReplicationSourceSSLCAContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitChangeReplicationSourceSSLCA(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::ChangeReplicationSourceSSLCAContext* MySQLParser::changeReplicationSourceSSLCA() {
   ChangeReplicationSourceSSLCAContext *_localctx = _tracker.createInstance<ChangeReplicationSourceSSLCAContext>(_ctx, getState());
@@ -34711,25 +29807,6 @@ size_t MySQLParser::ChangeReplicationSourceSSLCApathContext::getRuleIndex() cons
   return MySQLParser::RuleChangeReplicationSourceSSLCApath;
 }
 
-void MySQLParser::ChangeReplicationSourceSSLCApathContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterChangeReplicationSourceSSLCApath(this);
-}
-
-void MySQLParser::ChangeReplicationSourceSSLCApathContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitChangeReplicationSourceSSLCApath(this);
-}
-
-
-std::any MySQLParser::ChangeReplicationSourceSSLCApathContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitChangeReplicationSourceSSLCApath(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::ChangeReplicationSourceSSLCApathContext* MySQLParser::changeReplicationSourceSSLCApath() {
   ChangeReplicationSourceSSLCApathContext *_localctx = _tracker.createInstance<ChangeReplicationSourceSSLCApathContext>(_ctx, getState());
@@ -34784,25 +29861,6 @@ size_t MySQLParser::ChangeReplicationSourceSSLCipherContext::getRuleIndex() cons
   return MySQLParser::RuleChangeReplicationSourceSSLCipher;
 }
 
-void MySQLParser::ChangeReplicationSourceSSLCipherContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterChangeReplicationSourceSSLCipher(this);
-}
-
-void MySQLParser::ChangeReplicationSourceSSLCipherContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitChangeReplicationSourceSSLCipher(this);
-}
-
-
-std::any MySQLParser::ChangeReplicationSourceSSLCipherContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitChangeReplicationSourceSSLCipher(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::ChangeReplicationSourceSSLCipherContext* MySQLParser::changeReplicationSourceSSLCipher() {
   ChangeReplicationSourceSSLCipherContext *_localctx = _tracker.createInstance<ChangeReplicationSourceSSLCipherContext>(_ctx, getState());
@@ -34857,25 +29915,6 @@ size_t MySQLParser::ChangeReplicationSourceSSLCLRContext::getRuleIndex() const {
   return MySQLParser::RuleChangeReplicationSourceSSLCLR;
 }
 
-void MySQLParser::ChangeReplicationSourceSSLCLRContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterChangeReplicationSourceSSLCLR(this);
-}
-
-void MySQLParser::ChangeReplicationSourceSSLCLRContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitChangeReplicationSourceSSLCLR(this);
-}
-
-
-std::any MySQLParser::ChangeReplicationSourceSSLCLRContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitChangeReplicationSourceSSLCLR(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::ChangeReplicationSourceSSLCLRContext* MySQLParser::changeReplicationSourceSSLCLR() {
   ChangeReplicationSourceSSLCLRContext *_localctx = _tracker.createInstance<ChangeReplicationSourceSSLCLRContext>(_ctx, getState());
@@ -34930,25 +29969,6 @@ size_t MySQLParser::ChangeReplicationSourceSSLCLRpathContext::getRuleIndex() con
   return MySQLParser::RuleChangeReplicationSourceSSLCLRpath;
 }
 
-void MySQLParser::ChangeReplicationSourceSSLCLRpathContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterChangeReplicationSourceSSLCLRpath(this);
-}
-
-void MySQLParser::ChangeReplicationSourceSSLCLRpathContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitChangeReplicationSourceSSLCLRpath(this);
-}
-
-
-std::any MySQLParser::ChangeReplicationSourceSSLCLRpathContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitChangeReplicationSourceSSLCLRpath(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::ChangeReplicationSourceSSLCLRpathContext* MySQLParser::changeReplicationSourceSSLCLRpath() {
   ChangeReplicationSourceSSLCLRpathContext *_localctx = _tracker.createInstance<ChangeReplicationSourceSSLCLRpathContext>(_ctx, getState());
@@ -35003,25 +30023,6 @@ size_t MySQLParser::ChangeReplicationSourceSSLKeyContext::getRuleIndex() const {
   return MySQLParser::RuleChangeReplicationSourceSSLKey;
 }
 
-void MySQLParser::ChangeReplicationSourceSSLKeyContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterChangeReplicationSourceSSLKey(this);
-}
-
-void MySQLParser::ChangeReplicationSourceSSLKeyContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitChangeReplicationSourceSSLKey(this);
-}
-
-
-std::any MySQLParser::ChangeReplicationSourceSSLKeyContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitChangeReplicationSourceSSLKey(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::ChangeReplicationSourceSSLKeyContext* MySQLParser::changeReplicationSourceSSLKey() {
   ChangeReplicationSourceSSLKeyContext *_localctx = _tracker.createInstance<ChangeReplicationSourceSSLKeyContext>(_ctx, getState());
@@ -35076,25 +30077,6 @@ size_t MySQLParser::ChangeReplicationSourceSSLVerifyServerCertContext::getRuleIn
   return MySQLParser::RuleChangeReplicationSourceSSLVerifyServerCert;
 }
 
-void MySQLParser::ChangeReplicationSourceSSLVerifyServerCertContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterChangeReplicationSourceSSLVerifyServerCert(this);
-}
-
-void MySQLParser::ChangeReplicationSourceSSLVerifyServerCertContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitChangeReplicationSourceSSLVerifyServerCert(this);
-}
-
-
-std::any MySQLParser::ChangeReplicationSourceSSLVerifyServerCertContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitChangeReplicationSourceSSLVerifyServerCert(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::ChangeReplicationSourceSSLVerifyServerCertContext* MySQLParser::changeReplicationSourceSSLVerifyServerCert() {
   ChangeReplicationSourceSSLVerifyServerCertContext *_localctx = _tracker.createInstance<ChangeReplicationSourceSSLVerifyServerCertContext>(_ctx, getState());
@@ -35149,25 +30131,6 @@ size_t MySQLParser::ChangeReplicationSourceTLSVersionContext::getRuleIndex() con
   return MySQLParser::RuleChangeReplicationSourceTLSVersion;
 }
 
-void MySQLParser::ChangeReplicationSourceTLSVersionContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterChangeReplicationSourceTLSVersion(this);
-}
-
-void MySQLParser::ChangeReplicationSourceTLSVersionContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitChangeReplicationSourceTLSVersion(this);
-}
-
-
-std::any MySQLParser::ChangeReplicationSourceTLSVersionContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitChangeReplicationSourceTLSVersion(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::ChangeReplicationSourceTLSVersionContext* MySQLParser::changeReplicationSourceTLSVersion() {
   ChangeReplicationSourceTLSVersionContext *_localctx = _tracker.createInstance<ChangeReplicationSourceTLSVersionContext>(_ctx, getState());
@@ -35222,25 +30185,6 @@ size_t MySQLParser::ChangeReplicationSourceTLSCiphersuitesContext::getRuleIndex(
   return MySQLParser::RuleChangeReplicationSourceTLSCiphersuites;
 }
 
-void MySQLParser::ChangeReplicationSourceTLSCiphersuitesContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterChangeReplicationSourceTLSCiphersuites(this);
-}
-
-void MySQLParser::ChangeReplicationSourceTLSCiphersuitesContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitChangeReplicationSourceTLSCiphersuites(this);
-}
-
-
-std::any MySQLParser::ChangeReplicationSourceTLSCiphersuitesContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitChangeReplicationSourceTLSCiphersuites(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::ChangeReplicationSourceTLSCiphersuitesContext* MySQLParser::changeReplicationSourceTLSCiphersuites() {
   ChangeReplicationSourceTLSCiphersuitesContext *_localctx = _tracker.createInstance<ChangeReplicationSourceTLSCiphersuitesContext>(_ctx, getState());
@@ -35297,25 +30241,6 @@ size_t MySQLParser::ChangeReplicationSourceSSLCertContext::getRuleIndex() const 
   return MySQLParser::RuleChangeReplicationSourceSSLCert;
 }
 
-void MySQLParser::ChangeReplicationSourceSSLCertContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterChangeReplicationSourceSSLCert(this);
-}
-
-void MySQLParser::ChangeReplicationSourceSSLCertContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitChangeReplicationSourceSSLCert(this);
-}
-
-
-std::any MySQLParser::ChangeReplicationSourceSSLCertContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitChangeReplicationSourceSSLCert(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::ChangeReplicationSourceSSLCertContext* MySQLParser::changeReplicationSourceSSLCert() {
   ChangeReplicationSourceSSLCertContext *_localctx = _tracker.createInstance<ChangeReplicationSourceSSLCertContext>(_ctx, getState());
@@ -35370,25 +30295,6 @@ size_t MySQLParser::ChangeReplicationSourcePublicKeyContext::getRuleIndex() cons
   return MySQLParser::RuleChangeReplicationSourcePublicKey;
 }
 
-void MySQLParser::ChangeReplicationSourcePublicKeyContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterChangeReplicationSourcePublicKey(this);
-}
-
-void MySQLParser::ChangeReplicationSourcePublicKeyContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitChangeReplicationSourcePublicKey(this);
-}
-
-
-std::any MySQLParser::ChangeReplicationSourcePublicKeyContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitChangeReplicationSourcePublicKey(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::ChangeReplicationSourcePublicKeyContext* MySQLParser::changeReplicationSourcePublicKey() {
   ChangeReplicationSourcePublicKeyContext *_localctx = _tracker.createInstance<ChangeReplicationSourcePublicKeyContext>(_ctx, getState());
@@ -35445,25 +30351,6 @@ size_t MySQLParser::ChangeReplicationSourceGetSourcePublicKeyContext::getRuleInd
   return MySQLParser::RuleChangeReplicationSourceGetSourcePublicKey;
 }
 
-void MySQLParser::ChangeReplicationSourceGetSourcePublicKeyContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterChangeReplicationSourceGetSourcePublicKey(this);
-}
-
-void MySQLParser::ChangeReplicationSourceGetSourcePublicKeyContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitChangeReplicationSourceGetSourcePublicKey(this);
-}
-
-
-std::any MySQLParser::ChangeReplicationSourceGetSourcePublicKeyContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitChangeReplicationSourceGetSourcePublicKey(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::ChangeReplicationSourceGetSourcePublicKeyContext* MySQLParser::changeReplicationSourceGetSourcePublicKey() {
   ChangeReplicationSourceGetSourcePublicKeyContext *_localctx = _tracker.createInstance<ChangeReplicationSourceGetSourcePublicKeyContext>(_ctx, getState());
@@ -35520,25 +30407,6 @@ size_t MySQLParser::ChangeReplicationSourceHeartbeatPeriodContext::getRuleIndex(
   return MySQLParser::RuleChangeReplicationSourceHeartbeatPeriod;
 }
 
-void MySQLParser::ChangeReplicationSourceHeartbeatPeriodContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterChangeReplicationSourceHeartbeatPeriod(this);
-}
-
-void MySQLParser::ChangeReplicationSourceHeartbeatPeriodContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitChangeReplicationSourceHeartbeatPeriod(this);
-}
-
-
-std::any MySQLParser::ChangeReplicationSourceHeartbeatPeriodContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitChangeReplicationSourceHeartbeatPeriod(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::ChangeReplicationSourceHeartbeatPeriodContext* MySQLParser::changeReplicationSourceHeartbeatPeriod() {
   ChangeReplicationSourceHeartbeatPeriodContext *_localctx = _tracker.createInstance<ChangeReplicationSourceHeartbeatPeriodContext>(_ctx, getState());
@@ -35593,25 +30461,6 @@ size_t MySQLParser::ChangeReplicationSourceCompressionAlgorithmContext::getRuleI
   return MySQLParser::RuleChangeReplicationSourceCompressionAlgorithm;
 }
 
-void MySQLParser::ChangeReplicationSourceCompressionAlgorithmContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterChangeReplicationSourceCompressionAlgorithm(this);
-}
-
-void MySQLParser::ChangeReplicationSourceCompressionAlgorithmContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitChangeReplicationSourceCompressionAlgorithm(this);
-}
-
-
-std::any MySQLParser::ChangeReplicationSourceCompressionAlgorithmContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitChangeReplicationSourceCompressionAlgorithm(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::ChangeReplicationSourceCompressionAlgorithmContext* MySQLParser::changeReplicationSourceCompressionAlgorithm() {
   ChangeReplicationSourceCompressionAlgorithmContext *_localctx = _tracker.createInstance<ChangeReplicationSourceCompressionAlgorithmContext>(_ctx, getState());
@@ -35668,25 +30517,6 @@ size_t MySQLParser::ChangeReplicationSourceZstdCompressionLevelContext::getRuleI
   return MySQLParser::RuleChangeReplicationSourceZstdCompressionLevel;
 }
 
-void MySQLParser::ChangeReplicationSourceZstdCompressionLevelContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterChangeReplicationSourceZstdCompressionLevel(this);
-}
-
-void MySQLParser::ChangeReplicationSourceZstdCompressionLevelContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitChangeReplicationSourceZstdCompressionLevel(this);
-}
-
-
-std::any MySQLParser::ChangeReplicationSourceZstdCompressionLevelContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitChangeReplicationSourceZstdCompressionLevel(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::ChangeReplicationSourceZstdCompressionLevelContext* MySQLParser::changeReplicationSourceZstdCompressionLevel() {
   ChangeReplicationSourceZstdCompressionLevelContext *_localctx = _tracker.createInstance<ChangeReplicationSourceZstdCompressionLevelContext>(_ctx, getState());
@@ -35743,25 +30573,6 @@ size_t MySQLParser::PrivilegeCheckDefContext::getRuleIndex() const {
   return MySQLParser::RulePrivilegeCheckDef;
 }
 
-void MySQLParser::PrivilegeCheckDefContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterPrivilegeCheckDef(this);
-}
-
-void MySQLParser::PrivilegeCheckDefContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitPrivilegeCheckDef(this);
-}
-
-
-std::any MySQLParser::PrivilegeCheckDefContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitPrivilegeCheckDef(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::PrivilegeCheckDefContext* MySQLParser::privilegeCheckDef() {
   PrivilegeCheckDefContext *_localctx = _tracker.createInstance<PrivilegeCheckDefContext>(_ctx, getState());
@@ -35833,25 +30644,6 @@ size_t MySQLParser::TablePrimaryKeyCheckDefContext::getRuleIndex() const {
   return MySQLParser::RuleTablePrimaryKeyCheckDef;
 }
 
-void MySQLParser::TablePrimaryKeyCheckDefContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterTablePrimaryKeyCheckDef(this);
-}
-
-void MySQLParser::TablePrimaryKeyCheckDefContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitTablePrimaryKeyCheckDef(this);
-}
-
-
-std::any MySQLParser::TablePrimaryKeyCheckDefContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitTablePrimaryKeyCheckDef(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::TablePrimaryKeyCheckDefContext* MySQLParser::tablePrimaryKeyCheckDef() {
   TablePrimaryKeyCheckDefContext *_localctx = _tracker.createInstance<TablePrimaryKeyCheckDefContext>(_ctx, getState());
@@ -35911,25 +30703,6 @@ size_t MySQLParser::AssignGtidsToAnonymousTransactionsDefinitionContext::getRule
   return MySQLParser::RuleAssignGtidsToAnonymousTransactionsDefinition;
 }
 
-void MySQLParser::AssignGtidsToAnonymousTransactionsDefinitionContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterAssignGtidsToAnonymousTransactionsDefinition(this);
-}
-
-void MySQLParser::AssignGtidsToAnonymousTransactionsDefinitionContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitAssignGtidsToAnonymousTransactionsDefinition(this);
-}
-
-
-std::any MySQLParser::AssignGtidsToAnonymousTransactionsDefinitionContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitAssignGtidsToAnonymousTransactionsDefinition(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::AssignGtidsToAnonymousTransactionsDefinitionContext* MySQLParser::assignGtidsToAnonymousTransactionsDefinition() {
   AssignGtidsToAnonymousTransactionsDefinitionContext *_localctx = _tracker.createInstance<AssignGtidsToAnonymousTransactionsDefinitionContext>(_ctx, getState());
@@ -36000,25 +30773,6 @@ size_t MySQLParser::SourceTlsCiphersuitesDefContext::getRuleIndex() const {
   return MySQLParser::RuleSourceTlsCiphersuitesDef;
 }
 
-void MySQLParser::SourceTlsCiphersuitesDefContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterSourceTlsCiphersuitesDef(this);
-}
-
-void MySQLParser::SourceTlsCiphersuitesDefContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitSourceTlsCiphersuitesDef(this);
-}
-
-
-std::any MySQLParser::SourceTlsCiphersuitesDefContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitSourceTlsCiphersuitesDef(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::SourceTlsCiphersuitesDefContext* MySQLParser::sourceTlsCiphersuitesDef() {
   SourceTlsCiphersuitesDefContext *_localctx = _tracker.createInstance<SourceTlsCiphersuitesDefContext>(_ctx, getState());
@@ -36106,25 +30860,6 @@ size_t MySQLParser::SourceFileDefContext::getRuleIndex() const {
   return MySQLParser::RuleSourceFileDef;
 }
 
-void MySQLParser::SourceFileDefContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterSourceFileDef(this);
-}
-
-void MySQLParser::SourceFileDefContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitSourceFileDef(this);
-}
-
-
-std::any MySQLParser::SourceFileDefContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitSourceFileDef(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::SourceFileDefContext* MySQLParser::sourceFileDef() {
   SourceFileDefContext *_localctx = _tracker.createInstance<SourceFileDefContext>(_ctx, getState());
@@ -36220,25 +30955,6 @@ size_t MySQLParser::SourceLogFileContext::getRuleIndex() const {
   return MySQLParser::RuleSourceLogFile;
 }
 
-void MySQLParser::SourceLogFileContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterSourceLogFile(this);
-}
-
-void MySQLParser::SourceLogFileContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitSourceLogFile(this);
-}
-
-
-std::any MySQLParser::SourceLogFileContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitSourceLogFile(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::SourceLogFileContext* MySQLParser::sourceLogFile() {
   SourceLogFileContext *_localctx = _tracker.createInstance<SourceLogFileContext>(_ctx, getState());
@@ -36293,25 +31009,6 @@ size_t MySQLParser::SourceLogPosContext::getRuleIndex() const {
   return MySQLParser::RuleSourceLogPos;
 }
 
-void MySQLParser::SourceLogPosContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterSourceLogPos(this);
-}
-
-void MySQLParser::SourceLogPosContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitSourceLogPos(this);
-}
-
-
-std::any MySQLParser::SourceLogPosContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitSourceLogPos(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::SourceLogPosContext* MySQLParser::sourceLogPos() {
   SourceLogPosContext *_localctx = _tracker.createInstance<SourceLogPosContext>(_ctx, getState());
@@ -36382,25 +31079,6 @@ size_t MySQLParser::ServerIdListContext::getRuleIndex() const {
   return MySQLParser::RuleServerIdList;
 }
 
-void MySQLParser::ServerIdListContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterServerIdList(this);
-}
-
-void MySQLParser::ServerIdListContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitServerIdList(this);
-}
-
-
-std::any MySQLParser::ServerIdListContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitServerIdList(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::ServerIdListContext* MySQLParser::serverIdList() {
   ServerIdListContext *_localctx = _tracker.createInstance<ServerIdListContext>(_ctx, getState());
@@ -36495,25 +31173,6 @@ size_t MySQLParser::ChangeReplicationContext::getRuleIndex() const {
   return MySQLParser::RuleChangeReplication;
 }
 
-void MySQLParser::ChangeReplicationContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterChangeReplication(this);
-}
-
-void MySQLParser::ChangeReplicationContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitChangeReplication(this);
-}
-
-
-std::any MySQLParser::ChangeReplicationContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitChangeReplication(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::ChangeReplicationContext* MySQLParser::changeReplication() {
   ChangeReplicationContext *_localctx = _tracker.createInstance<ChangeReplicationContext>(_ctx, getState());
@@ -36635,25 +31294,6 @@ size_t MySQLParser::FilterDefinitionContext::getRuleIndex() const {
   return MySQLParser::RuleFilterDefinition;
 }
 
-void MySQLParser::FilterDefinitionContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterFilterDefinition(this);
-}
-
-void MySQLParser::FilterDefinitionContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitFilterDefinition(this);
-}
-
-
-std::any MySQLParser::FilterDefinitionContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitFilterDefinition(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::FilterDefinitionContext* MySQLParser::filterDefinition() {
   FilterDefinitionContext *_localctx = _tracker.createInstance<FilterDefinitionContext>(_ctx, getState());
@@ -36889,25 +31529,6 @@ size_t MySQLParser::FilterDbListContext::getRuleIndex() const {
   return MySQLParser::RuleFilterDbList;
 }
 
-void MySQLParser::FilterDbListContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterFilterDbList(this);
-}
-
-void MySQLParser::FilterDbListContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitFilterDbList(this);
-}
-
-
-std::any MySQLParser::FilterDbListContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitFilterDbList(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::FilterDbListContext* MySQLParser::filterDbList() {
   FilterDbListContext *_localctx = _tracker.createInstance<FilterDbListContext>(_ctx, getState());
@@ -36975,25 +31596,6 @@ size_t MySQLParser::FilterTableListContext::getRuleIndex() const {
   return MySQLParser::RuleFilterTableList;
 }
 
-void MySQLParser::FilterTableListContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterFilterTableList(this);
-}
-
-void MySQLParser::FilterTableListContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitFilterTableList(this);
-}
-
-
-std::any MySQLParser::FilterTableListContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitFilterTableList(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::FilterTableListContext* MySQLParser::filterTableList() {
   FilterTableListContext *_localctx = _tracker.createInstance<FilterTableListContext>(_ctx, getState());
@@ -37061,25 +31663,6 @@ size_t MySQLParser::FilterStringListContext::getRuleIndex() const {
   return MySQLParser::RuleFilterStringList;
 }
 
-void MySQLParser::FilterStringListContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterFilterStringList(this);
-}
-
-void MySQLParser::FilterStringListContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitFilterStringList(this);
-}
-
-
-std::any MySQLParser::FilterStringListContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitFilterStringList(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::FilterStringListContext* MySQLParser::filterStringList() {
   FilterStringListContext *_localctx = _tracker.createInstance<FilterStringListContext>(_ctx, getState());
@@ -37135,25 +31718,6 @@ size_t MySQLParser::FilterWildDbTableStringContext::getRuleIndex() const {
   return MySQLParser::RuleFilterWildDbTableString;
 }
 
-void MySQLParser::FilterWildDbTableStringContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterFilterWildDbTableString(this);
-}
-
-void MySQLParser::FilterWildDbTableStringContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitFilterWildDbTableString(this);
-}
-
-
-std::any MySQLParser::FilterWildDbTableStringContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitFilterWildDbTableString(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::FilterWildDbTableStringContext* MySQLParser::filterWildDbTableString() {
   FilterWildDbTableStringContext *_localctx = _tracker.createInstance<FilterWildDbTableStringContext>(_ctx, getState());
@@ -37208,25 +31772,6 @@ size_t MySQLParser::FilterDbPairListContext::getRuleIndex() const {
   return MySQLParser::RuleFilterDbPairList;
 }
 
-void MySQLParser::FilterDbPairListContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterFilterDbPairList(this);
-}
-
-void MySQLParser::FilterDbPairListContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitFilterDbPairList(this);
-}
-
-
-std::any MySQLParser::FilterDbPairListContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitFilterDbPairList(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::FilterDbPairListContext* MySQLParser::filterDbPairList() {
   FilterDbPairListContext *_localctx = _tracker.createInstance<FilterDbPairListContext>(_ctx, getState());
@@ -37318,25 +31863,6 @@ size_t MySQLParser::StartReplicaStatementContext::getRuleIndex() const {
   return MySQLParser::RuleStartReplicaStatement;
 }
 
-void MySQLParser::StartReplicaStatementContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterStartReplicaStatement(this);
-}
-
-void MySQLParser::StartReplicaStatementContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitStartReplicaStatement(this);
-}
-
-
-std::any MySQLParser::StartReplicaStatementContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitStartReplicaStatement(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::StartReplicaStatementContext* MySQLParser::startReplicaStatement() {
   StartReplicaStatementContext *_localctx = _tracker.createInstance<StartReplicaStatementContext>(_ctx, getState());
@@ -37452,25 +31978,6 @@ size_t MySQLParser::StopReplicaStatementContext::getRuleIndex() const {
   return MySQLParser::RuleStopReplicaStatement;
 }
 
-void MySQLParser::StopReplicaStatementContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterStopReplicaStatement(this);
-}
-
-void MySQLParser::StopReplicaStatementContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitStopReplicaStatement(this);
-}
-
-
-std::any MySQLParser::StopReplicaStatementContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitStopReplicaStatement(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::StopReplicaStatementContext* MySQLParser::stopReplicaStatement() {
   StopReplicaStatementContext *_localctx = _tracker.createInstance<StopReplicaStatementContext>(_ctx, getState());
@@ -37564,25 +32071,6 @@ size_t MySQLParser::ReplicaUntilContext::getRuleIndex() const {
   return MySQLParser::RuleReplicaUntil;
 }
 
-void MySQLParser::ReplicaUntilContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterReplicaUntil(this);
-}
-
-void MySQLParser::ReplicaUntilContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitReplicaUntil(this);
-}
-
-
-std::any MySQLParser::ReplicaUntilContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitReplicaUntil(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::ReplicaUntilContext* MySQLParser::replicaUntil() {
   ReplicaUntilContext *_localctx = _tracker.createInstance<ReplicaUntilContext>(_ctx, getState());
@@ -37687,25 +32175,6 @@ size_t MySQLParser::UserOptionContext::getRuleIndex() const {
   return MySQLParser::RuleUserOption;
 }
 
-void MySQLParser::UserOptionContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterUserOption(this);
-}
-
-void MySQLParser::UserOptionContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitUserOption(this);
-}
-
-
-std::any MySQLParser::UserOptionContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitUserOption(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::UserOptionContext* MySQLParser::userOption() {
   UserOptionContext *_localctx = _tracker.createInstance<UserOptionContext>(_ctx, getState());
@@ -37760,25 +32229,6 @@ size_t MySQLParser::PasswordOptionContext::getRuleIndex() const {
   return MySQLParser::RulePasswordOption;
 }
 
-void MySQLParser::PasswordOptionContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterPasswordOption(this);
-}
-
-void MySQLParser::PasswordOptionContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitPasswordOption(this);
-}
-
-
-std::any MySQLParser::PasswordOptionContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitPasswordOption(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::PasswordOptionContext* MySQLParser::passwordOption() {
   PasswordOptionContext *_localctx = _tracker.createInstance<PasswordOptionContext>(_ctx, getState());
@@ -37833,25 +32283,6 @@ size_t MySQLParser::DefaultAuthOptionContext::getRuleIndex() const {
   return MySQLParser::RuleDefaultAuthOption;
 }
 
-void MySQLParser::DefaultAuthOptionContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterDefaultAuthOption(this);
-}
-
-void MySQLParser::DefaultAuthOptionContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitDefaultAuthOption(this);
-}
-
-
-std::any MySQLParser::DefaultAuthOptionContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitDefaultAuthOption(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::DefaultAuthOptionContext* MySQLParser::defaultAuthOption() {
   DefaultAuthOptionContext *_localctx = _tracker.createInstance<DefaultAuthOptionContext>(_ctx, getState());
@@ -37906,25 +32337,6 @@ size_t MySQLParser::PluginDirOptionContext::getRuleIndex() const {
   return MySQLParser::RulePluginDirOption;
 }
 
-void MySQLParser::PluginDirOptionContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterPluginDirOption(this);
-}
-
-void MySQLParser::PluginDirOptionContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitPluginDirOption(this);
-}
-
-
-std::any MySQLParser::PluginDirOptionContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitPluginDirOption(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::PluginDirOptionContext* MySQLParser::pluginDirOption() {
   PluginDirOptionContext *_localctx = _tracker.createInstance<PluginDirOptionContext>(_ctx, getState());
@@ -37983,25 +32395,6 @@ size_t MySQLParser::ReplicaThreadOptionsContext::getRuleIndex() const {
   return MySQLParser::RuleReplicaThreadOptions;
 }
 
-void MySQLParser::ReplicaThreadOptionsContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterReplicaThreadOptions(this);
-}
-
-void MySQLParser::ReplicaThreadOptionsContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitReplicaThreadOptions(this);
-}
-
-
-std::any MySQLParser::ReplicaThreadOptionsContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitReplicaThreadOptions(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::ReplicaThreadOptionsContext* MySQLParser::replicaThreadOptions() {
   ReplicaThreadOptionsContext *_localctx = _tracker.createInstance<ReplicaThreadOptionsContext>(_ctx, getState());
@@ -38061,25 +32454,6 @@ size_t MySQLParser::ReplicaThreadOptionContext::getRuleIndex() const {
   return MySQLParser::RuleReplicaThreadOption;
 }
 
-void MySQLParser::ReplicaThreadOptionContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterReplicaThreadOption(this);
-}
-
-void MySQLParser::ReplicaThreadOptionContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitReplicaThreadOption(this);
-}
-
-
-std::any MySQLParser::ReplicaThreadOptionContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitReplicaThreadOption(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::ReplicaThreadOptionContext* MySQLParser::replicaThreadOption() {
   ReplicaThreadOptionContext *_localctx = _tracker.createInstance<ReplicaThreadOptionContext>(_ctx, getState());
@@ -38142,25 +32516,6 @@ size_t MySQLParser::GroupReplicationContext::getRuleIndex() const {
   return MySQLParser::RuleGroupReplication;
 }
 
-void MySQLParser::GroupReplicationContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterGroupReplication(this);
-}
-
-void MySQLParser::GroupReplicationContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitGroupReplication(this);
-}
-
-
-std::any MySQLParser::GroupReplicationContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitGroupReplication(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::GroupReplicationContext* MySQLParser::groupReplication() {
   GroupReplicationContext *_localctx = _tracker.createInstance<GroupReplicationContext>(_ctx, getState());
@@ -38242,25 +32597,6 @@ size_t MySQLParser::GroupReplicationStartOptionsContext::getRuleIndex() const {
   return MySQLParser::RuleGroupReplicationStartOptions;
 }
 
-void MySQLParser::GroupReplicationStartOptionsContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterGroupReplicationStartOptions(this);
-}
-
-void MySQLParser::GroupReplicationStartOptionsContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitGroupReplicationStartOptions(this);
-}
-
-
-std::any MySQLParser::GroupReplicationStartOptionsContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitGroupReplicationStartOptions(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::GroupReplicationStartOptionsContext* MySQLParser::groupReplicationStartOptions() {
   GroupReplicationStartOptionsContext *_localctx = _tracker.createInstance<GroupReplicationStartOptionsContext>(_ctx, getState());
@@ -38324,25 +32660,6 @@ size_t MySQLParser::GroupReplicationStartOptionContext::getRuleIndex() const {
   return MySQLParser::RuleGroupReplicationStartOption;
 }
 
-void MySQLParser::GroupReplicationStartOptionContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterGroupReplicationStartOption(this);
-}
-
-void MySQLParser::GroupReplicationStartOptionContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitGroupReplicationStartOption(this);
-}
-
-
-std::any MySQLParser::GroupReplicationStartOptionContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitGroupReplicationStartOption(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::GroupReplicationStartOptionContext* MySQLParser::groupReplicationStartOption() {
   GroupReplicationStartOptionContext *_localctx = _tracker.createInstance<GroupReplicationStartOptionContext>(_ctx, getState());
@@ -38417,25 +32734,6 @@ size_t MySQLParser::GroupReplicationUserContext::getRuleIndex() const {
   return MySQLParser::RuleGroupReplicationUser;
 }
 
-void MySQLParser::GroupReplicationUserContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterGroupReplicationUser(this);
-}
-
-void MySQLParser::GroupReplicationUserContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitGroupReplicationUser(this);
-}
-
-
-std::any MySQLParser::GroupReplicationUserContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitGroupReplicationUser(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::GroupReplicationUserContext* MySQLParser::groupReplicationUser() {
   GroupReplicationUserContext *_localctx = _tracker.createInstance<GroupReplicationUserContext>(_ctx, getState());
@@ -38490,25 +32788,6 @@ size_t MySQLParser::GroupReplicationPasswordContext::getRuleIndex() const {
   return MySQLParser::RuleGroupReplicationPassword;
 }
 
-void MySQLParser::GroupReplicationPasswordContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterGroupReplicationPassword(this);
-}
-
-void MySQLParser::GroupReplicationPasswordContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitGroupReplicationPassword(this);
-}
-
-
-std::any MySQLParser::GroupReplicationPasswordContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitGroupReplicationPassword(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::GroupReplicationPasswordContext* MySQLParser::groupReplicationPassword() {
   GroupReplicationPasswordContext *_localctx = _tracker.createInstance<GroupReplicationPasswordContext>(_ctx, getState());
@@ -38563,25 +32842,6 @@ size_t MySQLParser::GroupReplicationPluginAuthContext::getRuleIndex() const {
   return MySQLParser::RuleGroupReplicationPluginAuth;
 }
 
-void MySQLParser::GroupReplicationPluginAuthContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterGroupReplicationPluginAuth(this);
-}
-
-void MySQLParser::GroupReplicationPluginAuthContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitGroupReplicationPluginAuth(this);
-}
-
-
-std::any MySQLParser::GroupReplicationPluginAuthContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitGroupReplicationPluginAuth(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::GroupReplicationPluginAuthContext* MySQLParser::groupReplicationPluginAuth() {
   GroupReplicationPluginAuthContext *_localctx = _tracker.createInstance<GroupReplicationPluginAuthContext>(_ctx, getState());
@@ -38632,25 +32892,6 @@ size_t MySQLParser::ReplicaContext::getRuleIndex() const {
   return MySQLParser::RuleReplica;
 }
 
-void MySQLParser::ReplicaContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterReplica(this);
-}
-
-void MySQLParser::ReplicaContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitReplica(this);
-}
-
-
-std::any MySQLParser::ReplicaContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitReplica(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::ReplicaContext* MySQLParser::replica() {
   ReplicaContext *_localctx = _tracker.createInstance<ReplicaContext>(_ctx, getState());
@@ -38729,25 +32970,6 @@ size_t MySQLParser::PreparedStatementContext::getRuleIndex() const {
   return MySQLParser::RulePreparedStatement;
 }
 
-void MySQLParser::PreparedStatementContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterPreparedStatement(this);
-}
-
-void MySQLParser::PreparedStatementContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitPreparedStatement(this);
-}
-
-
-std::any MySQLParser::PreparedStatementContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitPreparedStatement(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::PreparedStatementContext* MySQLParser::preparedStatement() {
   PreparedStatementContext *_localctx = _tracker.createInstance<PreparedStatementContext>(_ctx, getState());
@@ -38864,25 +33086,6 @@ size_t MySQLParser::ExecuteStatementContext::getRuleIndex() const {
   return MySQLParser::RuleExecuteStatement;
 }
 
-void MySQLParser::ExecuteStatementContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterExecuteStatement(this);
-}
-
-void MySQLParser::ExecuteStatementContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitExecuteStatement(this);
-}
-
-
-std::any MySQLParser::ExecuteStatementContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitExecuteStatement(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::ExecuteStatementContext* MySQLParser::executeStatement() {
   ExecuteStatementContext *_localctx = _tracker.createInstance<ExecuteStatementContext>(_ctx, getState());
@@ -38950,25 +33153,6 @@ size_t MySQLParser::ExecuteVarListContext::getRuleIndex() const {
   return MySQLParser::RuleExecuteVarList;
 }
 
-void MySQLParser::ExecuteVarListContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterExecuteVarList(this);
-}
-
-void MySQLParser::ExecuteVarListContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitExecuteVarList(this);
-}
-
-
-std::any MySQLParser::ExecuteVarListContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitExecuteVarList(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::ExecuteVarListContext* MySQLParser::executeVarList() {
   ExecuteVarListContext *_localctx = _tracker.createInstance<ExecuteVarListContext>(_ctx, getState());
@@ -39088,25 +33272,6 @@ size_t MySQLParser::CloneStatementContext::getRuleIndex() const {
   return MySQLParser::RuleCloneStatement;
 }
 
-void MySQLParser::CloneStatementContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterCloneStatement(this);
-}
-
-void MySQLParser::CloneStatementContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitCloneStatement(this);
-}
-
-
-std::any MySQLParser::CloneStatementContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitCloneStatement(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::CloneStatementContext* MySQLParser::cloneStatement() {
   CloneStatementContext *_localctx = _tracker.createInstance<CloneStatementContext>(_ctx, getState());
@@ -39244,25 +33409,6 @@ size_t MySQLParser::DataDirSSLContext::getRuleIndex() const {
   return MySQLParser::RuleDataDirSSL;
 }
 
-void MySQLParser::DataDirSSLContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterDataDirSSL(this);
-}
-
-void MySQLParser::DataDirSSLContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitDataDirSSL(this);
-}
-
-
-std::any MySQLParser::DataDirSSLContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitDataDirSSL(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::DataDirSSLContext* MySQLParser::dataDirSSL() {
   DataDirSSLContext *_localctx = _tracker.createInstance<DataDirSSLContext>(_ctx, getState());
@@ -39356,25 +33502,6 @@ size_t MySQLParser::SslContext::getRuleIndex() const {
   return MySQLParser::RuleSsl;
 }
 
-void MySQLParser::SslContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterSsl(this);
-}
-
-void MySQLParser::SslContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitSsl(this);
-}
-
-
-std::any MySQLParser::SslContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitSsl(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::SslContext* MySQLParser::ssl() {
   SslContext *_localctx = _tracker.createInstance<SslContext>(_ctx, getState());
@@ -39452,25 +33579,6 @@ size_t MySQLParser::AccountManagementStatementContext::getRuleIndex() const {
   return MySQLParser::RuleAccountManagementStatement;
 }
 
-void MySQLParser::AccountManagementStatementContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterAccountManagementStatement(this);
-}
-
-void MySQLParser::AccountManagementStatementContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitAccountManagementStatement(this);
-}
-
-
-std::any MySQLParser::AccountManagementStatementContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitAccountManagementStatement(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::AccountManagementStatementContext* MySQLParser::accountManagementStatement() {
   AccountManagementStatementContext *_localctx = _tracker.createInstance<AccountManagementStatementContext>(_ctx, getState());
@@ -39645,25 +33753,6 @@ size_t MySQLParser::AlterUserStatementContext::getRuleIndex() const {
   return MySQLParser::RuleAlterUserStatement;
 }
 
-void MySQLParser::AlterUserStatementContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterAlterUserStatement(this);
-}
-
-void MySQLParser::AlterUserStatementContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitAlterUserStatement(this);
-}
-
-
-std::any MySQLParser::AlterUserStatementContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitAlterUserStatement(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::AlterUserStatementContext* MySQLParser::alterUserStatement() {
   AlterUserStatementContext *_localctx = _tracker.createInstance<AlterUserStatementContext>(_ctx, getState());
@@ -39912,25 +34001,6 @@ size_t MySQLParser::AlterUserListContext::getRuleIndex() const {
   return MySQLParser::RuleAlterUserList;
 }
 
-void MySQLParser::AlterUserListContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterAlterUserList(this);
-}
-
-void MySQLParser::AlterUserListContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitAlterUserList(this);
-}
-
-
-std::any MySQLParser::AlterUserListContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitAlterUserList(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::AlterUserListContext* MySQLParser::alterUserList() {
   AlterUserListContext *_localctx = _tracker.createInstance<AlterUserListContext>(_ctx, getState());
@@ -40072,25 +34142,6 @@ size_t MySQLParser::AlterUserContext::getRuleIndex() const {
   return MySQLParser::RuleAlterUser;
 }
 
-void MySQLParser::AlterUserContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterAlterUser(this);
-}
-
-void MySQLParser::AlterUserContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitAlterUser(this);
-}
-
-
-std::any MySQLParser::AlterUserContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitAlterUser(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::AlterUserContext* MySQLParser::alterUser() {
   AlterUserContext *_localctx = _tracker.createInstance<AlterUserContext>(_ctx, getState());
@@ -40503,25 +34554,6 @@ size_t MySQLParser::OldAlterUserContext::getRuleIndex() const {
   return MySQLParser::RuleOldAlterUser;
 }
 
-void MySQLParser::OldAlterUserContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterOldAlterUser(this);
-}
-
-void MySQLParser::OldAlterUserContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitOldAlterUser(this);
-}
-
-
-std::any MySQLParser::OldAlterUserContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitOldAlterUser(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::OldAlterUserContext* MySQLParser::oldAlterUser() {
   OldAlterUserContext *_localctx = _tracker.createInstance<OldAlterUserContext>(_ctx, getState());
@@ -40797,25 +34829,6 @@ size_t MySQLParser::UserFunctionContext::getRuleIndex() const {
   return MySQLParser::RuleUserFunction;
 }
 
-void MySQLParser::UserFunctionContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterUserFunction(this);
-}
-
-void MySQLParser::UserFunctionContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitUserFunction(this);
-}
-
-
-std::any MySQLParser::UserFunctionContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitUserFunction(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::UserFunctionContext* MySQLParser::userFunction() {
   UserFunctionContext *_localctx = _tracker.createInstance<UserFunctionContext>(_ctx, getState());
@@ -40880,25 +34893,6 @@ size_t MySQLParser::CreateUserStatementContext::getRuleIndex() const {
   return MySQLParser::RuleCreateUserStatement;
 }
 
-void MySQLParser::CreateUserStatementContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterCreateUserStatement(this);
-}
-
-void MySQLParser::CreateUserStatementContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitCreateUserStatement(this);
-}
-
-
-std::any MySQLParser::CreateUserStatementContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitCreateUserStatement(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::CreateUserStatementContext* MySQLParser::createUserStatement() {
   CreateUserStatementContext *_localctx = _tracker.createInstance<CreateUserStatementContext>(_ctx, getState());
@@ -40989,25 +34983,6 @@ size_t MySQLParser::CreateUserTailContext::getRuleIndex() const {
   return MySQLParser::RuleCreateUserTail;
 }
 
-void MySQLParser::CreateUserTailContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterCreateUserTail(this);
-}
-
-void MySQLParser::CreateUserTailContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitCreateUserTail(this);
-}
-
-
-std::any MySQLParser::CreateUserTailContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitCreateUserTail(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::CreateUserTailContext* MySQLParser::createUserTail() {
   CreateUserTailContext *_localctx = _tracker.createInstance<CreateUserTailContext>(_ctx, getState());
@@ -41111,25 +35086,6 @@ size_t MySQLParser::UserAttributesContext::getRuleIndex() const {
   return MySQLParser::RuleUserAttributes;
 }
 
-void MySQLParser::UserAttributesContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterUserAttributes(this);
-}
-
-void MySQLParser::UserAttributesContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitUserAttributes(this);
-}
-
-
-std::any MySQLParser::UserAttributesContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitUserAttributes(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::UserAttributesContext* MySQLParser::userAttributes() {
   UserAttributesContext *_localctx = _tracker.createInstance<UserAttributesContext>(_ctx, getState());
@@ -41201,25 +35157,6 @@ size_t MySQLParser::DefaultRoleClauseContext::getRuleIndex() const {
   return MySQLParser::RuleDefaultRoleClause;
 }
 
-void MySQLParser::DefaultRoleClauseContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterDefaultRoleClause(this);
-}
-
-void MySQLParser::DefaultRoleClauseContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitDefaultRoleClause(this);
-}
-
-
-std::any MySQLParser::DefaultRoleClauseContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitDefaultRoleClause(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::DefaultRoleClauseContext* MySQLParser::defaultRoleClause() {
   DefaultRoleClauseContext *_localctx = _tracker.createInstance<DefaultRoleClauseContext>(_ctx, getState());
@@ -41282,25 +35219,6 @@ size_t MySQLParser::RequireClauseContext::getRuleIndex() const {
   return MySQLParser::RuleRequireClause;
 }
 
-void MySQLParser::RequireClauseContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterRequireClause(this);
-}
-
-void MySQLParser::RequireClauseContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitRequireClause(this);
-}
-
-
-std::any MySQLParser::RequireClauseContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitRequireClause(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::RequireClauseContext* MySQLParser::requireClause() {
   RequireClauseContext *_localctx = _tracker.createInstance<RequireClauseContext>(_ctx, getState());
@@ -41414,25 +35332,6 @@ size_t MySQLParser::ConnectOptionsContext::getRuleIndex() const {
   return MySQLParser::RuleConnectOptions;
 }
 
-void MySQLParser::ConnectOptionsContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterConnectOptions(this);
-}
-
-void MySQLParser::ConnectOptionsContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitConnectOptions(this);
-}
-
-
-std::any MySQLParser::ConnectOptionsContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitConnectOptions(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::ConnectOptionsContext* MySQLParser::connectOptions() {
   ConnectOptionsContext *_localctx = _tracker.createInstance<ConnectOptionsContext>(_ctx, getState());
@@ -41598,25 +35497,6 @@ size_t MySQLParser::AccountLockPasswordExpireOptionsContext::getRuleIndex() cons
   return MySQLParser::RuleAccountLockPasswordExpireOptions;
 }
 
-void MySQLParser::AccountLockPasswordExpireOptionsContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterAccountLockPasswordExpireOptions(this);
-}
-
-void MySQLParser::AccountLockPasswordExpireOptionsContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitAccountLockPasswordExpireOptions(this);
-}
-
-
-std::any MySQLParser::AccountLockPasswordExpireOptionsContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitAccountLockPasswordExpireOptions(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::AccountLockPasswordExpireOptionsContext* MySQLParser::accountLockPasswordExpireOptions() {
   AccountLockPasswordExpireOptionsContext *_localctx = _tracker.createInstance<AccountLockPasswordExpireOptionsContext>(_ctx, getState());
@@ -41861,25 +35741,6 @@ size_t MySQLParser::UserAttributeContext::getRuleIndex() const {
   return MySQLParser::RuleUserAttribute;
 }
 
-void MySQLParser::UserAttributeContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterUserAttribute(this);
-}
-
-void MySQLParser::UserAttributeContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitUserAttribute(this);
-}
-
-
-std::any MySQLParser::UserAttributeContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitUserAttribute(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::UserAttributeContext* MySQLParser::userAttribute() {
   UserAttributeContext *_localctx = _tracker.createInstance<UserAttributeContext>(_ctx, getState());
@@ -41961,25 +35822,6 @@ size_t MySQLParser::DropUserStatementContext::getRuleIndex() const {
   return MySQLParser::RuleDropUserStatement;
 }
 
-void MySQLParser::DropUserStatementContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterDropUserStatement(this);
-}
-
-void MySQLParser::DropUserStatementContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitDropUserStatement(this);
-}
-
-
-std::any MySQLParser::DropUserStatementContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitDropUserStatement(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::DropUserStatementContext* MySQLParser::dropUserStatement() {
   DropUserStatementContext *_localctx = _tracker.createInstance<DropUserStatementContext>(_ctx, getState());
@@ -42111,25 +35953,6 @@ size_t MySQLParser::GrantStatementContext::getRuleIndex() const {
   return MySQLParser::RuleGrantStatement;
 }
 
-void MySQLParser::GrantStatementContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterGrantStatement(this);
-}
-
-void MySQLParser::GrantStatementContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitGrantStatement(this);
-}
-
-
-std::any MySQLParser::GrantStatementContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitGrantStatement(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::GrantStatementContext* MySQLParser::grantStatement() {
   GrantStatementContext *_localctx = _tracker.createInstance<GrantStatementContext>(_ctx, getState());
@@ -42311,25 +36134,6 @@ size_t MySQLParser::GrantTargetListContext::getRuleIndex() const {
   return MySQLParser::RuleGrantTargetList;
 }
 
-void MySQLParser::GrantTargetListContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterGrantTargetList(this);
-}
-
-void MySQLParser::GrantTargetListContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitGrantTargetList(this);
-}
-
-
-std::any MySQLParser::GrantTargetListContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitGrantTargetList(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::GrantTargetListContext* MySQLParser::grantTargetList() {
   GrantTargetListContext *_localctx = _tracker.createInstance<GrantTargetListContext>(_ctx, getState());
@@ -42399,25 +36203,6 @@ size_t MySQLParser::GrantOptionsContext::getRuleIndex() const {
   return MySQLParser::RuleGrantOptions;
 }
 
-void MySQLParser::GrantOptionsContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterGrantOptions(this);
-}
-
-void MySQLParser::GrantOptionsContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitGrantOptions(this);
-}
-
-
-std::any MySQLParser::GrantOptionsContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitGrantOptions(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::GrantOptionsContext* MySQLParser::grantOptions() {
   GrantOptionsContext *_localctx = _tracker.createInstance<GrantOptionsContext>(_ctx, getState());
@@ -42466,25 +36251,6 @@ size_t MySQLParser::ExceptRoleListContext::getRuleIndex() const {
   return MySQLParser::RuleExceptRoleList;
 }
 
-void MySQLParser::ExceptRoleListContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterExceptRoleList(this);
-}
-
-void MySQLParser::ExceptRoleListContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitExceptRoleList(this);
-}
-
-
-std::any MySQLParser::ExceptRoleListContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitExceptRoleList(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::ExceptRoleListContext* MySQLParser::exceptRoleList() {
   ExceptRoleListContext *_localctx = _tracker.createInstance<ExceptRoleListContext>(_ctx, getState());
@@ -42553,25 +36319,6 @@ size_t MySQLParser::WithRolesContext::getRuleIndex() const {
   return MySQLParser::RuleWithRoles;
 }
 
-void MySQLParser::WithRolesContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterWithRoles(this);
-}
-
-void MySQLParser::WithRolesContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitWithRoles(this);
-}
-
-
-std::any MySQLParser::WithRolesContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitWithRoles(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::WithRolesContext* MySQLParser::withRoles() {
   WithRolesContext *_localctx = _tracker.createInstance<WithRolesContext>(_ctx, getState());
@@ -42663,25 +36410,6 @@ size_t MySQLParser::GrantAsContext::getRuleIndex() const {
   return MySQLParser::RuleGrantAs;
 }
 
-void MySQLParser::GrantAsContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterGrantAs(this);
-}
-
-void MySQLParser::GrantAsContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitGrantAs(this);
-}
-
-
-std::any MySQLParser::GrantAsContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitGrantAs(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::GrantAsContext* MySQLParser::grantAs() {
   GrantAsContext *_localctx = _tracker.createInstance<GrantAsContext>(_ctx, getState());
@@ -42735,25 +36463,6 @@ size_t MySQLParser::VersionedRequireClauseContext::getRuleIndex() const {
   return MySQLParser::RuleVersionedRequireClause;
 }
 
-void MySQLParser::VersionedRequireClauseContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterVersionedRequireClause(this);
-}
-
-void MySQLParser::VersionedRequireClauseContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitVersionedRequireClause(this);
-}
-
-
-std::any MySQLParser::VersionedRequireClauseContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitVersionedRequireClause(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::VersionedRequireClauseContext* MySQLParser::versionedRequireClause() {
   VersionedRequireClauseContext *_localctx = _tracker.createInstance<VersionedRequireClauseContext>(_ctx, getState());
@@ -42827,25 +36536,6 @@ size_t MySQLParser::RenameUserStatementContext::getRuleIndex() const {
   return MySQLParser::RuleRenameUserStatement;
 }
 
-void MySQLParser::RenameUserStatementContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterRenameUserStatement(this);
-}
-
-void MySQLParser::RenameUserStatementContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitRenameUserStatement(this);
-}
-
-
-std::any MySQLParser::RenameUserStatementContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitRenameUserStatement(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::RenameUserStatementContext* MySQLParser::renameUserStatement() {
   RenameUserStatementContext *_localctx = _tracker.createInstance<RenameUserStatementContext>(_ctx, getState());
@@ -42973,25 +36663,6 @@ size_t MySQLParser::RevokeStatementContext::getRuleIndex() const {
   return MySQLParser::RuleRevokeStatement;
 }
 
-void MySQLParser::RevokeStatementContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterRevokeStatement(this);
-}
-
-void MySQLParser::RevokeStatementContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitRevokeStatement(this);
-}
-
-
-std::any MySQLParser::RevokeStatementContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitRevokeStatement(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::RevokeStatementContext* MySQLParser::revokeStatement() {
   RevokeStatementContext *_localctx = _tracker.createInstance<RevokeStatementContext>(_ctx, getState());
@@ -43187,25 +36858,6 @@ size_t MySQLParser::AclTypeContext::getRuleIndex() const {
   return MySQLParser::RuleAclType;
 }
 
-void MySQLParser::AclTypeContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterAclType(this);
-}
-
-void MySQLParser::AclTypeContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitAclType(this);
-}
-
-
-std::any MySQLParser::AclTypeContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitAclType(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::AclTypeContext* MySQLParser::aclType() {
   AclTypeContext *_localctx = _tracker.createInstance<AclTypeContext>(_ctx, getState());
@@ -43268,25 +36920,6 @@ size_t MySQLParser::RoleOrPrivilegesListContext::getRuleIndex() const {
   return MySQLParser::RuleRoleOrPrivilegesList;
 }
 
-void MySQLParser::RoleOrPrivilegesListContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterRoleOrPrivilegesList(this);
-}
-
-void MySQLParser::RoleOrPrivilegesListContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitRoleOrPrivilegesList(this);
-}
-
-
-std::any MySQLParser::RoleOrPrivilegesListContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitRoleOrPrivilegesList(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::RoleOrPrivilegesListContext* MySQLParser::roleOrPrivilegesList() {
   RoleOrPrivilegesListContext *_localctx = _tracker.createInstance<RoleOrPrivilegesListContext>(_ctx, getState());
@@ -43494,25 +37127,6 @@ size_t MySQLParser::RoleOrPrivilegeContext::getRuleIndex() const {
   return MySQLParser::RuleRoleOrPrivilege;
 }
 
-void MySQLParser::RoleOrPrivilegeContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterRoleOrPrivilege(this);
-}
-
-void MySQLParser::RoleOrPrivilegeContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitRoleOrPrivilege(this);
-}
-
-
-std::any MySQLParser::RoleOrPrivilegeContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitRoleOrPrivilege(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::RoleOrPrivilegeContext* MySQLParser::roleOrPrivilege() {
   RoleOrPrivilegeContext *_localctx = _tracker.createInstance<RoleOrPrivilegeContext>(_ctx, getState());
@@ -43811,25 +37425,6 @@ size_t MySQLParser::GrantIdentifierContext::getRuleIndex() const {
   return MySQLParser::RuleGrantIdentifier;
 }
 
-void MySQLParser::GrantIdentifierContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterGrantIdentifier(this);
-}
-
-void MySQLParser::GrantIdentifierContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitGrantIdentifier(this);
-}
-
-
-std::any MySQLParser::GrantIdentifierContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitGrantIdentifier(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::GrantIdentifierContext* MySQLParser::grantIdentifier() {
   GrantIdentifierContext *_localctx = _tracker.createInstance<GrantIdentifierContext>(_ctx, getState());
@@ -43943,25 +37538,6 @@ size_t MySQLParser::RequireListContext::getRuleIndex() const {
   return MySQLParser::RuleRequireList;
 }
 
-void MySQLParser::RequireListContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterRequireList(this);
-}
-
-void MySQLParser::RequireListContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitRequireList(this);
-}
-
-
-std::any MySQLParser::RequireListContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitRequireList(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::RequireListContext* MySQLParser::requireList() {
   RequireListContext *_localctx = _tracker.createInstance<RequireListContext>(_ctx, getState());
@@ -44038,25 +37614,6 @@ size_t MySQLParser::RequireListElementContext::getRuleIndex() const {
   return MySQLParser::RuleRequireListElement;
 }
 
-void MySQLParser::RequireListElementContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterRequireListElement(this);
-}
-
-void MySQLParser::RequireListElementContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitRequireListElement(this);
-}
-
-
-std::any MySQLParser::RequireListElementContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitRequireListElement(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::RequireListElementContext* MySQLParser::requireListElement() {
   RequireListElementContext *_localctx = _tracker.createInstance<RequireListElementContext>(_ctx, getState());
@@ -44153,25 +37710,6 @@ size_t MySQLParser::GrantOptionContext::getRuleIndex() const {
   return MySQLParser::RuleGrantOption;
 }
 
-void MySQLParser::GrantOptionContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterGrantOption(this);
-}
-
-void MySQLParser::GrantOptionContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitGrantOption(this);
-}
-
-
-std::any MySQLParser::GrantOptionContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitGrantOption(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::GrantOptionContext* MySQLParser::grantOption() {
   GrantOptionContext *_localctx = _tracker.createInstance<GrantOptionContext>(_ctx, getState());
@@ -44304,25 +37842,6 @@ size_t MySQLParser::SetRoleStatementContext::getRuleIndex() const {
   return MySQLParser::RuleSetRoleStatement;
 }
 
-void MySQLParser::SetRoleStatementContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterSetRoleStatement(this);
-}
-
-void MySQLParser::SetRoleStatementContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitSetRoleStatement(this);
-}
-
-
-std::any MySQLParser::SetRoleStatementContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitSetRoleStatement(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::SetRoleStatementContext* MySQLParser::setRoleStatement() {
   SetRoleStatementContext *_localctx = _tracker.createInstance<SetRoleStatementContext>(_ctx, getState());
@@ -44470,25 +37989,6 @@ size_t MySQLParser::RoleListContext::getRuleIndex() const {
   return MySQLParser::RuleRoleList;
 }
 
-void MySQLParser::RoleListContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterRoleList(this);
-}
-
-void MySQLParser::RoleListContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitRoleList(this);
-}
-
-
-std::any MySQLParser::RoleListContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitRoleList(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::RoleListContext* MySQLParser::roleList() {
   RoleListContext *_localctx = _tracker.createInstance<RoleListContext>(_ctx, getState());
@@ -44550,25 +38050,6 @@ size_t MySQLParser::RoleContext::getRuleIndex() const {
   return MySQLParser::RuleRole;
 }
 
-void MySQLParser::RoleContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterRole(this);
-}
-
-void MySQLParser::RoleContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitRole(this);
-}
-
-
-std::any MySQLParser::RoleContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitRole(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::RoleContext* MySQLParser::role() {
   RoleContext *_localctx = _tracker.createInstance<RoleContext>(_ctx, getState());
@@ -44680,25 +38161,6 @@ size_t MySQLParser::TableAdministrationStatementContext::getRuleIndex() const {
   return MySQLParser::RuleTableAdministrationStatement;
 }
 
-void MySQLParser::TableAdministrationStatementContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterTableAdministrationStatement(this);
-}
-
-void MySQLParser::TableAdministrationStatementContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitTableAdministrationStatement(this);
-}
-
-
-std::any MySQLParser::TableAdministrationStatementContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitTableAdministrationStatement(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::TableAdministrationStatementContext* MySQLParser::tableAdministrationStatement() {
   TableAdministrationStatementContext *_localctx = _tracker.createInstance<TableAdministrationStatementContext>(_ctx, getState());
@@ -44876,25 +38338,6 @@ size_t MySQLParser::HistogramAutoUpdateContext::getRuleIndex() const {
   return MySQLParser::RuleHistogramAutoUpdate;
 }
 
-void MySQLParser::HistogramAutoUpdateContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterHistogramAutoUpdate(this);
-}
-
-void MySQLParser::HistogramAutoUpdateContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitHistogramAutoUpdate(this);
-}
-
-
-std::any MySQLParser::HistogramAutoUpdateContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitHistogramAutoUpdate(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::HistogramAutoUpdateContext* MySQLParser::histogramAutoUpdate() {
   HistogramAutoUpdateContext *_localctx = _tracker.createInstance<HistogramAutoUpdateContext>(_ctx, getState());
@@ -44968,25 +38411,6 @@ size_t MySQLParser::HistogramUpdateParamContext::getRuleIndex() const {
   return MySQLParser::RuleHistogramUpdateParam;
 }
 
-void MySQLParser::HistogramUpdateParamContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterHistogramUpdateParam(this);
-}
-
-void MySQLParser::HistogramUpdateParamContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitHistogramUpdateParam(this);
-}
-
-
-std::any MySQLParser::HistogramUpdateParamContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitHistogramUpdateParam(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::HistogramUpdateParamContext* MySQLParser::histogramUpdateParam() {
   HistogramUpdateParamContext *_localctx = _tracker.createInstance<HistogramUpdateParamContext>(_ctx, getState());
@@ -45085,25 +38509,6 @@ size_t MySQLParser::HistogramNumBucketsContext::getRuleIndex() const {
   return MySQLParser::RuleHistogramNumBuckets;
 }
 
-void MySQLParser::HistogramNumBucketsContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterHistogramNumBuckets(this);
-}
-
-void MySQLParser::HistogramNumBucketsContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitHistogramNumBuckets(this);
-}
-
-
-std::any MySQLParser::HistogramNumBucketsContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitHistogramNumBuckets(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::HistogramNumBucketsContext* MySQLParser::histogramNumBuckets() {
   HistogramNumBucketsContext *_localctx = _tracker.createInstance<HistogramNumBucketsContext>(_ctx, getState());
@@ -45173,25 +38578,6 @@ size_t MySQLParser::HistogramContext::getRuleIndex() const {
   return MySQLParser::RuleHistogram;
 }
 
-void MySQLParser::HistogramContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterHistogram(this);
-}
-
-void MySQLParser::HistogramContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitHistogram(this);
-}
-
-
-std::any MySQLParser::HistogramContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitHistogram(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::HistogramContext* MySQLParser::histogram() {
   HistogramContext *_localctx = _tracker.createInstance<HistogramContext>(_ctx, getState());
@@ -45289,25 +38675,6 @@ size_t MySQLParser::CheckOptionContext::getRuleIndex() const {
   return MySQLParser::RuleCheckOption;
 }
 
-void MySQLParser::CheckOptionContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterCheckOption(this);
-}
-
-void MySQLParser::CheckOptionContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitCheckOption(this);
-}
-
-
-std::any MySQLParser::CheckOptionContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitCheckOption(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::CheckOptionContext* MySQLParser::checkOption() {
   CheckOptionContext *_localctx = _tracker.createInstance<CheckOptionContext>(_ctx, getState());
@@ -45391,25 +38758,6 @@ size_t MySQLParser::RepairTypeContext::getRuleIndex() const {
   return MySQLParser::RuleRepairType;
 }
 
-void MySQLParser::RepairTypeContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterRepairType(this);
-}
-
-void MySQLParser::RepairTypeContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitRepairType(this);
-}
-
-
-std::any MySQLParser::RepairTypeContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitRepairType(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::RepairTypeContext* MySQLParser::repairType() {
   RepairTypeContext *_localctx = _tracker.createInstance<RepairTypeContext>(_ctx, getState());
@@ -45488,25 +38836,6 @@ size_t MySQLParser::UninstallStatementContext::getRuleIndex() const {
   return MySQLParser::RuleUninstallStatement;
 }
 
-void MySQLParser::UninstallStatementContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterUninstallStatement(this);
-}
-
-void MySQLParser::UninstallStatementContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitUninstallStatement(this);
-}
-
-
-std::any MySQLParser::UninstallStatementContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitUninstallStatement(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::UninstallStatementContext* MySQLParser::uninstallStatement() {
   UninstallStatementContext *_localctx = _tracker.createInstance<UninstallStatementContext>(_ctx, getState());
@@ -45612,25 +38941,6 @@ size_t MySQLParser::InstallStatementContext::getRuleIndex() const {
   return MySQLParser::RuleInstallStatement;
 }
 
-void MySQLParser::InstallStatementContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterInstallStatement(this);
-}
-
-void MySQLParser::InstallStatementContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitInstallStatement(this);
-}
-
-
-std::any MySQLParser::InstallStatementContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitInstallStatement(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::InstallStatementContext* MySQLParser::installStatement() {
   InstallStatementContext *_localctx = _tracker.createInstance<InstallStatementContext>(_ctx, getState());
@@ -45716,25 +39026,6 @@ size_t MySQLParser::InstallOptionTypeContext::getRuleIndex() const {
   return MySQLParser::RuleInstallOptionType;
 }
 
-void MySQLParser::InstallOptionTypeContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterInstallOptionType(this);
-}
-
-void MySQLParser::InstallOptionTypeContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitInstallOptionType(this);
-}
-
-
-std::any MySQLParser::InstallOptionTypeContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitInstallOptionType(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::InstallOptionTypeContext* MySQLParser::installOptionType() {
   InstallOptionTypeContext *_localctx = _tracker.createInstance<InstallOptionTypeContext>(_ctx, getState());
@@ -45789,25 +39080,6 @@ size_t MySQLParser::InstallSetRvalueContext::getRuleIndex() const {
   return MySQLParser::RuleInstallSetRvalue;
 }
 
-void MySQLParser::InstallSetRvalueContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterInstallSetRvalue(this);
-}
-
-void MySQLParser::InstallSetRvalueContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitInstallSetRvalue(this);
-}
-
-
-std::any MySQLParser::InstallSetRvalueContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitInstallSetRvalue(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::InstallSetRvalueContext* MySQLParser::installSetRvalue() {
   InstallSetRvalueContext *_localctx = _tracker.createInstance<InstallSetRvalueContext>(_ctx, getState());
@@ -45879,25 +39151,6 @@ size_t MySQLParser::InstallSetValueContext::getRuleIndex() const {
   return MySQLParser::RuleInstallSetValue;
 }
 
-void MySQLParser::InstallSetValueContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterInstallSetValue(this);
-}
-
-void MySQLParser::InstallSetValueContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitInstallSetValue(this);
-}
-
-
-std::any MySQLParser::InstallSetValueContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitInstallSetValue(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::InstallSetValueContext* MySQLParser::installSetValue() {
   InstallSetValueContext *_localctx = _tracker.createInstance<InstallSetValueContext>(_ctx, getState());
@@ -45962,25 +39215,6 @@ size_t MySQLParser::InstallSetValueListContext::getRuleIndex() const {
   return MySQLParser::RuleInstallSetValueList;
 }
 
-void MySQLParser::InstallSetValueListContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterInstallSetValueList(this);
-}
-
-void MySQLParser::InstallSetValueListContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitInstallSetValueList(this);
-}
-
-
-std::any MySQLParser::InstallSetValueListContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitInstallSetValueList(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::InstallSetValueListContext* MySQLParser::installSetValueList() {
   InstallSetValueListContext *_localctx = _tracker.createInstance<InstallSetValueListContext>(_ctx, getState());
@@ -46045,25 +39279,6 @@ size_t MySQLParser::SetStatementContext::getRuleIndex() const {
   return MySQLParser::RuleSetStatement;
 }
 
-void MySQLParser::SetStatementContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterSetStatement(this);
-}
-
-void MySQLParser::SetStatementContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitSetStatement(this);
-}
-
-
-std::any MySQLParser::SetStatementContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitSetStatement(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::SetStatementContext* MySQLParser::setStatement() {
   SetStatementContext *_localctx = _tracker.createInstance<SetStatementContext>(_ctx, getState());
@@ -46176,25 +39391,6 @@ size_t MySQLParser::StartOptionValueListContext::getRuleIndex() const {
   return MySQLParser::RuleStartOptionValueList;
 }
 
-void MySQLParser::StartOptionValueListContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterStartOptionValueList(this);
-}
-
-void MySQLParser::StartOptionValueListContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitStartOptionValueList(this);
-}
-
-
-std::any MySQLParser::StartOptionValueListContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitStartOptionValueList(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::StartOptionValueListContext* MySQLParser::startOptionValueList() {
   StartOptionValueListContext *_localctx = _tracker.createInstance<StartOptionValueListContext>(_ctx, getState());
@@ -46400,25 +39596,6 @@ size_t MySQLParser::TransactionCharacteristicsContext::getRuleIndex() const {
   return MySQLParser::RuleTransactionCharacteristics;
 }
 
-void MySQLParser::TransactionCharacteristicsContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterTransactionCharacteristics(this);
-}
-
-void MySQLParser::TransactionCharacteristicsContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitTransactionCharacteristics(this);
-}
-
-
-std::any MySQLParser::TransactionCharacteristicsContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitTransactionCharacteristics(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::TransactionCharacteristicsContext* MySQLParser::transactionCharacteristics() {
   TransactionCharacteristicsContext *_localctx = _tracker.createInstance<TransactionCharacteristicsContext>(_ctx, getState());
@@ -46505,25 +39682,6 @@ size_t MySQLParser::TransactionAccessModeContext::getRuleIndex() const {
   return MySQLParser::RuleTransactionAccessMode;
 }
 
-void MySQLParser::TransactionAccessModeContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterTransactionAccessMode(this);
-}
-
-void MySQLParser::TransactionAccessModeContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitTransactionAccessMode(this);
-}
-
-
-std::any MySQLParser::TransactionAccessModeContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitTransactionAccessMode(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::TransactionAccessModeContext* MySQLParser::transactionAccessMode() {
   TransactionAccessModeContext *_localctx = _tracker.createInstance<TransactionAccessModeContext>(_ctx, getState());
@@ -46600,25 +39758,6 @@ size_t MySQLParser::IsolationLevelContext::getRuleIndex() const {
   return MySQLParser::RuleIsolationLevel;
 }
 
-void MySQLParser::IsolationLevelContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterIsolationLevel(this);
-}
-
-void MySQLParser::IsolationLevelContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitIsolationLevel(this);
-}
-
-
-std::any MySQLParser::IsolationLevelContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitIsolationLevel(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::IsolationLevelContext* MySQLParser::isolationLevel() {
   IsolationLevelContext *_localctx = _tracker.createInstance<IsolationLevelContext>(_ctx, getState());
@@ -46711,25 +39850,6 @@ size_t MySQLParser::OptionValueListContinuedContext::getRuleIndex() const {
   return MySQLParser::RuleOptionValueListContinued;
 }
 
-void MySQLParser::OptionValueListContinuedContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterOptionValueListContinued(this);
-}
-
-void MySQLParser::OptionValueListContinuedContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitOptionValueListContinued(this);
-}
-
-
-std::any MySQLParser::OptionValueListContinuedContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitOptionValueListContinued(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::OptionValueListContinuedContext* MySQLParser::optionValueListContinued() {
   OptionValueListContinuedContext *_localctx = _tracker.createInstance<OptionValueListContinuedContext>(_ctx, getState());
@@ -46827,25 +39947,6 @@ size_t MySQLParser::OptionValueNoOptionTypeContext::getRuleIndex() const {
   return MySQLParser::RuleOptionValueNoOptionType;
 }
 
-void MySQLParser::OptionValueNoOptionTypeContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterOptionValueNoOptionType(this);
-}
-
-void MySQLParser::OptionValueNoOptionTypeContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitOptionValueNoOptionType(this);
-}
-
-
-std::any MySQLParser::OptionValueNoOptionTypeContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitOptionValueNoOptionType(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::OptionValueNoOptionTypeContext* MySQLParser::optionValueNoOptionType() {
   OptionValueNoOptionTypeContext *_localctx = _tracker.createInstance<OptionValueNoOptionTypeContext>(_ctx, getState());
@@ -47007,25 +40108,6 @@ size_t MySQLParser::OptionValueContext::getRuleIndex() const {
   return MySQLParser::RuleOptionValue;
 }
 
-void MySQLParser::OptionValueContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterOptionValue(this);
-}
-
-void MySQLParser::OptionValueContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitOptionValue(this);
-}
-
-
-std::any MySQLParser::OptionValueContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitOptionValue(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::OptionValueContext* MySQLParser::optionValue() {
   OptionValueContext *_localctx = _tracker.createInstance<OptionValueContext>(_ctx, getState());
@@ -47099,25 +40181,6 @@ size_t MySQLParser::SetSystemVariableContext::getRuleIndex() const {
   return MySQLParser::RuleSetSystemVariable;
 }
 
-void MySQLParser::SetSystemVariableContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterSetSystemVariable(this);
-}
-
-void MySQLParser::SetSystemVariableContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitSetSystemVariable(this);
-}
-
-
-std::any MySQLParser::SetSystemVariableContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitSetSystemVariable(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::SetSystemVariableContext* MySQLParser::setSystemVariable() {
   SetSystemVariableContext *_localctx = _tracker.createInstance<SetSystemVariableContext>(_ctx, getState());
@@ -47187,25 +40250,6 @@ size_t MySQLParser::StartOptionValueListFollowingOptionTypeContext::getRuleIndex
   return MySQLParser::RuleStartOptionValueListFollowingOptionType;
 }
 
-void MySQLParser::StartOptionValueListFollowingOptionTypeContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterStartOptionValueListFollowingOptionType(this);
-}
-
-void MySQLParser::StartOptionValueListFollowingOptionTypeContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitStartOptionValueListFollowingOptionType(this);
-}
-
-
-std::any MySQLParser::StartOptionValueListFollowingOptionTypeContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitStartOptionValueListFollowingOptionType(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::StartOptionValueListFollowingOptionTypeContext* MySQLParser::startOptionValueListFollowingOptionType() {
   StartOptionValueListFollowingOptionTypeContext *_localctx = _tracker.createInstance<StartOptionValueListFollowingOptionTypeContext>(_ctx, getState());
@@ -47277,25 +40321,6 @@ size_t MySQLParser::OptionValueFollowingOptionTypeContext::getRuleIndex() const 
   return MySQLParser::RuleOptionValueFollowingOptionType;
 }
 
-void MySQLParser::OptionValueFollowingOptionTypeContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterOptionValueFollowingOptionType(this);
-}
-
-void MySQLParser::OptionValueFollowingOptionTypeContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitOptionValueFollowingOptionType(this);
-}
-
-
-std::any MySQLParser::OptionValueFollowingOptionTypeContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitOptionValueFollowingOptionType(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::OptionValueFollowingOptionTypeContext* MySQLParser::optionValueFollowingOptionType() {
   OptionValueFollowingOptionTypeContext *_localctx = _tracker.createInstance<OptionValueFollowingOptionTypeContext>(_ctx, getState());
@@ -47366,25 +40391,6 @@ size_t MySQLParser::SetExprOrDefaultContext::getRuleIndex() const {
   return MySQLParser::RuleSetExprOrDefault;
 }
 
-void MySQLParser::SetExprOrDefaultContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterSetExprOrDefault(this);
-}
-
-void MySQLParser::SetExprOrDefaultContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitSetExprOrDefault(this);
-}
-
-
-std::any MySQLParser::SetExprOrDefaultContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitSetExprOrDefault(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::SetExprOrDefaultContext* MySQLParser::setExprOrDefault() {
   SetExprOrDefaultContext *_localctx = _tracker.createInstance<SetExprOrDefaultContext>(_ctx, getState());
@@ -47487,25 +40493,6 @@ size_t MySQLParser::ShowDatabasesStatementContext::getRuleIndex() const {
   return MySQLParser::RuleShowDatabasesStatement;
 }
 
-void MySQLParser::ShowDatabasesStatementContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterShowDatabasesStatement(this);
-}
-
-void MySQLParser::ShowDatabasesStatementContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitShowDatabasesStatement(this);
-}
-
-
-std::any MySQLParser::ShowDatabasesStatementContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitShowDatabasesStatement(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::ShowDatabasesStatementContext* MySQLParser::showDatabasesStatement() {
   ShowDatabasesStatementContext *_localctx = _tracker.createInstance<ShowDatabasesStatementContext>(_ctx, getState());
@@ -47575,25 +40562,6 @@ size_t MySQLParser::ShowTablesStatementContext::getRuleIndex() const {
   return MySQLParser::RuleShowTablesStatement;
 }
 
-void MySQLParser::ShowTablesStatementContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterShowTablesStatement(this);
-}
-
-void MySQLParser::ShowTablesStatementContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitShowTablesStatement(this);
-}
-
-
-std::any MySQLParser::ShowTablesStatementContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitShowTablesStatement(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::ShowTablesStatementContext* MySQLParser::showTablesStatement() {
   ShowTablesStatementContext *_localctx = _tracker.createInstance<ShowTablesStatementContext>(_ctx, getState());
@@ -47683,25 +40651,6 @@ size_t MySQLParser::ShowTriggersStatementContext::getRuleIndex() const {
   return MySQLParser::RuleShowTriggersStatement;
 }
 
-void MySQLParser::ShowTriggersStatementContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterShowTriggersStatement(this);
-}
-
-void MySQLParser::ShowTriggersStatementContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitShowTriggersStatement(this);
-}
-
-
-std::any MySQLParser::ShowTriggersStatementContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitShowTriggersStatement(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::ShowTriggersStatementContext* MySQLParser::showTriggersStatement() {
   ShowTriggersStatementContext *_localctx = _tracker.createInstance<ShowTriggersStatementContext>(_ctx, getState());
@@ -47785,25 +40734,6 @@ size_t MySQLParser::ShowEventsStatementContext::getRuleIndex() const {
   return MySQLParser::RuleShowEventsStatement;
 }
 
-void MySQLParser::ShowEventsStatementContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterShowEventsStatement(this);
-}
-
-void MySQLParser::ShowEventsStatementContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitShowEventsStatement(this);
-}
-
-
-std::any MySQLParser::ShowEventsStatementContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitShowEventsStatement(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::ShowEventsStatementContext* MySQLParser::showEventsStatement() {
   ShowEventsStatementContext *_localctx = _tracker.createInstance<ShowEventsStatementContext>(_ctx, getState());
@@ -47883,25 +40813,6 @@ size_t MySQLParser::ShowTableStatusStatementContext::getRuleIndex() const {
   return MySQLParser::RuleShowTableStatusStatement;
 }
 
-void MySQLParser::ShowTableStatusStatementContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterShowTableStatusStatement(this);
-}
-
-void MySQLParser::ShowTableStatusStatementContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitShowTableStatusStatement(this);
-}
-
-
-std::any MySQLParser::ShowTableStatusStatementContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitShowTableStatusStatement(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::ShowTableStatusStatementContext* MySQLParser::showTableStatusStatement() {
   ShowTableStatusStatementContext *_localctx = _tracker.createInstance<ShowTableStatusStatementContext>(_ctx, getState());
@@ -47983,25 +40894,6 @@ size_t MySQLParser::ShowOpenTablesStatementContext::getRuleIndex() const {
   return MySQLParser::RuleShowOpenTablesStatement;
 }
 
-void MySQLParser::ShowOpenTablesStatementContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterShowOpenTablesStatement(this);
-}
-
-void MySQLParser::ShowOpenTablesStatementContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitShowOpenTablesStatement(this);
-}
-
-
-std::any MySQLParser::ShowOpenTablesStatementContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitShowOpenTablesStatement(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::ShowOpenTablesStatementContext* MySQLParser::showOpenTablesStatement() {
   ShowOpenTablesStatementContext *_localctx = _tracker.createInstance<ShowOpenTablesStatementContext>(_ctx, getState());
@@ -48075,25 +40967,6 @@ size_t MySQLParser::ShowParseTreeStatementContext::getRuleIndex() const {
   return MySQLParser::RuleShowParseTreeStatement;
 }
 
-void MySQLParser::ShowParseTreeStatementContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterShowParseTreeStatement(this);
-}
-
-void MySQLParser::ShowParseTreeStatementContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitShowParseTreeStatement(this);
-}
-
-
-std::any MySQLParser::ShowParseTreeStatementContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitShowParseTreeStatement(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::ShowParseTreeStatementContext* MySQLParser::showParseTreeStatement() {
   ShowParseTreeStatementContext *_localctx = _tracker.createInstance<ShowParseTreeStatementContext>(_ctx, getState());
@@ -48147,25 +41020,6 @@ size_t MySQLParser::ShowPluginsStatementContext::getRuleIndex() const {
   return MySQLParser::RuleShowPluginsStatement;
 }
 
-void MySQLParser::ShowPluginsStatementContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterShowPluginsStatement(this);
-}
-
-void MySQLParser::ShowPluginsStatementContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitShowPluginsStatement(this);
-}
-
-
-std::any MySQLParser::ShowPluginsStatementContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitShowPluginsStatement(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::ShowPluginsStatementContext* MySQLParser::showPluginsStatement() {
   ShowPluginsStatementContext *_localctx = _tracker.createInstance<ShowPluginsStatementContext>(_ctx, getState());
@@ -48222,25 +41076,6 @@ size_t MySQLParser::ShowEngineLogsStatementContext::getRuleIndex() const {
   return MySQLParser::RuleShowEngineLogsStatement;
 }
 
-void MySQLParser::ShowEngineLogsStatementContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterShowEngineLogsStatement(this);
-}
-
-void MySQLParser::ShowEngineLogsStatementContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitShowEngineLogsStatement(this);
-}
-
-
-std::any MySQLParser::ShowEngineLogsStatementContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitShowEngineLogsStatement(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::ShowEngineLogsStatementContext* MySQLParser::showEngineLogsStatement() {
   ShowEngineLogsStatementContext *_localctx = _tracker.createInstance<ShowEngineLogsStatementContext>(_ctx, getState());
@@ -48301,25 +41136,6 @@ size_t MySQLParser::ShowEngineMutexStatementContext::getRuleIndex() const {
   return MySQLParser::RuleShowEngineMutexStatement;
 }
 
-void MySQLParser::ShowEngineMutexStatementContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterShowEngineMutexStatement(this);
-}
-
-void MySQLParser::ShowEngineMutexStatementContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitShowEngineMutexStatement(this);
-}
-
-
-std::any MySQLParser::ShowEngineMutexStatementContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitShowEngineMutexStatement(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::ShowEngineMutexStatementContext* MySQLParser::showEngineMutexStatement() {
   ShowEngineMutexStatementContext *_localctx = _tracker.createInstance<ShowEngineMutexStatementContext>(_ctx, getState());
@@ -48380,25 +41196,6 @@ size_t MySQLParser::ShowEngineStatusStatementContext::getRuleIndex() const {
   return MySQLParser::RuleShowEngineStatusStatement;
 }
 
-void MySQLParser::ShowEngineStatusStatementContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterShowEngineStatusStatement(this);
-}
-
-void MySQLParser::ShowEngineStatusStatementContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitShowEngineStatusStatement(this);
-}
-
-
-std::any MySQLParser::ShowEngineStatusStatementContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitShowEngineStatusStatement(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::ShowEngineStatusStatementContext* MySQLParser::showEngineStatusStatement() {
   ShowEngineStatusStatementContext *_localctx = _tracker.createInstance<ShowEngineStatusStatementContext>(_ctx, getState());
@@ -48475,25 +41272,6 @@ size_t MySQLParser::ShowColumnsStatementContext::getRuleIndex() const {
   return MySQLParser::RuleShowColumnsStatement;
 }
 
-void MySQLParser::ShowColumnsStatementContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterShowColumnsStatement(this);
-}
-
-void MySQLParser::ShowColumnsStatementContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitShowColumnsStatement(this);
-}
-
-
-std::any MySQLParser::ShowColumnsStatementContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitShowColumnsStatement(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::ShowColumnsStatementContext* MySQLParser::showColumnsStatement() {
   ShowColumnsStatementContext *_localctx = _tracker.createInstance<ShowColumnsStatementContext>(_ctx, getState());
@@ -48592,25 +41370,6 @@ size_t MySQLParser::ShowBinaryLogsStatementContext::getRuleIndex() const {
   return MySQLParser::RuleShowBinaryLogsStatement;
 }
 
-void MySQLParser::ShowBinaryLogsStatementContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterShowBinaryLogsStatement(this);
-}
-
-void MySQLParser::ShowBinaryLogsStatementContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitShowBinaryLogsStatement(this);
-}
-
-
-std::any MySQLParser::ShowBinaryLogsStatementContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitShowBinaryLogsStatement(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::ShowBinaryLogsStatementContext* MySQLParser::showBinaryLogsStatement() {
   ShowBinaryLogsStatementContext *_localctx = _tracker.createInstance<ShowBinaryLogsStatementContext>(_ctx, getState());
@@ -48677,25 +41436,6 @@ size_t MySQLParser::ShowBinaryLogStatusStatementContext::getRuleIndex() const {
   return MySQLParser::RuleShowBinaryLogStatusStatement;
 }
 
-void MySQLParser::ShowBinaryLogStatusStatementContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterShowBinaryLogStatusStatement(this);
-}
-
-void MySQLParser::ShowBinaryLogStatusStatementContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitShowBinaryLogStatusStatement(this);
-}
-
-
-std::any MySQLParser::ShowBinaryLogStatusStatementContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitShowBinaryLogStatusStatement(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::ShowBinaryLogStatusStatementContext* MySQLParser::showBinaryLogStatusStatement() {
   ShowBinaryLogStatusStatementContext *_localctx = _tracker.createInstance<ShowBinaryLogStatusStatementContext>(_ctx, getState());
@@ -48756,25 +41496,6 @@ size_t MySQLParser::ShowReplicasStatementContext::getRuleIndex() const {
   return MySQLParser::RuleShowReplicasStatement;
 }
 
-void MySQLParser::ShowReplicasStatementContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterShowReplicasStatement(this);
-}
-
-void MySQLParser::ShowReplicasStatementContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitShowReplicasStatement(this);
-}
-
-
-std::any MySQLParser::ShowReplicasStatementContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitShowReplicasStatement(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::ShowReplicasStatementContext* MySQLParser::showReplicasStatement() {
   ShowReplicasStatementContext *_localctx = _tracker.createInstance<ShowReplicasStatementContext>(_ctx, getState());
@@ -48870,25 +41591,6 @@ size_t MySQLParser::ShowBinlogEventsStatementContext::getRuleIndex() const {
   return MySQLParser::RuleShowBinlogEventsStatement;
 }
 
-void MySQLParser::ShowBinlogEventsStatementContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterShowBinlogEventsStatement(this);
-}
-
-void MySQLParser::ShowBinlogEventsStatementContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitShowBinlogEventsStatement(this);
-}
-
-
-std::any MySQLParser::ShowBinlogEventsStatementContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitShowBinlogEventsStatement(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::ShowBinlogEventsStatementContext* MySQLParser::showBinlogEventsStatement() {
   ShowBinlogEventsStatementContext *_localctx = _tracker.createInstance<ShowBinlogEventsStatementContext>(_ctx, getState());
@@ -49004,25 +41706,6 @@ size_t MySQLParser::ShowRelaylogEventsStatementContext::getRuleIndex() const {
   return MySQLParser::RuleShowRelaylogEventsStatement;
 }
 
-void MySQLParser::ShowRelaylogEventsStatementContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterShowRelaylogEventsStatement(this);
-}
-
-void MySQLParser::ShowRelaylogEventsStatementContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitShowRelaylogEventsStatement(this);
-}
-
-
-std::any MySQLParser::ShowRelaylogEventsStatementContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitShowRelaylogEventsStatement(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::ShowRelaylogEventsStatementContext* MySQLParser::showRelaylogEventsStatement() {
   ShowRelaylogEventsStatementContext *_localctx = _tracker.createInstance<ShowRelaylogEventsStatementContext>(_ctx, getState());
@@ -49138,25 +41821,6 @@ size_t MySQLParser::ShowKeysStatementContext::getRuleIndex() const {
   return MySQLParser::RuleShowKeysStatement;
 }
 
-void MySQLParser::ShowKeysStatementContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterShowKeysStatement(this);
-}
-
-void MySQLParser::ShowKeysStatementContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitShowKeysStatement(this);
-}
-
-
-std::any MySQLParser::ShowKeysStatementContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitShowKeysStatement(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::ShowKeysStatementContext* MySQLParser::showKeysStatement() {
   ShowKeysStatementContext *_localctx = _tracker.createInstance<ShowKeysStatementContext>(_ctx, getState());
@@ -49248,25 +41912,6 @@ size_t MySQLParser::ShowEnginesStatementContext::getRuleIndex() const {
   return MySQLParser::RuleShowEnginesStatement;
 }
 
-void MySQLParser::ShowEnginesStatementContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterShowEnginesStatement(this);
-}
-
-void MySQLParser::ShowEnginesStatementContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitShowEnginesStatement(this);
-}
-
-
-std::any MySQLParser::ShowEnginesStatementContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitShowEnginesStatement(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::ShowEnginesStatementContext* MySQLParser::showEnginesStatement() {
   ShowEnginesStatementContext *_localctx = _tracker.createInstance<ShowEnginesStatementContext>(_ctx, getState());
@@ -49340,25 +41985,6 @@ size_t MySQLParser::ShowCountWarningsStatementContext::getRuleIndex() const {
   return MySQLParser::RuleShowCountWarningsStatement;
 }
 
-void MySQLParser::ShowCountWarningsStatementContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterShowCountWarningsStatement(this);
-}
-
-void MySQLParser::ShowCountWarningsStatementContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitShowCountWarningsStatement(this);
-}
-
-
-std::any MySQLParser::ShowCountWarningsStatementContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitShowCountWarningsStatement(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::ShowCountWarningsStatementContext* MySQLParser::showCountWarningsStatement() {
   ShowCountWarningsStatementContext *_localctx = _tracker.createInstance<ShowCountWarningsStatementContext>(_ctx, getState());
@@ -49431,25 +42057,6 @@ size_t MySQLParser::ShowCountErrorsStatementContext::getRuleIndex() const {
   return MySQLParser::RuleShowCountErrorsStatement;
 }
 
-void MySQLParser::ShowCountErrorsStatementContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterShowCountErrorsStatement(this);
-}
-
-void MySQLParser::ShowCountErrorsStatementContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitShowCountErrorsStatement(this);
-}
-
-
-std::any MySQLParser::ShowCountErrorsStatementContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitShowCountErrorsStatement(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::ShowCountErrorsStatementContext* MySQLParser::showCountErrorsStatement() {
   ShowCountErrorsStatementContext *_localctx = _tracker.createInstance<ShowCountErrorsStatementContext>(_ctx, getState());
@@ -49510,25 +42117,6 @@ size_t MySQLParser::ShowWarningsStatementContext::getRuleIndex() const {
   return MySQLParser::RuleShowWarningsStatement;
 }
 
-void MySQLParser::ShowWarningsStatementContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterShowWarningsStatement(this);
-}
-
-void MySQLParser::ShowWarningsStatementContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitShowWarningsStatement(this);
-}
-
-
-std::any MySQLParser::ShowWarningsStatementContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitShowWarningsStatement(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::ShowWarningsStatementContext* MySQLParser::showWarningsStatement() {
   ShowWarningsStatementContext *_localctx = _tracker.createInstance<ShowWarningsStatementContext>(_ctx, getState());
@@ -49590,25 +42178,6 @@ size_t MySQLParser::ShowErrorsStatementContext::getRuleIndex() const {
   return MySQLParser::RuleShowErrorsStatement;
 }
 
-void MySQLParser::ShowErrorsStatementContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterShowErrorsStatement(this);
-}
-
-void MySQLParser::ShowErrorsStatementContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitShowErrorsStatement(this);
-}
-
-
-std::any MySQLParser::ShowErrorsStatementContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitShowErrorsStatement(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::ShowErrorsStatementContext* MySQLParser::showErrorsStatement() {
   ShowErrorsStatementContext *_localctx = _tracker.createInstance<ShowErrorsStatementContext>(_ctx, getState());
@@ -49666,25 +42235,6 @@ size_t MySQLParser::ShowProfilesStatementContext::getRuleIndex() const {
   return MySQLParser::RuleShowProfilesStatement;
 }
 
-void MySQLParser::ShowProfilesStatementContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterShowProfilesStatement(this);
-}
-
-void MySQLParser::ShowProfilesStatementContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitShowProfilesStatement(this);
-}
-
-
-std::any MySQLParser::ShowProfilesStatementContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitShowProfilesStatement(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::ShowProfilesStatementContext* MySQLParser::showProfilesStatement() {
   ShowProfilesStatementContext *_localctx = _tracker.createInstance<ShowProfilesStatementContext>(_ctx, getState());
@@ -49753,25 +42303,6 @@ size_t MySQLParser::ShowProfileStatementContext::getRuleIndex() const {
   return MySQLParser::RuleShowProfileStatement;
 }
 
-void MySQLParser::ShowProfileStatementContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterShowProfileStatement(this);
-}
-
-void MySQLParser::ShowProfileStatementContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitShowProfileStatement(this);
-}
-
-
-std::any MySQLParser::ShowProfileStatementContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitShowProfileStatement(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::ShowProfileStatementContext* MySQLParser::showProfileStatement() {
   ShowProfileStatementContext *_localctx = _tracker.createInstance<ShowProfileStatementContext>(_ctx, getState());
@@ -49862,25 +42393,6 @@ size_t MySQLParser::ShowStatusStatementContext::getRuleIndex() const {
   return MySQLParser::RuleShowStatusStatement;
 }
 
-void MySQLParser::ShowStatusStatementContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterShowStatusStatement(this);
-}
-
-void MySQLParser::ShowStatusStatementContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitShowStatusStatement(this);
-}
-
-
-std::any MySQLParser::ShowStatusStatementContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitShowStatusStatement(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::ShowStatusStatementContext* MySQLParser::showStatusStatement() {
   ShowStatusStatementContext *_localctx = _tracker.createInstance<ShowStatusStatementContext>(_ctx, getState());
@@ -49952,25 +42464,6 @@ size_t MySQLParser::ShowProcessListStatementContext::getRuleIndex() const {
   return MySQLParser::RuleShowProcessListStatement;
 }
 
-void MySQLParser::ShowProcessListStatementContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterShowProcessListStatement(this);
-}
-
-void MySQLParser::ShowProcessListStatementContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitShowProcessListStatement(this);
-}
-
-
-std::any MySQLParser::ShowProcessListStatementContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitShowProcessListStatement(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::ShowProcessListStatementContext* MySQLParser::showProcessListStatement() {
   ShowProcessListStatementContext *_localctx = _tracker.createInstance<ShowProcessListStatementContext>(_ctx, getState());
@@ -50036,25 +42529,6 @@ size_t MySQLParser::ShowVariablesStatementContext::getRuleIndex() const {
   return MySQLParser::RuleShowVariablesStatement;
 }
 
-void MySQLParser::ShowVariablesStatementContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterShowVariablesStatement(this);
-}
-
-void MySQLParser::ShowVariablesStatementContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitShowVariablesStatement(this);
-}
-
-
-std::any MySQLParser::ShowVariablesStatementContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitShowVariablesStatement(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::ShowVariablesStatementContext* MySQLParser::showVariablesStatement() {
   ShowVariablesStatementContext *_localctx = _tracker.createInstance<ShowVariablesStatementContext>(_ctx, getState());
@@ -50126,25 +42600,6 @@ size_t MySQLParser::ShowCharacterSetStatementContext::getRuleIndex() const {
   return MySQLParser::RuleShowCharacterSetStatement;
 }
 
-void MySQLParser::ShowCharacterSetStatementContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterShowCharacterSetStatement(this);
-}
-
-void MySQLParser::ShowCharacterSetStatementContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitShowCharacterSetStatement(this);
-}
-
-
-std::any MySQLParser::ShowCharacterSetStatementContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitShowCharacterSetStatement(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::ShowCharacterSetStatementContext* MySQLParser::showCharacterSetStatement() {
   ShowCharacterSetStatementContext *_localctx = _tracker.createInstance<ShowCharacterSetStatementContext>(_ctx, getState());
@@ -50206,25 +42661,6 @@ size_t MySQLParser::ShowCollationStatementContext::getRuleIndex() const {
   return MySQLParser::RuleShowCollationStatement;
 }
 
-void MySQLParser::ShowCollationStatementContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterShowCollationStatement(this);
-}
-
-void MySQLParser::ShowCollationStatementContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitShowCollationStatement(this);
-}
-
-
-std::any MySQLParser::ShowCollationStatementContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitShowCollationStatement(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::ShowCollationStatementContext* MySQLParser::showCollationStatement() {
   ShowCollationStatementContext *_localctx = _tracker.createInstance<ShowCollationStatementContext>(_ctx, getState());
@@ -50282,25 +42718,6 @@ size_t MySQLParser::ShowPrivilegesStatementContext::getRuleIndex() const {
   return MySQLParser::RuleShowPrivilegesStatement;
 }
 
-void MySQLParser::ShowPrivilegesStatementContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterShowPrivilegesStatement(this);
-}
-
-void MySQLParser::ShowPrivilegesStatementContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitShowPrivilegesStatement(this);
-}
-
-
-std::any MySQLParser::ShowPrivilegesStatementContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitShowPrivilegesStatement(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::ShowPrivilegesStatementContext* MySQLParser::showPrivilegesStatement() {
   ShowPrivilegesStatementContext *_localctx = _tracker.createInstance<ShowPrivilegesStatementContext>(_ctx, getState());
@@ -50365,25 +42782,6 @@ size_t MySQLParser::ShowGrantsStatementContext::getRuleIndex() const {
   return MySQLParser::RuleShowGrantsStatement;
 }
 
-void MySQLParser::ShowGrantsStatementContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterShowGrantsStatement(this);
-}
-
-void MySQLParser::ShowGrantsStatementContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitShowGrantsStatement(this);
-}
-
-
-std::any MySQLParser::ShowGrantsStatementContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitShowGrantsStatement(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::ShowGrantsStatementContext* MySQLParser::showGrantsStatement() {
   ShowGrantsStatementContext *_localctx = _tracker.createInstance<ShowGrantsStatementContext>(_ctx, getState());
@@ -50465,25 +42863,6 @@ size_t MySQLParser::ShowCreateDatabaseStatementContext::getRuleIndex() const {
   return MySQLParser::RuleShowCreateDatabaseStatement;
 }
 
-void MySQLParser::ShowCreateDatabaseStatementContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterShowCreateDatabaseStatement(this);
-}
-
-void MySQLParser::ShowCreateDatabaseStatementContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitShowCreateDatabaseStatement(this);
-}
-
-
-std::any MySQLParser::ShowCreateDatabaseStatementContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitShowCreateDatabaseStatement(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::ShowCreateDatabaseStatementContext* MySQLParser::showCreateDatabaseStatement() {
   ShowCreateDatabaseStatementContext *_localctx = _tracker.createInstance<ShowCreateDatabaseStatementContext>(_ctx, getState());
@@ -50557,25 +42936,6 @@ size_t MySQLParser::ShowCreateTableStatementContext::getRuleIndex() const {
   return MySQLParser::RuleShowCreateTableStatement;
 }
 
-void MySQLParser::ShowCreateTableStatementContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterShowCreateTableStatement(this);
-}
-
-void MySQLParser::ShowCreateTableStatementContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitShowCreateTableStatement(this);
-}
-
-
-std::any MySQLParser::ShowCreateTableStatementContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitShowCreateTableStatement(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::ShowCreateTableStatementContext* MySQLParser::showCreateTableStatement() {
   ShowCreateTableStatementContext *_localctx = _tracker.createInstance<ShowCreateTableStatementContext>(_ctx, getState());
@@ -50636,25 +42996,6 @@ size_t MySQLParser::ShowCreateViewStatementContext::getRuleIndex() const {
   return MySQLParser::RuleShowCreateViewStatement;
 }
 
-void MySQLParser::ShowCreateViewStatementContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterShowCreateViewStatement(this);
-}
-
-void MySQLParser::ShowCreateViewStatementContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitShowCreateViewStatement(this);
-}
-
-
-std::any MySQLParser::ShowCreateViewStatementContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitShowCreateViewStatement(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::ShowCreateViewStatementContext* MySQLParser::showCreateViewStatement() {
   ShowCreateViewStatementContext *_localctx = _tracker.createInstance<ShowCreateViewStatementContext>(_ctx, getState());
@@ -50711,25 +43052,6 @@ size_t MySQLParser::ShowMasterStatusStatementContext::getRuleIndex() const {
   return MySQLParser::RuleShowMasterStatusStatement;
 }
 
-void MySQLParser::ShowMasterStatusStatementContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterShowMasterStatusStatement(this);
-}
-
-void MySQLParser::ShowMasterStatusStatementContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitShowMasterStatusStatement(this);
-}
-
-
-std::any MySQLParser::ShowMasterStatusStatementContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitShowMasterStatusStatement(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::ShowMasterStatusStatementContext* MySQLParser::showMasterStatusStatement() {
   ShowMasterStatusStatementContext *_localctx = _tracker.createInstance<ShowMasterStatusStatementContext>(_ctx, getState());
@@ -50788,25 +43110,6 @@ size_t MySQLParser::ShowReplicaStatusStatementContext::getRuleIndex() const {
   return MySQLParser::RuleShowReplicaStatusStatement;
 }
 
-void MySQLParser::ShowReplicaStatusStatementContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterShowReplicaStatusStatement(this);
-}
-
-void MySQLParser::ShowReplicaStatusStatementContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitShowReplicaStatusStatement(this);
-}
-
-
-std::any MySQLParser::ShowReplicaStatusStatementContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitShowReplicaStatusStatement(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::ShowReplicaStatusStatementContext* MySQLParser::showReplicaStatusStatement() {
   ShowReplicaStatusStatementContext *_localctx = _tracker.createInstance<ShowReplicaStatusStatementContext>(_ctx, getState());
@@ -50874,25 +43177,6 @@ size_t MySQLParser::ShowCreateProcedureStatementContext::getRuleIndex() const {
   return MySQLParser::RuleShowCreateProcedureStatement;
 }
 
-void MySQLParser::ShowCreateProcedureStatementContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterShowCreateProcedureStatement(this);
-}
-
-void MySQLParser::ShowCreateProcedureStatementContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitShowCreateProcedureStatement(this);
-}
-
-
-std::any MySQLParser::ShowCreateProcedureStatementContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitShowCreateProcedureStatement(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::ShowCreateProcedureStatementContext* MySQLParser::showCreateProcedureStatement() {
   ShowCreateProcedureStatementContext *_localctx = _tracker.createInstance<ShowCreateProcedureStatementContext>(_ctx, getState());
@@ -50953,25 +43237,6 @@ size_t MySQLParser::ShowCreateFunctionStatementContext::getRuleIndex() const {
   return MySQLParser::RuleShowCreateFunctionStatement;
 }
 
-void MySQLParser::ShowCreateFunctionStatementContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterShowCreateFunctionStatement(this);
-}
-
-void MySQLParser::ShowCreateFunctionStatementContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitShowCreateFunctionStatement(this);
-}
-
-
-std::any MySQLParser::ShowCreateFunctionStatementContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitShowCreateFunctionStatement(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::ShowCreateFunctionStatementContext* MySQLParser::showCreateFunctionStatement() {
   ShowCreateFunctionStatementContext *_localctx = _tracker.createInstance<ShowCreateFunctionStatementContext>(_ctx, getState());
@@ -51032,25 +43297,6 @@ size_t MySQLParser::ShowCreateTriggerStatementContext::getRuleIndex() const {
   return MySQLParser::RuleShowCreateTriggerStatement;
 }
 
-void MySQLParser::ShowCreateTriggerStatementContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterShowCreateTriggerStatement(this);
-}
-
-void MySQLParser::ShowCreateTriggerStatementContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitShowCreateTriggerStatement(this);
-}
-
-
-std::any MySQLParser::ShowCreateTriggerStatementContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitShowCreateTriggerStatement(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::ShowCreateTriggerStatementContext* MySQLParser::showCreateTriggerStatement() {
   ShowCreateTriggerStatementContext *_localctx = _tracker.createInstance<ShowCreateTriggerStatementContext>(_ctx, getState());
@@ -51115,25 +43361,6 @@ size_t MySQLParser::ShowCreateProcedureStatusStatementContext::getRuleIndex() co
   return MySQLParser::RuleShowCreateProcedureStatusStatement;
 }
 
-void MySQLParser::ShowCreateProcedureStatusStatementContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterShowCreateProcedureStatusStatement(this);
-}
-
-void MySQLParser::ShowCreateProcedureStatusStatementContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitShowCreateProcedureStatusStatement(this);
-}
-
-
-std::any MySQLParser::ShowCreateProcedureStatusStatementContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitShowCreateProcedureStatusStatement(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::ShowCreateProcedureStatusStatementContext* MySQLParser::showCreateProcedureStatusStatement() {
   ShowCreateProcedureStatusStatementContext *_localctx = _tracker.createInstance<ShowCreateProcedureStatusStatementContext>(_ctx, getState());
@@ -51207,25 +43434,6 @@ size_t MySQLParser::ShowCreateFunctionStatusStatementContext::getRuleIndex() con
   return MySQLParser::RuleShowCreateFunctionStatusStatement;
 }
 
-void MySQLParser::ShowCreateFunctionStatusStatementContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterShowCreateFunctionStatusStatement(this);
-}
-
-void MySQLParser::ShowCreateFunctionStatusStatementContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitShowCreateFunctionStatusStatement(this);
-}
-
-
-std::any MySQLParser::ShowCreateFunctionStatusStatementContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitShowCreateFunctionStatusStatement(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::ShowCreateFunctionStatusStatementContext* MySQLParser::showCreateFunctionStatusStatement() {
   ShowCreateFunctionStatusStatementContext *_localctx = _tracker.createInstance<ShowCreateFunctionStatusStatementContext>(_ctx, getState());
@@ -51299,25 +43507,6 @@ size_t MySQLParser::ShowCreateProcedureCodeStatementContext::getRuleIndex() cons
   return MySQLParser::RuleShowCreateProcedureCodeStatement;
 }
 
-void MySQLParser::ShowCreateProcedureCodeStatementContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterShowCreateProcedureCodeStatement(this);
-}
-
-void MySQLParser::ShowCreateProcedureCodeStatementContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitShowCreateProcedureCodeStatement(this);
-}
-
-
-std::any MySQLParser::ShowCreateProcedureCodeStatementContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitShowCreateProcedureCodeStatement(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::ShowCreateProcedureCodeStatementContext* MySQLParser::showCreateProcedureCodeStatement() {
   ShowCreateProcedureCodeStatementContext *_localctx = _tracker.createInstance<ShowCreateProcedureCodeStatementContext>(_ctx, getState());
@@ -51384,25 +43573,6 @@ size_t MySQLParser::ShowCreateFunctionCodeStatementContext::getRuleIndex() const
   return MySQLParser::RuleShowCreateFunctionCodeStatement;
 }
 
-void MySQLParser::ShowCreateFunctionCodeStatementContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterShowCreateFunctionCodeStatement(this);
-}
-
-void MySQLParser::ShowCreateFunctionCodeStatementContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitShowCreateFunctionCodeStatement(this);
-}
-
-
-std::any MySQLParser::ShowCreateFunctionCodeStatementContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitShowCreateFunctionCodeStatement(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::ShowCreateFunctionCodeStatementContext* MySQLParser::showCreateFunctionCodeStatement() {
   ShowCreateFunctionCodeStatementContext *_localctx = _tracker.createInstance<ShowCreateFunctionCodeStatementContext>(_ctx, getState());
@@ -51465,25 +43635,6 @@ size_t MySQLParser::ShowCreateEventStatementContext::getRuleIndex() const {
   return MySQLParser::RuleShowCreateEventStatement;
 }
 
-void MySQLParser::ShowCreateEventStatementContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterShowCreateEventStatement(this);
-}
-
-void MySQLParser::ShowCreateEventStatementContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitShowCreateEventStatement(this);
-}
-
-
-std::any MySQLParser::ShowCreateEventStatementContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitShowCreateEventStatement(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::ShowCreateEventStatementContext* MySQLParser::showCreateEventStatement() {
   ShowCreateEventStatementContext *_localctx = _tracker.createInstance<ShowCreateEventStatementContext>(_ctx, getState());
@@ -51544,25 +43695,6 @@ size_t MySQLParser::ShowCreateUserStatementContext::getRuleIndex() const {
   return MySQLParser::RuleShowCreateUserStatement;
 }
 
-void MySQLParser::ShowCreateUserStatementContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterShowCreateUserStatement(this);
-}
-
-void MySQLParser::ShowCreateUserStatementContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitShowCreateUserStatement(this);
-}
-
-
-std::any MySQLParser::ShowCreateUserStatementContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitShowCreateUserStatement(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::ShowCreateUserStatementContext* MySQLParser::showCreateUserStatement() {
   ShowCreateUserStatementContext *_localctx = _tracker.createInstance<ShowCreateUserStatementContext>(_ctx, getState());
@@ -51615,25 +43747,6 @@ size_t MySQLParser::ShowCommandTypeContext::getRuleIndex() const {
   return MySQLParser::RuleShowCommandType;
 }
 
-void MySQLParser::ShowCommandTypeContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterShowCommandType(this);
-}
-
-void MySQLParser::ShowCommandTypeContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitShowCommandType(this);
-}
-
-
-std::any MySQLParser::ShowCommandTypeContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitShowCommandType(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::ShowCommandTypeContext* MySQLParser::showCommandType() {
   ShowCommandTypeContext *_localctx = _tracker.createInstance<ShowCommandTypeContext>(_ctx, getState());
@@ -51706,25 +43819,6 @@ size_t MySQLParser::EngineOrAllContext::getRuleIndex() const {
   return MySQLParser::RuleEngineOrAll;
 }
 
-void MySQLParser::EngineOrAllContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterEngineOrAll(this);
-}
-
-void MySQLParser::EngineOrAllContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitEngineOrAll(this);
-}
-
-
-std::any MySQLParser::EngineOrAllContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitEngineOrAll(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::EngineOrAllContext* MySQLParser::engineOrAll() {
   EngineOrAllContext *_localctx = _tracker.createInstance<EngineOrAllContext>(_ctx, getState());
@@ -51788,25 +43882,6 @@ size_t MySQLParser::FromOrInContext::getRuleIndex() const {
   return MySQLParser::RuleFromOrIn;
 }
 
-void MySQLParser::FromOrInContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterFromOrIn(this);
-}
-
-void MySQLParser::FromOrInContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitFromOrIn(this);
-}
-
-
-std::any MySQLParser::FromOrInContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitFromOrIn(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::FromOrInContext* MySQLParser::fromOrIn() {
   FromOrInContext *_localctx = _tracker.createInstance<FromOrInContext>(_ctx, getState());
@@ -51863,25 +43938,6 @@ size_t MySQLParser::InDbContext::getRuleIndex() const {
   return MySQLParser::RuleInDb;
 }
 
-void MySQLParser::InDbContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterInDb(this);
-}
-
-void MySQLParser::InDbContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitInDb(this);
-}
-
-
-std::any MySQLParser::InDbContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitInDb(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::InDbContext* MySQLParser::inDb() {
   InDbContext *_localctx = _tracker.createInstance<InDbContext>(_ctx, getState());
@@ -51938,25 +43994,6 @@ size_t MySQLParser::ProfileDefinitionsContext::getRuleIndex() const {
   return MySQLParser::RuleProfileDefinitions;
 }
 
-void MySQLParser::ProfileDefinitionsContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterProfileDefinitions(this);
-}
-
-void MySQLParser::ProfileDefinitionsContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitProfileDefinitions(this);
-}
-
-
-std::any MySQLParser::ProfileDefinitionsContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitProfileDefinitions(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::ProfileDefinitionsContext* MySQLParser::profileDefinitions() {
   ProfileDefinitionsContext *_localctx = _tracker.createInstance<ProfileDefinitionsContext>(_ctx, getState());
@@ -52056,25 +44093,6 @@ size_t MySQLParser::ProfileDefinitionContext::getRuleIndex() const {
   return MySQLParser::RuleProfileDefinition;
 }
 
-void MySQLParser::ProfileDefinitionContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterProfileDefinition(this);
-}
-
-void MySQLParser::ProfileDefinitionContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitProfileDefinition(this);
-}
-
-
-std::any MySQLParser::ProfileDefinitionContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitProfileDefinition(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::ProfileDefinitionContext* MySQLParser::profileDefinition() {
   ProfileDefinitionContext *_localctx = _tracker.createInstance<ProfileDefinitionContext>(_ctx, getState());
@@ -52257,25 +44275,6 @@ size_t MySQLParser::OtherAdministrativeStatementContext::getRuleIndex() const {
   return MySQLParser::RuleOtherAdministrativeStatement;
 }
 
-void MySQLParser::OtherAdministrativeStatementContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterOtherAdministrativeStatement(this);
-}
-
-void MySQLParser::OtherAdministrativeStatementContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitOtherAdministrativeStatement(this);
-}
-
-
-std::any MySQLParser::OtherAdministrativeStatementContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitOtherAdministrativeStatement(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::OtherAdministrativeStatementContext* MySQLParser::otherAdministrativeStatement() {
   OtherAdministrativeStatementContext *_localctx = _tracker.createInstance<OtherAdministrativeStatementContext>(_ctx, getState());
@@ -52474,25 +44473,6 @@ size_t MySQLParser::KeyCacheListOrPartsContext::getRuleIndex() const {
   return MySQLParser::RuleKeyCacheListOrParts;
 }
 
-void MySQLParser::KeyCacheListOrPartsContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterKeyCacheListOrParts(this);
-}
-
-void MySQLParser::KeyCacheListOrPartsContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitKeyCacheListOrParts(this);
-}
-
-
-std::any MySQLParser::KeyCacheListOrPartsContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitKeyCacheListOrParts(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::KeyCacheListOrPartsContext* MySQLParser::keyCacheListOrParts() {
   KeyCacheListOrPartsContext *_localctx = _tracker.createInstance<KeyCacheListOrPartsContext>(_ctx, getState());
@@ -52564,25 +44544,6 @@ size_t MySQLParser::KeyCacheListContext::getRuleIndex() const {
   return MySQLParser::RuleKeyCacheList;
 }
 
-void MySQLParser::KeyCacheListContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterKeyCacheList(this);
-}
-
-void MySQLParser::KeyCacheListContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitKeyCacheList(this);
-}
-
-
-std::any MySQLParser::KeyCacheListContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitKeyCacheList(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::KeyCacheListContext* MySQLParser::keyCacheList() {
   KeyCacheListContext *_localctx = _tracker.createInstance<KeyCacheListContext>(_ctx, getState());
@@ -52642,25 +44603,6 @@ size_t MySQLParser::AssignToKeycacheContext::getRuleIndex() const {
   return MySQLParser::RuleAssignToKeycache;
 }
 
-void MySQLParser::AssignToKeycacheContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterAssignToKeycache(this);
-}
-
-void MySQLParser::AssignToKeycacheContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitAssignToKeycache(this);
-}
-
-
-std::any MySQLParser::AssignToKeycacheContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitAssignToKeycache(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::AssignToKeycacheContext* MySQLParser::assignToKeycache() {
   AssignToKeycacheContext *_localctx = _tracker.createInstance<AssignToKeycacheContext>(_ctx, getState());
@@ -52734,25 +44676,6 @@ size_t MySQLParser::AssignToKeycachePartitionContext::getRuleIndex() const {
   return MySQLParser::RuleAssignToKeycachePartition;
 }
 
-void MySQLParser::AssignToKeycachePartitionContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterAssignToKeycachePartition(this);
-}
-
-void MySQLParser::AssignToKeycachePartitionContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitAssignToKeycachePartition(this);
-}
-
-
-std::any MySQLParser::AssignToKeycachePartitionContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitAssignToKeycachePartition(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::AssignToKeycachePartitionContext* MySQLParser::assignToKeycachePartition() {
   AssignToKeycachePartitionContext *_localctx = _tracker.createInstance<AssignToKeycachePartitionContext>(_ctx, getState());
@@ -52826,25 +44749,6 @@ size_t MySQLParser::CacheKeyListContext::getRuleIndex() const {
   return MySQLParser::RuleCacheKeyList;
 }
 
-void MySQLParser::CacheKeyListContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterCacheKeyList(this);
-}
-
-void MySQLParser::CacheKeyListContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitCacheKeyList(this);
-}
-
-
-std::any MySQLParser::CacheKeyListContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitCacheKeyList(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::CacheKeyListContext* MySQLParser::cacheKeyList() {
   CacheKeyListContext *_localctx = _tracker.createInstance<CacheKeyListContext>(_ctx, getState());
@@ -52908,25 +44812,6 @@ size_t MySQLParser::KeyUsageElementContext::getRuleIndex() const {
   return MySQLParser::RuleKeyUsageElement;
 }
 
-void MySQLParser::KeyUsageElementContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterKeyUsageElement(this);
-}
-
-void MySQLParser::KeyUsageElementContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitKeyUsageElement(this);
-}
-
-
-std::any MySQLParser::KeyUsageElementContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitKeyUsageElement(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::KeyUsageElementContext* MySQLParser::keyUsageElement() {
   KeyUsageElementContext *_localctx = _tracker.createInstance<KeyUsageElementContext>(_ctx, getState());
@@ -52998,25 +44883,6 @@ size_t MySQLParser::KeyUsageListContext::getRuleIndex() const {
   return MySQLParser::RuleKeyUsageList;
 }
 
-void MySQLParser::KeyUsageListContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterKeyUsageList(this);
-}
-
-void MySQLParser::KeyUsageListContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitKeyUsageList(this);
-}
-
-
-std::any MySQLParser::KeyUsageListContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitKeyUsageList(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::KeyUsageListContext* MySQLParser::keyUsageList() {
   KeyUsageListContext *_localctx = _tracker.createInstance<KeyUsageListContext>(_ctx, getState());
@@ -53104,25 +44970,6 @@ size_t MySQLParser::FlushOptionContext::getRuleIndex() const {
   return MySQLParser::RuleFlushOption;
 }
 
-void MySQLParser::FlushOptionContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterFlushOption(this);
-}
-
-void MySQLParser::FlushOptionContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitFlushOption(this);
-}
-
-
-std::any MySQLParser::FlushOptionContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitFlushOption(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::FlushOptionContext* MySQLParser::flushOption() {
   FlushOptionContext *_localctx = _tracker.createInstance<FlushOptionContext>(_ctx, getState());
@@ -53248,25 +45095,6 @@ size_t MySQLParser::LogTypeContext::getRuleIndex() const {
   return MySQLParser::RuleLogType;
 }
 
-void MySQLParser::LogTypeContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterLogType(this);
-}
-
-void MySQLParser::LogTypeContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitLogType(this);
-}
-
-
-std::any MySQLParser::LogTypeContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitLogType(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::LogTypeContext* MySQLParser::logType() {
   LogTypeContext *_localctx = _tracker.createInstance<LogTypeContext>(_ctx, getState());
@@ -53342,25 +45170,6 @@ size_t MySQLParser::FlushTablesContext::getRuleIndex() const {
   return MySQLParser::RuleFlushTables;
 }
 
-void MySQLParser::FlushTablesContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterFlushTables(this);
-}
-
-void MySQLParser::FlushTablesContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitFlushTables(this);
-}
-
-
-std::any MySQLParser::FlushTablesContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitFlushTables(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::FlushTablesContext* MySQLParser::flushTables() {
   FlushTablesContext *_localctx = _tracker.createInstance<FlushTablesContext>(_ctx, getState());
@@ -53460,25 +45269,6 @@ size_t MySQLParser::FlushTablesOptionsContext::getRuleIndex() const {
   return MySQLParser::RuleFlushTablesOptions;
 }
 
-void MySQLParser::FlushTablesOptionsContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterFlushTablesOptions(this);
-}
-
-void MySQLParser::FlushTablesOptionsContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitFlushTablesOptions(this);
-}
-
-
-std::any MySQLParser::FlushTablesOptionsContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitFlushTablesOptions(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::FlushTablesOptionsContext* MySQLParser::flushTablesOptions() {
   FlushTablesOptionsContext *_localctx = _tracker.createInstance<FlushTablesOptionsContext>(_ctx, getState());
@@ -53564,25 +45354,6 @@ size_t MySQLParser::PreloadTailContext::getRuleIndex() const {
   return MySQLParser::RulePreloadTail;
 }
 
-void MySQLParser::PreloadTailContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterPreloadTail(this);
-}
-
-void MySQLParser::PreloadTailContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitPreloadTail(this);
-}
-
-
-std::any MySQLParser::PreloadTailContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitPreloadTail(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::PreloadTailContext* MySQLParser::preloadTail() {
   PreloadTailContext *_localctx = _tracker.createInstance<PreloadTailContext>(_ctx, getState());
@@ -53677,25 +45448,6 @@ size_t MySQLParser::PreloadListContext::getRuleIndex() const {
   return MySQLParser::RulePreloadList;
 }
 
-void MySQLParser::PreloadListContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterPreloadList(this);
-}
-
-void MySQLParser::PreloadListContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitPreloadList(this);
-}
-
-
-std::any MySQLParser::PreloadListContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitPreloadList(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::PreloadListContext* MySQLParser::preloadList() {
   PreloadListContext *_localctx = _tracker.createInstance<PreloadListContext>(_ctx, getState());
@@ -53763,25 +45515,6 @@ size_t MySQLParser::PreloadKeysContext::getRuleIndex() const {
   return MySQLParser::RulePreloadKeys;
 }
 
-void MySQLParser::PreloadKeysContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterPreloadKeys(this);
-}
-
-void MySQLParser::PreloadKeysContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitPreloadKeys(this);
-}
-
-
-std::any MySQLParser::PreloadKeysContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitPreloadKeys(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::PreloadKeysContext* MySQLParser::preloadKeys() {
   PreloadKeysContext *_localctx = _tracker.createInstance<PreloadKeysContext>(_ctx, getState());
@@ -53857,25 +45590,6 @@ size_t MySQLParser::AdminPartitionContext::getRuleIndex() const {
   return MySQLParser::RuleAdminPartition;
 }
 
-void MySQLParser::AdminPartitionContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterAdminPartition(this);
-}
-
-void MySQLParser::AdminPartitionContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitAdminPartition(this);
-}
-
-
-std::any MySQLParser::AdminPartitionContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitAdminPartition(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::AdminPartitionContext* MySQLParser::adminPartition() {
   AdminPartitionContext *_localctx = _tracker.createInstance<AdminPartitionContext>(_ctx, getState());
@@ -53936,25 +45650,6 @@ size_t MySQLParser::ResourceGroupManagementContext::getRuleIndex() const {
   return MySQLParser::RuleResourceGroupManagement;
 }
 
-void MySQLParser::ResourceGroupManagementContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterResourceGroupManagement(this);
-}
-
-void MySQLParser::ResourceGroupManagementContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitResourceGroupManagement(this);
-}
-
-
-std::any MySQLParser::ResourceGroupManagementContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitResourceGroupManagement(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::ResourceGroupManagementContext* MySQLParser::resourceGroupManagement() {
   ResourceGroupManagementContext *_localctx = _tracker.createInstance<ResourceGroupManagementContext>(_ctx, getState());
@@ -54068,25 +45763,6 @@ size_t MySQLParser::CreateResourceGroupContext::getRuleIndex() const {
   return MySQLParser::RuleCreateResourceGroup;
 }
 
-void MySQLParser::CreateResourceGroupContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterCreateResourceGroup(this);
-}
-
-void MySQLParser::CreateResourceGroupContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitCreateResourceGroup(this);
-}
-
-
-std::any MySQLParser::CreateResourceGroupContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitCreateResourceGroup(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::CreateResourceGroupContext* MySQLParser::createResourceGroup() {
   CreateResourceGroupContext *_localctx = _tracker.createInstance<CreateResourceGroupContext>(_ctx, getState());
@@ -54203,25 +45879,6 @@ size_t MySQLParser::ResourceGroupVcpuListContext::getRuleIndex() const {
   return MySQLParser::RuleResourceGroupVcpuList;
 }
 
-void MySQLParser::ResourceGroupVcpuListContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterResourceGroupVcpuList(this);
-}
-
-void MySQLParser::ResourceGroupVcpuListContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitResourceGroupVcpuList(this);
-}
-
-
-std::any MySQLParser::ResourceGroupVcpuListContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitResourceGroupVcpuList(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::ResourceGroupVcpuListContext* MySQLParser::resourceGroupVcpuList() {
   ResourceGroupVcpuListContext *_localctx = _tracker.createInstance<ResourceGroupVcpuListContext>(_ctx, getState());
@@ -54305,25 +45962,6 @@ size_t MySQLParser::VcpuNumOrRangeContext::getRuleIndex() const {
   return MySQLParser::RuleVcpuNumOrRange;
 }
 
-void MySQLParser::VcpuNumOrRangeContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterVcpuNumOrRange(this);
-}
-
-void MySQLParser::VcpuNumOrRangeContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitVcpuNumOrRange(this);
-}
-
-
-std::any MySQLParser::VcpuNumOrRangeContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitVcpuNumOrRange(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::VcpuNumOrRangeContext* MySQLParser::vcpuNumOrRange() {
   VcpuNumOrRangeContext *_localctx = _tracker.createInstance<VcpuNumOrRangeContext>(_ctx, getState());
@@ -54385,25 +46023,6 @@ size_t MySQLParser::ResourceGroupPriorityContext::getRuleIndex() const {
   return MySQLParser::RuleResourceGroupPriority;
 }
 
-void MySQLParser::ResourceGroupPriorityContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterResourceGroupPriority(this);
-}
-
-void MySQLParser::ResourceGroupPriorityContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitResourceGroupPriority(this);
-}
-
-
-std::any MySQLParser::ResourceGroupPriorityContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitResourceGroupPriority(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::ResourceGroupPriorityContext* MySQLParser::resourceGroupPriority() {
   ResourceGroupPriorityContext *_localctx = _tracker.createInstance<ResourceGroupPriorityContext>(_ctx, getState());
@@ -54463,25 +46082,6 @@ size_t MySQLParser::ResourceGroupEnableDisableContext::getRuleIndex() const {
   return MySQLParser::RuleResourceGroupEnableDisable;
 }
 
-void MySQLParser::ResourceGroupEnableDisableContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterResourceGroupEnableDisable(this);
-}
-
-void MySQLParser::ResourceGroupEnableDisableContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitResourceGroupEnableDisable(this);
-}
-
-
-std::any MySQLParser::ResourceGroupEnableDisableContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitResourceGroupEnableDisable(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::ResourceGroupEnableDisableContext* MySQLParser::resourceGroupEnableDisable() {
   ResourceGroupEnableDisableContext *_localctx = _tracker.createInstance<ResourceGroupEnableDisableContext>(_ctx, getState());
@@ -54562,25 +46162,6 @@ size_t MySQLParser::AlterResourceGroupContext::getRuleIndex() const {
   return MySQLParser::RuleAlterResourceGroup;
 }
 
-void MySQLParser::AlterResourceGroupContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterAlterResourceGroup(this);
-}
-
-void MySQLParser::AlterResourceGroupContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitAlterResourceGroup(this);
-}
-
-
-std::any MySQLParser::AlterResourceGroupContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitAlterResourceGroup(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::AlterResourceGroupContext* MySQLParser::alterResourceGroup() {
   AlterResourceGroupContext *_localctx = _tracker.createInstance<AlterResourceGroupContext>(_ctx, getState());
@@ -54684,25 +46265,6 @@ size_t MySQLParser::SetResourceGroupContext::getRuleIndex() const {
   return MySQLParser::RuleSetResourceGroup;
 }
 
-void MySQLParser::SetResourceGroupContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterSetResourceGroup(this);
-}
-
-void MySQLParser::SetResourceGroupContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitSetResourceGroup(this);
-}
-
-
-std::any MySQLParser::SetResourceGroupContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitSetResourceGroup(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::SetResourceGroupContext* MySQLParser::setResourceGroup() {
   SetResourceGroupContext *_localctx = _tracker.createInstance<SetResourceGroupContext>(_ctx, getState());
@@ -54774,25 +46336,6 @@ size_t MySQLParser::ThreadIdListContext::getRuleIndex() const {
   return MySQLParser::RuleThreadIdList;
 }
 
-void MySQLParser::ThreadIdListContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterThreadIdList(this);
-}
-
-void MySQLParser::ThreadIdListContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitThreadIdList(this);
-}
-
-
-std::any MySQLParser::ThreadIdListContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitThreadIdList(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::ThreadIdListContext* MySQLParser::threadIdList() {
   ThreadIdListContext *_localctx = _tracker.createInstance<ThreadIdListContext>(_ctx, getState());
@@ -54871,25 +46414,6 @@ size_t MySQLParser::DropResourceGroupContext::getRuleIndex() const {
   return MySQLParser::RuleDropResourceGroup;
 }
 
-void MySQLParser::DropResourceGroupContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterDropResourceGroup(this);
-}
-
-void MySQLParser::DropResourceGroupContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitDropResourceGroup(this);
-}
-
-
-std::any MySQLParser::DropResourceGroupContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitDropResourceGroup(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::DropResourceGroupContext* MySQLParser::dropResourceGroup() {
   DropResourceGroupContext *_localctx = _tracker.createInstance<DropResourceGroupContext>(_ctx, getState());
@@ -54963,25 +46487,6 @@ size_t MySQLParser::UtilityStatementContext::getRuleIndex() const {
   return MySQLParser::RuleUtilityStatement;
 }
 
-void MySQLParser::UtilityStatementContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterUtilityStatement(this);
-}
-
-void MySQLParser::UtilityStatementContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitUtilityStatement(this);
-}
-
-
-std::any MySQLParser::UtilityStatementContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitUtilityStatement(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::UtilityStatementContext* MySQLParser::utilityStatement() {
   UtilityStatementContext *_localctx = _tracker.createInstance<UtilityStatementContext>(_ctx, getState());
@@ -55085,25 +46590,6 @@ size_t MySQLParser::DescribeStatementContext::getRuleIndex() const {
   return MySQLParser::RuleDescribeStatement;
 }
 
-void MySQLParser::DescribeStatementContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterDescribeStatement(this);
-}
-
-void MySQLParser::DescribeStatementContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitDescribeStatement(this);
-}
-
-
-std::any MySQLParser::DescribeStatementContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitDescribeStatement(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::DescribeStatementContext* MySQLParser::describeStatement() {
   DescribeStatementContext *_localctx = _tracker.createInstance<DescribeStatementContext>(_ctx, getState());
@@ -55204,25 +46690,6 @@ size_t MySQLParser::ExplainStatementContext::getRuleIndex() const {
   return MySQLParser::RuleExplainStatement;
 }
 
-void MySQLParser::ExplainStatementContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterExplainStatement(this);
-}
-
-void MySQLParser::ExplainStatementContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitExplainStatement(this);
-}
-
-
-std::any MySQLParser::ExplainStatementContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitExplainStatement(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::ExplainStatementContext* MySQLParser::explainStatement() {
   ExplainStatementContext *_localctx = _tracker.createInstance<ExplainStatementContext>(_ctx, getState());
@@ -55329,25 +46796,6 @@ size_t MySQLParser::ExplainOptionsContext::getRuleIndex() const {
   return MySQLParser::RuleExplainOptions;
 }
 
-void MySQLParser::ExplainOptionsContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterExplainOptions(this);
-}
-
-void MySQLParser::ExplainOptionsContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitExplainOptions(this);
-}
-
-
-std::any MySQLParser::ExplainOptionsContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitExplainOptions(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::ExplainOptionsContext* MySQLParser::explainOptions() {
   ExplainOptionsContext *_localctx = _tracker.createInstance<ExplainOptionsContext>(_ctx, getState());
@@ -55484,25 +46932,6 @@ size_t MySQLParser::ExplainableStatementContext::getRuleIndex() const {
   return MySQLParser::RuleExplainableStatement;
 }
 
-void MySQLParser::ExplainableStatementContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterExplainableStatement(this);
-}
-
-void MySQLParser::ExplainableStatementContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitExplainableStatement(this);
-}
-
-
-std::any MySQLParser::ExplainableStatementContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitExplainableStatement(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::ExplainableStatementContext* MySQLParser::explainableStatement() {
   ExplainableStatementContext *_localctx = _tracker.createInstance<ExplainableStatementContext>(_ctx, getState());
@@ -55602,25 +47031,6 @@ size_t MySQLParser::ExplainIntoContext::getRuleIndex() const {
   return MySQLParser::RuleExplainInto;
 }
 
-void MySQLParser::ExplainIntoContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterExplainInto(this);
-}
-
-void MySQLParser::ExplainIntoContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitExplainInto(this);
-}
-
-
-std::any MySQLParser::ExplainIntoContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitExplainInto(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::ExplainIntoContext* MySQLParser::explainInto() {
   ExplainIntoContext *_localctx = _tracker.createInstance<ExplainIntoContext>(_ctx, getState());
@@ -55671,25 +47081,6 @@ size_t MySQLParser::HelpCommandContext::getRuleIndex() const {
   return MySQLParser::RuleHelpCommand;
 }
 
-void MySQLParser::HelpCommandContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterHelpCommand(this);
-}
-
-void MySQLParser::HelpCommandContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitHelpCommand(this);
-}
-
-
-std::any MySQLParser::HelpCommandContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitHelpCommand(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::HelpCommandContext* MySQLParser::helpCommand() {
   HelpCommandContext *_localctx = _tracker.createInstance<HelpCommandContext>(_ctx, getState());
@@ -55738,25 +47129,6 @@ size_t MySQLParser::UseCommandContext::getRuleIndex() const {
   return MySQLParser::RuleUseCommand;
 }
 
-void MySQLParser::UseCommandContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterUseCommand(this);
-}
-
-void MySQLParser::UseCommandContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitUseCommand(this);
-}
-
-
-std::any MySQLParser::UseCommandContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitUseCommand(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::UseCommandContext* MySQLParser::useCommand() {
   UseCommandContext *_localctx = _tracker.createInstance<UseCommandContext>(_ctx, getState());
@@ -55801,25 +47173,6 @@ size_t MySQLParser::RestartServerContext::getRuleIndex() const {
   return MySQLParser::RuleRestartServer;
 }
 
-void MySQLParser::RestartServerContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterRestartServer(this);
-}
-
-void MySQLParser::RestartServerContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitRestartServer(this);
-}
-
-
-std::any MySQLParser::RestartServerContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitRestartServer(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::RestartServerContext* MySQLParser::restartServer() {
   RestartServerContext *_localctx = _tracker.createInstance<RestartServerContext>(_ctx, getState());
@@ -55882,23 +47235,7 @@ tree::TerminalNode* MySQLParser::ExprOrContext::LOGICAL_OR_OPERATOR() {
 
 MySQLParser::ExprOrContext::ExprOrContext(ExprContext *ctx) { copyFrom(ctx); }
 
-void MySQLParser::ExprOrContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterExprOr(this);
-}
-void MySQLParser::ExprOrContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitExprOr(this);
-}
 
-std::any MySQLParser::ExprOrContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitExprOr(this);
-  else
-    return visitor->visitChildren(this);
-}
 //----------------- ExprNotContext ------------------------------------------------------------------
 
 tree::TerminalNode* MySQLParser::ExprNotContext::NOT_SYMBOL() {
@@ -55911,23 +47248,7 @@ MySQLParser::ExprContext* MySQLParser::ExprNotContext::expr() {
 
 MySQLParser::ExprNotContext::ExprNotContext(ExprContext *ctx) { copyFrom(ctx); }
 
-void MySQLParser::ExprNotContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterExprNot(this);
-}
-void MySQLParser::ExprNotContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitExprNot(this);
-}
 
-std::any MySQLParser::ExprNotContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitExprNot(this);
-  else
-    return visitor->visitChildren(this);
-}
 //----------------- ExprIsContext ------------------------------------------------------------------
 
 MySQLParser::BoolPriContext* MySQLParser::ExprIsContext::boolPri() {
@@ -55956,23 +47277,7 @@ MySQLParser::NotRuleContext* MySQLParser::ExprIsContext::notRule() {
 
 MySQLParser::ExprIsContext::ExprIsContext(ExprContext *ctx) { copyFrom(ctx); }
 
-void MySQLParser::ExprIsContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterExprIs(this);
-}
-void MySQLParser::ExprIsContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitExprIs(this);
-}
 
-std::any MySQLParser::ExprIsContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitExprIs(this);
-  else
-    return visitor->visitChildren(this);
-}
 //----------------- ExprAndContext ------------------------------------------------------------------
 
 std::vector<MySQLParser::ExprContext *> MySQLParser::ExprAndContext::expr() {
@@ -55993,23 +47298,7 @@ tree::TerminalNode* MySQLParser::ExprAndContext::LOGICAL_AND_OPERATOR() {
 
 MySQLParser::ExprAndContext::ExprAndContext(ExprContext *ctx) { copyFrom(ctx); }
 
-void MySQLParser::ExprAndContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterExprAnd(this);
-}
-void MySQLParser::ExprAndContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitExprAnd(this);
-}
 
-std::any MySQLParser::ExprAndContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitExprAnd(this);
-  else
-    return visitor->visitChildren(this);
-}
 //----------------- ExprXorContext ------------------------------------------------------------------
 
 std::vector<MySQLParser::ExprContext *> MySQLParser::ExprXorContext::expr() {
@@ -56026,23 +47315,7 @@ tree::TerminalNode* MySQLParser::ExprXorContext::XOR_SYMBOL() {
 
 MySQLParser::ExprXorContext::ExprXorContext(ExprContext *ctx) { copyFrom(ctx); }
 
-void MySQLParser::ExprXorContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterExprXor(this);
-}
-void MySQLParser::ExprXorContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitExprXor(this);
-}
 
-std::any MySQLParser::ExprXorContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitExprXor(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::ExprContext* MySQLParser::expr() {
    return expr(0);
@@ -56241,23 +47514,7 @@ MySQLParser::PredicateContext* MySQLParser::PrimaryExprPredicateContext::predica
 
 MySQLParser::PrimaryExprPredicateContext::PrimaryExprPredicateContext(BoolPriContext *ctx) { copyFrom(ctx); }
 
-void MySQLParser::PrimaryExprPredicateContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterPrimaryExprPredicate(this);
-}
-void MySQLParser::PrimaryExprPredicateContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitPrimaryExprPredicate(this);
-}
 
-std::any MySQLParser::PrimaryExprPredicateContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitPrimaryExprPredicate(this);
-  else
-    return visitor->visitChildren(this);
-}
 //----------------- PrimaryExprCompareContext ------------------------------------------------------------------
 
 MySQLParser::BoolPriContext* MySQLParser::PrimaryExprCompareContext::boolPri() {
@@ -56274,23 +47531,7 @@ MySQLParser::PredicateContext* MySQLParser::PrimaryExprCompareContext::predicate
 
 MySQLParser::PrimaryExprCompareContext::PrimaryExprCompareContext(BoolPriContext *ctx) { copyFrom(ctx); }
 
-void MySQLParser::PrimaryExprCompareContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterPrimaryExprCompare(this);
-}
-void MySQLParser::PrimaryExprCompareContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitPrimaryExprCompare(this);
-}
 
-std::any MySQLParser::PrimaryExprCompareContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitPrimaryExprCompare(this);
-  else
-    return visitor->visitChildren(this);
-}
 //----------------- PrimaryExprAllAnyContext ------------------------------------------------------------------
 
 MySQLParser::BoolPriContext* MySQLParser::PrimaryExprAllAnyContext::boolPri() {
@@ -56315,23 +47556,7 @@ tree::TerminalNode* MySQLParser::PrimaryExprAllAnyContext::ANY_SYMBOL() {
 
 MySQLParser::PrimaryExprAllAnyContext::PrimaryExprAllAnyContext(BoolPriContext *ctx) { copyFrom(ctx); }
 
-void MySQLParser::PrimaryExprAllAnyContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterPrimaryExprAllAny(this);
-}
-void MySQLParser::PrimaryExprAllAnyContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitPrimaryExprAllAny(this);
-}
 
-std::any MySQLParser::PrimaryExprAllAnyContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitPrimaryExprAllAny(this);
-  else
-    return visitor->visitChildren(this);
-}
 //----------------- PrimaryExprIsNullContext ------------------------------------------------------------------
 
 MySQLParser::BoolPriContext* MySQLParser::PrimaryExprIsNullContext::boolPri() {
@@ -56352,23 +47577,7 @@ MySQLParser::NotRuleContext* MySQLParser::PrimaryExprIsNullContext::notRule() {
 
 MySQLParser::PrimaryExprIsNullContext::PrimaryExprIsNullContext(BoolPriContext *ctx) { copyFrom(ctx); }
 
-void MySQLParser::PrimaryExprIsNullContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterPrimaryExprIsNull(this);
-}
-void MySQLParser::PrimaryExprIsNullContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitPrimaryExprIsNull(this);
-}
 
-std::any MySQLParser::PrimaryExprIsNullContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitPrimaryExprIsNull(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::BoolPriContext* MySQLParser::boolPri() {
    return boolPri(0);
@@ -56530,25 +47739,6 @@ size_t MySQLParser::CompOpContext::getRuleIndex() const {
   return MySQLParser::RuleCompOp;
 }
 
-void MySQLParser::CompOpContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterCompOp(this);
-}
-
-void MySQLParser::CompOpContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitCompOp(this);
-}
-
-
-std::any MySQLParser::CompOpContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitCompOp(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::CompOpContext* MySQLParser::compOp() {
   CompOpContext *_localctx = _tracker.createInstance<CompOpContext>(_ctx, getState());
@@ -56632,25 +47822,6 @@ size_t MySQLParser::PredicateContext::getRuleIndex() const {
   return MySQLParser::RulePredicate;
 }
 
-void MySQLParser::PredicateContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterPredicate(this);
-}
-
-void MySQLParser::PredicateContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitPredicate(this);
-}
-
-
-std::any MySQLParser::PredicateContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitPredicate(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::PredicateContext* MySQLParser::predicate() {
   PredicateContext *_localctx = _tracker.createInstance<PredicateContext>(_ctx, getState());
@@ -56756,23 +47927,7 @@ MySQLParser::BitExprContext* MySQLParser::PredicateExprRegexContext::bitExpr() {
 
 MySQLParser::PredicateExprRegexContext::PredicateExprRegexContext(PredicateOperationsContext *ctx) { copyFrom(ctx); }
 
-void MySQLParser::PredicateExprRegexContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterPredicateExprRegex(this);
-}
-void MySQLParser::PredicateExprRegexContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitPredicateExprRegex(this);
-}
 
-std::any MySQLParser::PredicateExprRegexContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitPredicateExprRegex(this);
-  else
-    return visitor->visitChildren(this);
-}
 //----------------- PredicateExprBetweenContext ------------------------------------------------------------------
 
 tree::TerminalNode* MySQLParser::PredicateExprBetweenContext::BETWEEN_SYMBOL() {
@@ -56793,23 +47948,7 @@ MySQLParser::PredicateContext* MySQLParser::PredicateExprBetweenContext::predica
 
 MySQLParser::PredicateExprBetweenContext::PredicateExprBetweenContext(PredicateOperationsContext *ctx) { copyFrom(ctx); }
 
-void MySQLParser::PredicateExprBetweenContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterPredicateExprBetween(this);
-}
-void MySQLParser::PredicateExprBetweenContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitPredicateExprBetween(this);
-}
 
-std::any MySQLParser::PredicateExprBetweenContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitPredicateExprBetween(this);
-  else
-    return visitor->visitChildren(this);
-}
 //----------------- PredicateExprInContext ------------------------------------------------------------------
 
 tree::TerminalNode* MySQLParser::PredicateExprInContext::IN_SYMBOL() {
@@ -56834,23 +47973,7 @@ tree::TerminalNode* MySQLParser::PredicateExprInContext::CLOSE_PAR_SYMBOL() {
 
 MySQLParser::PredicateExprInContext::PredicateExprInContext(PredicateOperationsContext *ctx) { copyFrom(ctx); }
 
-void MySQLParser::PredicateExprInContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterPredicateExprIn(this);
-}
-void MySQLParser::PredicateExprInContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitPredicateExprIn(this);
-}
 
-std::any MySQLParser::PredicateExprInContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitPredicateExprIn(this);
-  else
-    return visitor->visitChildren(this);
-}
 //----------------- PredicateExprLikeContext ------------------------------------------------------------------
 
 tree::TerminalNode* MySQLParser::PredicateExprLikeContext::LIKE_SYMBOL() {
@@ -56871,23 +47994,7 @@ tree::TerminalNode* MySQLParser::PredicateExprLikeContext::ESCAPE_SYMBOL() {
 
 MySQLParser::PredicateExprLikeContext::PredicateExprLikeContext(PredicateOperationsContext *ctx) { copyFrom(ctx); }
 
-void MySQLParser::PredicateExprLikeContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterPredicateExprLike(this);
-}
-void MySQLParser::PredicateExprLikeContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitPredicateExprLike(this);
-}
 
-std::any MySQLParser::PredicateExprLikeContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitPredicateExprLike(this);
-  else
-    return visitor->visitChildren(this);
-}
 MySQLParser::PredicateOperationsContext* MySQLParser::predicateOperations() {
   PredicateOperationsContext *_localctx = _tracker.createInstance<PredicateOperationsContext>(_ctx, getState());
   enterRule(_localctx, 918, MySQLParser::RulePredicateOperations);
@@ -57079,25 +48186,6 @@ size_t MySQLParser::BitExprContext::getRuleIndex() const {
   return MySQLParser::RuleBitExpr;
 }
 
-void MySQLParser::BitExprContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterBitExpr(this);
-}
-
-void MySQLParser::BitExprContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitBitExpr(this);
-}
-
-
-std::any MySQLParser::BitExprContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitBitExpr(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 
 MySQLParser::BitExprContext* MySQLParser::bitExpr() {
@@ -57333,23 +48421,7 @@ tree::TerminalNode* MySQLParser::SimpleExprConvertContext::CLOSE_PAR_SYMBOL() {
 
 MySQLParser::SimpleExprConvertContext::SimpleExprConvertContext(SimpleExprContext *ctx) { copyFrom(ctx); }
 
-void MySQLParser::SimpleExprConvertContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterSimpleExprConvert(this);
-}
-void MySQLParser::SimpleExprConvertContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitSimpleExprConvert(this);
-}
 
-std::any MySQLParser::SimpleExprConvertContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitSimpleExprConvert(this);
-  else
-    return visitor->visitChildren(this);
-}
 //----------------- SimpleExprCastContext ------------------------------------------------------------------
 
 tree::TerminalNode* MySQLParser::SimpleExprCastContext::CAST_SYMBOL() {
@@ -57390,23 +48462,7 @@ MySQLParser::ArrayCastContext* MySQLParser::SimpleExprCastContext::arrayCast() {
 
 MySQLParser::SimpleExprCastContext::SimpleExprCastContext(SimpleExprContext *ctx) { copyFrom(ctx); }
 
-void MySQLParser::SimpleExprCastContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterSimpleExprCast(this);
-}
-void MySQLParser::SimpleExprCastContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitSimpleExprCast(this);
-}
 
-std::any MySQLParser::SimpleExprCastContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitSimpleExprCast(this);
-  else
-    return visitor->visitChildren(this);
-}
 //----------------- SimpleExprUnaryContext ------------------------------------------------------------------
 
 MySQLParser::SimpleExprContext* MySQLParser::SimpleExprUnaryContext::simpleExpr() {
@@ -57427,23 +48483,7 @@ tree::TerminalNode* MySQLParser::SimpleExprUnaryContext::BITWISE_NOT_OPERATOR() 
 
 MySQLParser::SimpleExprUnaryContext::SimpleExprUnaryContext(SimpleExprContext *ctx) { copyFrom(ctx); }
 
-void MySQLParser::SimpleExprUnaryContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterSimpleExprUnary(this);
-}
-void MySQLParser::SimpleExprUnaryContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitSimpleExprUnary(this);
-}
 
-std::any MySQLParser::SimpleExprUnaryContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitSimpleExprUnary(this);
-  else
-    return visitor->visitChildren(this);
-}
 //----------------- SimpleExpressionRValueContext ------------------------------------------------------------------
 
 MySQLParser::RvalueSystemOrUserVariableContext* MySQLParser::SimpleExpressionRValueContext::rvalueSystemOrUserVariable() {
@@ -57452,23 +48492,7 @@ MySQLParser::RvalueSystemOrUserVariableContext* MySQLParser::SimpleExpressionRVa
 
 MySQLParser::SimpleExpressionRValueContext::SimpleExpressionRValueContext(SimpleExprContext *ctx) { copyFrom(ctx); }
 
-void MySQLParser::SimpleExpressionRValueContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterSimpleExpressionRValue(this);
-}
-void MySQLParser::SimpleExpressionRValueContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitSimpleExpressionRValue(this);
-}
 
-std::any MySQLParser::SimpleExpressionRValueContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitSimpleExpressionRValue(this);
-  else
-    return visitor->visitChildren(this);
-}
 //----------------- SimpleExprOdbcContext ------------------------------------------------------------------
 
 tree::TerminalNode* MySQLParser::SimpleExprOdbcContext::OPEN_CURLY_SYMBOL() {
@@ -57489,23 +48513,7 @@ tree::TerminalNode* MySQLParser::SimpleExprOdbcContext::CLOSE_CURLY_SYMBOL() {
 
 MySQLParser::SimpleExprOdbcContext::SimpleExprOdbcContext(SimpleExprContext *ctx) { copyFrom(ctx); }
 
-void MySQLParser::SimpleExprOdbcContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterSimpleExprOdbc(this);
-}
-void MySQLParser::SimpleExprOdbcContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitSimpleExprOdbc(this);
-}
 
-std::any MySQLParser::SimpleExprOdbcContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitSimpleExprOdbc(this);
-  else
-    return visitor->visitChildren(this);
-}
 //----------------- SimpleExprRuntimeFunctionContext ------------------------------------------------------------------
 
 MySQLParser::RuntimeFunctionCallContext* MySQLParser::SimpleExprRuntimeFunctionContext::runtimeFunctionCall() {
@@ -57514,23 +48522,7 @@ MySQLParser::RuntimeFunctionCallContext* MySQLParser::SimpleExprRuntimeFunctionC
 
 MySQLParser::SimpleExprRuntimeFunctionContext::SimpleExprRuntimeFunctionContext(SimpleExprContext *ctx) { copyFrom(ctx); }
 
-void MySQLParser::SimpleExprRuntimeFunctionContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterSimpleExprRuntimeFunction(this);
-}
-void MySQLParser::SimpleExprRuntimeFunctionContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitSimpleExprRuntimeFunction(this);
-}
 
-std::any MySQLParser::SimpleExprRuntimeFunctionContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitSimpleExprRuntimeFunction(this);
-  else
-    return visitor->visitChildren(this);
-}
 //----------------- SimpleExprFunctionContext ------------------------------------------------------------------
 
 MySQLParser::FunctionCallContext* MySQLParser::SimpleExprFunctionContext::functionCall() {
@@ -57539,23 +48531,7 @@ MySQLParser::FunctionCallContext* MySQLParser::SimpleExprFunctionContext::functi
 
 MySQLParser::SimpleExprFunctionContext::SimpleExprFunctionContext(SimpleExprContext *ctx) { copyFrom(ctx); }
 
-void MySQLParser::SimpleExprFunctionContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterSimpleExprFunction(this);
-}
-void MySQLParser::SimpleExprFunctionContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitSimpleExprFunction(this);
-}
 
-std::any MySQLParser::SimpleExprFunctionContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitSimpleExprFunction(this);
-  else
-    return visitor->visitChildren(this);
-}
 //----------------- SimpleExprCollateContext ------------------------------------------------------------------
 
 MySQLParser::SimpleExprContext* MySQLParser::SimpleExprCollateContext::simpleExpr() {
@@ -57572,23 +48548,7 @@ MySQLParser::TextOrIdentifierContext* MySQLParser::SimpleExprCollateContext::tex
 
 MySQLParser::SimpleExprCollateContext::SimpleExprCollateContext(SimpleExprContext *ctx) { copyFrom(ctx); }
 
-void MySQLParser::SimpleExprCollateContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterSimpleExprCollate(this);
-}
-void MySQLParser::SimpleExprCollateContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitSimpleExprCollate(this);
-}
 
-std::any MySQLParser::SimpleExprCollateContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitSimpleExprCollate(this);
-  else
-    return visitor->visitChildren(this);
-}
 //----------------- SimpleExprMatchContext ------------------------------------------------------------------
 
 tree::TerminalNode* MySQLParser::SimpleExprMatchContext::MATCH_SYMBOL() {
@@ -57621,23 +48581,7 @@ MySQLParser::FulltextOptionsContext* MySQLParser::SimpleExprMatchContext::fullte
 
 MySQLParser::SimpleExprMatchContext::SimpleExprMatchContext(SimpleExprContext *ctx) { copyFrom(ctx); }
 
-void MySQLParser::SimpleExprMatchContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterSimpleExprMatch(this);
-}
-void MySQLParser::SimpleExprMatchContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitSimpleExprMatch(this);
-}
 
-std::any MySQLParser::SimpleExprMatchContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitSimpleExprMatch(this);
-  else
-    return visitor->visitChildren(this);
-}
 //----------------- SimpleExprWindowingFunctionContext ------------------------------------------------------------------
 
 MySQLParser::WindowFunctionCallContext* MySQLParser::SimpleExprWindowingFunctionContext::windowFunctionCall() {
@@ -57646,23 +48590,7 @@ MySQLParser::WindowFunctionCallContext* MySQLParser::SimpleExprWindowingFunction
 
 MySQLParser::SimpleExprWindowingFunctionContext::SimpleExprWindowingFunctionContext(SimpleExprContext *ctx) { copyFrom(ctx); }
 
-void MySQLParser::SimpleExprWindowingFunctionContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterSimpleExprWindowingFunction(this);
-}
-void MySQLParser::SimpleExprWindowingFunctionContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitSimpleExprWindowingFunction(this);
-}
 
-std::any MySQLParser::SimpleExprWindowingFunctionContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitSimpleExprWindowingFunction(this);
-  else
-    return visitor->visitChildren(this);
-}
 //----------------- SimpleExprBinaryContext ------------------------------------------------------------------
 
 tree::TerminalNode* MySQLParser::SimpleExprBinaryContext::BINARY_SYMBOL() {
@@ -57675,23 +48603,7 @@ MySQLParser::SimpleExprContext* MySQLParser::SimpleExprBinaryContext::simpleExpr
 
 MySQLParser::SimpleExprBinaryContext::SimpleExprBinaryContext(SimpleExprContext *ctx) { copyFrom(ctx); }
 
-void MySQLParser::SimpleExprBinaryContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterSimpleExprBinary(this);
-}
-void MySQLParser::SimpleExprBinaryContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitSimpleExprBinary(this);
-}
 
-std::any MySQLParser::SimpleExprBinaryContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitSimpleExprBinary(this);
-  else
-    return visitor->visitChildren(this);
-}
 //----------------- SimpleExprColumnRefContext ------------------------------------------------------------------
 
 MySQLParser::ColumnRefContext* MySQLParser::SimpleExprColumnRefContext::columnRef() {
@@ -57704,23 +48616,7 @@ MySQLParser::JsonOperatorContext* MySQLParser::SimpleExprColumnRefContext::jsonO
 
 MySQLParser::SimpleExprColumnRefContext::SimpleExprColumnRefContext(SimpleExprContext *ctx) { copyFrom(ctx); }
 
-void MySQLParser::SimpleExprColumnRefContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterSimpleExprColumnRef(this);
-}
-void MySQLParser::SimpleExprColumnRefContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitSimpleExprColumnRef(this);
-}
 
-std::any MySQLParser::SimpleExprColumnRefContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitSimpleExprColumnRef(this);
-  else
-    return visitor->visitChildren(this);
-}
 //----------------- SimpleExprParamMarkerContext ------------------------------------------------------------------
 
 tree::TerminalNode* MySQLParser::SimpleExprParamMarkerContext::PARAM_MARKER() {
@@ -57729,23 +48625,7 @@ tree::TerminalNode* MySQLParser::SimpleExprParamMarkerContext::PARAM_MARKER() {
 
 MySQLParser::SimpleExprParamMarkerContext::SimpleExprParamMarkerContext(SimpleExprContext *ctx) { copyFrom(ctx); }
 
-void MySQLParser::SimpleExprParamMarkerContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterSimpleExprParamMarker(this);
-}
-void MySQLParser::SimpleExprParamMarkerContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitSimpleExprParamMarker(this);
-}
 
-std::any MySQLParser::SimpleExprParamMarkerContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitSimpleExprParamMarker(this);
-  else
-    return visitor->visitChildren(this);
-}
 //----------------- SimpleExprSumContext ------------------------------------------------------------------
 
 MySQLParser::SumExprContext* MySQLParser::SimpleExprSumContext::sumExpr() {
@@ -57754,23 +48634,7 @@ MySQLParser::SumExprContext* MySQLParser::SimpleExprSumContext::sumExpr() {
 
 MySQLParser::SimpleExprSumContext::SimpleExprSumContext(SimpleExprContext *ctx) { copyFrom(ctx); }
 
-void MySQLParser::SimpleExprSumContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterSimpleExprSum(this);
-}
-void MySQLParser::SimpleExprSumContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitSimpleExprSum(this);
-}
 
-std::any MySQLParser::SimpleExprSumContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitSimpleExprSum(this);
-  else
-    return visitor->visitChildren(this);
-}
 //----------------- SimpleExprCastTimeContext ------------------------------------------------------------------
 
 tree::TerminalNode* MySQLParser::SimpleExprCastTimeContext::CAST_SYMBOL() {
@@ -57823,23 +48687,7 @@ tree::TerminalNode* MySQLParser::SimpleExprCastTimeContext::INTERVAL_SYMBOL() {
 
 MySQLParser::SimpleExprCastTimeContext::SimpleExprCastTimeContext(SimpleExprContext *ctx) { copyFrom(ctx); }
 
-void MySQLParser::SimpleExprCastTimeContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterSimpleExprCastTime(this);
-}
-void MySQLParser::SimpleExprCastTimeContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitSimpleExprCastTime(this);
-}
 
-std::any MySQLParser::SimpleExprCastTimeContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitSimpleExprCastTime(this);
-  else
-    return visitor->visitChildren(this);
-}
 //----------------- SimpleExprConvertUsingContext ------------------------------------------------------------------
 
 tree::TerminalNode* MySQLParser::SimpleExprConvertUsingContext::CONVERT_SYMBOL() {
@@ -57868,23 +48716,7 @@ tree::TerminalNode* MySQLParser::SimpleExprConvertUsingContext::CLOSE_PAR_SYMBOL
 
 MySQLParser::SimpleExprConvertUsingContext::SimpleExprConvertUsingContext(SimpleExprContext *ctx) { copyFrom(ctx); }
 
-void MySQLParser::SimpleExprConvertUsingContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterSimpleExprConvertUsing(this);
-}
-void MySQLParser::SimpleExprConvertUsingContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitSimpleExprConvertUsing(this);
-}
 
-std::any MySQLParser::SimpleExprConvertUsingContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitSimpleExprConvertUsing(this);
-  else
-    return visitor->visitChildren(this);
-}
 //----------------- SimpleExprSubQueryContext ------------------------------------------------------------------
 
 MySQLParser::SubqueryContext* MySQLParser::SimpleExprSubQueryContext::subquery() {
@@ -57897,23 +48729,7 @@ tree::TerminalNode* MySQLParser::SimpleExprSubQueryContext::EXISTS_SYMBOL() {
 
 MySQLParser::SimpleExprSubQueryContext::SimpleExprSubQueryContext(SimpleExprContext *ctx) { copyFrom(ctx); }
 
-void MySQLParser::SimpleExprSubQueryContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterSimpleExprSubQuery(this);
-}
-void MySQLParser::SimpleExprSubQueryContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitSimpleExprSubQuery(this);
-}
 
-std::any MySQLParser::SimpleExprSubQueryContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitSimpleExprSubQuery(this);
-  else
-    return visitor->visitChildren(this);
-}
 //----------------- SimpleExprGroupingOperationContext ------------------------------------------------------------------
 
 MySQLParser::GroupingOperationContext* MySQLParser::SimpleExprGroupingOperationContext::groupingOperation() {
@@ -57922,23 +48738,7 @@ MySQLParser::GroupingOperationContext* MySQLParser::SimpleExprGroupingOperationC
 
 MySQLParser::SimpleExprGroupingOperationContext::SimpleExprGroupingOperationContext(SimpleExprContext *ctx) { copyFrom(ctx); }
 
-void MySQLParser::SimpleExprGroupingOperationContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterSimpleExprGroupingOperation(this);
-}
-void MySQLParser::SimpleExprGroupingOperationContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitSimpleExprGroupingOperation(this);
-}
 
-std::any MySQLParser::SimpleExprGroupingOperationContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitSimpleExprGroupingOperation(this);
-  else
-    return visitor->visitChildren(this);
-}
 //----------------- SimpleExprNotContext ------------------------------------------------------------------
 
 MySQLParser::Not2RuleContext* MySQLParser::SimpleExprNotContext::not2Rule() {
@@ -57951,23 +48751,7 @@ MySQLParser::SimpleExprContext* MySQLParser::SimpleExprNotContext::simpleExpr() 
 
 MySQLParser::SimpleExprNotContext::SimpleExprNotContext(SimpleExprContext *ctx) { copyFrom(ctx); }
 
-void MySQLParser::SimpleExprNotContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterSimpleExprNot(this);
-}
-void MySQLParser::SimpleExprNotContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitSimpleExprNot(this);
-}
 
-std::any MySQLParser::SimpleExprNotContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitSimpleExprNot(this);
-  else
-    return visitor->visitChildren(this);
-}
 //----------------- SimpleExprValuesContext ------------------------------------------------------------------
 
 tree::TerminalNode* MySQLParser::SimpleExprValuesContext::VALUES_SYMBOL() {
@@ -57988,23 +48772,7 @@ tree::TerminalNode* MySQLParser::SimpleExprValuesContext::CLOSE_PAR_SYMBOL() {
 
 MySQLParser::SimpleExprValuesContext::SimpleExprValuesContext(SimpleExprContext *ctx) { copyFrom(ctx); }
 
-void MySQLParser::SimpleExprValuesContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterSimpleExprValues(this);
-}
-void MySQLParser::SimpleExprValuesContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitSimpleExprValues(this);
-}
 
-std::any MySQLParser::SimpleExprValuesContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitSimpleExprValues(this);
-  else
-    return visitor->visitChildren(this);
-}
 //----------------- SimpleExprUserVariableAssignmentContext ------------------------------------------------------------------
 
 MySQLParser::InExpressionUserVariableAssignmentContext* MySQLParser::SimpleExprUserVariableAssignmentContext::inExpressionUserVariableAssignment() {
@@ -58013,23 +48781,7 @@ MySQLParser::InExpressionUserVariableAssignmentContext* MySQLParser::SimpleExprU
 
 MySQLParser::SimpleExprUserVariableAssignmentContext::SimpleExprUserVariableAssignmentContext(SimpleExprContext *ctx) { copyFrom(ctx); }
 
-void MySQLParser::SimpleExprUserVariableAssignmentContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterSimpleExprUserVariableAssignment(this);
-}
-void MySQLParser::SimpleExprUserVariableAssignmentContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitSimpleExprUserVariableAssignment(this);
-}
 
-std::any MySQLParser::SimpleExprUserVariableAssignmentContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitSimpleExprUserVariableAssignment(this);
-  else
-    return visitor->visitChildren(this);
-}
 //----------------- SimpleExprDefaultContext ------------------------------------------------------------------
 
 tree::TerminalNode* MySQLParser::SimpleExprDefaultContext::DEFAULT_SYMBOL() {
@@ -58050,23 +48802,7 @@ tree::TerminalNode* MySQLParser::SimpleExprDefaultContext::CLOSE_PAR_SYMBOL() {
 
 MySQLParser::SimpleExprDefaultContext::SimpleExprDefaultContext(SimpleExprContext *ctx) { copyFrom(ctx); }
 
-void MySQLParser::SimpleExprDefaultContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterSimpleExprDefault(this);
-}
-void MySQLParser::SimpleExprDefaultContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitSimpleExprDefault(this);
-}
 
-std::any MySQLParser::SimpleExprDefaultContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitSimpleExprDefault(this);
-  else
-    return visitor->visitChildren(this);
-}
 //----------------- SimpleExprListContext ------------------------------------------------------------------
 
 tree::TerminalNode* MySQLParser::SimpleExprListContext::OPEN_PAR_SYMBOL() {
@@ -58087,23 +48823,7 @@ tree::TerminalNode* MySQLParser::SimpleExprListContext::ROW_SYMBOL() {
 
 MySQLParser::SimpleExprListContext::SimpleExprListContext(SimpleExprContext *ctx) { copyFrom(ctx); }
 
-void MySQLParser::SimpleExprListContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterSimpleExprList(this);
-}
-void MySQLParser::SimpleExprListContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitSimpleExprList(this);
-}
 
-std::any MySQLParser::SimpleExprListContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitSimpleExprList(this);
-  else
-    return visitor->visitChildren(this);
-}
 //----------------- SimpleExprIntervalContext ------------------------------------------------------------------
 
 tree::TerminalNode* MySQLParser::SimpleExprIntervalContext::INTERVAL_SYMBOL() {
@@ -58128,23 +48848,7 @@ tree::TerminalNode* MySQLParser::SimpleExprIntervalContext::PLUS_OPERATOR() {
 
 MySQLParser::SimpleExprIntervalContext::SimpleExprIntervalContext(SimpleExprContext *ctx) { copyFrom(ctx); }
 
-void MySQLParser::SimpleExprIntervalContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterSimpleExprInterval(this);
-}
-void MySQLParser::SimpleExprIntervalContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitSimpleExprInterval(this);
-}
 
-std::any MySQLParser::SimpleExprIntervalContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitSimpleExprInterval(this);
-  else
-    return visitor->visitChildren(this);
-}
 //----------------- SimpleExprCaseContext ------------------------------------------------------------------
 
 tree::TerminalNode* MySQLParser::SimpleExprCaseContext::CASE_SYMBOL() {
@@ -58181,23 +48885,7 @@ MySQLParser::ElseExpressionContext* MySQLParser::SimpleExprCaseContext::elseExpr
 
 MySQLParser::SimpleExprCaseContext::SimpleExprCaseContext(SimpleExprContext *ctx) { copyFrom(ctx); }
 
-void MySQLParser::SimpleExprCaseContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterSimpleExprCase(this);
-}
-void MySQLParser::SimpleExprCaseContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitSimpleExprCase(this);
-}
 
-std::any MySQLParser::SimpleExprCaseContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitSimpleExprCase(this);
-  else
-    return visitor->visitChildren(this);
-}
 //----------------- SimpleExprConcatContext ------------------------------------------------------------------
 
 std::vector<MySQLParser::SimpleExprContext *> MySQLParser::SimpleExprConcatContext::simpleExpr() {
@@ -58214,23 +48902,7 @@ tree::TerminalNode* MySQLParser::SimpleExprConcatContext::CONCAT_PIPES_SYMBOL() 
 
 MySQLParser::SimpleExprConcatContext::SimpleExprConcatContext(SimpleExprContext *ctx) { copyFrom(ctx); }
 
-void MySQLParser::SimpleExprConcatContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterSimpleExprConcat(this);
-}
-void MySQLParser::SimpleExprConcatContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitSimpleExprConcat(this);
-}
 
-std::any MySQLParser::SimpleExprConcatContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitSimpleExprConcat(this);
-  else
-    return visitor->visitChildren(this);
-}
 //----------------- SimpleExprLiteralContext ------------------------------------------------------------------
 
 MySQLParser::LiteralOrNullContext* MySQLParser::SimpleExprLiteralContext::literalOrNull() {
@@ -58239,23 +48911,7 @@ MySQLParser::LiteralOrNullContext* MySQLParser::SimpleExprLiteralContext::litera
 
 MySQLParser::SimpleExprLiteralContext::SimpleExprLiteralContext(SimpleExprContext *ctx) { copyFrom(ctx); }
 
-void MySQLParser::SimpleExprLiteralContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterSimpleExprLiteral(this);
-}
-void MySQLParser::SimpleExprLiteralContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitSimpleExprLiteral(this);
-}
 
-std::any MySQLParser::SimpleExprLiteralContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitSimpleExprLiteral(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::SimpleExprContext* MySQLParser::simpleExpr() {
    return simpleExpr(0);
@@ -58799,25 +49455,6 @@ size_t MySQLParser::ArrayCastContext::getRuleIndex() const {
   return MySQLParser::RuleArrayCast;
 }
 
-void MySQLParser::ArrayCastContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterArrayCast(this);
-}
-
-void MySQLParser::ArrayCastContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitArrayCast(this);
-}
-
-
-std::any MySQLParser::ArrayCastContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitArrayCast(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::ArrayCastContext* MySQLParser::arrayCast() {
   ArrayCastContext *_localctx = _tracker.createInstance<ArrayCastContext>(_ctx, getState());
@@ -58871,25 +49508,6 @@ size_t MySQLParser::JsonOperatorContext::getRuleIndex() const {
   return MySQLParser::RuleJsonOperator;
 }
 
-void MySQLParser::JsonOperatorContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterJsonOperator(this);
-}
-
-void MySQLParser::JsonOperatorContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitJsonOperator(this);
-}
-
-
-std::any MySQLParser::JsonOperatorContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitJsonOperator(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::JsonOperatorContext* MySQLParser::jsonOperator() {
   JsonOperatorContext *_localctx = _tracker.createInstance<JsonOperatorContext>(_ctx, getState());
@@ -59053,25 +49671,6 @@ size_t MySQLParser::SumExprContext::getRuleIndex() const {
   return MySQLParser::RuleSumExpr;
 }
 
-void MySQLParser::SumExprContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterSumExpr(this);
-}
-
-void MySQLParser::SumExprContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitSumExpr(this);
-}
-
-
-std::any MySQLParser::SumExprContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitSumExpr(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::SumExprContext* MySQLParser::sumExpr() {
   SumExprContext *_localctx = _tracker.createInstance<SumExprContext>(_ctx, getState());
@@ -59479,25 +50078,6 @@ size_t MySQLParser::GroupingOperationContext::getRuleIndex() const {
   return MySQLParser::RuleGroupingOperation;
 }
 
-void MySQLParser::GroupingOperationContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterGroupingOperation(this);
-}
-
-void MySQLParser::GroupingOperationContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitGroupingOperation(this);
-}
-
-
-std::any MySQLParser::GroupingOperationContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitGroupingOperation(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::GroupingOperationContext* MySQLParser::groupingOperation() {
   GroupingOperationContext *_localctx = _tracker.createInstance<GroupingOperationContext>(_ctx, getState());
@@ -59646,25 +50226,6 @@ size_t MySQLParser::WindowFunctionCallContext::getRuleIndex() const {
   return MySQLParser::RuleWindowFunctionCall;
 }
 
-void MySQLParser::WindowFunctionCallContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterWindowFunctionCall(this);
-}
-
-void MySQLParser::WindowFunctionCallContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitWindowFunctionCall(this);
-}
-
-
-std::any MySQLParser::WindowFunctionCallContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitWindowFunctionCall(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::WindowFunctionCallContext* MySQLParser::windowFunctionCall() {
   WindowFunctionCallContext *_localctx = _tracker.createInstance<WindowFunctionCallContext>(_ctx, getState());
@@ -59886,25 +50447,6 @@ size_t MySQLParser::SamplingMethodContext::getRuleIndex() const {
   return MySQLParser::RuleSamplingMethod;
 }
 
-void MySQLParser::SamplingMethodContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterSamplingMethod(this);
-}
-
-void MySQLParser::SamplingMethodContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitSamplingMethod(this);
-}
-
-
-std::any MySQLParser::SamplingMethodContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitSamplingMethod(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::SamplingMethodContext* MySQLParser::samplingMethod() {
   SamplingMethodContext *_localctx = _tracker.createInstance<SamplingMethodContext>(_ctx, getState());
@@ -59967,25 +50509,6 @@ size_t MySQLParser::SamplingPercentageContext::getRuleIndex() const {
   return MySQLParser::RuleSamplingPercentage;
 }
 
-void MySQLParser::SamplingPercentageContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterSamplingPercentage(this);
-}
-
-void MySQLParser::SamplingPercentageContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitSamplingPercentage(this);
-}
-
-
-std::any MySQLParser::SamplingPercentageContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitSamplingPercentage(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::SamplingPercentageContext* MySQLParser::samplingPercentage() {
   SamplingPercentageContext *_localctx = _tracker.createInstance<SamplingPercentageContext>(_ctx, getState());
@@ -60074,25 +50597,6 @@ size_t MySQLParser::TablesampleClauseContext::getRuleIndex() const {
   return MySQLParser::RuleTablesampleClause;
 }
 
-void MySQLParser::TablesampleClauseContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterTablesampleClause(this);
-}
-
-void MySQLParser::TablesampleClauseContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitTablesampleClause(this);
-}
-
-
-std::any MySQLParser::TablesampleClauseContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitTablesampleClause(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::TablesampleClauseContext* MySQLParser::tablesampleClause() {
   TablesampleClauseContext *_localctx = _tracker.createInstance<TablesampleClauseContext>(_ctx, getState());
@@ -60154,25 +50658,6 @@ size_t MySQLParser::WindowingClauseContext::getRuleIndex() const {
   return MySQLParser::RuleWindowingClause;
 }
 
-void MySQLParser::WindowingClauseContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterWindowingClause(this);
-}
-
-void MySQLParser::WindowingClauseContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitWindowingClause(this);
-}
-
-
-std::any MySQLParser::WindowingClauseContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitWindowingClause(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::WindowingClauseContext* MySQLParser::windowingClause() {
   WindowingClauseContext *_localctx = _tracker.createInstance<WindowingClauseContext>(_ctx, getState());
@@ -60253,25 +50738,6 @@ size_t MySQLParser::LeadLagInfoContext::getRuleIndex() const {
   return MySQLParser::RuleLeadLagInfo;
 }
 
-void MySQLParser::LeadLagInfoContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterLeadLagInfo(this);
-}
-
-void MySQLParser::LeadLagInfoContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitLeadLagInfo(this);
-}
-
-
-std::any MySQLParser::LeadLagInfoContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitLeadLagInfo(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::LeadLagInfoContext* MySQLParser::leadLagInfo() {
   LeadLagInfoContext *_localctx = _tracker.createInstance<LeadLagInfoContext>(_ctx, getState());
@@ -60356,25 +50822,6 @@ size_t MySQLParser::StableIntegerContext::getRuleIndex() const {
   return MySQLParser::RuleStableInteger;
 }
 
-void MySQLParser::StableIntegerContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterStableInteger(this);
-}
-
-void MySQLParser::StableIntegerContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitStableInteger(this);
-}
-
-
-std::any MySQLParser::StableIntegerContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitStableInteger(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::StableIntegerContext* MySQLParser::stableInteger() {
   StableIntegerContext *_localctx = _tracker.createInstance<StableIntegerContext>(_ctx, getState());
@@ -60446,25 +50893,6 @@ size_t MySQLParser::ParamOrVarContext::getRuleIndex() const {
   return MySQLParser::RuleParamOrVar;
 }
 
-void MySQLParser::ParamOrVarContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterParamOrVar(this);
-}
-
-void MySQLParser::ParamOrVarContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitParamOrVar(this);
-}
-
-
-std::any MySQLParser::ParamOrVarContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitParamOrVar(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::ParamOrVarContext* MySQLParser::paramOrVar() {
   ParamOrVarContext *_localctx = _tracker.createInstance<ParamOrVarContext>(_ctx, getState());
@@ -60541,25 +50969,6 @@ size_t MySQLParser::NullTreatmentContext::getRuleIndex() const {
   return MySQLParser::RuleNullTreatment;
 }
 
-void MySQLParser::NullTreatmentContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterNullTreatment(this);
-}
-
-void MySQLParser::NullTreatmentContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitNullTreatment(this);
-}
-
-
-std::any MySQLParser::NullTreatmentContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitNullTreatment(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::NullTreatmentContext* MySQLParser::nullTreatment() {
   NullTreatmentContext *_localctx = _tracker.createInstance<NullTreatmentContext>(_ctx, getState());
@@ -60640,25 +51049,6 @@ size_t MySQLParser::JsonFunctionContext::getRuleIndex() const {
   return MySQLParser::RuleJsonFunction;
 }
 
-void MySQLParser::JsonFunctionContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterJsonFunction(this);
-}
-
-void MySQLParser::JsonFunctionContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitJsonFunction(this);
-}
-
-
-std::any MySQLParser::JsonFunctionContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitJsonFunction(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::JsonFunctionContext* MySQLParser::jsonFunction() {
   JsonFunctionContext *_localctx = _tracker.createInstance<JsonFunctionContext>(_ctx, getState());
@@ -60764,25 +51154,6 @@ size_t MySQLParser::InSumExprContext::getRuleIndex() const {
   return MySQLParser::RuleInSumExpr;
 }
 
-void MySQLParser::InSumExprContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterInSumExpr(this);
-}
-
-void MySQLParser::InSumExprContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitInSumExpr(this);
-}
-
-
-std::any MySQLParser::InSumExprContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitInSumExpr(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::InSumExprContext* MySQLParser::inSumExpr() {
   InSumExprContext *_localctx = _tracker.createInstance<InSumExprContext>(_ctx, getState());
@@ -60846,25 +51217,6 @@ size_t MySQLParser::IdentListArgContext::getRuleIndex() const {
   return MySQLParser::RuleIdentListArg;
 }
 
-void MySQLParser::IdentListArgContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterIdentListArg(this);
-}
-
-void MySQLParser::IdentListArgContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitIdentListArg(this);
-}
-
-
-std::any MySQLParser::IdentListArgContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitIdentListArg(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::IdentListArgContext* MySQLParser::identListArg() {
   IdentListArgContext *_localctx = _tracker.createInstance<IdentListArgContext>(_ctx, getState());
@@ -60940,25 +51292,6 @@ size_t MySQLParser::IdentListContext::getRuleIndex() const {
   return MySQLParser::RuleIdentList;
 }
 
-void MySQLParser::IdentListContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterIdentList(this);
-}
-
-void MySQLParser::IdentListContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitIdentList(this);
-}
-
-
-std::any MySQLParser::IdentListContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitIdentList(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::IdentListContext* MySQLParser::identList() {
   IdentListContext *_localctx = _tracker.createInstance<IdentListContext>(_ctx, getState());
@@ -61042,25 +51375,6 @@ size_t MySQLParser::FulltextOptionsContext::getRuleIndex() const {
   return MySQLParser::RuleFulltextOptions;
 }
 
-void MySQLParser::FulltextOptionsContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterFulltextOptions(this);
-}
-
-void MySQLParser::FulltextOptionsContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitFulltextOptions(this);
-}
-
-
-std::any MySQLParser::FulltextOptionsContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitFulltextOptions(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::FulltextOptionsContext* MySQLParser::fulltextOptions() {
   FulltextOptionsContext *_localctx = _tracker.createInstance<FulltextOptionsContext>(_ctx, getState());
@@ -61486,25 +51800,6 @@ size_t MySQLParser::RuntimeFunctionCallContext::getRuleIndex() const {
   return MySQLParser::RuleRuntimeFunctionCall;
 }
 
-void MySQLParser::RuntimeFunctionCallContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterRuntimeFunctionCall(this);
-}
-
-void MySQLParser::RuntimeFunctionCallContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitRuntimeFunctionCall(this);
-}
-
-
-std::any MySQLParser::RuntimeFunctionCallContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitRuntimeFunctionCall(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::RuntimeFunctionCallContext* MySQLParser::runtimeFunctionCall() {
   RuntimeFunctionCallContext *_localctx = _tracker.createInstance<RuntimeFunctionCallContext>(_ctx, getState());
@@ -62459,25 +52754,6 @@ size_t MySQLParser::ReturningTypeContext::getRuleIndex() const {
   return MySQLParser::RuleReturningType;
 }
 
-void MySQLParser::ReturningTypeContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterReturningType(this);
-}
-
-void MySQLParser::ReturningTypeContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitReturningType(this);
-}
-
-
-std::any MySQLParser::ReturningTypeContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitReturningType(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::ReturningTypeContext* MySQLParser::returningType() {
   ReturningTypeContext *_localctx = _tracker.createInstance<ReturningTypeContext>(_ctx, getState());
@@ -62574,25 +52850,6 @@ size_t MySQLParser::GeometryFunctionContext::getRuleIndex() const {
   return MySQLParser::RuleGeometryFunction;
 }
 
-void MySQLParser::GeometryFunctionContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterGeometryFunction(this);
-}
-
-void MySQLParser::GeometryFunctionContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitGeometryFunction(this);
-}
-
-
-std::any MySQLParser::GeometryFunctionContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitGeometryFunction(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::GeometryFunctionContext* MySQLParser::geometryFunction() {
   GeometryFunctionContext *_localctx = _tracker.createInstance<GeometryFunctionContext>(_ctx, getState());
@@ -62732,25 +52989,6 @@ size_t MySQLParser::TimeFunctionParametersContext::getRuleIndex() const {
   return MySQLParser::RuleTimeFunctionParameters;
 }
 
-void MySQLParser::TimeFunctionParametersContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterTimeFunctionParameters(this);
-}
-
-void MySQLParser::TimeFunctionParametersContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitTimeFunctionParameters(this);
-}
-
-
-std::any MySQLParser::TimeFunctionParametersContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitTimeFunctionParameters(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::TimeFunctionParametersContext* MySQLParser::timeFunctionParameters() {
   TimeFunctionParametersContext *_localctx = _tracker.createInstance<TimeFunctionParametersContext>(_ctx, getState());
@@ -62804,25 +53042,6 @@ size_t MySQLParser::FractionalPrecisionContext::getRuleIndex() const {
   return MySQLParser::RuleFractionalPrecision;
 }
 
-void MySQLParser::FractionalPrecisionContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterFractionalPrecision(this);
-}
-
-void MySQLParser::FractionalPrecisionContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitFractionalPrecision(this);
-}
-
-
-std::any MySQLParser::FractionalPrecisionContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitFractionalPrecision(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::FractionalPrecisionContext* MySQLParser::fractionalPrecision() {
   FractionalPrecisionContext *_localctx = _tracker.createInstance<FractionalPrecisionContext>(_ctx, getState());
@@ -62893,25 +53112,6 @@ size_t MySQLParser::WeightStringLevelsContext::getRuleIndex() const {
   return MySQLParser::RuleWeightStringLevels;
 }
 
-void MySQLParser::WeightStringLevelsContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterWeightStringLevels(this);
-}
-
-void MySQLParser::WeightStringLevelsContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitWeightStringLevels(this);
-}
-
-
-std::any MySQLParser::WeightStringLevelsContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitWeightStringLevels(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::WeightStringLevelsContext* MySQLParser::weightStringLevels() {
   WeightStringLevelsContext *_localctx = _tracker.createInstance<WeightStringLevelsContext>(_ctx, getState());
@@ -63001,25 +53201,6 @@ size_t MySQLParser::WeightStringLevelListItemContext::getRuleIndex() const {
   return MySQLParser::RuleWeightStringLevelListItem;
 }
 
-void MySQLParser::WeightStringLevelListItemContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterWeightStringLevelListItem(this);
-}
-
-void MySQLParser::WeightStringLevelListItemContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitWeightStringLevelListItem(this);
-}
-
-
-std::any MySQLParser::WeightStringLevelListItemContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitWeightStringLevelListItem(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::WeightStringLevelListItemContext* MySQLParser::weightStringLevelListItem() {
   WeightStringLevelListItemContext *_localctx = _tracker.createInstance<WeightStringLevelListItemContext>(_ctx, getState());
@@ -63114,25 +53295,6 @@ size_t MySQLParser::DateTimeTtypeContext::getRuleIndex() const {
   return MySQLParser::RuleDateTimeTtype;
 }
 
-void MySQLParser::DateTimeTtypeContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterDateTimeTtype(this);
-}
-
-void MySQLParser::DateTimeTtypeContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitDateTimeTtype(this);
-}
-
-
-std::any MySQLParser::DateTimeTtypeContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitDateTimeTtype(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::DateTimeTtypeContext* MySQLParser::dateTimeTtype() {
   DateTimeTtypeContext *_localctx = _tracker.createInstance<DateTimeTtypeContext>(_ctx, getState());
@@ -63219,25 +53381,6 @@ size_t MySQLParser::TrimFunctionContext::getRuleIndex() const {
   return MySQLParser::RuleTrimFunction;
 }
 
-void MySQLParser::TrimFunctionContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterTrimFunction(this);
-}
-
-void MySQLParser::TrimFunctionContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitTrimFunction(this);
-}
-
-
-std::any MySQLParser::TrimFunctionContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitTrimFunction(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::TrimFunctionContext* MySQLParser::trimFunction() {
   TrimFunctionContext *_localctx = _tracker.createInstance<TrimFunctionContext>(_ctx, getState());
@@ -63408,25 +53551,6 @@ size_t MySQLParser::SubstringFunctionContext::getRuleIndex() const {
   return MySQLParser::RuleSubstringFunction;
 }
 
-void MySQLParser::SubstringFunctionContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterSubstringFunction(this);
-}
-
-void MySQLParser::SubstringFunctionContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitSubstringFunction(this);
-}
-
-
-std::any MySQLParser::SubstringFunctionContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitSubstringFunction(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::SubstringFunctionContext* MySQLParser::substringFunction() {
   SubstringFunctionContext *_localctx = _tracker.createInstance<SubstringFunctionContext>(_ctx, getState());
@@ -63538,25 +53662,6 @@ size_t MySQLParser::FunctionCallContext::getRuleIndex() const {
   return MySQLParser::RuleFunctionCall;
 }
 
-void MySQLParser::FunctionCallContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterFunctionCall(this);
-}
-
-void MySQLParser::FunctionCallContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitFunctionCall(this);
-}
-
-
-std::any MySQLParser::FunctionCallContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitFunctionCall(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::FunctionCallContext* MySQLParser::functionCall() {
   FunctionCallContext *_localctx = _tracker.createInstance<FunctionCallContext>(_ctx, getState());
@@ -63662,25 +53767,6 @@ size_t MySQLParser::UdfExprListContext::getRuleIndex() const {
   return MySQLParser::RuleUdfExprList;
 }
 
-void MySQLParser::UdfExprListContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterUdfExprList(this);
-}
-
-void MySQLParser::UdfExprListContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitUdfExprList(this);
-}
-
-
-std::any MySQLParser::UdfExprListContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitUdfExprList(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::UdfExprListContext* MySQLParser::udfExprList() {
   UdfExprListContext *_localctx = _tracker.createInstance<UdfExprListContext>(_ctx, getState());
@@ -63740,25 +53826,6 @@ size_t MySQLParser::UdfExprContext::getRuleIndex() const {
   return MySQLParser::RuleUdfExpr;
 }
 
-void MySQLParser::UdfExprContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterUdfExpr(this);
-}
-
-void MySQLParser::UdfExprContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitUdfExpr(this);
-}
-
-
-std::any MySQLParser::UdfExprContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitUdfExpr(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::UdfExprContext* MySQLParser::udfExpr() {
   UdfExprContext *_localctx = _tracker.createInstance<UdfExprContext>(_ctx, getState());
@@ -63822,25 +53889,6 @@ size_t MySQLParser::UserVariableContext::getRuleIndex() const {
   return MySQLParser::RuleUserVariable;
 }
 
-void MySQLParser::UserVariableContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterUserVariable(this);
-}
-
-void MySQLParser::UserVariableContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitUserVariable(this);
-}
-
-
-std::any MySQLParser::UserVariableContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitUserVariable(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::UserVariableContext* MySQLParser::userVariable() {
   UserVariableContext *_localctx = _tracker.createInstance<UserVariableContext>(_ctx, getState());
@@ -63910,25 +53958,6 @@ size_t MySQLParser::InExpressionUserVariableAssignmentContext::getRuleIndex() co
   return MySQLParser::RuleInExpressionUserVariableAssignment;
 }
 
-void MySQLParser::InExpressionUserVariableAssignmentContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterInExpressionUserVariableAssignment(this);
-}
-
-void MySQLParser::InExpressionUserVariableAssignmentContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitInExpressionUserVariableAssignment(this);
-}
-
-
-std::any MySQLParser::InExpressionUserVariableAssignmentContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitInExpressionUserVariableAssignment(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::InExpressionUserVariableAssignmentContext* MySQLParser::inExpressionUserVariableAssignment() {
   InExpressionUserVariableAssignmentContext *_localctx = _tracker.createInstance<InExpressionUserVariableAssignmentContext>(_ctx, getState());
@@ -63987,25 +54016,6 @@ size_t MySQLParser::RvalueSystemOrUserVariableContext::getRuleIndex() const {
   return MySQLParser::RuleRvalueSystemOrUserVariable;
 }
 
-void MySQLParser::RvalueSystemOrUserVariableContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterRvalueSystemOrUserVariable(this);
-}
-
-void MySQLParser::RvalueSystemOrUserVariableContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitRvalueSystemOrUserVariable(this);
-}
-
-
-std::any MySQLParser::RvalueSystemOrUserVariableContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitRvalueSystemOrUserVariable(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::RvalueSystemOrUserVariableContext* MySQLParser::rvalueSystemOrUserVariable() {
   RvalueSystemOrUserVariableContext *_localctx = _tracker.createInstance<RvalueSystemOrUserVariableContext>(_ctx, getState());
@@ -64093,25 +54103,6 @@ size_t MySQLParser::LvalueVariableContext::getRuleIndex() const {
   return MySQLParser::RuleLvalueVariable;
 }
 
-void MySQLParser::LvalueVariableContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterLvalueVariable(this);
-}
-
-void MySQLParser::LvalueVariableContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitLvalueVariable(this);
-}
-
-
-std::any MySQLParser::LvalueVariableContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitLvalueVariable(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::LvalueVariableContext* MySQLParser::lvalueVariable() {
   LvalueVariableContext *_localctx = _tracker.createInstance<LvalueVariableContext>(_ctx, getState());
@@ -64213,25 +54204,6 @@ size_t MySQLParser::RvalueSystemVariableContext::getRuleIndex() const {
   return MySQLParser::RuleRvalueSystemVariable;
 }
 
-void MySQLParser::RvalueSystemVariableContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterRvalueSystemVariable(this);
-}
-
-void MySQLParser::RvalueSystemVariableContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitRvalueSystemVariable(this);
-}
-
-
-std::any MySQLParser::RvalueSystemVariableContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitRvalueSystemVariable(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::RvalueSystemVariableContext* MySQLParser::rvalueSystemVariable() {
   RvalueSystemVariableContext *_localctx = _tracker.createInstance<RvalueSystemVariableContext>(_ctx, getState());
@@ -64291,25 +54263,6 @@ size_t MySQLParser::WhenExpressionContext::getRuleIndex() const {
   return MySQLParser::RuleWhenExpression;
 }
 
-void MySQLParser::WhenExpressionContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterWhenExpression(this);
-}
-
-void MySQLParser::WhenExpressionContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitWhenExpression(this);
-}
-
-
-std::any MySQLParser::WhenExpressionContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitWhenExpression(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::WhenExpressionContext* MySQLParser::whenExpression() {
   WhenExpressionContext *_localctx = _tracker.createInstance<WhenExpressionContext>(_ctx, getState());
@@ -64358,25 +54311,6 @@ size_t MySQLParser::ThenExpressionContext::getRuleIndex() const {
   return MySQLParser::RuleThenExpression;
 }
 
-void MySQLParser::ThenExpressionContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterThenExpression(this);
-}
-
-void MySQLParser::ThenExpressionContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitThenExpression(this);
-}
-
-
-std::any MySQLParser::ThenExpressionContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitThenExpression(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::ThenExpressionContext* MySQLParser::thenExpression() {
   ThenExpressionContext *_localctx = _tracker.createInstance<ThenExpressionContext>(_ctx, getState());
@@ -64425,25 +54359,6 @@ size_t MySQLParser::ElseExpressionContext::getRuleIndex() const {
   return MySQLParser::RuleElseExpression;
 }
 
-void MySQLParser::ElseExpressionContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterElseExpression(this);
-}
-
-void MySQLParser::ElseExpressionContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitElseExpression(this);
-}
-
-
-std::any MySQLParser::ElseExpressionContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitElseExpression(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::ElseExpressionContext* MySQLParser::elseExpression() {
   ElseExpressionContext *_localctx = _tracker.createInstance<ElseExpressionContext>(_ctx, getState());
@@ -64588,25 +54503,6 @@ size_t MySQLParser::CastTypeContext::getRuleIndex() const {
   return MySQLParser::RuleCastType;
 }
 
-void MySQLParser::CastTypeContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterCastType(this);
-}
-
-void MySQLParser::CastTypeContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitCastType(this);
-}
-
-
-std::any MySQLParser::CastTypeContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitCastType(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::CastTypeContext* MySQLParser::castType() {
   CastTypeContext *_localctx = _tracker.createInstance<CastTypeContext>(_ctx, getState());
@@ -64913,25 +54809,6 @@ size_t MySQLParser::ExprListContext::getRuleIndex() const {
   return MySQLParser::RuleExprList;
 }
 
-void MySQLParser::ExprListContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterExprList(this);
-}
-
-void MySQLParser::ExprListContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitExprList(this);
-}
-
-
-std::any MySQLParser::ExprListContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitExprList(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::ExprListContext* MySQLParser::exprList() {
   ExprListContext *_localctx = _tracker.createInstance<ExprListContext>(_ctx, getState());
@@ -64995,25 +54872,6 @@ size_t MySQLParser::CharsetContext::getRuleIndex() const {
   return MySQLParser::RuleCharset;
 }
 
-void MySQLParser::CharsetContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterCharset(this);
-}
-
-void MySQLParser::CharsetContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitCharset(this);
-}
-
-
-std::any MySQLParser::CharsetContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitCharset(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::CharsetContext* MySQLParser::charset() {
   CharsetContext *_localctx = _tracker.createInstance<CharsetContext>(_ctx, getState());
@@ -65079,25 +54937,6 @@ size_t MySQLParser::NotRuleContext::getRuleIndex() const {
   return MySQLParser::RuleNotRule;
 }
 
-void MySQLParser::NotRuleContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterNotRule(this);
-}
-
-void MySQLParser::NotRuleContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitNotRule(this);
-}
-
-
-std::any MySQLParser::NotRuleContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitNotRule(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::NotRuleContext* MySQLParser::notRule() {
   NotRuleContext *_localctx = _tracker.createInstance<NotRuleContext>(_ctx, getState());
@@ -65152,25 +54991,6 @@ size_t MySQLParser::Not2RuleContext::getRuleIndex() const {
   return MySQLParser::RuleNot2Rule;
 }
 
-void MySQLParser::Not2RuleContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterNot2Rule(this);
-}
-
-void MySQLParser::Not2RuleContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitNot2Rule(this);
-}
-
-
-std::any MySQLParser::Not2RuleContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitNot2Rule(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::Not2RuleContext* MySQLParser::not2Rule() {
   Not2RuleContext *_localctx = _tracker.createInstance<Not2RuleContext>(_ctx, getState());
@@ -65267,25 +55087,6 @@ size_t MySQLParser::IntervalContext::getRuleIndex() const {
   return MySQLParser::RuleInterval;
 }
 
-void MySQLParser::IntervalContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterInterval(this);
-}
-
-void MySQLParser::IntervalContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitInterval(this);
-}
-
-
-std::any MySQLParser::IntervalContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitInterval(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::IntervalContext* MySQLParser::interval() {
   IntervalContext *_localctx = _tracker.createInstance<IntervalContext>(_ctx, getState());
@@ -65407,25 +55208,6 @@ size_t MySQLParser::IntervalTimeStampContext::getRuleIndex() const {
   return MySQLParser::RuleIntervalTimeStamp;
 }
 
-void MySQLParser::IntervalTimeStampContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterIntervalTimeStamp(this);
-}
-
-void MySQLParser::IntervalTimeStampContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitIntervalTimeStamp(this);
-}
-
-
-std::any MySQLParser::IntervalTimeStampContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitIntervalTimeStamp(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::IntervalTimeStampContext* MySQLParser::intervalTimeStamp() {
   IntervalTimeStampContext *_localctx = _tracker.createInstance<IntervalTimeStampContext>(_ctx, getState());
@@ -65489,25 +55271,6 @@ size_t MySQLParser::ExprListWithParenthesesContext::getRuleIndex() const {
   return MySQLParser::RuleExprListWithParentheses;
 }
 
-void MySQLParser::ExprListWithParenthesesContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterExprListWithParentheses(this);
-}
-
-void MySQLParser::ExprListWithParenthesesContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitExprListWithParentheses(this);
-}
-
-
-std::any MySQLParser::ExprListWithParenthesesContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitExprListWithParentheses(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::ExprListWithParenthesesContext* MySQLParser::exprListWithParentheses() {
   ExprListWithParenthesesContext *_localctx = _tracker.createInstance<ExprListWithParenthesesContext>(_ctx, getState());
@@ -65562,25 +55325,6 @@ size_t MySQLParser::ExprWithParenthesesContext::getRuleIndex() const {
   return MySQLParser::RuleExprWithParentheses;
 }
 
-void MySQLParser::ExprWithParenthesesContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterExprWithParentheses(this);
-}
-
-void MySQLParser::ExprWithParenthesesContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitExprWithParentheses(this);
-}
-
-
-std::any MySQLParser::ExprWithParenthesesContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitExprWithParentheses(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::ExprWithParenthesesContext* MySQLParser::exprWithParentheses() {
   ExprWithParenthesesContext *_localctx = _tracker.createInstance<ExprWithParenthesesContext>(_ctx, getState());
@@ -65635,25 +55379,6 @@ size_t MySQLParser::SimpleExprWithParenthesesContext::getRuleIndex() const {
   return MySQLParser::RuleSimpleExprWithParentheses;
 }
 
-void MySQLParser::SimpleExprWithParenthesesContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterSimpleExprWithParentheses(this);
-}
-
-void MySQLParser::SimpleExprWithParenthesesContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitSimpleExprWithParentheses(this);
-}
-
-
-std::any MySQLParser::SimpleExprWithParenthesesContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitSimpleExprWithParentheses(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::SimpleExprWithParenthesesContext* MySQLParser::simpleExprWithParentheses() {
   SimpleExprWithParenthesesContext *_localctx = _tracker.createInstance<SimpleExprWithParenthesesContext>(_ctx, getState());
@@ -65712,25 +55437,6 @@ size_t MySQLParser::OrderListContext::getRuleIndex() const {
   return MySQLParser::RuleOrderList;
 }
 
-void MySQLParser::OrderListContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterOrderList(this);
-}
-
-void MySQLParser::OrderListContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitOrderList(this);
-}
-
-
-std::any MySQLParser::OrderListContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitOrderList(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::OrderListContext* MySQLParser::orderList() {
   OrderListContext *_localctx = _tracker.createInstance<OrderListContext>(_ctx, getState());
@@ -65792,25 +55498,6 @@ size_t MySQLParser::OrderExpressionContext::getRuleIndex() const {
   return MySQLParser::RuleOrderExpression;
 }
 
-void MySQLParser::OrderExpressionContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterOrderExpression(this);
-}
-
-void MySQLParser::OrderExpressionContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitOrderExpression(this);
-}
-
-
-std::any MySQLParser::OrderExpressionContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitOrderExpression(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::OrderExpressionContext* MySQLParser::orderExpression() {
   OrderExpressionContext *_localctx = _tracker.createInstance<OrderExpressionContext>(_ctx, getState());
@@ -65878,25 +55565,6 @@ size_t MySQLParser::GroupListContext::getRuleIndex() const {
   return MySQLParser::RuleGroupList;
 }
 
-void MySQLParser::GroupListContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterGroupList(this);
-}
-
-void MySQLParser::GroupListContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitGroupList(this);
-}
-
-
-std::any MySQLParser::GroupListContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitGroupList(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::GroupListContext* MySQLParser::groupList() {
   GroupListContext *_localctx = _tracker.createInstance<GroupListContext>(_ctx, getState());
@@ -65952,25 +55620,6 @@ size_t MySQLParser::GroupingExpressionContext::getRuleIndex() const {
   return MySQLParser::RuleGroupingExpression;
 }
 
-void MySQLParser::GroupingExpressionContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterGroupingExpression(this);
-}
-
-void MySQLParser::GroupingExpressionContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitGroupingExpression(this);
-}
-
-
-std::any MySQLParser::GroupingExpressionContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitGroupingExpression(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::GroupingExpressionContext* MySQLParser::groupingExpression() {
   GroupingExpressionContext *_localctx = _tracker.createInstance<GroupingExpressionContext>(_ctx, getState());
@@ -66021,25 +55670,6 @@ size_t MySQLParser::ChannelContext::getRuleIndex() const {
   return MySQLParser::RuleChannel;
 }
 
-void MySQLParser::ChannelContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterChannel(this);
-}
-
-void MySQLParser::ChannelContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitChannel(this);
-}
-
-
-std::any MySQLParser::ChannelContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitChannel(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::ChannelContext* MySQLParser::channel() {
   ChannelContext *_localctx = _tracker.createInstance<ChannelContext>(_ctx, getState());
@@ -66134,25 +55764,6 @@ size_t MySQLParser::CompoundStatementContext::getRuleIndex() const {
   return MySQLParser::RuleCompoundStatement;
 }
 
-void MySQLParser::CompoundStatementContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterCompoundStatement(this);
-}
-
-void MySQLParser::CompoundStatementContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitCompoundStatement(this);
-}
-
-
-std::any MySQLParser::CompoundStatementContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitCompoundStatement(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::CompoundStatementContext* MySQLParser::compoundStatement() {
   CompoundStatementContext *_localctx = _tracker.createInstance<CompoundStatementContext>(_ctx, getState());
@@ -66293,25 +55904,6 @@ size_t MySQLParser::ReturnStatementContext::getRuleIndex() const {
   return MySQLParser::RuleReturnStatement;
 }
 
-void MySQLParser::ReturnStatementContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterReturnStatement(this);
-}
-
-void MySQLParser::ReturnStatementContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitReturnStatement(this);
-}
-
-
-std::any MySQLParser::ReturnStatementContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitReturnStatement(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::ReturnStatementContext* MySQLParser::returnStatement() {
   ReturnStatementContext *_localctx = _tracker.createInstance<ReturnStatementContext>(_ctx, getState());
@@ -66368,25 +55960,6 @@ size_t MySQLParser::IfStatementContext::getRuleIndex() const {
   return MySQLParser::RuleIfStatement;
 }
 
-void MySQLParser::IfStatementContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterIfStatement(this);
-}
-
-void MySQLParser::IfStatementContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitIfStatement(this);
-}
-
-
-std::any MySQLParser::IfStatementContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitIfStatement(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::IfStatementContext* MySQLParser::ifStatement() {
   IfStatementContext *_localctx = _tracker.createInstance<IfStatementContext>(_ctx, getState());
@@ -66455,25 +56028,6 @@ size_t MySQLParser::IfBodyContext::getRuleIndex() const {
   return MySQLParser::RuleIfBody;
 }
 
-void MySQLParser::IfBodyContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterIfBody(this);
-}
-
-void MySQLParser::IfBodyContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitIfBody(this);
-}
-
-
-std::any MySQLParser::IfBodyContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitIfBody(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::IfBodyContext* MySQLParser::ifBody() {
   IfBodyContext *_localctx = _tracker.createInstance<IfBodyContext>(_ctx, getState());
@@ -66548,25 +56102,6 @@ size_t MySQLParser::ThenStatementContext::getRuleIndex() const {
   return MySQLParser::RuleThenStatement;
 }
 
-void MySQLParser::ThenStatementContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterThenStatement(this);
-}
-
-void MySQLParser::ThenStatementContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitThenStatement(this);
-}
-
-
-std::any MySQLParser::ThenStatementContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitThenStatement(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::ThenStatementContext* MySQLParser::thenStatement() {
   ThenStatementContext *_localctx = _tracker.createInstance<ThenStatementContext>(_ctx, getState());
@@ -66623,25 +56158,6 @@ size_t MySQLParser::CompoundStatementListContext::getRuleIndex() const {
   return MySQLParser::RuleCompoundStatementList;
 }
 
-void MySQLParser::CompoundStatementListContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterCompoundStatementList(this);
-}
-
-void MySQLParser::CompoundStatementListContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitCompoundStatementList(this);
-}
-
-
-std::any MySQLParser::CompoundStatementListContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitCompoundStatementList(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::CompoundStatementListContext* MySQLParser::compoundStatementList() {
   CompoundStatementListContext *_localctx = _tracker.createInstance<CompoundStatementListContext>(_ctx, getState());
@@ -66735,25 +56251,6 @@ size_t MySQLParser::CaseStatementContext::getRuleIndex() const {
   return MySQLParser::RuleCaseStatement;
 }
 
-void MySQLParser::CaseStatementContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterCaseStatement(this);
-}
-
-void MySQLParser::CaseStatementContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitCaseStatement(this);
-}
-
-
-std::any MySQLParser::CaseStatementContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitCaseStatement(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::CaseStatementContext* MySQLParser::caseStatement() {
   CaseStatementContext *_localctx = _tracker.createInstance<CaseStatementContext>(_ctx, getState());
@@ -66838,25 +56335,6 @@ size_t MySQLParser::ElseStatementContext::getRuleIndex() const {
   return MySQLParser::RuleElseStatement;
 }
 
-void MySQLParser::ElseStatementContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterElseStatement(this);
-}
-
-void MySQLParser::ElseStatementContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitElseStatement(this);
-}
-
-
-std::any MySQLParser::ElseStatementContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitElseStatement(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::ElseStatementContext* MySQLParser::elseStatement() {
   ElseStatementContext *_localctx = _tracker.createInstance<ElseStatementContext>(_ctx, getState());
@@ -66909,25 +56387,6 @@ size_t MySQLParser::LabeledBlockContext::getRuleIndex() const {
   return MySQLParser::RuleLabeledBlock;
 }
 
-void MySQLParser::LabeledBlockContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterLabeledBlock(this);
-}
-
-void MySQLParser::LabeledBlockContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitLabeledBlock(this);
-}
-
-
-std::any MySQLParser::LabeledBlockContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitLabeledBlock(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::LabeledBlockContext* MySQLParser::labeledBlock() {
   LabeledBlockContext *_localctx = _tracker.createInstance<LabeledBlockContext>(_ctx, getState());
@@ -66985,25 +56444,6 @@ size_t MySQLParser::UnlabeledBlockContext::getRuleIndex() const {
   return MySQLParser::RuleUnlabeledBlock;
 }
 
-void MySQLParser::UnlabeledBlockContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterUnlabeledBlock(this);
-}
-
-void MySQLParser::UnlabeledBlockContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitUnlabeledBlock(this);
-}
-
-
-std::any MySQLParser::UnlabeledBlockContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitUnlabeledBlock(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::UnlabeledBlockContext* MySQLParser::unlabeledBlock() {
   UnlabeledBlockContext *_localctx = _tracker.createInstance<UnlabeledBlockContext>(_ctx, getState());
@@ -67050,25 +56490,6 @@ size_t MySQLParser::LabelContext::getRuleIndex() const {
   return MySQLParser::RuleLabel;
 }
 
-void MySQLParser::LabelContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterLabel(this);
-}
-
-void MySQLParser::LabelContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitLabel(this);
-}
-
-
-std::any MySQLParser::LabelContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitLabel(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::LabelContext* MySQLParser::label() {
   LabelContext *_localctx = _tracker.createInstance<LabelContext>(_ctx, getState());
@@ -67125,25 +56546,6 @@ size_t MySQLParser::BeginEndBlockContext::getRuleIndex() const {
   return MySQLParser::RuleBeginEndBlock;
 }
 
-void MySQLParser::BeginEndBlockContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterBeginEndBlock(this);
-}
-
-void MySQLParser::BeginEndBlockContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitBeginEndBlock(this);
-}
-
-
-std::any MySQLParser::BeginEndBlockContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitBeginEndBlock(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::BeginEndBlockContext* MySQLParser::beginEndBlock() {
   BeginEndBlockContext *_localctx = _tracker.createInstance<BeginEndBlockContext>(_ctx, getState());
@@ -67222,25 +56624,6 @@ size_t MySQLParser::LabeledControlContext::getRuleIndex() const {
   return MySQLParser::RuleLabeledControl;
 }
 
-void MySQLParser::LabeledControlContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterLabeledControl(this);
-}
-
-void MySQLParser::LabeledControlContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitLabeledControl(this);
-}
-
-
-std::any MySQLParser::LabeledControlContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitLabeledControl(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::LabeledControlContext* MySQLParser::labeledControl() {
   LabeledControlContext *_localctx = _tracker.createInstance<LabeledControlContext>(_ctx, getState());
@@ -67306,25 +56689,6 @@ size_t MySQLParser::UnlabeledControlContext::getRuleIndex() const {
   return MySQLParser::RuleUnlabeledControl;
 }
 
-void MySQLParser::UnlabeledControlContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterUnlabeledControl(this);
-}
-
-void MySQLParser::UnlabeledControlContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitUnlabeledControl(this);
-}
-
-
-std::any MySQLParser::UnlabeledControlContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitUnlabeledControl(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::UnlabeledControlContext* MySQLParser::unlabeledControl() {
   UnlabeledControlContext *_localctx = _tracker.createInstance<UnlabeledControlContext>(_ctx, getState());
@@ -67403,25 +56767,6 @@ size_t MySQLParser::LoopBlockContext::getRuleIndex() const {
   return MySQLParser::RuleLoopBlock;
 }
 
-void MySQLParser::LoopBlockContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterLoopBlock(this);
-}
-
-void MySQLParser::LoopBlockContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitLoopBlock(this);
-}
-
-
-std::any MySQLParser::LoopBlockContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitLoopBlock(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::LoopBlockContext* MySQLParser::loopBlock() {
   LoopBlockContext *_localctx = _tracker.createInstance<LoopBlockContext>(_ctx, getState());
@@ -67490,25 +56835,6 @@ size_t MySQLParser::WhileDoBlockContext::getRuleIndex() const {
   return MySQLParser::RuleWhileDoBlock;
 }
 
-void MySQLParser::WhileDoBlockContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterWhileDoBlock(this);
-}
-
-void MySQLParser::WhileDoBlockContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitWhileDoBlock(this);
-}
-
-
-std::any MySQLParser::WhileDoBlockContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitWhileDoBlock(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::WhileDoBlockContext* MySQLParser::whileDoBlock() {
   WhileDoBlockContext *_localctx = _tracker.createInstance<WhileDoBlockContext>(_ctx, getState());
@@ -67581,25 +56907,6 @@ size_t MySQLParser::RepeatUntilBlockContext::getRuleIndex() const {
   return MySQLParser::RuleRepeatUntilBlock;
 }
 
-void MySQLParser::RepeatUntilBlockContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterRepeatUntilBlock(this);
-}
-
-void MySQLParser::RepeatUntilBlockContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitRepeatUntilBlock(this);
-}
-
-
-std::any MySQLParser::RepeatUntilBlockContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitRepeatUntilBlock(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::RepeatUntilBlockContext* MySQLParser::repeatUntilBlock() {
   RepeatUntilBlockContext *_localctx = _tracker.createInstance<RepeatUntilBlockContext>(_ctx, getState());
@@ -67664,25 +56971,6 @@ size_t MySQLParser::SpDeclarationsContext::getRuleIndex() const {
   return MySQLParser::RuleSpDeclarations;
 }
 
-void MySQLParser::SpDeclarationsContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterSpDeclarations(this);
-}
-
-void MySQLParser::SpDeclarationsContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitSpDeclarations(this);
-}
-
-
-std::any MySQLParser::SpDeclarationsContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitSpDeclarations(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::SpDeclarationsContext* MySQLParser::spDeclarations() {
   SpDeclarationsContext *_localctx = _tracker.createInstance<SpDeclarationsContext>(_ctx, getState());
@@ -67756,25 +57044,6 @@ size_t MySQLParser::SpDeclarationContext::getRuleIndex() const {
   return MySQLParser::RuleSpDeclaration;
 }
 
-void MySQLParser::SpDeclarationContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterSpDeclaration(this);
-}
-
-void MySQLParser::SpDeclarationContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitSpDeclaration(this);
-}
-
-
-std::any MySQLParser::SpDeclarationContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitSpDeclaration(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::SpDeclarationContext* MySQLParser::spDeclaration() {
   SpDeclarationContext *_localctx = _tracker.createInstance<SpDeclarationContext>(_ctx, getState());
@@ -67868,25 +57137,6 @@ size_t MySQLParser::VariableDeclarationContext::getRuleIndex() const {
   return MySQLParser::RuleVariableDeclaration;
 }
 
-void MySQLParser::VariableDeclarationContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterVariableDeclaration(this);
-}
-
-void MySQLParser::VariableDeclarationContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitVariableDeclaration(this);
-}
-
-
-std::any MySQLParser::VariableDeclarationContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitVariableDeclaration(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::VariableDeclarationContext* MySQLParser::variableDeclaration() {
   VariableDeclarationContext *_localctx = _tracker.createInstance<VariableDeclarationContext>(_ctx, getState());
@@ -67968,25 +57218,6 @@ size_t MySQLParser::ConditionDeclarationContext::getRuleIndex() const {
   return MySQLParser::RuleConditionDeclaration;
 }
 
-void MySQLParser::ConditionDeclarationContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterConditionDeclaration(this);
-}
-
-void MySQLParser::ConditionDeclarationContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitConditionDeclaration(this);
-}
-
-
-std::any MySQLParser::ConditionDeclarationContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitConditionDeclaration(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::ConditionDeclarationContext* MySQLParser::conditionDeclaration() {
   ConditionDeclarationContext *_localctx = _tracker.createInstance<ConditionDeclarationContext>(_ctx, getState());
@@ -68041,25 +57272,6 @@ size_t MySQLParser::SpConditionContext::getRuleIndex() const {
   return MySQLParser::RuleSpCondition;
 }
 
-void MySQLParser::SpConditionContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterSpCondition(this);
-}
-
-void MySQLParser::SpConditionContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitSpCondition(this);
-}
-
-
-std::any MySQLParser::SpConditionContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitSpCondition(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::SpConditionContext* MySQLParser::spCondition() {
   SpConditionContext *_localctx = _tracker.createInstance<SpConditionContext>(_ctx, getState());
@@ -68132,25 +57344,6 @@ size_t MySQLParser::SqlstateContext::getRuleIndex() const {
   return MySQLParser::RuleSqlstate;
 }
 
-void MySQLParser::SqlstateContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterSqlstate(this);
-}
-
-void MySQLParser::SqlstateContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitSqlstate(this);
-}
-
-
-std::any MySQLParser::SqlstateContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitSqlstate(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::SqlstateContext* MySQLParser::sqlstate() {
   SqlstateContext *_localctx = _tracker.createInstance<SqlstateContext>(_ctx, getState());
@@ -68248,25 +57441,6 @@ size_t MySQLParser::HandlerDeclarationContext::getRuleIndex() const {
   return MySQLParser::RuleHandlerDeclaration;
 }
 
-void MySQLParser::HandlerDeclarationContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterHandlerDeclaration(this);
-}
-
-void MySQLParser::HandlerDeclarationContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitHandlerDeclaration(this);
-}
-
-
-std::any MySQLParser::HandlerDeclarationContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitHandlerDeclaration(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::HandlerDeclarationContext* MySQLParser::handlerDeclaration() {
   HandlerDeclarationContext *_localctx = _tracker.createInstance<HandlerDeclarationContext>(_ctx, getState());
@@ -68362,25 +57536,6 @@ size_t MySQLParser::HandlerConditionContext::getRuleIndex() const {
   return MySQLParser::RuleHandlerCondition;
 }
 
-void MySQLParser::HandlerConditionContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterHandlerCondition(this);
-}
-
-void MySQLParser::HandlerConditionContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitHandlerCondition(this);
-}
-
-
-std::any MySQLParser::HandlerConditionContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitHandlerCondition(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::HandlerConditionContext* MySQLParser::handlerCondition() {
   HandlerConditionContext *_localctx = _tracker.createInstance<HandlerConditionContext>(_ctx, getState());
@@ -68479,25 +57634,6 @@ size_t MySQLParser::CursorDeclarationContext::getRuleIndex() const {
   return MySQLParser::RuleCursorDeclaration;
 }
 
-void MySQLParser::CursorDeclarationContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterCursorDeclaration(this);
-}
-
-void MySQLParser::CursorDeclarationContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitCursorDeclaration(this);
-}
-
-
-std::any MySQLParser::CursorDeclarationContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitCursorDeclaration(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::CursorDeclarationContext* MySQLParser::cursorDeclaration() {
   CursorDeclarationContext *_localctx = _tracker.createInstance<CursorDeclarationContext>(_ctx, getState());
@@ -68552,25 +57688,6 @@ size_t MySQLParser::IterateStatementContext::getRuleIndex() const {
   return MySQLParser::RuleIterateStatement;
 }
 
-void MySQLParser::IterateStatementContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterIterateStatement(this);
-}
-
-void MySQLParser::IterateStatementContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitIterateStatement(this);
-}
-
-
-std::any MySQLParser::IterateStatementContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitIterateStatement(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::IterateStatementContext* MySQLParser::iterateStatement() {
   IterateStatementContext *_localctx = _tracker.createInstance<IterateStatementContext>(_ctx, getState());
@@ -68619,25 +57736,6 @@ size_t MySQLParser::LeaveStatementContext::getRuleIndex() const {
   return MySQLParser::RuleLeaveStatement;
 }
 
-void MySQLParser::LeaveStatementContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterLeaveStatement(this);
-}
-
-void MySQLParser::LeaveStatementContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitLeaveStatement(this);
-}
-
-
-std::any MySQLParser::LeaveStatementContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitLeaveStatement(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::LeaveStatementContext* MySQLParser::leaveStatement() {
   LeaveStatementContext *_localctx = _tracker.createInstance<LeaveStatementContext>(_ctx, getState());
@@ -68726,25 +57824,6 @@ size_t MySQLParser::GetDiagnosticsStatementContext::getRuleIndex() const {
   return MySQLParser::RuleGetDiagnosticsStatement;
 }
 
-void MySQLParser::GetDiagnosticsStatementContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterGetDiagnosticsStatement(this);
-}
-
-void MySQLParser::GetDiagnosticsStatementContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitGetDiagnosticsStatement(this);
-}
-
-
-std::any MySQLParser::GetDiagnosticsStatementContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitGetDiagnosticsStatement(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::GetDiagnosticsStatementContext* MySQLParser::getDiagnosticsStatement() {
   GetDiagnosticsStatementContext *_localctx = _tracker.createInstance<GetDiagnosticsStatementContext>(_ctx, getState());
@@ -68859,25 +57938,6 @@ size_t MySQLParser::SignalAllowedExprContext::getRuleIndex() const {
   return MySQLParser::RuleSignalAllowedExpr;
 }
 
-void MySQLParser::SignalAllowedExprContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterSignalAllowedExpr(this);
-}
-
-void MySQLParser::SignalAllowedExprContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitSignalAllowedExpr(this);
-}
-
-
-std::any MySQLParser::SignalAllowedExprContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitSignalAllowedExpr(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::SignalAllowedExprContext* MySQLParser::signalAllowedExpr() {
   SignalAllowedExprContext *_localctx = _tracker.createInstance<SignalAllowedExprContext>(_ctx, getState());
@@ -68960,25 +58020,6 @@ size_t MySQLParser::StatementInformationItemContext::getRuleIndex() const {
   return MySQLParser::RuleStatementInformationItem;
 }
 
-void MySQLParser::StatementInformationItemContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterStatementInformationItem(this);
-}
-
-void MySQLParser::StatementInformationItemContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitStatementInformationItem(this);
-}
-
-
-std::any MySQLParser::StatementInformationItemContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitStatementInformationItem(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::StatementInformationItemContext* MySQLParser::statementInformationItem() {
   StatementInformationItemContext *_localctx = _tracker.createInstance<StatementInformationItemContext>(_ctx, getState());
@@ -69065,25 +58106,6 @@ size_t MySQLParser::ConditionInformationItemContext::getRuleIndex() const {
   return MySQLParser::RuleConditionInformationItem;
 }
 
-void MySQLParser::ConditionInformationItemContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterConditionInformationItem(this);
-}
-
-void MySQLParser::ConditionInformationItemContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitConditionInformationItem(this);
-}
-
-
-std::any MySQLParser::ConditionInformationItemContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitConditionInformationItem(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::ConditionInformationItemContext* MySQLParser::conditionInformationItem() {
   ConditionInformationItemContext *_localctx = _tracker.createInstance<ConditionInformationItemContext>(_ctx, getState());
@@ -69217,25 +58239,6 @@ size_t MySQLParser::SignalInformationItemNameContext::getRuleIndex() const {
   return MySQLParser::RuleSignalInformationItemName;
 }
 
-void MySQLParser::SignalInformationItemNameContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterSignalInformationItemName(this);
-}
-
-void MySQLParser::SignalInformationItemNameContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitSignalInformationItemName(this);
-}
-
-
-std::any MySQLParser::SignalInformationItemNameContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitSignalInformationItemName(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::SignalInformationItemNameContext* MySQLParser::signalInformationItemName() {
   SignalInformationItemNameContext *_localctx = _tracker.createInstance<SignalInformationItemNameContext>(_ctx, getState());
@@ -69319,25 +58322,6 @@ size_t MySQLParser::SignalStatementContext::getRuleIndex() const {
   return MySQLParser::RuleSignalStatement;
 }
 
-void MySQLParser::SignalStatementContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterSignalStatement(this);
-}
-
-void MySQLParser::SignalStatementContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitSignalStatement(this);
-}
-
-
-std::any MySQLParser::SignalStatementContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitSignalStatement(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::SignalStatementContext* MySQLParser::signalStatement() {
   SignalStatementContext *_localctx = _tracker.createInstance<SignalStatementContext>(_ctx, getState());
@@ -69449,25 +58433,6 @@ size_t MySQLParser::ResignalStatementContext::getRuleIndex() const {
   return MySQLParser::RuleResignalStatement;
 }
 
-void MySQLParser::ResignalStatementContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterResignalStatement(this);
-}
-
-void MySQLParser::ResignalStatementContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitResignalStatement(this);
-}
-
-
-std::any MySQLParser::ResignalStatementContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitResignalStatement(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::ResignalStatementContext* MySQLParser::resignalStatement() {
   ResignalStatementContext *_localctx = _tracker.createInstance<ResignalStatementContext>(_ctx, getState());
@@ -69560,25 +58525,6 @@ size_t MySQLParser::SignalInformationItemContext::getRuleIndex() const {
   return MySQLParser::RuleSignalInformationItem;
 }
 
-void MySQLParser::SignalInformationItemContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterSignalInformationItem(this);
-}
-
-void MySQLParser::SignalInformationItemContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitSignalInformationItem(this);
-}
-
-
-std::any MySQLParser::SignalInformationItemContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitSignalInformationItem(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::SignalInformationItemContext* MySQLParser::signalInformationItem() {
   SignalInformationItemContext *_localctx = _tracker.createInstance<SignalInformationItemContext>(_ctx, getState());
@@ -69629,25 +58575,6 @@ size_t MySQLParser::CursorOpenContext::getRuleIndex() const {
   return MySQLParser::RuleCursorOpen;
 }
 
-void MySQLParser::CursorOpenContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterCursorOpen(this);
-}
-
-void MySQLParser::CursorOpenContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitCursorOpen(this);
-}
-
-
-std::any MySQLParser::CursorOpenContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitCursorOpen(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::CursorOpenContext* MySQLParser::cursorOpen() {
   CursorOpenContext *_localctx = _tracker.createInstance<CursorOpenContext>(_ctx, getState());
@@ -69696,25 +58623,6 @@ size_t MySQLParser::CursorCloseContext::getRuleIndex() const {
   return MySQLParser::RuleCursorClose;
 }
 
-void MySQLParser::CursorCloseContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterCursorClose(this);
-}
-
-void MySQLParser::CursorCloseContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitCursorClose(this);
-}
-
-
-std::any MySQLParser::CursorCloseContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitCursorClose(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::CursorCloseContext* MySQLParser::cursorClose() {
   CursorCloseContext *_localctx = _tracker.createInstance<CursorCloseContext>(_ctx, getState());
@@ -69779,25 +58687,6 @@ size_t MySQLParser::CursorFetchContext::getRuleIndex() const {
   return MySQLParser::RuleCursorFetch;
 }
 
-void MySQLParser::CursorFetchContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterCursorFetch(this);
-}
-
-void MySQLParser::CursorFetchContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitCursorFetch(this);
-}
-
-
-std::any MySQLParser::CursorFetchContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitCursorFetch(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::CursorFetchContext* MySQLParser::cursorFetch() {
   CursorFetchContext *_localctx = _tracker.createInstance<CursorFetchContext>(_ctx, getState());
@@ -69892,25 +58781,6 @@ size_t MySQLParser::ScheduleContext::getRuleIndex() const {
   return MySQLParser::RuleSchedule;
 }
 
-void MySQLParser::ScheduleContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterSchedule(this);
-}
-
-void MySQLParser::ScheduleContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitSchedule(this);
-}
-
-
-std::any MySQLParser::ScheduleContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitSchedule(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::ScheduleContext* MySQLParser::schedule() {
   ScheduleContext *_localctx = _tracker.createInstance<ScheduleContext>(_ctx, getState());
@@ -70005,25 +58875,6 @@ size_t MySQLParser::ColumnDefinitionContext::getRuleIndex() const {
   return MySQLParser::RuleColumnDefinition;
 }
 
-void MySQLParser::ColumnDefinitionContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterColumnDefinition(this);
-}
-
-void MySQLParser::ColumnDefinitionContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitColumnDefinition(this);
-}
-
-
-std::any MySQLParser::ColumnDefinitionContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitColumnDefinition(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::ColumnDefinitionContext* MySQLParser::columnDefinition() {
   ColumnDefinitionContext *_localctx = _tracker.createInstance<ColumnDefinitionContext>(_ctx, getState());
@@ -70085,25 +58936,6 @@ size_t MySQLParser::CheckOrReferencesContext::getRuleIndex() const {
   return MySQLParser::RuleCheckOrReferences;
 }
 
-void MySQLParser::CheckOrReferencesContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterCheckOrReferences(this);
-}
-
-void MySQLParser::CheckOrReferencesContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitCheckOrReferences(this);
-}
-
-
-std::any MySQLParser::CheckOrReferencesContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitCheckOrReferences(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::CheckOrReferencesContext* MySQLParser::checkOrReferences() {
   CheckOrReferencesContext *_localctx = _tracker.createInstance<CheckOrReferencesContext>(_ctx, getState());
@@ -70170,25 +59002,6 @@ size_t MySQLParser::CheckConstraintContext::getRuleIndex() const {
   return MySQLParser::RuleCheckConstraint;
 }
 
-void MySQLParser::CheckConstraintContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterCheckConstraint(this);
-}
-
-void MySQLParser::CheckConstraintContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitCheckConstraint(this);
-}
-
-
-std::any MySQLParser::CheckConstraintContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitCheckConstraint(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::CheckConstraintContext* MySQLParser::checkConstraint() {
   CheckConstraintContext *_localctx = _tracker.createInstance<CheckConstraintContext>(_ctx, getState());
@@ -70237,25 +59050,6 @@ size_t MySQLParser::ConstraintEnforcementContext::getRuleIndex() const {
   return MySQLParser::RuleConstraintEnforcement;
 }
 
-void MySQLParser::ConstraintEnforcementContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterConstraintEnforcement(this);
-}
-
-void MySQLParser::ConstraintEnforcementContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitConstraintEnforcement(this);
-}
-
-
-std::any MySQLParser::ConstraintEnforcementContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitConstraintEnforcement(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::ConstraintEnforcementContext* MySQLParser::constraintEnforcement() {
   ConstraintEnforcementContext *_localctx = _tracker.createInstance<ConstraintEnforcementContext>(_ctx, getState());
@@ -70394,25 +59188,6 @@ size_t MySQLParser::TableConstraintDefContext::getRuleIndex() const {
   return MySQLParser::RuleTableConstraintDef;
 }
 
-void MySQLParser::TableConstraintDefContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterTableConstraintDef(this);
-}
-
-void MySQLParser::TableConstraintDefContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitTableConstraintDef(this);
-}
-
-
-std::any MySQLParser::TableConstraintDefContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitTableConstraintDef(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::TableConstraintDefContext* MySQLParser::tableConstraintDef() {
   TableConstraintDefContext *_localctx = _tracker.createInstance<TableConstraintDefContext>(_ctx, getState());
@@ -70735,25 +59510,6 @@ size_t MySQLParser::ConstraintNameContext::getRuleIndex() const {
   return MySQLParser::RuleConstraintName;
 }
 
-void MySQLParser::ConstraintNameContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterConstraintName(this);
-}
-
-void MySQLParser::ConstraintNameContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitConstraintName(this);
-}
-
-
-std::any MySQLParser::ConstraintNameContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitConstraintName(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::ConstraintNameContext* MySQLParser::constraintName() {
   ConstraintNameContext *_localctx = _tracker.createInstance<ConstraintNameContext>(_ctx, getState());
@@ -70845,25 +59601,6 @@ size_t MySQLParser::FieldDefinitionContext::getRuleIndex() const {
   return MySQLParser::RuleFieldDefinition;
 }
 
-void MySQLParser::FieldDefinitionContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterFieldDefinition(this);
-}
-
-void MySQLParser::FieldDefinitionContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitFieldDefinition(this);
-}
-
-
-std::any MySQLParser::FieldDefinitionContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitFieldDefinition(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::FieldDefinitionContext* MySQLParser::fieldDefinition() {
   FieldDefinitionContext *_localctx = _tracker.createInstance<FieldDefinitionContext>(_ctx, getState());
@@ -71116,25 +59853,6 @@ size_t MySQLParser::ColumnAttributeContext::getRuleIndex() const {
   return MySQLParser::RuleColumnAttribute;
 }
 
-void MySQLParser::ColumnAttributeContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterColumnAttribute(this);
-}
-
-void MySQLParser::ColumnAttributeContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitColumnAttribute(this);
-}
-
-
-std::any MySQLParser::ColumnAttributeContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitColumnAttribute(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::ColumnAttributeContext* MySQLParser::columnAttribute() {
   ColumnAttributeContext *_localctx = _tracker.createInstance<ColumnAttributeContext>(_ctx, getState());
@@ -71452,25 +60170,6 @@ size_t MySQLParser::ColumnFormatContext::getRuleIndex() const {
   return MySQLParser::RuleColumnFormat;
 }
 
-void MySQLParser::ColumnFormatContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterColumnFormat(this);
-}
-
-void MySQLParser::ColumnFormatContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitColumnFormat(this);
-}
-
-
-std::any MySQLParser::ColumnFormatContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitColumnFormat(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::ColumnFormatContext* MySQLParser::columnFormat() {
   ColumnFormatContext *_localctx = _tracker.createInstance<ColumnFormatContext>(_ctx, getState());
@@ -71530,25 +60229,6 @@ size_t MySQLParser::StorageMediaContext::getRuleIndex() const {
   return MySQLParser::RuleStorageMedia;
 }
 
-void MySQLParser::StorageMediaContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterStorageMedia(this);
-}
-
-void MySQLParser::StorageMediaContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitStorageMedia(this);
-}
-
-
-std::any MySQLParser::StorageMediaContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitStorageMedia(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::StorageMediaContext* MySQLParser::storageMedia() {
   StorageMediaContext *_localctx = _tracker.createInstance<StorageMediaContext>(_ctx, getState());
@@ -71605,25 +60285,6 @@ size_t MySQLParser::NowContext::getRuleIndex() const {
   return MySQLParser::RuleNow;
 }
 
-void MySQLParser::NowContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterNow(this);
-}
-
-void MySQLParser::NowContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitNow(this);
-}
-
-
-std::any MySQLParser::NowContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitNow(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::NowContext* MySQLParser::now() {
   NowContext *_localctx = _tracker.createInstance<NowContext>(_ctx, getState());
@@ -71672,25 +60333,6 @@ size_t MySQLParser::NowOrSignedLiteralContext::getRuleIndex() const {
   return MySQLParser::RuleNowOrSignedLiteral;
 }
 
-void MySQLParser::NowOrSignedLiteralContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterNowOrSignedLiteral(this);
-}
-
-void MySQLParser::NowOrSignedLiteralContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitNowOrSignedLiteral(this);
-}
-
-
-std::any MySQLParser::NowOrSignedLiteralContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitNowOrSignedLiteral(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::NowOrSignedLiteralContext* MySQLParser::nowOrSignedLiteral() {
   NowOrSignedLiteralContext *_localctx = _tracker.createInstance<NowOrSignedLiteralContext>(_ctx, getState());
@@ -71774,25 +60416,6 @@ size_t MySQLParser::GcolAttributeContext::getRuleIndex() const {
   return MySQLParser::RuleGcolAttribute;
 }
 
-void MySQLParser::GcolAttributeContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterGcolAttribute(this);
-}
-
-void MySQLParser::GcolAttributeContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitGcolAttribute(this);
-}
-
-
-std::any MySQLParser::GcolAttributeContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitGcolAttribute(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::GcolAttributeContext* MySQLParser::gcolAttribute() {
   GcolAttributeContext *_localctx = _tracker.createInstance<GcolAttributeContext>(_ctx, getState());
@@ -71944,25 +60567,6 @@ size_t MySQLParser::ReferencesContext::getRuleIndex() const {
   return MySQLParser::RuleReferences;
 }
 
-void MySQLParser::ReferencesContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterReferences(this);
-}
-
-void MySQLParser::ReferencesContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitReferences(this);
-}
-
-
-std::any MySQLParser::ReferencesContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitReferences(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::ReferencesContext* MySQLParser::references() {
   ReferencesContext *_localctx = _tracker.createInstance<ReferencesContext>(_ctx, getState());
@@ -72109,25 +60713,6 @@ size_t MySQLParser::DeleteOptionContext::getRuleIndex() const {
   return MySQLParser::RuleDeleteOption;
 }
 
-void MySQLParser::DeleteOptionContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterDeleteOption(this);
-}
-
-void MySQLParser::DeleteOptionContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitDeleteOption(this);
-}
-
-
-std::any MySQLParser::DeleteOptionContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitDeleteOption(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::DeleteOptionContext* MySQLParser::deleteOption() {
   DeleteOptionContext *_localctx = _tracker.createInstance<DeleteOptionContext>(_ctx, getState());
@@ -72235,25 +60820,6 @@ size_t MySQLParser::KeyListContext::getRuleIndex() const {
   return MySQLParser::RuleKeyList;
 }
 
-void MySQLParser::KeyListContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterKeyList(this);
-}
-
-void MySQLParser::KeyListContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitKeyList(this);
-}
-
-
-std::any MySQLParser::KeyListContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitKeyList(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::KeyListContext* MySQLParser::keyList() {
   KeyListContext *_localctx = _tracker.createInstance<KeyListContext>(_ctx, getState());
@@ -72321,25 +60887,6 @@ size_t MySQLParser::KeyPartContext::getRuleIndex() const {
   return MySQLParser::RuleKeyPart;
 }
 
-void MySQLParser::KeyPartContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterKeyPart(this);
-}
-
-void MySQLParser::KeyPartContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitKeyPart(this);
-}
-
-
-std::any MySQLParser::KeyPartContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitKeyPart(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::KeyPartContext* MySQLParser::keyPart() {
   KeyPartContext *_localctx = _tracker.createInstance<KeyPartContext>(_ctx, getState());
@@ -72419,25 +60966,6 @@ size_t MySQLParser::KeyListWithExpressionContext::getRuleIndex() const {
   return MySQLParser::RuleKeyListWithExpression;
 }
 
-void MySQLParser::KeyListWithExpressionContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterKeyListWithExpression(this);
-}
-
-void MySQLParser::KeyListWithExpressionContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitKeyListWithExpression(this);
-}
-
-
-std::any MySQLParser::KeyListWithExpressionContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitKeyListWithExpression(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::KeyListWithExpressionContext* MySQLParser::keyListWithExpression() {
   KeyListWithExpressionContext *_localctx = _tracker.createInstance<KeyListWithExpressionContext>(_ctx, getState());
@@ -72505,25 +61033,6 @@ size_t MySQLParser::KeyPartOrExpressionContext::getRuleIndex() const {
   return MySQLParser::RuleKeyPartOrExpression;
 }
 
-void MySQLParser::KeyPartOrExpressionContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterKeyPartOrExpression(this);
-}
-
-void MySQLParser::KeyPartOrExpressionContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitKeyPartOrExpression(this);
-}
-
-
-std::any MySQLParser::KeyPartOrExpressionContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitKeyPartOrExpression(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::KeyPartOrExpressionContext* MySQLParser::keyPartOrExpression() {
   KeyPartOrExpressionContext *_localctx = _tracker.createInstance<KeyPartOrExpressionContext>(_ctx, getState());
@@ -72603,25 +61112,6 @@ size_t MySQLParser::IndexTypeContext::getRuleIndex() const {
   return MySQLParser::RuleIndexType;
 }
 
-void MySQLParser::IndexTypeContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterIndexType(this);
-}
-
-void MySQLParser::IndexTypeContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitIndexType(this);
-}
-
-
-std::any MySQLParser::IndexTypeContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitIndexType(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::IndexTypeContext* MySQLParser::indexType() {
   IndexTypeContext *_localctx = _tracker.createInstance<IndexTypeContext>(_ctx, getState());
@@ -72677,25 +61167,6 @@ size_t MySQLParser::IndexOptionContext::getRuleIndex() const {
   return MySQLParser::RuleIndexOption;
 }
 
-void MySQLParser::IndexOptionContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterIndexOption(this);
-}
-
-void MySQLParser::IndexOptionContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitIndexOption(this);
-}
-
-
-std::any MySQLParser::IndexOptionContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitIndexOption(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::IndexOptionContext* MySQLParser::indexOption() {
   IndexOptionContext *_localctx = _tracker.createInstance<IndexOptionContext>(_ctx, getState());
@@ -72787,25 +61258,6 @@ size_t MySQLParser::CommonIndexOptionContext::getRuleIndex() const {
   return MySQLParser::RuleCommonIndexOption;
 }
 
-void MySQLParser::CommonIndexOptionContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterCommonIndexOption(this);
-}
-
-void MySQLParser::CommonIndexOptionContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitCommonIndexOption(this);
-}
-
-
-std::any MySQLParser::CommonIndexOptionContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitCommonIndexOption(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::CommonIndexOptionContext* MySQLParser::commonIndexOption() {
   CommonIndexOptionContext *_localctx = _tracker.createInstance<CommonIndexOptionContext>(_ctx, getState());
@@ -72939,25 +61391,6 @@ size_t MySQLParser::VisibilityContext::getRuleIndex() const {
   return MySQLParser::RuleVisibility;
 }
 
-void MySQLParser::VisibilityContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterVisibility(this);
-}
-
-void MySQLParser::VisibilityContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitVisibility(this);
-}
-
-
-std::any MySQLParser::VisibilityContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitVisibility(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::VisibilityContext* MySQLParser::visibility() {
   VisibilityContext *_localctx = _tracker.createInstance<VisibilityContext>(_ctx, getState());
@@ -73018,25 +61451,6 @@ size_t MySQLParser::IndexTypeClauseContext::getRuleIndex() const {
   return MySQLParser::RuleIndexTypeClause;
 }
 
-void MySQLParser::IndexTypeClauseContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterIndexTypeClause(this);
-}
-
-void MySQLParser::IndexTypeClauseContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitIndexTypeClause(this);
-}
-
-
-std::any MySQLParser::IndexTypeClauseContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitIndexTypeClause(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::IndexTypeClauseContext* MySQLParser::indexTypeClause() {
   IndexTypeClauseContext *_localctx = _tracker.createInstance<IndexTypeClauseContext>(_ctx, getState());
@@ -73103,25 +61517,6 @@ size_t MySQLParser::FulltextIndexOptionContext::getRuleIndex() const {
   return MySQLParser::RuleFulltextIndexOption;
 }
 
-void MySQLParser::FulltextIndexOptionContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterFulltextIndexOption(this);
-}
-
-void MySQLParser::FulltextIndexOptionContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitFulltextIndexOption(this);
-}
-
-
-std::any MySQLParser::FulltextIndexOptionContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitFulltextIndexOption(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::FulltextIndexOptionContext* MySQLParser::fulltextIndexOption() {
   FulltextIndexOptionContext *_localctx = _tracker.createInstance<FulltextIndexOptionContext>(_ctx, getState());
@@ -73185,25 +61580,6 @@ size_t MySQLParser::SpatialIndexOptionContext::getRuleIndex() const {
   return MySQLParser::RuleSpatialIndexOption;
 }
 
-void MySQLParser::SpatialIndexOptionContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterSpatialIndexOption(this);
-}
-
-void MySQLParser::SpatialIndexOptionContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitSpatialIndexOption(this);
-}
-
-
-std::any MySQLParser::SpatialIndexOptionContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitSpatialIndexOption(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::SpatialIndexOptionContext* MySQLParser::spatialIndexOption() {
   SpatialIndexOptionContext *_localctx = _tracker.createInstance<SpatialIndexOptionContext>(_ctx, getState());
@@ -73250,25 +61626,6 @@ size_t MySQLParser::DataTypeDefinitionContext::getRuleIndex() const {
   return MySQLParser::RuleDataTypeDefinition;
 }
 
-void MySQLParser::DataTypeDefinitionContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterDataTypeDefinition(this);
-}
-
-void MySQLParser::DataTypeDefinitionContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitDataTypeDefinition(this);
-}
-
-
-std::any MySQLParser::DataTypeDefinitionContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitDataTypeDefinition(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::DataTypeDefinitionContext* MySQLParser::dataTypeDefinition() {
   DataTypeDefinitionContext *_localctx = _tracker.createInstance<DataTypeDefinitionContext>(_ctx, getState());
@@ -73537,25 +61894,6 @@ size_t MySQLParser::DataTypeContext::getRuleIndex() const {
   return MySQLParser::RuleDataType;
 }
 
-void MySQLParser::DataTypeContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterDataType(this);
-}
-
-void MySQLParser::DataTypeContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitDataType(this);
-}
-
-
-std::any MySQLParser::DataTypeContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitDataType(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::DataTypeContext* MySQLParser::dataType() {
   DataTypeContext *_localctx = _tracker.createInstance<DataTypeContext>(_ctx, getState());
@@ -74356,25 +62694,6 @@ size_t MySQLParser::NcharContext::getRuleIndex() const {
   return MySQLParser::RuleNchar;
 }
 
-void MySQLParser::NcharContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterNchar(this);
-}
-
-void MySQLParser::NcharContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitNchar(this);
-}
-
-
-std::any MySQLParser::NcharContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitNchar(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::NcharContext* MySQLParser::nchar() {
   NcharContext *_localctx = _tracker.createInstance<NcharContext>(_ctx, getState());
@@ -74444,25 +62763,6 @@ size_t MySQLParser::RealTypeContext::getRuleIndex() const {
   return MySQLParser::RuleRealType;
 }
 
-void MySQLParser::RealTypeContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterRealType(this);
-}
-
-void MySQLParser::RealTypeContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitRealType(this);
-}
-
-
-std::any MySQLParser::RealTypeContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitRealType(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::RealTypeContext* MySQLParser::realType() {
   RealTypeContext *_localctx = _tracker.createInstance<RealTypeContext>(_ctx, getState());
@@ -74547,25 +62847,6 @@ size_t MySQLParser::FieldLengthContext::getRuleIndex() const {
   return MySQLParser::RuleFieldLength;
 }
 
-void MySQLParser::FieldLengthContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterFieldLength(this);
-}
-
-void MySQLParser::FieldLengthContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitFieldLength(this);
-}
-
-
-std::any MySQLParser::FieldLengthContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitFieldLength(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::FieldLengthContext* MySQLParser::fieldLength() {
   FieldLengthContext *_localctx = _tracker.createInstance<FieldLengthContext>(_ctx, getState());
@@ -74648,25 +62929,6 @@ size_t MySQLParser::FieldOptionsContext::getRuleIndex() const {
   return MySQLParser::RuleFieldOptions;
 }
 
-void MySQLParser::FieldOptionsContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterFieldOptions(this);
-}
-
-void MySQLParser::FieldOptionsContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitFieldOptions(this);
-}
-
-
-std::any MySQLParser::FieldOptionsContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitFieldOptions(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::FieldOptionsContext* MySQLParser::fieldOptions() {
   FieldOptionsContext *_localctx = _tracker.createInstance<FieldOptionsContext>(_ctx, getState());
@@ -74756,25 +63018,6 @@ size_t MySQLParser::CharsetWithOptBinaryContext::getRuleIndex() const {
   return MySQLParser::RuleCharsetWithOptBinary;
 }
 
-void MySQLParser::CharsetWithOptBinaryContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterCharsetWithOptBinary(this);
-}
-
-void MySQLParser::CharsetWithOptBinaryContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitCharsetWithOptBinary(this);
-}
-
-
-std::any MySQLParser::CharsetWithOptBinaryContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitCharsetWithOptBinary(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::CharsetWithOptBinaryContext* MySQLParser::charsetWithOptBinary() {
   CharsetWithOptBinaryContext *_localctx = _tracker.createInstance<CharsetWithOptBinaryContext>(_ctx, getState());
@@ -74889,25 +63132,6 @@ size_t MySQLParser::AsciiContext::getRuleIndex() const {
   return MySQLParser::RuleAscii;
 }
 
-void MySQLParser::AsciiContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterAscii(this);
-}
-
-void MySQLParser::AsciiContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitAscii(this);
-}
-
-
-std::any MySQLParser::AsciiContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitAscii(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::AsciiContext* MySQLParser::ascii() {
   AsciiContext *_localctx = _tracker.createInstance<AsciiContext>(_ctx, getState());
@@ -74986,25 +63210,6 @@ size_t MySQLParser::UnicodeContext::getRuleIndex() const {
   return MySQLParser::RuleUnicode;
 }
 
-void MySQLParser::UnicodeContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterUnicode(this);
-}
-
-void MySQLParser::UnicodeContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitUnicode(this);
-}
-
-
-std::any MySQLParser::UnicodeContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitUnicode(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::UnicodeContext* MySQLParser::unicode() {
   UnicodeContext *_localctx = _tracker.createInstance<UnicodeContext>(_ctx, getState());
@@ -75087,25 +63292,6 @@ size_t MySQLParser::WsNumCodepointsContext::getRuleIndex() const {
   return MySQLParser::RuleWsNumCodepoints;
 }
 
-void MySQLParser::WsNumCodepointsContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterWsNumCodepoints(this);
-}
-
-void MySQLParser::WsNumCodepointsContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitWsNumCodepoints(this);
-}
-
-
-std::any MySQLParser::WsNumCodepointsContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitWsNumCodepoints(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::WsNumCodepointsContext* MySQLParser::wsNumCodepoints() {
   WsNumCodepointsContext *_localctx = _tracker.createInstance<WsNumCodepointsContext>(_ctx, getState());
@@ -75160,25 +63346,6 @@ size_t MySQLParser::TypeDatetimePrecisionContext::getRuleIndex() const {
   return MySQLParser::RuleTypeDatetimePrecision;
 }
 
-void MySQLParser::TypeDatetimePrecisionContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterTypeDatetimePrecision(this);
-}
-
-void MySQLParser::TypeDatetimePrecisionContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitTypeDatetimePrecision(this);
-}
-
-
-std::any MySQLParser::TypeDatetimePrecisionContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitTypeDatetimePrecision(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::TypeDatetimePrecisionContext* MySQLParser::typeDatetimePrecision() {
   TypeDatetimePrecisionContext *_localctx = _tracker.createInstance<TypeDatetimePrecisionContext>(_ctx, getState());
@@ -75237,25 +63404,6 @@ size_t MySQLParser::FunctionDatetimePrecisionContext::getRuleIndex() const {
   return MySQLParser::RuleFunctionDatetimePrecision;
 }
 
-void MySQLParser::FunctionDatetimePrecisionContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterFunctionDatetimePrecision(this);
-}
-
-void MySQLParser::FunctionDatetimePrecisionContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitFunctionDatetimePrecision(this);
-}
-
-
-std::any MySQLParser::FunctionDatetimePrecisionContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitFunctionDatetimePrecision(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::FunctionDatetimePrecisionContext* MySQLParser::functionDatetimePrecision() {
   FunctionDatetimePrecisionContext *_localctx = _tracker.createInstance<FunctionDatetimePrecisionContext>(_ctx, getState());
@@ -75333,25 +63481,6 @@ size_t MySQLParser::CharsetNameContext::getRuleIndex() const {
   return MySQLParser::RuleCharsetName;
 }
 
-void MySQLParser::CharsetNameContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterCharsetName(this);
-}
-
-void MySQLParser::CharsetNameContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitCharsetName(this);
-}
-
-
-std::any MySQLParser::CharsetNameContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitCharsetName(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::CharsetNameContext* MySQLParser::charsetName() {
   CharsetNameContext *_localctx = _tracker.createInstance<CharsetNameContext>(_ctx, getState());
@@ -75429,25 +63558,6 @@ size_t MySQLParser::CollationNameContext::getRuleIndex() const {
   return MySQLParser::RuleCollationName;
 }
 
-void MySQLParser::CollationNameContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterCollationName(this);
-}
-
-void MySQLParser::CollationNameContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitCollationName(this);
-}
-
-
-std::any MySQLParser::CollationNameContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitCollationName(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::CollationNameContext* MySQLParser::collationName() {
   CollationNameContext *_localctx = _tracker.createInstance<CollationNameContext>(_ctx, getState());
@@ -75532,25 +63642,6 @@ size_t MySQLParser::CreateTableOptionsContext::getRuleIndex() const {
   return MySQLParser::RuleCreateTableOptions;
 }
 
-void MySQLParser::CreateTableOptionsContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterCreateTableOptions(this);
-}
-
-void MySQLParser::CreateTableOptionsContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitCreateTableOptions(this);
-}
-
-
-std::any MySQLParser::CreateTableOptionsContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitCreateTableOptions(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::CreateTableOptionsContext* MySQLParser::createTableOptions() {
   CreateTableOptionsContext *_localctx = _tracker.createInstance<CreateTableOptionsContext>(_ctx, getState());
@@ -75623,25 +63714,6 @@ size_t MySQLParser::CreateTableOptionsEtcContext::getRuleIndex() const {
   return MySQLParser::RuleCreateTableOptionsEtc;
 }
 
-void MySQLParser::CreateTableOptionsEtcContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterCreateTableOptionsEtc(this);
-}
-
-void MySQLParser::CreateTableOptionsEtcContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitCreateTableOptionsEtc(this);
-}
-
-
-std::any MySQLParser::CreateTableOptionsEtcContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitCreateTableOptionsEtc(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::CreateTableOptionsEtcContext* MySQLParser::createTableOptionsEtc() {
   CreateTableOptionsEtcContext *_localctx = _tracker.createInstance<CreateTableOptionsEtcContext>(_ctx, getState());
@@ -75718,25 +63790,6 @@ size_t MySQLParser::CreatePartitioningEtcContext::getRuleIndex() const {
   return MySQLParser::RuleCreatePartitioningEtc;
 }
 
-void MySQLParser::CreatePartitioningEtcContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterCreatePartitioningEtc(this);
-}
-
-void MySQLParser::CreatePartitioningEtcContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitCreatePartitioningEtc(this);
-}
-
-
-std::any MySQLParser::CreatePartitioningEtcContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitCreatePartitioningEtc(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::CreatePartitioningEtcContext* MySQLParser::createPartitioningEtc() {
   CreatePartitioningEtcContext *_localctx = _tracker.createInstance<CreatePartitioningEtcContext>(_ctx, getState());
@@ -75813,25 +63866,6 @@ size_t MySQLParser::CreateTableOptionsSpaceSeparatedContext::getRuleIndex() cons
   return MySQLParser::RuleCreateTableOptionsSpaceSeparated;
 }
 
-void MySQLParser::CreateTableOptionsSpaceSeparatedContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterCreateTableOptionsSpaceSeparated(this);
-}
-
-void MySQLParser::CreateTableOptionsSpaceSeparatedContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitCreateTableOptionsSpaceSeparated(this);
-}
-
-
-std::any MySQLParser::CreateTableOptionsSpaceSeparatedContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitCreateTableOptionsSpaceSeparated(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::CreateTableOptionsSpaceSeparatedContext* MySQLParser::createTableOptionsSpaceSeparated() {
   CreateTableOptionsSpaceSeparatedContext *_localctx = _tracker.createInstance<CreateTableOptionsSpaceSeparatedContext>(_ctx, getState());
@@ -76127,25 +64161,6 @@ size_t MySQLParser::CreateTableOptionContext::getRuleIndex() const {
   return MySQLParser::RuleCreateTableOption;
 }
 
-void MySQLParser::CreateTableOptionContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterCreateTableOption(this);
-}
-
-void MySQLParser::CreateTableOptionContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitCreateTableOption(this);
-}
-
-
-std::any MySQLParser::CreateTableOptionContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitCreateTableOption(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::CreateTableOptionContext* MySQLParser::createTableOption() {
   CreateTableOptionContext *_localctx = _tracker.createInstance<CreateTableOptionContext>(_ctx, getState());
@@ -76785,25 +64800,6 @@ size_t MySQLParser::TernaryOptionContext::getRuleIndex() const {
   return MySQLParser::RuleTernaryOption;
 }
 
-void MySQLParser::TernaryOptionContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterTernaryOption(this);
-}
-
-void MySQLParser::TernaryOptionContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitTernaryOption(this);
-}
-
-
-std::any MySQLParser::TernaryOptionContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitTernaryOption(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::TernaryOptionContext* MySQLParser::ternaryOption() {
   TernaryOptionContext *_localctx = _tracker.createInstance<TernaryOptionContext>(_ctx, getState());
@@ -76880,25 +64876,6 @@ size_t MySQLParser::DefaultCollationContext::getRuleIndex() const {
   return MySQLParser::RuleDefaultCollation;
 }
 
-void MySQLParser::DefaultCollationContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterDefaultCollation(this);
-}
-
-void MySQLParser::DefaultCollationContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitDefaultCollation(this);
-}
-
-
-std::any MySQLParser::DefaultCollationContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitDefaultCollation(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::DefaultCollationContext* MySQLParser::defaultCollation() {
   DefaultCollationContext *_localctx = _tracker.createInstance<DefaultCollationContext>(_ctx, getState());
@@ -76977,25 +64954,6 @@ size_t MySQLParser::DefaultEncryptionContext::getRuleIndex() const {
   return MySQLParser::RuleDefaultEncryption;
 }
 
-void MySQLParser::DefaultEncryptionContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterDefaultEncryption(this);
-}
-
-void MySQLParser::DefaultEncryptionContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitDefaultEncryption(this);
-}
-
-
-std::any MySQLParser::DefaultEncryptionContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitDefaultEncryption(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::DefaultEncryptionContext* MySQLParser::defaultEncryption() {
   DefaultEncryptionContext *_localctx = _tracker.createInstance<DefaultEncryptionContext>(_ctx, getState());
@@ -77074,25 +65032,6 @@ size_t MySQLParser::DefaultCharsetContext::getRuleIndex() const {
   return MySQLParser::RuleDefaultCharset;
 }
 
-void MySQLParser::DefaultCharsetContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterDefaultCharset(this);
-}
-
-void MySQLParser::DefaultCharsetContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitDefaultCharset(this);
-}
-
-
-std::any MySQLParser::DefaultCharsetContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitDefaultCharset(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::DefaultCharsetContext* MySQLParser::defaultCharset() {
   DefaultCharsetContext *_localctx = _tracker.createInstance<DefaultCharsetContext>(_ctx, getState());
@@ -77183,25 +65122,6 @@ size_t MySQLParser::PartitionClauseContext::getRuleIndex() const {
   return MySQLParser::RulePartitionClause;
 }
 
-void MySQLParser::PartitionClauseContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterPartitionClause(this);
-}
-
-void MySQLParser::PartitionClauseContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitPartitionClause(this);
-}
-
-
-std::any MySQLParser::PartitionClauseContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitPartitionClause(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::PartitionClauseContext* MySQLParser::partitionClause() {
   PartitionClauseContext *_localctx = _tracker.createInstance<PartitionClauseContext>(_ctx, getState());
@@ -77321,23 +65241,7 @@ MySQLParser::IdentifierListContext* MySQLParser::PartitionDefRangeListContext::i
 
 MySQLParser::PartitionDefRangeListContext::PartitionDefRangeListContext(PartitionTypeDefContext *ctx) { copyFrom(ctx); }
 
-void MySQLParser::PartitionDefRangeListContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterPartitionDefRangeList(this);
-}
-void MySQLParser::PartitionDefRangeListContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitPartitionDefRangeList(this);
-}
 
-std::any MySQLParser::PartitionDefRangeListContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitPartitionDefRangeList(this);
-  else
-    return visitor->visitChildren(this);
-}
 //----------------- PartitionDefKeyContext ------------------------------------------------------------------
 
 tree::TerminalNode* MySQLParser::PartitionDefKeyContext::KEY_SYMBOL() {
@@ -77366,23 +65270,7 @@ MySQLParser::IdentifierListContext* MySQLParser::PartitionDefKeyContext::identif
 
 MySQLParser::PartitionDefKeyContext::PartitionDefKeyContext(PartitionTypeDefContext *ctx) { copyFrom(ctx); }
 
-void MySQLParser::PartitionDefKeyContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterPartitionDefKey(this);
-}
-void MySQLParser::PartitionDefKeyContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitPartitionDefKey(this);
-}
 
-std::any MySQLParser::PartitionDefKeyContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitPartitionDefKey(this);
-  else
-    return visitor->visitChildren(this);
-}
 //----------------- PartitionDefHashContext ------------------------------------------------------------------
 
 tree::TerminalNode* MySQLParser::PartitionDefHashContext::HASH_SYMBOL() {
@@ -77407,23 +65295,7 @@ tree::TerminalNode* MySQLParser::PartitionDefHashContext::LINEAR_SYMBOL() {
 
 MySQLParser::PartitionDefHashContext::PartitionDefHashContext(PartitionTypeDefContext *ctx) { copyFrom(ctx); }
 
-void MySQLParser::PartitionDefHashContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterPartitionDefHash(this);
-}
-void MySQLParser::PartitionDefHashContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitPartitionDefHash(this);
-}
 
-std::any MySQLParser::PartitionDefHashContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitPartitionDefHash(this);
-  else
-    return visitor->visitChildren(this);
-}
 MySQLParser::PartitionTypeDefContext* MySQLParser::partitionTypeDef() {
   PartitionTypeDefContext *_localctx = _tracker.createInstance<PartitionTypeDefContext>(_ctx, getState());
   enterRule(_localctx, 1212, MySQLParser::RulePartitionTypeDef);
@@ -77630,25 +65502,6 @@ size_t MySQLParser::SubPartitionsContext::getRuleIndex() const {
   return MySQLParser::RuleSubPartitions;
 }
 
-void MySQLParser::SubPartitionsContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterSubPartitions(this);
-}
-
-void MySQLParser::SubPartitionsContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitSubPartitions(this);
-}
-
-
-std::any MySQLParser::SubPartitionsContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitSubPartitions(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::SubPartitionsContext* MySQLParser::subPartitions() {
   SubPartitionsContext *_localctx = _tracker.createInstance<SubPartitionsContext>(_ctx, getState());
@@ -77759,25 +65612,6 @@ size_t MySQLParser::PartitionKeyAlgorithmContext::getRuleIndex() const {
   return MySQLParser::RulePartitionKeyAlgorithm;
 }
 
-void MySQLParser::PartitionKeyAlgorithmContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterPartitionKeyAlgorithm(this);
-}
-
-void MySQLParser::PartitionKeyAlgorithmContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitPartitionKeyAlgorithm(this);
-}
-
-
-std::any MySQLParser::PartitionKeyAlgorithmContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitPartitionKeyAlgorithm(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::PartitionKeyAlgorithmContext* MySQLParser::partitionKeyAlgorithm() {
   PartitionKeyAlgorithmContext *_localctx = _tracker.createInstance<PartitionKeyAlgorithmContext>(_ctx, getState());
@@ -77844,25 +65678,6 @@ size_t MySQLParser::PartitionDefinitionsContext::getRuleIndex() const {
   return MySQLParser::RulePartitionDefinitions;
 }
 
-void MySQLParser::PartitionDefinitionsContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterPartitionDefinitions(this);
-}
-
-void MySQLParser::PartitionDefinitionsContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitPartitionDefinitions(this);
-}
-
-
-std::any MySQLParser::PartitionDefinitionsContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitPartitionDefinitions(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::PartitionDefinitionsContext* MySQLParser::partitionDefinitions() {
   PartitionDefinitionsContext *_localctx = _tracker.createInstance<PartitionDefinitionsContext>(_ctx, getState());
@@ -77986,25 +65801,6 @@ size_t MySQLParser::PartitionDefinitionContext::getRuleIndex() const {
   return MySQLParser::RulePartitionDefinition;
 }
 
-void MySQLParser::PartitionDefinitionContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterPartitionDefinition(this);
-}
-
-void MySQLParser::PartitionDefinitionContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitPartitionDefinition(this);
-}
-
-
-std::any MySQLParser::PartitionDefinitionContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitPartitionDefinition(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::PartitionDefinitionContext* MySQLParser::partitionDefinition() {
   PartitionDefinitionContext *_localctx = _tracker.createInstance<PartitionDefinitionContext>(_ctx, getState());
@@ -78154,25 +65950,6 @@ size_t MySQLParser::PartitionValuesInContext::getRuleIndex() const {
   return MySQLParser::RulePartitionValuesIn;
 }
 
-void MySQLParser::PartitionValuesInContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterPartitionValuesIn(this);
-}
-
-void MySQLParser::PartitionValuesInContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitPartitionValuesIn(this);
-}
-
-
-std::any MySQLParser::PartitionValuesInContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitPartitionValuesIn(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::PartitionValuesInContext* MySQLParser::partitionValuesIn() {
   PartitionValuesInContext *_localctx = _tracker.createInstance<PartitionValuesInContext>(_ctx, getState());
@@ -78305,25 +66082,6 @@ size_t MySQLParser::PartitionOptionContext::getRuleIndex() const {
   return MySQLParser::RulePartitionOption;
 }
 
-void MySQLParser::PartitionOptionContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterPartitionOption(this);
-}
-
-void MySQLParser::PartitionOptionContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitPartitionOption(this);
-}
-
-
-std::any MySQLParser::PartitionOptionContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitPartitionOption(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::PartitionOptionContext* MySQLParser::partitionOption() {
   PartitionOptionContext *_localctx = _tracker.createInstance<PartitionOptionContext>(_ctx, getState());
@@ -78535,25 +66293,6 @@ size_t MySQLParser::SubpartitionDefinitionContext::getRuleIndex() const {
   return MySQLParser::RuleSubpartitionDefinition;
 }
 
-void MySQLParser::SubpartitionDefinitionContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterSubpartitionDefinition(this);
-}
-
-void MySQLParser::SubpartitionDefinitionContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitSubpartitionDefinition(this);
-}
-
-
-std::any MySQLParser::SubpartitionDefinitionContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitSubpartitionDefinition(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::SubpartitionDefinitionContext* MySQLParser::subpartitionDefinition() {
   SubpartitionDefinitionContext *_localctx = _tracker.createInstance<SubpartitionDefinitionContext>(_ctx, getState());
@@ -78634,25 +66373,6 @@ size_t MySQLParser::PartitionValueItemListParenContext::getRuleIndex() const {
   return MySQLParser::RulePartitionValueItemListParen;
 }
 
-void MySQLParser::PartitionValueItemListParenContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterPartitionValueItemListParen(this);
-}
-
-void MySQLParser::PartitionValueItemListParenContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitPartitionValueItemListParen(this);
-}
-
-
-std::any MySQLParser::PartitionValueItemListParenContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitPartitionValueItemListParen(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::PartitionValueItemListParenContext* MySQLParser::partitionValueItemListParen() {
   PartitionValueItemListParenContext *_localctx = _tracker.createInstance<PartitionValueItemListParenContext>(_ctx, getState());
@@ -78716,25 +66436,6 @@ size_t MySQLParser::PartitionValueItemContext::getRuleIndex() const {
   return MySQLParser::RulePartitionValueItem;
 }
 
-void MySQLParser::PartitionValueItemContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterPartitionValueItem(this);
-}
-
-void MySQLParser::PartitionValueItemContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitPartitionValueItem(this);
-}
-
-
-std::any MySQLParser::PartitionValueItemContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitPartitionValueItem(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::PartitionValueItemContext* MySQLParser::partitionValueItem() {
   PartitionValueItemContext *_localctx = _tracker.createInstance<PartitionValueItemContext>(_ctx, getState());
@@ -78802,25 +66503,6 @@ size_t MySQLParser::DefinerClauseContext::getRuleIndex() const {
   return MySQLParser::RuleDefinerClause;
 }
 
-void MySQLParser::DefinerClauseContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterDefinerClause(this);
-}
-
-void MySQLParser::DefinerClauseContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitDefinerClause(this);
-}
-
-
-std::any MySQLParser::DefinerClauseContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitDefinerClause(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::DefinerClauseContext* MySQLParser::definerClause() {
   DefinerClauseContext *_localctx = _tracker.createInstance<DefinerClauseContext>(_ctx, getState());
@@ -78871,25 +66553,6 @@ size_t MySQLParser::IfExistsContext::getRuleIndex() const {
   return MySQLParser::RuleIfExists;
 }
 
-void MySQLParser::IfExistsContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterIfExists(this);
-}
-
-void MySQLParser::IfExistsContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitIfExists(this);
-}
-
-
-std::any MySQLParser::IfExistsContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitIfExists(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::IfExistsContext* MySQLParser::ifExists() {
   IfExistsContext *_localctx = _tracker.createInstance<IfExistsContext>(_ctx, getState());
@@ -78938,25 +66601,6 @@ size_t MySQLParser::IfExistsIdentifierContext::getRuleIndex() const {
   return MySQLParser::RuleIfExistsIdentifier;
 }
 
-void MySQLParser::IfExistsIdentifierContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterIfExistsIdentifier(this);
-}
-
-void MySQLParser::IfExistsIdentifierContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitIfExistsIdentifier(this);
-}
-
-
-std::any MySQLParser::IfExistsIdentifierContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitIfExistsIdentifier(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::IfExistsIdentifierContext* MySQLParser::ifExistsIdentifier() {
   IfExistsIdentifierContext *_localctx = _tracker.createInstance<IfExistsIdentifierContext>(_ctx, getState());
@@ -79013,25 +66657,6 @@ size_t MySQLParser::PersistedVariableIdentifierContext::getRuleIndex() const {
   return MySQLParser::RulePersistedVariableIdentifier;
 }
 
-void MySQLParser::PersistedVariableIdentifierContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterPersistedVariableIdentifier(this);
-}
-
-void MySQLParser::PersistedVariableIdentifierContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitPersistedVariableIdentifier(this);
-}
-
-
-std::any MySQLParser::PersistedVariableIdentifierContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitPersistedVariableIdentifier(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::PersistedVariableIdentifierContext* MySQLParser::persistedVariableIdentifier() {
   PersistedVariableIdentifierContext *_localctx = _tracker.createInstance<PersistedVariableIdentifierContext>(_ctx, getState());
@@ -79120,25 +66745,6 @@ size_t MySQLParser::IfNotExistsContext::getRuleIndex() const {
   return MySQLParser::RuleIfNotExists;
 }
 
-void MySQLParser::IfNotExistsContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterIfNotExists(this);
-}
-
-void MySQLParser::IfNotExistsContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitIfNotExists(this);
-}
-
-
-std::any MySQLParser::IfNotExistsContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitIfNotExists(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::IfNotExistsContext* MySQLParser::ifNotExists() {
   IfNotExistsContext *_localctx = _tracker.createInstance<IfNotExistsContext>(_ctx, getState());
@@ -79193,25 +66799,6 @@ size_t MySQLParser::IgnoreUnknownUserContext::getRuleIndex() const {
   return MySQLParser::RuleIgnoreUnknownUser;
 }
 
-void MySQLParser::IgnoreUnknownUserContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterIgnoreUnknownUser(this);
-}
-
-void MySQLParser::IgnoreUnknownUserContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitIgnoreUnknownUser(this);
-}
-
-
-std::any MySQLParser::IgnoreUnknownUserContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitIgnoreUnknownUser(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::IgnoreUnknownUserContext* MySQLParser::ignoreUnknownUser() {
   IgnoreUnknownUserContext *_localctx = _tracker.createInstance<IgnoreUnknownUserContext>(_ctx, getState());
@@ -79270,25 +66857,6 @@ size_t MySQLParser::ProcedureParameterContext::getRuleIndex() const {
   return MySQLParser::RuleProcedureParameter;
 }
 
-void MySQLParser::ProcedureParameterContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterProcedureParameter(this);
-}
-
-void MySQLParser::ProcedureParameterContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitProcedureParameter(this);
-}
-
-
-std::any MySQLParser::ProcedureParameterContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitProcedureParameter(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::ProcedureParameterContext* MySQLParser::procedureParameter() {
   ProcedureParameterContext *_localctx = _tracker.createInstance<ProcedureParameterContext>(_ctx, getState());
@@ -79359,25 +66927,6 @@ size_t MySQLParser::FunctionParameterContext::getRuleIndex() const {
   return MySQLParser::RuleFunctionParameter;
 }
 
-void MySQLParser::FunctionParameterContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterFunctionParameter(this);
-}
-
-void MySQLParser::FunctionParameterContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitFunctionParameter(this);
-}
-
-
-std::any MySQLParser::FunctionParameterContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitFunctionParameter(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::FunctionParameterContext* MySQLParser::functionParameter() {
   FunctionParameterContext *_localctx = _tracker.createInstance<FunctionParameterContext>(_ctx, getState());
@@ -79426,25 +66975,6 @@ size_t MySQLParser::CollateContext::getRuleIndex() const {
   return MySQLParser::RuleCollate;
 }
 
-void MySQLParser::CollateContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterCollate(this);
-}
-
-void MySQLParser::CollateContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitCollate(this);
-}
-
-
-std::any MySQLParser::CollateContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitCollate(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::CollateContext* MySQLParser::collate() {
   CollateContext *_localctx = _tracker.createInstance<CollateContext>(_ctx, getState());
@@ -79493,25 +67023,6 @@ size_t MySQLParser::TypeWithOptCollateContext::getRuleIndex() const {
   return MySQLParser::RuleTypeWithOptCollate;
 }
 
-void MySQLParser::TypeWithOptCollateContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterTypeWithOptCollate(this);
-}
-
-void MySQLParser::TypeWithOptCollateContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitTypeWithOptCollate(this);
-}
-
-
-std::any MySQLParser::TypeWithOptCollateContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitTypeWithOptCollate(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::TypeWithOptCollateContext* MySQLParser::typeWithOptCollate() {
   TypeWithOptCollateContext *_localctx = _tracker.createInstance<TypeWithOptCollateContext>(_ctx, getState());
@@ -79583,25 +67094,6 @@ size_t MySQLParser::SchemaIdentifierPairContext::getRuleIndex() const {
   return MySQLParser::RuleSchemaIdentifierPair;
 }
 
-void MySQLParser::SchemaIdentifierPairContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterSchemaIdentifierPair(this);
-}
-
-void MySQLParser::SchemaIdentifierPairContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitSchemaIdentifierPair(this);
-}
-
-
-std::any MySQLParser::SchemaIdentifierPairContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitSchemaIdentifierPair(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::SchemaIdentifierPairContext* MySQLParser::schemaIdentifierPair() {
   SchemaIdentifierPairContext *_localctx = _tracker.createInstance<SchemaIdentifierPairContext>(_ctx, getState());
@@ -79664,25 +67156,6 @@ size_t MySQLParser::ViewRefListContext::getRuleIndex() const {
   return MySQLParser::RuleViewRefList;
 }
 
-void MySQLParser::ViewRefListContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterViewRefList(this);
-}
-
-void MySQLParser::ViewRefListContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitViewRefList(this);
-}
-
-
-std::any MySQLParser::ViewRefListContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitViewRefList(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::ViewRefListContext* MySQLParser::viewRefList() {
   ViewRefListContext *_localctx = _tracker.createInstance<ViewRefListContext>(_ctx, getState());
@@ -79750,25 +67223,6 @@ size_t MySQLParser::UpdateListContext::getRuleIndex() const {
   return MySQLParser::RuleUpdateList;
 }
 
-void MySQLParser::UpdateListContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterUpdateList(this);
-}
-
-void MySQLParser::UpdateListContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitUpdateList(this);
-}
-
-
-std::any MySQLParser::UpdateListContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitUpdateList(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::UpdateListContext* MySQLParser::updateList() {
   UpdateListContext *_localctx = _tracker.createInstance<UpdateListContext>(_ctx, getState());
@@ -79838,25 +67292,6 @@ size_t MySQLParser::UpdateElementContext::getRuleIndex() const {
   return MySQLParser::RuleUpdateElement;
 }
 
-void MySQLParser::UpdateElementContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterUpdateElement(this);
-}
-
-void MySQLParser::UpdateElementContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitUpdateElement(this);
-}
-
-
-std::any MySQLParser::UpdateElementContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitUpdateElement(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::UpdateElementContext* MySQLParser::updateElement() {
   UpdateElementContext *_localctx = _tracker.createInstance<UpdateElementContext>(_ctx, getState());
@@ -79923,25 +67358,6 @@ size_t MySQLParser::CharsetClauseContext::getRuleIndex() const {
   return MySQLParser::RuleCharsetClause;
 }
 
-void MySQLParser::CharsetClauseContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterCharsetClause(this);
-}
-
-void MySQLParser::CharsetClauseContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitCharsetClause(this);
-}
-
-
-std::any MySQLParser::CharsetClauseContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitCharsetClause(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::CharsetClauseContext* MySQLParser::charsetClause() {
   CharsetClauseContext *_localctx = _tracker.createInstance<CharsetClauseContext>(_ctx, getState());
@@ -79994,25 +67410,6 @@ size_t MySQLParser::FieldsClauseContext::getRuleIndex() const {
   return MySQLParser::RuleFieldsClause;
 }
 
-void MySQLParser::FieldsClauseContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterFieldsClause(this);
-}
-
-void MySQLParser::FieldsClauseContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitFieldsClause(this);
-}
-
-
-std::any MySQLParser::FieldsClauseContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitFieldsClause(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::FieldsClauseContext* MySQLParser::fieldsClause() {
   FieldsClauseContext *_localctx = _tracker.createInstance<FieldsClauseContext>(_ctx, getState());
@@ -80094,25 +67491,6 @@ size_t MySQLParser::FieldTermContext::getRuleIndex() const {
   return MySQLParser::RuleFieldTerm;
 }
 
-void MySQLParser::FieldTermContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterFieldTerm(this);
-}
-
-void MySQLParser::FieldTermContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitFieldTerm(this);
-}
-
-
-std::any MySQLParser::FieldTermContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitFieldTerm(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::FieldTermContext* MySQLParser::fieldTerm() {
   FieldTermContext *_localctx = _tracker.createInstance<FieldTermContext>(_ctx, getState());
@@ -80209,25 +67587,6 @@ size_t MySQLParser::LinesClauseContext::getRuleIndex() const {
   return MySQLParser::RuleLinesClause;
 }
 
-void MySQLParser::LinesClauseContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterLinesClause(this);
-}
-
-void MySQLParser::LinesClauseContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitLinesClause(this);
-}
-
-
-std::any MySQLParser::LinesClauseContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitLinesClause(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::LinesClauseContext* MySQLParser::linesClause() {
   LinesClauseContext *_localctx = _tracker.createInstance<LinesClauseContext>(_ctx, getState());
@@ -80301,25 +67660,6 @@ size_t MySQLParser::LineTermContext::getRuleIndex() const {
   return MySQLParser::RuleLineTerm;
 }
 
-void MySQLParser::LineTermContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterLineTerm(this);
-}
-
-void MySQLParser::LineTermContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitLineTerm(this);
-}
-
-
-std::any MySQLParser::LineTermContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitLineTerm(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::LineTermContext* MySQLParser::lineTerm() {
   LineTermContext *_localctx = _tracker.createInstance<LineTermContext>(_ctx, getState());
@@ -80388,25 +67728,6 @@ size_t MySQLParser::UserListContext::getRuleIndex() const {
   return MySQLParser::RuleUserList;
 }
 
-void MySQLParser::UserListContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterUserList(this);
-}
-
-void MySQLParser::UserListContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitUserList(this);
-}
-
-
-std::any MySQLParser::UserListContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitUserList(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::UserListContext* MySQLParser::userList() {
   UserListContext *_localctx = _tracker.createInstance<UserListContext>(_ctx, getState());
@@ -80476,25 +67797,6 @@ size_t MySQLParser::CreateUserListContext::getRuleIndex() const {
   return MySQLParser::RuleCreateUserList;
 }
 
-void MySQLParser::CreateUserListContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterCreateUserList(this);
-}
-
-void MySQLParser::CreateUserListContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitCreateUserList(this);
-}
-
-
-std::any MySQLParser::CreateUserListContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitCreateUserList(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::CreateUserListContext* MySQLParser::createUserList() {
   CreateUserListContext *_localctx = _tracker.createInstance<CreateUserListContext>(_ctx, getState());
@@ -80568,25 +67870,6 @@ size_t MySQLParser::CreateUserContext::getRuleIndex() const {
   return MySQLParser::RuleCreateUser;
 }
 
-void MySQLParser::CreateUserContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterCreateUser(this);
-}
-
-void MySQLParser::CreateUserContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitCreateUser(this);
-}
-
-
-std::any MySQLParser::CreateUserContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitCreateUser(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::CreateUserContext* MySQLParser::createUser() {
   CreateUserContext *_localctx = _tracker.createInstance<CreateUserContext>(_ctx, getState());
@@ -80692,25 +67975,6 @@ size_t MySQLParser::CreateUserWithMfaContext::getRuleIndex() const {
   return MySQLParser::RuleCreateUserWithMfa;
 }
 
-void MySQLParser::CreateUserWithMfaContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterCreateUserWithMfa(this);
-}
-
-void MySQLParser::CreateUserWithMfaContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitCreateUserWithMfa(this);
-}
-
-
-std::any MySQLParser::CreateUserWithMfaContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitCreateUserWithMfa(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::CreateUserWithMfaContext* MySQLParser::createUserWithMfa() {
   CreateUserWithMfaContext *_localctx = _tracker.createInstance<CreateUserWithMfaContext>(_ctx, getState());
@@ -80790,25 +68054,6 @@ size_t MySQLParser::IdentificationContext::getRuleIndex() const {
   return MySQLParser::RuleIdentification;
 }
 
-void MySQLParser::IdentificationContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterIdentification(this);
-}
-
-void MySQLParser::IdentificationContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitIdentification(this);
-}
-
-
-std::any MySQLParser::IdentificationContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitIdentification(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::IdentificationContext* MySQLParser::identification() {
   IdentificationContext *_localctx = _tracker.createInstance<IdentificationContext>(_ctx, getState());
@@ -80904,25 +68149,6 @@ size_t MySQLParser::IdentifiedByPasswordContext::getRuleIndex() const {
   return MySQLParser::RuleIdentifiedByPassword;
 }
 
-void MySQLParser::IdentifiedByPasswordContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterIdentifiedByPassword(this);
-}
-
-void MySQLParser::IdentifiedByPasswordContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitIdentifiedByPassword(this);
-}
-
-
-std::any MySQLParser::IdentifiedByPasswordContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitIdentifiedByPassword(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::IdentifiedByPasswordContext* MySQLParser::identifiedByPassword() {
   IdentifiedByPasswordContext *_localctx = _tracker.createInstance<IdentifiedByPasswordContext>(_ctx, getState());
@@ -80981,25 +68207,6 @@ size_t MySQLParser::IdentifiedByRandomPasswordContext::getRuleIndex() const {
   return MySQLParser::RuleIdentifiedByRandomPassword;
 }
 
-void MySQLParser::IdentifiedByRandomPasswordContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterIdentifiedByRandomPassword(this);
-}
-
-void MySQLParser::IdentifiedByRandomPasswordContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitIdentifiedByRandomPassword(this);
-}
-
-
-std::any MySQLParser::IdentifiedByRandomPasswordContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitIdentifiedByRandomPassword(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::IdentifiedByRandomPasswordContext* MySQLParser::identifiedByRandomPassword() {
   IdentifiedByRandomPasswordContext *_localctx = _tracker.createInstance<IdentifiedByRandomPasswordContext>(_ctx, getState());
@@ -81056,25 +68263,6 @@ size_t MySQLParser::IdentifiedWithPluginContext::getRuleIndex() const {
   return MySQLParser::RuleIdentifiedWithPlugin;
 }
 
-void MySQLParser::IdentifiedWithPluginContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterIdentifiedWithPlugin(this);
-}
-
-void MySQLParser::IdentifiedWithPluginContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitIdentifiedWithPlugin(this);
-}
-
-
-std::any MySQLParser::IdentifiedWithPluginContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitIdentifiedWithPlugin(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::IdentifiedWithPluginContext* MySQLParser::identifiedWithPlugin() {
   IdentifiedWithPluginContext *_localctx = _tracker.createInstance<IdentifiedWithPluginContext>(_ctx, getState());
@@ -81137,25 +68325,6 @@ size_t MySQLParser::IdentifiedWithPluginAsAuthContext::getRuleIndex() const {
   return MySQLParser::RuleIdentifiedWithPluginAsAuth;
 }
 
-void MySQLParser::IdentifiedWithPluginAsAuthContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterIdentifiedWithPluginAsAuth(this);
-}
-
-void MySQLParser::IdentifiedWithPluginAsAuthContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitIdentifiedWithPluginAsAuth(this);
-}
-
-
-std::any MySQLParser::IdentifiedWithPluginAsAuthContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitIdentifiedWithPluginAsAuth(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::IdentifiedWithPluginAsAuthContext* MySQLParser::identifiedWithPluginAsAuth() {
   IdentifiedWithPluginAsAuthContext *_localctx = _tracker.createInstance<IdentifiedWithPluginAsAuthContext>(_ctx, getState());
@@ -81222,25 +68391,6 @@ size_t MySQLParser::IdentifiedWithPluginByPasswordContext::getRuleIndex() const 
   return MySQLParser::RuleIdentifiedWithPluginByPassword;
 }
 
-void MySQLParser::IdentifiedWithPluginByPasswordContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterIdentifiedWithPluginByPassword(this);
-}
-
-void MySQLParser::IdentifiedWithPluginByPasswordContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitIdentifiedWithPluginByPassword(this);
-}
-
-
-std::any MySQLParser::IdentifiedWithPluginByPasswordContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitIdentifiedWithPluginByPassword(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::IdentifiedWithPluginByPasswordContext* MySQLParser::identifiedWithPluginByPassword() {
   IdentifiedWithPluginByPasswordContext *_localctx = _tracker.createInstance<IdentifiedWithPluginByPasswordContext>(_ctx, getState());
@@ -81311,25 +68461,6 @@ size_t MySQLParser::IdentifiedWithPluginByRandomPasswordContext::getRuleIndex() 
   return MySQLParser::RuleIdentifiedWithPluginByRandomPassword;
 }
 
-void MySQLParser::IdentifiedWithPluginByRandomPasswordContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterIdentifiedWithPluginByRandomPassword(this);
-}
-
-void MySQLParser::IdentifiedWithPluginByRandomPasswordContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitIdentifiedWithPluginByRandomPassword(this);
-}
-
-
-std::any MySQLParser::IdentifiedWithPluginByRandomPasswordContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitIdentifiedWithPluginByRandomPassword(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::IdentifiedWithPluginByRandomPasswordContext* MySQLParser::identifiedWithPluginByRandomPassword() {
   IdentifiedWithPluginByRandomPasswordContext *_localctx = _tracker.createInstance<IdentifiedWithPluginByRandomPasswordContext>(_ctx, getState());
@@ -81398,25 +68529,6 @@ size_t MySQLParser::InitialAuthContext::getRuleIndex() const {
   return MySQLParser::RuleInitialAuth;
 }
 
-void MySQLParser::InitialAuthContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterInitialAuth(this);
-}
-
-void MySQLParser::InitialAuthContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitInitialAuth(this);
-}
-
-
-std::any MySQLParser::InitialAuthContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitInitialAuth(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::InitialAuthContext* MySQLParser::initialAuth() {
   InitialAuthContext *_localctx = _tracker.createInstance<InitialAuthContext>(_ctx, getState());
@@ -81493,25 +68605,6 @@ size_t MySQLParser::RetainCurrentPasswordContext::getRuleIndex() const {
   return MySQLParser::RuleRetainCurrentPassword;
 }
 
-void MySQLParser::RetainCurrentPasswordContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterRetainCurrentPassword(this);
-}
-
-void MySQLParser::RetainCurrentPasswordContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitRetainCurrentPassword(this);
-}
-
-
-std::any MySQLParser::RetainCurrentPasswordContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitRetainCurrentPassword(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::RetainCurrentPasswordContext* MySQLParser::retainCurrentPassword() {
   RetainCurrentPasswordContext *_localctx = _tracker.createInstance<RetainCurrentPasswordContext>(_ctx, getState());
@@ -81566,25 +68659,6 @@ size_t MySQLParser::DiscardOldPasswordContext::getRuleIndex() const {
   return MySQLParser::RuleDiscardOldPassword;
 }
 
-void MySQLParser::DiscardOldPasswordContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterDiscardOldPassword(this);
-}
-
-void MySQLParser::DiscardOldPasswordContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitDiscardOldPassword(this);
-}
-
-
-std::any MySQLParser::DiscardOldPasswordContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitDiscardOldPassword(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::DiscardOldPasswordContext* MySQLParser::discardOldPassword() {
   DiscardOldPasswordContext *_localctx = _tracker.createInstance<DiscardOldPasswordContext>(_ctx, getState());
@@ -81663,25 +68737,6 @@ size_t MySQLParser::UserRegistrationContext::getRuleIndex() const {
   return MySQLParser::RuleUserRegistration;
 }
 
-void MySQLParser::UserRegistrationContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterUserRegistration(this);
-}
-
-void MySQLParser::UserRegistrationContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitUserRegistration(this);
-}
-
-
-std::any MySQLParser::UserRegistrationContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitUserRegistration(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::UserRegistrationContext* MySQLParser::userRegistration() {
   UserRegistrationContext *_localctx = _tracker.createInstance<UserRegistrationContext>(_ctx, getState());
@@ -81770,25 +68825,6 @@ size_t MySQLParser::FactorContext::getRuleIndex() const {
   return MySQLParser::RuleFactor;
 }
 
-void MySQLParser::FactorContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterFactor(this);
-}
-
-void MySQLParser::FactorContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitFactor(this);
-}
-
-
-std::any MySQLParser::FactorContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitFactor(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::FactorContext* MySQLParser::factor() {
   FactorContext *_localctx = _tracker.createInstance<FactorContext>(_ctx, getState());
@@ -81837,25 +68873,6 @@ size_t MySQLParser::ReplacePasswordContext::getRuleIndex() const {
   return MySQLParser::RuleReplacePassword;
 }
 
-void MySQLParser::ReplacePasswordContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterReplacePassword(this);
-}
-
-void MySQLParser::ReplacePasswordContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitReplacePassword(this);
-}
-
-
-std::any MySQLParser::ReplacePasswordContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitReplacePassword(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::ReplacePasswordContext* MySQLParser::replacePassword() {
   ReplacePasswordContext *_localctx = _tracker.createInstance<ReplacePasswordContext>(_ctx, getState());
@@ -81904,25 +68921,6 @@ size_t MySQLParser::UserIdentifierOrTextContext::getRuleIndex() const {
   return MySQLParser::RuleUserIdentifierOrText;
 }
 
-void MySQLParser::UserIdentifierOrTextContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterUserIdentifierOrText(this);
-}
-
-void MySQLParser::UserIdentifierOrTextContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitUserIdentifierOrText(this);
-}
-
-
-std::any MySQLParser::UserIdentifierOrTextContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitUserIdentifierOrText(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::UserIdentifierOrTextContext* MySQLParser::userIdentifierOrText() {
   UserIdentifierOrTextContext *_localctx = _tracker.createInstance<UserIdentifierOrTextContext>(_ctx, getState());
@@ -81986,25 +68984,6 @@ size_t MySQLParser::UserContext::getRuleIndex() const {
   return MySQLParser::RuleUser;
 }
 
-void MySQLParser::UserContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterUser(this);
-}
-
-void MySQLParser::UserContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitUser(this);
-}
-
-
-std::any MySQLParser::UserContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitUser(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::UserContext* MySQLParser::user() {
   UserContext *_localctx = _tracker.createInstance<UserContext>(_ctx, getState());
@@ -82081,25 +69060,6 @@ size_t MySQLParser::LikeClauseContext::getRuleIndex() const {
   return MySQLParser::RuleLikeClause;
 }
 
-void MySQLParser::LikeClauseContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterLikeClause(this);
-}
-
-void MySQLParser::LikeClauseContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitLikeClause(this);
-}
-
-
-std::any MySQLParser::LikeClauseContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitLikeClause(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::LikeClauseContext* MySQLParser::likeClause() {
   LikeClauseContext *_localctx = _tracker.createInstance<LikeClauseContext>(_ctx, getState());
@@ -82148,25 +69108,6 @@ size_t MySQLParser::LikeOrWhereContext::getRuleIndex() const {
   return MySQLParser::RuleLikeOrWhere;
 }
 
-void MySQLParser::LikeOrWhereContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterLikeOrWhere(this);
-}
-
-void MySQLParser::LikeOrWhereContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitLikeOrWhere(this);
-}
-
-
-std::any MySQLParser::LikeOrWhereContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitLikeOrWhere(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::LikeOrWhereContext* MySQLParser::likeOrWhere() {
   LikeOrWhereContext *_localctx = _tracker.createInstance<LikeOrWhereContext>(_ctx, getState());
@@ -82230,25 +69171,6 @@ size_t MySQLParser::OnlineOptionContext::getRuleIndex() const {
   return MySQLParser::RuleOnlineOption;
 }
 
-void MySQLParser::OnlineOptionContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterOnlineOption(this);
-}
-
-void MySQLParser::OnlineOptionContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitOnlineOption(this);
-}
-
-
-std::any MySQLParser::OnlineOptionContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitOnlineOption(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::OnlineOptionContext* MySQLParser::onlineOption() {
   OnlineOptionContext *_localctx = _tracker.createInstance<OnlineOptionContext>(_ctx, getState());
@@ -82305,25 +69227,6 @@ size_t MySQLParser::NoWriteToBinLogContext::getRuleIndex() const {
   return MySQLParser::RuleNoWriteToBinLog;
 }
 
-void MySQLParser::NoWriteToBinLogContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterNoWriteToBinLog(this);
-}
-
-void MySQLParser::NoWriteToBinLogContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitNoWriteToBinLog(this);
-}
-
-
-std::any MySQLParser::NoWriteToBinLogContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitNoWriteToBinLog(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::NoWriteToBinLogContext* MySQLParser::noWriteToBinLog() {
   NoWriteToBinLogContext *_localctx = _tracker.createInstance<NoWriteToBinLogContext>(_ctx, getState());
@@ -82378,25 +69281,6 @@ size_t MySQLParser::UsePartitionContext::getRuleIndex() const {
   return MySQLParser::RuleUsePartition;
 }
 
-void MySQLParser::UsePartitionContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterUsePartition(this);
-}
-
-void MySQLParser::UsePartitionContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitUsePartition(this);
-}
-
-
-std::any MySQLParser::UsePartitionContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitUsePartition(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::UsePartitionContext* MySQLParser::usePartition() {
   UsePartitionContext *_localctx = _tracker.createInstance<UsePartitionContext>(_ctx, getState());
@@ -82445,25 +69329,6 @@ size_t MySQLParser::FieldIdentifierContext::getRuleIndex() const {
   return MySQLParser::RuleFieldIdentifier;
 }
 
-void MySQLParser::FieldIdentifierContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterFieldIdentifier(this);
-}
-
-void MySQLParser::FieldIdentifierContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitFieldIdentifier(this);
-}
-
-
-std::any MySQLParser::FieldIdentifierContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitFieldIdentifier(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::FieldIdentifierContext* MySQLParser::fieldIdentifier() {
   FieldIdentifierContext *_localctx = _tracker.createInstance<FieldIdentifierContext>(_ctx, getState());
@@ -82536,25 +69401,6 @@ size_t MySQLParser::ColumnNameContext::getRuleIndex() const {
   return MySQLParser::RuleColumnName;
 }
 
-void MySQLParser::ColumnNameContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterColumnName(this);
-}
-
-void MySQLParser::ColumnNameContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitColumnName(this);
-}
-
-
-std::any MySQLParser::ColumnNameContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitColumnName(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::ColumnNameContext* MySQLParser::columnName() {
   ColumnNameContext *_localctx = _tracker.createInstance<ColumnNameContext>(_ctx, getState());
@@ -82597,25 +69443,6 @@ size_t MySQLParser::ColumnInternalRefContext::getRuleIndex() const {
   return MySQLParser::RuleColumnInternalRef;
 }
 
-void MySQLParser::ColumnInternalRefContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterColumnInternalRef(this);
-}
-
-void MySQLParser::ColumnInternalRefContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitColumnInternalRef(this);
-}
-
-
-std::any MySQLParser::ColumnInternalRefContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitColumnInternalRef(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::ColumnInternalRefContext* MySQLParser::columnInternalRef() {
   ColumnInternalRefContext *_localctx = _tracker.createInstance<ColumnInternalRefContext>(_ctx, getState());
@@ -82678,25 +69505,6 @@ size_t MySQLParser::ColumnInternalRefListContext::getRuleIndex() const {
   return MySQLParser::RuleColumnInternalRefList;
 }
 
-void MySQLParser::ColumnInternalRefListContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterColumnInternalRefList(this);
-}
-
-void MySQLParser::ColumnInternalRefListContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitColumnInternalRefList(this);
-}
-
-
-std::any MySQLParser::ColumnInternalRefListContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitColumnInternalRefList(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::ColumnInternalRefListContext* MySQLParser::columnInternalRefList() {
   ColumnInternalRefListContext *_localctx = _tracker.createInstance<ColumnInternalRefListContext>(_ctx, getState());
@@ -82756,25 +69564,6 @@ size_t MySQLParser::ColumnRefContext::getRuleIndex() const {
   return MySQLParser::RuleColumnRef;
 }
 
-void MySQLParser::ColumnRefContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterColumnRef(this);
-}
-
-void MySQLParser::ColumnRefContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitColumnRef(this);
-}
-
-
-std::any MySQLParser::ColumnRefContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitColumnRef(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::ColumnRefContext* MySQLParser::columnRef() {
   ColumnRefContext *_localctx = _tracker.createInstance<ColumnRefContext>(_ctx, getState());
@@ -82821,25 +69610,6 @@ size_t MySQLParser::InsertIdentifierContext::getRuleIndex() const {
   return MySQLParser::RuleInsertIdentifier;
 }
 
-void MySQLParser::InsertIdentifierContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterInsertIdentifier(this);
-}
-
-void MySQLParser::InsertIdentifierContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitInsertIdentifier(this);
-}
-
-
-std::any MySQLParser::InsertIdentifierContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitInsertIdentifier(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::InsertIdentifierContext* MySQLParser::insertIdentifier() {
   InsertIdentifierContext *_localctx = _tracker.createInstance<InsertIdentifierContext>(_ctx, getState());
@@ -82899,25 +69669,6 @@ size_t MySQLParser::IndexNameContext::getRuleIndex() const {
   return MySQLParser::RuleIndexName;
 }
 
-void MySQLParser::IndexNameContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterIndexName(this);
-}
-
-void MySQLParser::IndexNameContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitIndexName(this);
-}
-
-
-std::any MySQLParser::IndexNameContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitIndexName(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::IndexNameContext* MySQLParser::indexName() {
   IndexNameContext *_localctx = _tracker.createInstance<IndexNameContext>(_ctx, getState());
@@ -82960,25 +69711,6 @@ size_t MySQLParser::IndexRefContext::getRuleIndex() const {
   return MySQLParser::RuleIndexRef;
 }
 
-void MySQLParser::IndexRefContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterIndexRef(this);
-}
-
-void MySQLParser::IndexRefContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitIndexRef(this);
-}
-
-
-std::any MySQLParser::IndexRefContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitIndexRef(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::IndexRefContext* MySQLParser::indexRef() {
   IndexRefContext *_localctx = _tracker.createInstance<IndexRefContext>(_ctx, getState());
@@ -83037,25 +69769,6 @@ size_t MySQLParser::TableWildContext::getRuleIndex() const {
   return MySQLParser::RuleTableWild;
 }
 
-void MySQLParser::TableWildContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterTableWild(this);
-}
-
-void MySQLParser::TableWildContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitTableWild(this);
-}
-
-
-std::any MySQLParser::TableWildContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitTableWild(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::TableWildContext* MySQLParser::tableWild() {
   TableWildContext *_localctx = _tracker.createInstance<TableWildContext>(_ctx, getState());
@@ -83117,25 +69830,6 @@ size_t MySQLParser::SchemaNameContext::getRuleIndex() const {
   return MySQLParser::RuleSchemaName;
 }
 
-void MySQLParser::SchemaNameContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterSchemaName(this);
-}
-
-void MySQLParser::SchemaNameContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitSchemaName(this);
-}
-
-
-std::any MySQLParser::SchemaNameContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitSchemaName(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::SchemaNameContext* MySQLParser::schemaName() {
   SchemaNameContext *_localctx = _tracker.createInstance<SchemaNameContext>(_ctx, getState());
@@ -83178,25 +69872,6 @@ size_t MySQLParser::SchemaRefContext::getRuleIndex() const {
   return MySQLParser::RuleSchemaRef;
 }
 
-void MySQLParser::SchemaRefContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterSchemaRef(this);
-}
-
-void MySQLParser::SchemaRefContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitSchemaRef(this);
-}
-
-
-std::any MySQLParser::SchemaRefContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitSchemaRef(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::SchemaRefContext* MySQLParser::schemaRef() {
   SchemaRefContext *_localctx = _tracker.createInstance<SchemaRefContext>(_ctx, getState());
@@ -83239,25 +69914,6 @@ size_t MySQLParser::ProcedureNameContext::getRuleIndex() const {
   return MySQLParser::RuleProcedureName;
 }
 
-void MySQLParser::ProcedureNameContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterProcedureName(this);
-}
-
-void MySQLParser::ProcedureNameContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitProcedureName(this);
-}
-
-
-std::any MySQLParser::ProcedureNameContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitProcedureName(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::ProcedureNameContext* MySQLParser::procedureName() {
   ProcedureNameContext *_localctx = _tracker.createInstance<ProcedureNameContext>(_ctx, getState());
@@ -83300,25 +69956,6 @@ size_t MySQLParser::ProcedureRefContext::getRuleIndex() const {
   return MySQLParser::RuleProcedureRef;
 }
 
-void MySQLParser::ProcedureRefContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterProcedureRef(this);
-}
-
-void MySQLParser::ProcedureRefContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitProcedureRef(this);
-}
-
-
-std::any MySQLParser::ProcedureRefContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitProcedureRef(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::ProcedureRefContext* MySQLParser::procedureRef() {
   ProcedureRefContext *_localctx = _tracker.createInstance<ProcedureRefContext>(_ctx, getState());
@@ -83361,25 +69998,6 @@ size_t MySQLParser::FunctionNameContext::getRuleIndex() const {
   return MySQLParser::RuleFunctionName;
 }
 
-void MySQLParser::FunctionNameContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterFunctionName(this);
-}
-
-void MySQLParser::FunctionNameContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitFunctionName(this);
-}
-
-
-std::any MySQLParser::FunctionNameContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitFunctionName(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::FunctionNameContext* MySQLParser::functionName() {
   FunctionNameContext *_localctx = _tracker.createInstance<FunctionNameContext>(_ctx, getState());
@@ -83422,25 +70040,6 @@ size_t MySQLParser::FunctionRefContext::getRuleIndex() const {
   return MySQLParser::RuleFunctionRef;
 }
 
-void MySQLParser::FunctionRefContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterFunctionRef(this);
-}
-
-void MySQLParser::FunctionRefContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitFunctionRef(this);
-}
-
-
-std::any MySQLParser::FunctionRefContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitFunctionRef(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::FunctionRefContext* MySQLParser::functionRef() {
   FunctionRefContext *_localctx = _tracker.createInstance<FunctionRefContext>(_ctx, getState());
@@ -83483,25 +70082,6 @@ size_t MySQLParser::TriggerNameContext::getRuleIndex() const {
   return MySQLParser::RuleTriggerName;
 }
 
-void MySQLParser::TriggerNameContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterTriggerName(this);
-}
-
-void MySQLParser::TriggerNameContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitTriggerName(this);
-}
-
-
-std::any MySQLParser::TriggerNameContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitTriggerName(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::TriggerNameContext* MySQLParser::triggerName() {
   TriggerNameContext *_localctx = _tracker.createInstance<TriggerNameContext>(_ctx, getState());
@@ -83544,25 +70124,6 @@ size_t MySQLParser::TriggerRefContext::getRuleIndex() const {
   return MySQLParser::RuleTriggerRef;
 }
 
-void MySQLParser::TriggerRefContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterTriggerRef(this);
-}
-
-void MySQLParser::TriggerRefContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitTriggerRef(this);
-}
-
-
-std::any MySQLParser::TriggerRefContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitTriggerRef(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::TriggerRefContext* MySQLParser::triggerRef() {
   TriggerRefContext *_localctx = _tracker.createInstance<TriggerRefContext>(_ctx, getState());
@@ -83609,25 +70170,6 @@ size_t MySQLParser::ViewNameContext::getRuleIndex() const {
   return MySQLParser::RuleViewName;
 }
 
-void MySQLParser::ViewNameContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterViewName(this);
-}
-
-void MySQLParser::ViewNameContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitViewName(this);
-}
-
-
-std::any MySQLParser::ViewNameContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitViewName(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::ViewNameContext* MySQLParser::viewName() {
   ViewNameContext *_localctx = _tracker.createInstance<ViewNameContext>(_ctx, getState());
@@ -83691,25 +70233,6 @@ size_t MySQLParser::ViewRefContext::getRuleIndex() const {
   return MySQLParser::RuleViewRef;
 }
 
-void MySQLParser::ViewRefContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterViewRef(this);
-}
-
-void MySQLParser::ViewRefContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitViewRef(this);
-}
-
-
-std::any MySQLParser::ViewRefContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitViewRef(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::ViewRefContext* MySQLParser::viewRef() {
   ViewRefContext *_localctx = _tracker.createInstance<ViewRefContext>(_ctx, getState());
@@ -83769,25 +70292,6 @@ size_t MySQLParser::TablespaceNameContext::getRuleIndex() const {
   return MySQLParser::RuleTablespaceName;
 }
 
-void MySQLParser::TablespaceNameContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterTablespaceName(this);
-}
-
-void MySQLParser::TablespaceNameContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitTablespaceName(this);
-}
-
-
-std::any MySQLParser::TablespaceNameContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitTablespaceName(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::TablespaceNameContext* MySQLParser::tablespaceName() {
   TablespaceNameContext *_localctx = _tracker.createInstance<TablespaceNameContext>(_ctx, getState());
@@ -83830,25 +70334,6 @@ size_t MySQLParser::TablespaceRefContext::getRuleIndex() const {
   return MySQLParser::RuleTablespaceRef;
 }
 
-void MySQLParser::TablespaceRefContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterTablespaceRef(this);
-}
-
-void MySQLParser::TablespaceRefContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitTablespaceRef(this);
-}
-
-
-std::any MySQLParser::TablespaceRefContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitTablespaceRef(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::TablespaceRefContext* MySQLParser::tablespaceRef() {
   TablespaceRefContext *_localctx = _tracker.createInstance<TablespaceRefContext>(_ctx, getState());
@@ -83891,25 +70376,6 @@ size_t MySQLParser::LogfileGroupNameContext::getRuleIndex() const {
   return MySQLParser::RuleLogfileGroupName;
 }
 
-void MySQLParser::LogfileGroupNameContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterLogfileGroupName(this);
-}
-
-void MySQLParser::LogfileGroupNameContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitLogfileGroupName(this);
-}
-
-
-std::any MySQLParser::LogfileGroupNameContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitLogfileGroupName(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::LogfileGroupNameContext* MySQLParser::logfileGroupName() {
   LogfileGroupNameContext *_localctx = _tracker.createInstance<LogfileGroupNameContext>(_ctx, getState());
@@ -83952,25 +70418,6 @@ size_t MySQLParser::LogfileGroupRefContext::getRuleIndex() const {
   return MySQLParser::RuleLogfileGroupRef;
 }
 
-void MySQLParser::LogfileGroupRefContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterLogfileGroupRef(this);
-}
-
-void MySQLParser::LogfileGroupRefContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitLogfileGroupRef(this);
-}
-
-
-std::any MySQLParser::LogfileGroupRefContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitLogfileGroupRef(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::LogfileGroupRefContext* MySQLParser::logfileGroupRef() {
   LogfileGroupRefContext *_localctx = _tracker.createInstance<LogfileGroupRefContext>(_ctx, getState());
@@ -84013,25 +70460,6 @@ size_t MySQLParser::EventNameContext::getRuleIndex() const {
   return MySQLParser::RuleEventName;
 }
 
-void MySQLParser::EventNameContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterEventName(this);
-}
-
-void MySQLParser::EventNameContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitEventName(this);
-}
-
-
-std::any MySQLParser::EventNameContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitEventName(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::EventNameContext* MySQLParser::eventName() {
   EventNameContext *_localctx = _tracker.createInstance<EventNameContext>(_ctx, getState());
@@ -84074,25 +70502,6 @@ size_t MySQLParser::EventRefContext::getRuleIndex() const {
   return MySQLParser::RuleEventRef;
 }
 
-void MySQLParser::EventRefContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterEventRef(this);
-}
-
-void MySQLParser::EventRefContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitEventRef(this);
-}
-
-
-std::any MySQLParser::EventRefContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitEventRef(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::EventRefContext* MySQLParser::eventRef() {
   EventRefContext *_localctx = _tracker.createInstance<EventRefContext>(_ctx, getState());
@@ -84135,25 +70544,6 @@ size_t MySQLParser::UdfNameContext::getRuleIndex() const {
   return MySQLParser::RuleUdfName;
 }
 
-void MySQLParser::UdfNameContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterUdfName(this);
-}
-
-void MySQLParser::UdfNameContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitUdfName(this);
-}
-
-
-std::any MySQLParser::UdfNameContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitUdfName(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::UdfNameContext* MySQLParser::udfName() {
   UdfNameContext *_localctx = _tracker.createInstance<UdfNameContext>(_ctx, getState());
@@ -84196,25 +70586,6 @@ size_t MySQLParser::ServerNameContext::getRuleIndex() const {
   return MySQLParser::RuleServerName;
 }
 
-void MySQLParser::ServerNameContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterServerName(this);
-}
-
-void MySQLParser::ServerNameContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitServerName(this);
-}
-
-
-std::any MySQLParser::ServerNameContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitServerName(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::ServerNameContext* MySQLParser::serverName() {
   ServerNameContext *_localctx = _tracker.createInstance<ServerNameContext>(_ctx, getState());
@@ -84257,25 +70628,6 @@ size_t MySQLParser::ServerRefContext::getRuleIndex() const {
   return MySQLParser::RuleServerRef;
 }
 
-void MySQLParser::ServerRefContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterServerRef(this);
-}
-
-void MySQLParser::ServerRefContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitServerRef(this);
-}
-
-
-std::any MySQLParser::ServerRefContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitServerRef(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::ServerRefContext* MySQLParser::serverRef() {
   ServerRefContext *_localctx = _tracker.createInstance<ServerRefContext>(_ctx, getState());
@@ -84318,25 +70670,6 @@ size_t MySQLParser::EngineRefContext::getRuleIndex() const {
   return MySQLParser::RuleEngineRef;
 }
 
-void MySQLParser::EngineRefContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterEngineRef(this);
-}
-
-void MySQLParser::EngineRefContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitEngineRef(this);
-}
-
-
-std::any MySQLParser::EngineRefContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitEngineRef(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::EngineRefContext* MySQLParser::engineRef() {
   EngineRefContext *_localctx = _tracker.createInstance<EngineRefContext>(_ctx, getState());
@@ -84383,25 +70716,6 @@ size_t MySQLParser::TableNameContext::getRuleIndex() const {
   return MySQLParser::RuleTableName;
 }
 
-void MySQLParser::TableNameContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterTableName(this);
-}
-
-void MySQLParser::TableNameContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitTableName(this);
-}
-
-
-std::any MySQLParser::TableNameContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitTableName(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::TableNameContext* MySQLParser::tableName() {
   TableNameContext *_localctx = _tracker.createInstance<TableNameContext>(_ctx, getState());
@@ -84465,25 +70779,6 @@ size_t MySQLParser::FilterTableRefContext::getRuleIndex() const {
   return MySQLParser::RuleFilterTableRef;
 }
 
-void MySQLParser::FilterTableRefContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterFilterTableRef(this);
-}
-
-void MySQLParser::FilterTableRefContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitFilterTableRef(this);
-}
-
-
-std::any MySQLParser::FilterTableRefContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitFilterTableRef(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::FilterTableRefContext* MySQLParser::filterTableRef() {
   FilterTableRefContext *_localctx = _tracker.createInstance<FilterTableRefContext>(_ctx, getState());
@@ -84540,25 +70835,6 @@ size_t MySQLParser::TableRefWithWildcardContext::getRuleIndex() const {
   return MySQLParser::RuleTableRefWithWildcard;
 }
 
-void MySQLParser::TableRefWithWildcardContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterTableRefWithWildcard(this);
-}
-
-void MySQLParser::TableRefWithWildcardContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitTableRefWithWildcard(this);
-}
-
-
-std::any MySQLParser::TableRefWithWildcardContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitTableRefWithWildcard(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::TableRefWithWildcardContext* MySQLParser::tableRefWithWildcard() {
   TableRefWithWildcardContext *_localctx = _tracker.createInstance<TableRefWithWildcardContext>(_ctx, getState());
@@ -84637,25 +70913,6 @@ size_t MySQLParser::TableRefContext::getRuleIndex() const {
   return MySQLParser::RuleTableRef;
 }
 
-void MySQLParser::TableRefContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterTableRef(this);
-}
-
-void MySQLParser::TableRefContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitTableRef(this);
-}
-
-
-std::any MySQLParser::TableRefContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitTableRef(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::TableRefContext* MySQLParser::tableRef() {
   TableRefContext *_localctx = _tracker.createInstance<TableRefContext>(_ctx, getState());
@@ -84727,25 +70984,6 @@ size_t MySQLParser::TableRefListContext::getRuleIndex() const {
   return MySQLParser::RuleTableRefList;
 }
 
-void MySQLParser::TableRefListContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterTableRefList(this);
-}
-
-void MySQLParser::TableRefListContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitTableRefList(this);
-}
-
-
-std::any MySQLParser::TableRefListContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitTableRefList(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::TableRefListContext* MySQLParser::tableRefList() {
   TableRefListContext *_localctx = _tracker.createInstance<TableRefListContext>(_ctx, getState());
@@ -84813,25 +71051,6 @@ size_t MySQLParser::TableAliasRefListContext::getRuleIndex() const {
   return MySQLParser::RuleTableAliasRefList;
 }
 
-void MySQLParser::TableAliasRefListContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterTableAliasRefList(this);
-}
-
-void MySQLParser::TableAliasRefListContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitTableAliasRefList(this);
-}
-
-
-std::any MySQLParser::TableAliasRefListContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitTableAliasRefList(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::TableAliasRefListContext* MySQLParser::tableAliasRefList() {
   TableAliasRefListContext *_localctx = _tracker.createInstance<TableAliasRefListContext>(_ctx, getState());
@@ -84887,25 +71106,6 @@ size_t MySQLParser::ParameterNameContext::getRuleIndex() const {
   return MySQLParser::RuleParameterName;
 }
 
-void MySQLParser::ParameterNameContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterParameterName(this);
-}
-
-void MySQLParser::ParameterNameContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitParameterName(this);
-}
-
-
-std::any MySQLParser::ParameterNameContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitParameterName(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::ParameterNameContext* MySQLParser::parameterName() {
   ParameterNameContext *_localctx = _tracker.createInstance<ParameterNameContext>(_ctx, getState());
@@ -84952,25 +71152,6 @@ size_t MySQLParser::LabelIdentifierContext::getRuleIndex() const {
   return MySQLParser::RuleLabelIdentifier;
 }
 
-void MySQLParser::LabelIdentifierContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterLabelIdentifier(this);
-}
-
-void MySQLParser::LabelIdentifierContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitLabelIdentifier(this);
-}
-
-
-std::any MySQLParser::LabelIdentifierContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitLabelIdentifier(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::LabelIdentifierContext* MySQLParser::labelIdentifier() {
   LabelIdentifierContext *_localctx = _tracker.createInstance<LabelIdentifierContext>(_ctx, getState());
@@ -85030,25 +71211,6 @@ size_t MySQLParser::LabelRefContext::getRuleIndex() const {
   return MySQLParser::RuleLabelRef;
 }
 
-void MySQLParser::LabelRefContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterLabelRef(this);
-}
-
-void MySQLParser::LabelRefContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitLabelRef(this);
-}
-
-
-std::any MySQLParser::LabelRefContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitLabelRef(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::LabelRefContext* MySQLParser::labelRef() {
   LabelRefContext *_localctx = _tracker.createInstance<LabelRefContext>(_ctx, getState());
@@ -85095,25 +71257,6 @@ size_t MySQLParser::RoleIdentifierContext::getRuleIndex() const {
   return MySQLParser::RuleRoleIdentifier;
 }
 
-void MySQLParser::RoleIdentifierContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterRoleIdentifier(this);
-}
-
-void MySQLParser::RoleIdentifierContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitRoleIdentifier(this);
-}
-
-
-std::any MySQLParser::RoleIdentifierContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitRoleIdentifier(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::RoleIdentifierContext* MySQLParser::roleIdentifier() {
   RoleIdentifierContext *_localctx = _tracker.createInstance<RoleIdentifierContext>(_ctx, getState());
@@ -85173,25 +71316,6 @@ size_t MySQLParser::PluginRefContext::getRuleIndex() const {
   return MySQLParser::RulePluginRef;
 }
 
-void MySQLParser::PluginRefContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterPluginRef(this);
-}
-
-void MySQLParser::PluginRefContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitPluginRef(this);
-}
-
-
-std::any MySQLParser::PluginRefContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitPluginRef(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::PluginRefContext* MySQLParser::pluginRef() {
   PluginRefContext *_localctx = _tracker.createInstance<PluginRefContext>(_ctx, getState());
@@ -85234,25 +71358,6 @@ size_t MySQLParser::ComponentRefContext::getRuleIndex() const {
   return MySQLParser::RuleComponentRef;
 }
 
-void MySQLParser::ComponentRefContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterComponentRef(this);
-}
-
-void MySQLParser::ComponentRefContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitComponentRef(this);
-}
-
-
-std::any MySQLParser::ComponentRefContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitComponentRef(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::ComponentRefContext* MySQLParser::componentRef() {
   ComponentRefContext *_localctx = _tracker.createInstance<ComponentRefContext>(_ctx, getState());
@@ -85295,25 +71400,6 @@ size_t MySQLParser::ResourceGroupRefContext::getRuleIndex() const {
   return MySQLParser::RuleResourceGroupRef;
 }
 
-void MySQLParser::ResourceGroupRefContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterResourceGroupRef(this);
-}
-
-void MySQLParser::ResourceGroupRefContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitResourceGroupRef(this);
-}
-
-
-std::any MySQLParser::ResourceGroupRefContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitResourceGroupRef(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::ResourceGroupRefContext* MySQLParser::resourceGroupRef() {
   ResourceGroupRefContext *_localctx = _tracker.createInstance<ResourceGroupRefContext>(_ctx, getState());
@@ -85356,25 +71442,6 @@ size_t MySQLParser::WindowNameContext::getRuleIndex() const {
   return MySQLParser::RuleWindowName;
 }
 
-void MySQLParser::WindowNameContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterWindowName(this);
-}
-
-void MySQLParser::WindowNameContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitWindowName(this);
-}
-
-
-std::any MySQLParser::WindowNameContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitWindowName(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::WindowNameContext* MySQLParser::windowName() {
   WindowNameContext *_localctx = _tracker.createInstance<WindowNameContext>(_ctx, getState());
@@ -85425,25 +71492,6 @@ size_t MySQLParser::PureIdentifierContext::getRuleIndex() const {
   return MySQLParser::RulePureIdentifier;
 }
 
-void MySQLParser::PureIdentifierContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterPureIdentifier(this);
-}
-
-void MySQLParser::PureIdentifierContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitPureIdentifier(this);
-}
-
-
-std::any MySQLParser::PureIdentifierContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitPureIdentifier(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::PureIdentifierContext* MySQLParser::pureIdentifier() {
   PureIdentifierContext *_localctx = _tracker.createInstance<PureIdentifierContext>(_ctx, getState());
@@ -85520,25 +71568,6 @@ size_t MySQLParser::IdentifierContext::getRuleIndex() const {
   return MySQLParser::RuleIdentifier;
 }
 
-void MySQLParser::IdentifierContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterIdentifier(this);
-}
-
-void MySQLParser::IdentifierContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitIdentifier(this);
-}
-
-
-std::any MySQLParser::IdentifierContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitIdentifier(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::IdentifierContext* MySQLParser::identifier() {
   IdentifierContext *_localctx = _tracker.createInstance<IdentifierContext>(_ctx, getState());
@@ -85610,25 +71639,6 @@ size_t MySQLParser::IdentifierListContext::getRuleIndex() const {
   return MySQLParser::RuleIdentifierList;
 }
 
-void MySQLParser::IdentifierListContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterIdentifierList(this);
-}
-
-void MySQLParser::IdentifierListContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitIdentifierList(this);
-}
-
-
-std::any MySQLParser::IdentifierListContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitIdentifierList(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::IdentifierListContext* MySQLParser::identifierList() {
   IdentifierListContext *_localctx = _tracker.createInstance<IdentifierListContext>(_ctx, getState());
@@ -85694,25 +71704,6 @@ size_t MySQLParser::IdentifierListWithParenthesesContext::getRuleIndex() const {
   return MySQLParser::RuleIdentifierListWithParentheses;
 }
 
-void MySQLParser::IdentifierListWithParenthesesContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterIdentifierListWithParentheses(this);
-}
-
-void MySQLParser::IdentifierListWithParenthesesContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitIdentifierListWithParentheses(this);
-}
-
-
-std::any MySQLParser::IdentifierListWithParenthesesContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitIdentifierListWithParentheses(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::IdentifierListWithParenthesesContext* MySQLParser::identifierListWithParentheses() {
   IdentifierListWithParenthesesContext *_localctx = _tracker.createInstance<IdentifierListWithParenthesesContext>(_ctx, getState());
@@ -85763,25 +71754,6 @@ size_t MySQLParser::QualifiedIdentifierContext::getRuleIndex() const {
   return MySQLParser::RuleQualifiedIdentifier;
 }
 
-void MySQLParser::QualifiedIdentifierContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterQualifiedIdentifier(this);
-}
-
-void MySQLParser::QualifiedIdentifierContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitQualifiedIdentifier(this);
-}
-
-
-std::any MySQLParser::QualifiedIdentifierContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitQualifiedIdentifier(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::QualifiedIdentifierContext* MySQLParser::qualifiedIdentifier() {
   QualifiedIdentifierContext *_localctx = _tracker.createInstance<QualifiedIdentifierContext>(_ctx, getState());
@@ -85845,25 +71817,6 @@ size_t MySQLParser::SimpleIdentifierContext::getRuleIndex() const {
   return MySQLParser::RuleSimpleIdentifier;
 }
 
-void MySQLParser::SimpleIdentifierContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterSimpleIdentifier(this);
-}
-
-void MySQLParser::SimpleIdentifierContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitSimpleIdentifier(this);
-}
-
-
-std::any MySQLParser::SimpleIdentifierContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitSimpleIdentifier(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::SimpleIdentifierContext* MySQLParser::simpleIdentifier() {
   SimpleIdentifierContext *_localctx = _tracker.createInstance<SimpleIdentifierContext>(_ctx, getState());
@@ -85927,25 +71880,6 @@ size_t MySQLParser::DotIdentifierContext::getRuleIndex() const {
   return MySQLParser::RuleDotIdentifier;
 }
 
-void MySQLParser::DotIdentifierContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterDotIdentifier(this);
-}
-
-void MySQLParser::DotIdentifierContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitDotIdentifier(this);
-}
-
-
-std::any MySQLParser::DotIdentifierContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitDotIdentifier(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::DotIdentifierContext* MySQLParser::dotIdentifier() {
   DotIdentifierContext *_localctx = _tracker.createInstance<DotIdentifierContext>(_ctx, getState());
@@ -86010,25 +71944,6 @@ size_t MySQLParser::Ulong_numberContext::getRuleIndex() const {
   return MySQLParser::RuleUlong_number;
 }
 
-void MySQLParser::Ulong_numberContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterUlong_number(this);
-}
-
-void MySQLParser::Ulong_numberContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitUlong_number(this);
-}
-
-
-std::any MySQLParser::Ulong_numberContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitUlong_number(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::Ulong_numberContext* MySQLParser::ulong_number() {
   Ulong_numberContext *_localctx = _tracker.createInstance<Ulong_numberContext>(_ctx, getState());
@@ -86092,25 +72007,6 @@ size_t MySQLParser::Real_ulong_numberContext::getRuleIndex() const {
   return MySQLParser::RuleReal_ulong_number;
 }
 
-void MySQLParser::Real_ulong_numberContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterReal_ulong_number(this);
-}
-
-void MySQLParser::Real_ulong_numberContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitReal_ulong_number(this);
-}
-
-
-std::any MySQLParser::Real_ulong_numberContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitReal_ulong_number(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::Real_ulong_numberContext* MySQLParser::real_ulong_number() {
   Real_ulong_numberContext *_localctx = _tracker.createInstance<Real_ulong_numberContext>(_ctx, getState());
@@ -86178,25 +72074,6 @@ size_t MySQLParser::UlonglongNumberContext::getRuleIndex() const {
   return MySQLParser::RuleUlonglongNumber;
 }
 
-void MySQLParser::UlonglongNumberContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterUlonglongNumber(this);
-}
-
-void MySQLParser::UlonglongNumberContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitUlonglongNumber(this);
-}
-
-
-std::any MySQLParser::UlonglongNumberContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitUlonglongNumber(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::UlonglongNumberContext* MySQLParser::ulonglongNumber() {
   UlonglongNumberContext *_localctx = _tracker.createInstance<UlonglongNumberContext>(_ctx, getState());
@@ -86260,25 +72137,6 @@ size_t MySQLParser::Real_ulonglong_numberContext::getRuleIndex() const {
   return MySQLParser::RuleReal_ulonglong_number;
 }
 
-void MySQLParser::Real_ulonglong_numberContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterReal_ulonglong_number(this);
-}
-
-void MySQLParser::Real_ulonglong_numberContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitReal_ulonglong_number(this);
-}
-
-
-std::any MySQLParser::Real_ulonglong_numberContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitReal_ulonglong_number(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::Real_ulonglong_numberContext* MySQLParser::real_ulonglong_number() {
   Real_ulonglong_numberContext *_localctx = _tracker.createInstance<Real_ulonglong_numberContext>(_ctx, getState());
@@ -86367,25 +72225,6 @@ size_t MySQLParser::SignedLiteralContext::getRuleIndex() const {
   return MySQLParser::RuleSignedLiteral;
 }
 
-void MySQLParser::SignedLiteralContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterSignedLiteral(this);
-}
-
-void MySQLParser::SignedLiteralContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitSignedLiteral(this);
-}
-
-
-std::any MySQLParser::SignedLiteralContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitSignedLiteral(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::SignedLiteralContext* MySQLParser::signedLiteral() {
   SignedLiteralContext *_localctx = _tracker.createInstance<SignedLiteralContext>(_ctx, getState());
@@ -86460,25 +72299,6 @@ size_t MySQLParser::SignedLiteralOrNullContext::getRuleIndex() const {
   return MySQLParser::RuleSignedLiteralOrNull;
 }
 
-void MySQLParser::SignedLiteralOrNullContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterSignedLiteralOrNull(this);
-}
-
-void MySQLParser::SignedLiteralOrNullContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitSignedLiteralOrNull(this);
-}
-
-
-std::any MySQLParser::SignedLiteralOrNullContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitSignedLiteralOrNull(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::SignedLiteralOrNullContext* MySQLParser::signedLiteralOrNull() {
   SignedLiteralOrNullContext *_localctx = _tracker.createInstance<SignedLiteralOrNullContext>(_ctx, getState());
@@ -86569,25 +72389,6 @@ size_t MySQLParser::LiteralContext::getRuleIndex() const {
   return MySQLParser::RuleLiteral;
 }
 
-void MySQLParser::LiteralContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterLiteral(this);
-}
-
-void MySQLParser::LiteralContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitLiteral(this);
-}
-
-
-std::any MySQLParser::LiteralContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitLiteral(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::LiteralContext* MySQLParser::literal() {
   LiteralContext *_localctx = _tracker.createInstance<LiteralContext>(_ctx, getState());
@@ -86697,25 +72498,6 @@ size_t MySQLParser::LiteralOrNullContext::getRuleIndex() const {
   return MySQLParser::RuleLiteralOrNull;
 }
 
-void MySQLParser::LiteralOrNullContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterLiteralOrNull(this);
-}
-
-void MySQLParser::LiteralOrNullContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitLiteralOrNull(this);
-}
-
-
-std::any MySQLParser::LiteralOrNullContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitLiteralOrNull(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::LiteralOrNullContext* MySQLParser::literalOrNull() {
   LiteralOrNullContext *_localctx = _tracker.createInstance<LiteralOrNullContext>(_ctx, getState());
@@ -86778,25 +72560,6 @@ size_t MySQLParser::NullAsLiteralContext::getRuleIndex() const {
   return MySQLParser::RuleNullAsLiteral;
 }
 
-void MySQLParser::NullAsLiteralContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterNullAsLiteral(this);
-}
-
-void MySQLParser::NullAsLiteralContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitNullAsLiteral(this);
-}
-
-
-std::any MySQLParser::NullAsLiteralContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitNullAsLiteral(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::NullAsLiteralContext* MySQLParser::nullAsLiteral() {
   NullAsLiteralContext *_localctx = _tracker.createInstance<NullAsLiteralContext>(_ctx, getState());
@@ -86859,25 +72622,6 @@ size_t MySQLParser::StringListContext::getRuleIndex() const {
   return MySQLParser::RuleStringList;
 }
 
-void MySQLParser::StringListContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterStringList(this);
-}
-
-void MySQLParser::StringListContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitStringList(this);
-}
-
-
-std::any MySQLParser::StringListContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitStringList(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::StringListContext* MySQLParser::stringList() {
   StringListContext *_localctx = _tracker.createInstance<StringListContext>(_ctx, getState());
@@ -86941,25 +72685,6 @@ size_t MySQLParser::TextStringLiteralContext::getRuleIndex() const {
   return MySQLParser::RuleTextStringLiteral;
 }
 
-void MySQLParser::TextStringLiteralContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterTextStringLiteral(this);
-}
-
-void MySQLParser::TextStringLiteralContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitTextStringLiteral(this);
-}
-
-
-std::any MySQLParser::TextStringLiteralContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitTextStringLiteral(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::TextStringLiteralContext* MySQLParser::textStringLiteral() {
   TextStringLiteralContext *_localctx = _tracker.createInstance<TextStringLiteralContext>(_ctx, getState());
@@ -87030,25 +72755,6 @@ size_t MySQLParser::TextStringContext::getRuleIndex() const {
   return MySQLParser::RuleTextString;
 }
 
-void MySQLParser::TextStringContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterTextString(this);
-}
-
-void MySQLParser::TextStringContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitTextString(this);
-}
-
-
-std::any MySQLParser::TextStringContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitTextString(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::TextStringContext* MySQLParser::textString() {
   TextStringContext *_localctx = _tracker.createInstance<TextStringContext>(_ctx, getState());
@@ -87119,25 +72825,6 @@ size_t MySQLParser::TextStringHashContext::getRuleIndex() const {
   return MySQLParser::RuleTextStringHash;
 }
 
-void MySQLParser::TextStringHashContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterTextStringHash(this);
-}
-
-void MySQLParser::TextStringHashContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitTextStringHash(this);
-}
-
-
-std::any MySQLParser::TextStringHashContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitTextStringHash(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::TextStringHashContext* MySQLParser::textStringHash() {
   TextStringHashContext *_localctx = _tracker.createInstance<TextStringHashContext>(_ctx, getState());
@@ -87212,25 +72899,6 @@ size_t MySQLParser::TextLiteralContext::getRuleIndex() const {
   return MySQLParser::RuleTextLiteral;
 }
 
-void MySQLParser::TextLiteralContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterTextLiteral(this);
-}
-
-void MySQLParser::TextLiteralContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitTextLiteral(this);
-}
-
-
-std::any MySQLParser::TextLiteralContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitTextLiteral(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::TextLiteralContext* MySQLParser::textLiteral() {
   TextLiteralContext *_localctx = _tracker.createInstance<TextLiteralContext>(_ctx, getState());
@@ -87315,25 +72983,6 @@ size_t MySQLParser::TextStringNoLinebreakContext::getRuleIndex() const {
   return MySQLParser::RuleTextStringNoLinebreak;
 }
 
-void MySQLParser::TextStringNoLinebreakContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterTextStringNoLinebreak(this);
-}
-
-void MySQLParser::TextStringNoLinebreakContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitTextStringNoLinebreak(this);
-}
-
-
-std::any MySQLParser::TextStringNoLinebreakContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitTextStringNoLinebreak(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::TextStringNoLinebreakContext* MySQLParser::textStringNoLinebreak() {
   TextStringNoLinebreakContext *_localctx = _tracker.createInstance<TextStringNoLinebreakContext>(_ctx, getState());
@@ -87388,25 +73037,6 @@ size_t MySQLParser::TextStringLiteralListContext::getRuleIndex() const {
   return MySQLParser::RuleTextStringLiteralList;
 }
 
-void MySQLParser::TextStringLiteralListContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterTextStringLiteralList(this);
-}
-
-void MySQLParser::TextStringLiteralListContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitTextStringLiteralList(this);
-}
-
-
-std::any MySQLParser::TextStringLiteralListContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitTextStringLiteralList(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::TextStringLiteralListContext* MySQLParser::textStringLiteralList() {
   TextStringLiteralListContext *_localctx = _tracker.createInstance<TextStringLiteralListContext>(_ctx, getState());
@@ -87472,25 +73102,6 @@ size_t MySQLParser::NumLiteralContext::getRuleIndex() const {
   return MySQLParser::RuleNumLiteral;
 }
 
-void MySQLParser::NumLiteralContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterNumLiteral(this);
-}
-
-void MySQLParser::NumLiteralContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitNumLiteral(this);
-}
-
-
-std::any MySQLParser::NumLiteralContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitNumLiteral(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::NumLiteralContext* MySQLParser::numLiteral() {
   NumLiteralContext *_localctx = _tracker.createInstance<NumLiteralContext>(_ctx, getState());
@@ -87563,25 +73174,6 @@ size_t MySQLParser::BoolLiteralContext::getRuleIndex() const {
   return MySQLParser::RuleBoolLiteral;
 }
 
-void MySQLParser::BoolLiteralContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterBoolLiteral(this);
-}
-
-void MySQLParser::BoolLiteralContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitBoolLiteral(this);
-}
-
-
-std::any MySQLParser::BoolLiteralContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitBoolLiteral(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::BoolLiteralContext* MySQLParser::boolLiteral() {
   BoolLiteralContext *_localctx = _tracker.createInstance<BoolLiteralContext>(_ctx, getState());
@@ -87636,25 +73228,6 @@ size_t MySQLParser::NullLiteralContext::getRuleIndex() const {
   return MySQLParser::RuleNullLiteral;
 }
 
-void MySQLParser::NullLiteralContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterNullLiteral(this);
-}
-
-void MySQLParser::NullLiteralContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitNullLiteral(this);
-}
-
-
-std::any MySQLParser::NullLiteralContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitNullLiteral(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::NullLiteralContext* MySQLParser::nullLiteral() {
   NullLiteralContext *_localctx = _tracker.createInstance<NullLiteralContext>(_ctx, getState());
@@ -87713,25 +73286,6 @@ size_t MySQLParser::Int64LiteralContext::getRuleIndex() const {
   return MySQLParser::RuleInt64Literal;
 }
 
-void MySQLParser::Int64LiteralContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterInt64Literal(this);
-}
-
-void MySQLParser::Int64LiteralContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitInt64Literal(this);
-}
-
-
-std::any MySQLParser::Int64LiteralContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitInt64Literal(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::Int64LiteralContext* MySQLParser::int64Literal() {
   Int64LiteralContext *_localctx = _tracker.createInstance<Int64LiteralContext>(_ctx, getState());
@@ -87795,25 +73349,6 @@ size_t MySQLParser::TemporalLiteralContext::getRuleIndex() const {
   return MySQLParser::RuleTemporalLiteral;
 }
 
-void MySQLParser::TemporalLiteralContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterTemporalLiteral(this);
-}
-
-void MySQLParser::TemporalLiteralContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitTemporalLiteral(this);
-}
-
-
-std::any MySQLParser::TemporalLiteralContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitTemporalLiteral(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::TemporalLiteralContext* MySQLParser::temporalLiteral() {
   TemporalLiteralContext *_localctx = _tracker.createInstance<TemporalLiteralContext>(_ctx, getState());
@@ -87890,25 +73425,6 @@ size_t MySQLParser::FloatOptionsContext::getRuleIndex() const {
   return MySQLParser::RuleFloatOptions;
 }
 
-void MySQLParser::FloatOptionsContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterFloatOptions(this);
-}
-
-void MySQLParser::FloatOptionsContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitFloatOptions(this);
-}
-
-
-std::any MySQLParser::FloatOptionsContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitFloatOptions(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::FloatOptionsContext* MySQLParser::floatOptions() {
   FloatOptionsContext *_localctx = _tracker.createInstance<FloatOptionsContext>(_ctx, getState());
@@ -87968,25 +73484,6 @@ size_t MySQLParser::StandardFloatOptionsContext::getRuleIndex() const {
   return MySQLParser::RuleStandardFloatOptions;
 }
 
-void MySQLParser::StandardFloatOptionsContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterStandardFloatOptions(this);
-}
-
-void MySQLParser::StandardFloatOptionsContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitStandardFloatOptions(this);
-}
-
-
-std::any MySQLParser::StandardFloatOptionsContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitStandardFloatOptions(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::StandardFloatOptionsContext* MySQLParser::standardFloatOptions() {
   StandardFloatOptionsContext *_localctx = _tracker.createInstance<StandardFloatOptionsContext>(_ctx, getState());
@@ -88045,25 +73542,6 @@ size_t MySQLParser::PrecisionContext::getRuleIndex() const {
   return MySQLParser::RulePrecision;
 }
 
-void MySQLParser::PrecisionContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterPrecision(this);
-}
-
-void MySQLParser::PrecisionContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitPrecision(this);
-}
-
-
-std::any MySQLParser::PrecisionContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitPrecision(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::PrecisionContext* MySQLParser::precision() {
   PrecisionContext *_localctx = _tracker.createInstance<PrecisionContext>(_ctx, getState());
@@ -88118,25 +73596,6 @@ size_t MySQLParser::TextOrIdentifierContext::getRuleIndex() const {
   return MySQLParser::RuleTextOrIdentifier;
 }
 
-void MySQLParser::TextOrIdentifierContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterTextOrIdentifier(this);
-}
-
-void MySQLParser::TextOrIdentifierContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitTextOrIdentifier(this);
-}
-
-
-std::any MySQLParser::TextOrIdentifierContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitTextOrIdentifier(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::TextOrIdentifierContext* MySQLParser::textOrIdentifier() {
   TextOrIdentifierContext *_localctx = _tracker.createInstance<TextOrIdentifierContext>(_ctx, getState());
@@ -88200,25 +73659,6 @@ size_t MySQLParser::LValueIdentifierContext::getRuleIndex() const {
   return MySQLParser::RuleLValueIdentifier;
 }
 
-void MySQLParser::LValueIdentifierContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterLValueIdentifier(this);
-}
-
-void MySQLParser::LValueIdentifierContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitLValueIdentifier(this);
-}
-
-
-std::any MySQLParser::LValueIdentifierContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitLValueIdentifier(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::LValueIdentifierContext* MySQLParser::lValueIdentifier() {
   LValueIdentifierContext *_localctx = _tracker.createInstance<LValueIdentifierContext>(_ctx, getState());
@@ -88282,25 +73722,6 @@ size_t MySQLParser::RoleIdentifierOrTextContext::getRuleIndex() const {
   return MySQLParser::RuleRoleIdentifierOrText;
 }
 
-void MySQLParser::RoleIdentifierOrTextContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterRoleIdentifierOrText(this);
-}
-
-void MySQLParser::RoleIdentifierOrTextContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitRoleIdentifierOrText(this);
-}
-
-
-std::any MySQLParser::RoleIdentifierOrTextContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitRoleIdentifierOrText(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::RoleIdentifierOrTextContext* MySQLParser::roleIdentifierOrText() {
   RoleIdentifierOrTextContext *_localctx = _tracker.createInstance<RoleIdentifierOrTextContext>(_ctx, getState());
@@ -88364,25 +73785,6 @@ size_t MySQLParser::SizeNumberContext::getRuleIndex() const {
   return MySQLParser::RuleSizeNumber;
 }
 
-void MySQLParser::SizeNumberContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterSizeNumber(this);
-}
-
-void MySQLParser::SizeNumberContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitSizeNumber(this);
-}
-
-
-std::any MySQLParser::SizeNumberContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitSizeNumber(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::SizeNumberContext* MySQLParser::sizeNumber() {
   SizeNumberContext *_localctx = _tracker.createInstance<SizeNumberContext>(_ctx, getState());
@@ -88446,25 +73848,6 @@ size_t MySQLParser::ParenthesesContext::getRuleIndex() const {
   return MySQLParser::RuleParentheses;
 }
 
-void MySQLParser::ParenthesesContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterParentheses(this);
-}
-
-void MySQLParser::ParenthesesContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitParentheses(this);
-}
-
-
-std::any MySQLParser::ParenthesesContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitParentheses(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::ParenthesesContext* MySQLParser::parentheses() {
   ParenthesesContext *_localctx = _tracker.createInstance<ParenthesesContext>(_ctx, getState());
@@ -88513,25 +73896,6 @@ size_t MySQLParser::EqualContext::getRuleIndex() const {
   return MySQLParser::RuleEqual;
 }
 
-void MySQLParser::EqualContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterEqual(this);
-}
-
-void MySQLParser::EqualContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitEqual(this);
-}
-
-
-std::any MySQLParser::EqualContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitEqual(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::EqualContext* MySQLParser::equal() {
   EqualContext *_localctx = _tracker.createInstance<EqualContext>(_ctx, getState());
@@ -88600,25 +73964,6 @@ size_t MySQLParser::OptionTypeContext::getRuleIndex() const {
   return MySQLParser::RuleOptionType;
 }
 
-void MySQLParser::OptionTypeContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterOptionType(this);
-}
-
-void MySQLParser::OptionTypeContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitOptionType(this);
-}
-
-
-std::any MySQLParser::OptionTypeContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitOptionType(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::OptionTypeContext* MySQLParser::optionType() {
   OptionTypeContext *_localctx = _tracker.createInstance<OptionTypeContext>(_ctx, getState());
@@ -88683,25 +74028,6 @@ size_t MySQLParser::RvalueSystemVariableTypeContext::getRuleIndex() const {
   return MySQLParser::RuleRvalueSystemVariableType;
 }
 
-void MySQLParser::RvalueSystemVariableTypeContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterRvalueSystemVariableType(this);
-}
-
-void MySQLParser::RvalueSystemVariableTypeContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitRvalueSystemVariableType(this);
-}
-
-
-std::any MySQLParser::RvalueSystemVariableTypeContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitRvalueSystemVariableType(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::RvalueSystemVariableTypeContext* MySQLParser::rvalueSystemVariableType() {
   RvalueSystemVariableTypeContext *_localctx = _tracker.createInstance<RvalueSystemVariableTypeContext>(_ctx, getState());
@@ -88794,25 +74120,6 @@ size_t MySQLParser::SetVarIdentTypeContext::getRuleIndex() const {
   return MySQLParser::RuleSetVarIdentType;
 }
 
-void MySQLParser::SetVarIdentTypeContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterSetVarIdentType(this);
-}
-
-void MySQLParser::SetVarIdentTypeContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitSetVarIdentType(this);
-}
-
-
-std::any MySQLParser::SetVarIdentTypeContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitSetVarIdentType(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::SetVarIdentTypeContext* MySQLParser::setVarIdentType() {
   SetVarIdentTypeContext *_localctx = _tracker.createInstance<SetVarIdentTypeContext>(_ctx, getState());
@@ -88867,25 +74174,6 @@ size_t MySQLParser::JsonAttributeContext::getRuleIndex() const {
   return MySQLParser::RuleJsonAttribute;
 }
 
-void MySQLParser::JsonAttributeContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterJsonAttribute(this);
-}
-
-void MySQLParser::JsonAttributeContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitJsonAttribute(this);
-}
-
-
-std::any MySQLParser::JsonAttributeContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitJsonAttribute(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::JsonAttributeContext* MySQLParser::jsonAttribute() {
   JsonAttributeContext *_localctx = _tracker.createInstance<JsonAttributeContext>(_ctx, getState());
@@ -88964,25 +74252,6 @@ size_t MySQLParser::IdentifierKeywordContext::getRuleIndex() const {
   return MySQLParser::RuleIdentifierKeyword;
 }
 
-void MySQLParser::IdentifierKeywordContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterIdentifierKeyword(this);
-}
-
-void MySQLParser::IdentifierKeywordContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitIdentifierKeyword(this);
-}
-
-
-std::any MySQLParser::IdentifierKeywordContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitIdentifierKeyword(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::IdentifierKeywordContext* MySQLParser::identifierKeyword() {
   IdentifierKeywordContext *_localctx = _tracker.createInstance<IdentifierKeywordContext>(_ctx, getState());
@@ -89124,25 +74393,6 @@ size_t MySQLParser::IdentifierKeywordsAmbiguous1RolesAndLabelsContext::getRuleIn
   return MySQLParser::RuleIdentifierKeywordsAmbiguous1RolesAndLabels;
 }
 
-void MySQLParser::IdentifierKeywordsAmbiguous1RolesAndLabelsContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterIdentifierKeywordsAmbiguous1RolesAndLabels(this);
-}
-
-void MySQLParser::IdentifierKeywordsAmbiguous1RolesAndLabelsContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitIdentifierKeywordsAmbiguous1RolesAndLabels(this);
-}
-
-
-std::any MySQLParser::IdentifierKeywordsAmbiguous1RolesAndLabelsContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitIdentifierKeywordsAmbiguous1RolesAndLabels(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::IdentifierKeywordsAmbiguous1RolesAndLabelsContext* MySQLParser::identifierKeywordsAmbiguous1RolesAndLabels() {
   IdentifierKeywordsAmbiguous1RolesAndLabelsContext *_localctx = _tracker.createInstance<IdentifierKeywordsAmbiguous1RolesAndLabelsContext>(_ctx, getState());
@@ -89329,25 +74579,6 @@ size_t MySQLParser::IdentifierKeywordsAmbiguous2LabelsContext::getRuleIndex() co
   return MySQLParser::RuleIdentifierKeywordsAmbiguous2Labels;
 }
 
-void MySQLParser::IdentifierKeywordsAmbiguous2LabelsContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterIdentifierKeywordsAmbiguous2Labels(this);
-}
-
-void MySQLParser::IdentifierKeywordsAmbiguous2LabelsContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitIdentifierKeywordsAmbiguous2Labels(this);
-}
-
-
-std::any MySQLParser::IdentifierKeywordsAmbiguous2LabelsContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitIdentifierKeywordsAmbiguous2Labels(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::IdentifierKeywordsAmbiguous2LabelsContext* MySQLParser::identifierKeywordsAmbiguous2Labels() {
   IdentifierKeywordsAmbiguous2LabelsContext *_localctx = _tracker.createInstance<IdentifierKeywordsAmbiguous2LabelsContext>(_ctx, getState());
@@ -89454,25 +74685,6 @@ size_t MySQLParser::LabelKeywordContext::getRuleIndex() const {
   return MySQLParser::RuleLabelKeyword;
 }
 
-void MySQLParser::LabelKeywordContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterLabelKeyword(this);
-}
-
-void MySQLParser::LabelKeywordContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitLabelKeyword(this);
-}
-
-
-std::any MySQLParser::LabelKeywordContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitLabelKeyword(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::LabelKeywordContext* MySQLParser::labelKeyword() {
   LabelKeywordContext *_localctx = _tracker.createInstance<LabelKeywordContext>(_ctx, getState());
@@ -89653,25 +74865,6 @@ size_t MySQLParser::IdentifierKeywordsAmbiguous3RolesContext::getRuleIndex() con
   return MySQLParser::RuleIdentifierKeywordsAmbiguous3Roles;
 }
 
-void MySQLParser::IdentifierKeywordsAmbiguous3RolesContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterIdentifierKeywordsAmbiguous3Roles(this);
-}
-
-void MySQLParser::IdentifierKeywordsAmbiguous3RolesContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitIdentifierKeywordsAmbiguous3Roles(this);
-}
-
-
-std::any MySQLParser::IdentifierKeywordsAmbiguous3RolesContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitIdentifierKeywordsAmbiguous3Roles(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::IdentifierKeywordsAmbiguous3RolesContext* MySQLParser::identifierKeywordsAmbiguous3Roles() {
   IdentifierKeywordsAmbiguous3RolesContext *_localctx = _tracker.createInstance<IdentifierKeywordsAmbiguous3RolesContext>(_ctx, getState());
@@ -91443,25 +76636,6 @@ size_t MySQLParser::IdentifierKeywordsUnambiguousContext::getRuleIndex() const {
   return MySQLParser::RuleIdentifierKeywordsUnambiguous;
 }
 
-void MySQLParser::IdentifierKeywordsUnambiguousContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterIdentifierKeywordsUnambiguous(this);
-}
-
-void MySQLParser::IdentifierKeywordsUnambiguousContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitIdentifierKeywordsUnambiguous(this);
-}
-
-
-std::any MySQLParser::IdentifierKeywordsUnambiguousContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitIdentifierKeywordsUnambiguous(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::IdentifierKeywordsUnambiguousContext* MySQLParser::identifierKeywordsUnambiguous() {
   IdentifierKeywordsUnambiguousContext *_localctx = _tracker.createInstance<IdentifierKeywordsUnambiguousContext>(_ctx, getState());
@@ -91588,25 +76762,6 @@ size_t MySQLParser::RoleKeywordContext::getRuleIndex() const {
   return MySQLParser::RuleRoleKeyword;
 }
 
-void MySQLParser::RoleKeywordContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterRoleKeyword(this);
-}
-
-void MySQLParser::RoleKeywordContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitRoleKeyword(this);
-}
-
-
-std::any MySQLParser::RoleKeywordContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitRoleKeyword(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::RoleKeywordContext* MySQLParser::roleKeyword() {
   RoleKeywordContext *_localctx = _tracker.createInstance<RoleKeywordContext>(_ctx, getState());
@@ -91719,25 +76874,6 @@ size_t MySQLParser::LValueKeywordContext::getRuleIndex() const {
   return MySQLParser::RuleLValueKeyword;
 }
 
-void MySQLParser::LValueKeywordContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterLValueKeyword(this);
-}
-
-void MySQLParser::LValueKeywordContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitLValueKeyword(this);
-}
-
-
-std::any MySQLParser::LValueKeywordContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitLValueKeyword(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::LValueKeywordContext* MySQLParser::lValueKeyword() {
   LValueKeywordContext *_localctx = _tracker.createInstance<LValueKeywordContext>(_ctx, getState());
@@ -91827,25 +76963,6 @@ size_t MySQLParser::IdentifierKeywordsAmbiguous4SystemVariablesContext::getRuleI
   return MySQLParser::RuleIdentifierKeywordsAmbiguous4SystemVariables;
 }
 
-void MySQLParser::IdentifierKeywordsAmbiguous4SystemVariablesContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterIdentifierKeywordsAmbiguous4SystemVariables(this);
-}
-
-void MySQLParser::IdentifierKeywordsAmbiguous4SystemVariablesContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitIdentifierKeywordsAmbiguous4SystemVariables(this);
-}
-
-
-std::any MySQLParser::IdentifierKeywordsAmbiguous4SystemVariablesContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitIdentifierKeywordsAmbiguous4SystemVariables(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::IdentifierKeywordsAmbiguous4SystemVariablesContext* MySQLParser::identifierKeywordsAmbiguous4SystemVariables() {
   IdentifierKeywordsAmbiguous4SystemVariablesContext *_localctx = _tracker.createInstance<IdentifierKeywordsAmbiguous4SystemVariablesContext>(_ctx, getState());
@@ -92142,25 +77259,6 @@ size_t MySQLParser::RoleOrIdentifierKeywordContext::getRuleIndex() const {
   return MySQLParser::RuleRoleOrIdentifierKeyword;
 }
 
-void MySQLParser::RoleOrIdentifierKeywordContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterRoleOrIdentifierKeyword(this);
-}
-
-void MySQLParser::RoleOrIdentifierKeywordContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitRoleOrIdentifierKeyword(this);
-}
-
-
-std::any MySQLParser::RoleOrIdentifierKeywordContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitRoleOrIdentifierKeyword(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::RoleOrIdentifierKeywordContext* MySQLParser::roleOrIdentifierKeyword() {
   RoleOrIdentifierKeywordContext *_localctx = _tracker.createInstance<RoleOrIdentifierKeywordContext>(_ctx, getState());
@@ -93540,25 +78638,6 @@ size_t MySQLParser::RoleOrLabelKeywordContext::getRuleIndex() const {
   return MySQLParser::RuleRoleOrLabelKeyword;
 }
 
-void MySQLParser::RoleOrLabelKeywordContext::enterRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->enterRoleOrLabelKeyword(this);
-}
-
-void MySQLParser::RoleOrLabelKeywordContext::exitRule(tree::ParseTreeListener *listener) {
-  auto parserListener = dynamic_cast<MySQLParserListener *>(listener);
-  if (parserListener != nullptr)
-    parserListener->exitRoleOrLabelKeyword(this);
-}
-
-
-std::any MySQLParser::RoleOrLabelKeywordContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<MySQLParserVisitor*>(visitor))
-    return parserVisitor->visitRoleOrLabelKeyword(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 MySQLParser::RoleOrLabelKeywordContext* MySQLParser::roleOrLabelKeyword() {
   RoleOrLabelKeywordContext *_localctx = _tracker.createInstance<RoleOrLabelKeywordContext>(_ctx, getState());

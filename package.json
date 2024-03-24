@@ -17,26 +17,23 @@
         "type": "git",
         "url": "git+https://github.com/mike-lischke/antl4-runtime-benchmarks.git"
     },
-    "scripts": {
-        "generate-benchmark-parsers": "cd ./src/mysql && ./generate.sh",
-        "build-cpp-wasm": "cd src/mysql/targets/antlr4-cpp-wasm/ && ./build-release.sh",
-        "build-cpp": "cd src/mysql/targets/antlr4-cpp/ && ./build.sh",
-        "run-cpp-benchmark": "cd src/mysql/targets/antlr4-cpp/ && ./mysql-benchmark",
-        "run-antlr4ng-benchmark": "node --no-warnings=ExperimentalWarning --loader ts-node/esm src/mysql/targets/antlr4ng/run-benchmark.ts",
-        "run-antlr4-benchmark": "node --no-warnings=ExperimentalWarning --loader ts-node/esm src/mysql/targets/antlr4/run-benchmark.ts",
-        "run-antlr4ts-benchmark": "node --no-warnings=ExperimentalWarning --loader ts-node/esm src/mysql/targets/antlr4ts/run-benchmark.ts",
-        "run-antlr4wasm-benchmark": "node --no-warnings=ExperimentalWarning --loader ts-node/esm src/mysql/targets/antlr4-cpp-wasm/run-benchmark.ts"
-    },
+    "scripts": {},
     "devDependencies": {
         "@tsconfig/node-lts-strictest-esm": "18.12.1",
         "@types/emscripten": "1.39.10",
         "@types/node": "20.11.26",
         "antlr4": "4.13.1-patch-1",
-        "antlr4ng": "3.0.3",
+        "antlr4ng": "3.0.4",
         "antlr4ng-cli": "2.0.0",
         "antlr4ts": "0.5.0-alpha.4",
         "antlr4ts-cli": "0.5.0-alpha.4",
+        "@typescript-eslint/eslint-plugin": "7.3.1",
+        "@typescript-eslint/parser": "7.3.1",
+        "eslint": "8.57.0",
+        "eslint-plugin-import": "2.29.1",
+        "eslint-plugin-jsdoc": "48.2.1",
+        "eslint-plugin-prefer-arrow": "1.2.3",
         "ts-node": "10.9.2",
-        "typescript": "5.4.2"
+        "typescript": "5.4.3"
     }
 }

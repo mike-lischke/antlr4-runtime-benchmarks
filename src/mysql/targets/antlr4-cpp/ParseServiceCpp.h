@@ -42,7 +42,9 @@ class ParseServiceCpp {
 public:
   ParseServiceCpp(size_t serverVersion);
 
-  bool errorCheck(const std::string &text);
+  void tokenize(const std::string &text);
+  bool errorCheck();
+  void clearDFA();
 
   void determineStatementRanges(const char *sql, size_t length, const std::string &initialDelimiter,
                                 std::vector<StatementRange> &ranges, const std::string &lineBreak = "\n");

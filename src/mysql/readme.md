@@ -26,15 +26,6 @@ The large binary inserts file contains only a few dozen queries, but they are re
 
 Cold tests only ran once, while the warm tests have been executed 5 times, the 2 slowest ones have been removed, and the average was computed from the remaining 3.
 
-## Emscripten Notes
-
-- Multiple inheritance is a problem for emscripten. You can specify only one base class. Using the derived class in places for any other base class is needed will cause an error.
-- Exception handling is tricky.
-  - By default an exception in wasm code just stops the app.
-  - Enable catching either with `-fexceptions` or `-fwasm-exceptions`. The latter is more efficient but requires a newer browser.
-  - Using wasm exceptions requires [additional handling](https://emscripten.org/docs/porting/exceptions.html#handling-c-exceptions-from-javascript).
-  - Exceptions thrown in C++ cannot be identified using `instanceof` in JS. To get wasm exception information, you can enable `-sEXPORT_EXCEPTION_HANDLING_HELPERS`, but that will partially disable optimization.
-
 ## Running the Benchmarks
 
 ### Installing Dependencies
@@ -55,7 +46,21 @@ npm run generate-benchmark-parsers
 
 which will run a script that does the actual work.
 
-> Note: there's no Windows batch file yet. You have to run each of the calls to ANTLR4 manually.
+> Note: there's no Windows batch file yet. You have to run each of the calls to ANTLR4 manually, which are batch file that is called by the above NPM script.
+
+Unfortunately, there's a manual step you need to make for the WASM runtime: the import paths in MySQLLexer.ts and MySQLParser.ts are generated wrongly. Change:
+
+```typescript
+from "../../../../src/antlr4-runtime.js"
+```
+
+to
+
+```typescript
+from "./antlr4-runtime.js"
+```
+
+in both files.
 
 Then build the C++ benchmark app, by executing:
 

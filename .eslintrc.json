@@ -1,31 +1,27 @@
 {
     "env": {
-        "browser": true,
+        "browser": false,
         "node": true,
         "es6": true,
         "jest": true
     },
     "extends": [
+        "eslint:recommended",
         "plugin:@typescript-eslint/recommended",
-        "plugin:@typescript-eslint/eslint-recommended",
         "plugin:@typescript-eslint/recommended-requiring-type-checking",
         "plugin:jsdoc/recommended"
     ],
     "ignorePatterns": [
         "**/generated/*",
-        "lib/**/*",
-        "jest.config.ts"
+        "node_modules"
     ],
     "parser": "@typescript-eslint/parser",
     "parserOptions": {
-        "project": [
-            "tsconfig.json"
-            //"tests/tsconfig.json"
-        ],
+        "project": "tsconfig.json",
         "sourceType": "module",
         "implicitStrict": true,
         "ecmaFeatures": {},
-        "ecmaVersion": 14
+        "ecmaVersion": 2022
     },
     "plugins": [
         "@typescript-eslint",
@@ -33,14 +29,12 @@
         "prefer-arrow",
         "eslint-plugin-import"
     ],
-    "settings": {},
-    "globals": {},
     "rules": {
         // Some base rules must be disabled as they return wrong results.
+        // There are specialized rules instead in the tslint rule section.
         "no-explicit-any": "off",
         "no-use-before-define": "off",
         "no-shadow": "off",
-        "no-array-constructor": "off",
         "array-callback-return": [
             "warn"
         ],
@@ -59,12 +53,17 @@
             "smart"
         ],
         "new-parens": "error",
+        "no-array-constructor": [
+            "warn"
+        ],
         "no-caller": "error",
         "no-cond-assign": "error",
         "no-const-assign": [
             "warn"
         ],
-        "no-control-regex": "off",
+        "no-control-regex": [
+            "warn"
+        ],
         "no-delete-var": [
             "warn"
         ],
@@ -196,13 +195,22 @@
         "no-octal-escape": [
             "warn"
         ],
-        "no-redeclare": "off",
+        "no-redeclare": [
+            "warn",
+            {
+                "builtinGlobals": false
+            }
+        ],
         "no-regex-spaces": [
             "warn"
         ],
         "no-restricted-syntax": [
-            "warn",
-            "WithStatement"
+            "off",
+            "WithStatement",
+            {
+                "selector": "SwitchCase:has(*.consequent[type!=\"BlockStatement\"])",
+                "message": "Switch cases without blocks are disallowed."
+            }
         ],
         "no-script-url": [
             "warn"
@@ -286,7 +294,6 @@
             "scrollTo",
             "scrollX",
             "scrollY",
-            "self",
             "status",
             "statusbar",
             "stop",
@@ -324,6 +331,9 @@
         ],
         "no-whitespace-before-property": [
             "warn"
+        ],
+        "no-constant-condition": [
+            "off"
         ],
         "require-yield": [
             "warn"
@@ -364,21 +374,12 @@
         "dot-notation": "error",
         "eol-last": "error",
         "guard-for-in": "off",
-        "id-blacklist": [
-            "error",
-            "any",
-            "number",
-            "string",
-            "boolean"
-        ],
         "id-match": "error",
         "import/order": "off",
+        "lines-around-comment": "off",
         "max-classes-per-file": [
             "error",
-            {
-                "ignoreExpressions": true,
-                "max": 1
-            }
+            1
         ],
         "max-len": [
             "error",
@@ -396,13 +397,7 @@
         "no-empty": "error",
         "no-invalid-this": "off",
         "no-magic-numbers": "off",
-        "no-multiple-empty-lines": [
-            "error",
-            {
-                "max": 1,
-                "maxEOF": 1
-            }
-        ],
+        "no-multiple-empty-lines": "error",
         "no-return-await": "error",
         "no-trailing-spaces": "error",
         "no-undef-init": "error",
@@ -443,7 +438,6 @@
             "never"
         ],
         "indent": "off",
-        "@typescript-eslint/no-array-constructor": "error",
         "@typescript-eslint/no-unused-vars": [
             "warn",
             {
@@ -462,7 +456,7 @@
         ],
         "@typescript-eslint/ban-types": "off",
         "@typescript-eslint/ban-ts-comment": "off",
-        "@typescript-eslint/consistent-type-definitions": "error",
+        "@typescript-eslint/consistent-type-definitions": "off",
         "@typescript-eslint/explicit-member-accessibility": [
             "error",
             {
@@ -475,7 +469,6 @@
         "@typescript-eslint/member-ordering": [
             "error",
             {
-                // No ordering for getters and setters here, as that conflicts currently with the rule adjacent-overload-signatures.
                 "default": [
                     // Index signature
                     "signature",
@@ -542,7 +535,7 @@
             "error",
             "always"
         ],
-        "@typescript-eslint/unified-signatures": "off",
+        "@typescript-eslint/unified-signatures": "error",
         "@typescript-eslint/prefer-regexp-exec": "off",
         "@typescript-eslint/naming-convention": [
             "error",
@@ -552,7 +545,7 @@
                     "camelCase"
                 ],
                 "filter": {
-                    "regex": "^_",
+                    "regex": "^_|^[0-9]+$",
                     "match": false
                 }
             },
@@ -594,15 +587,38 @@
                 "prefix": [
                     "I"
                 ]
+            },
+            {
+                "selector": "import",
+                "format": [
+                    "PascalCase",
+                    "camelCase"
+                ]
             }
         ],
-        "@typescript-eslint/restrict-template-expressions": "off",
-        "@typescript-eslint/restrict-plus-operands": "off",
+        "@typescript-eslint/triple-slash-reference": "off",
+        "@typescript-eslint/no-base-to-string": "off",
+        "@typescript-eslint/no-redundant-type-constituents": "off",
+        "@typescript-eslint/lines-around-comment": [
+            "warn",
+            {
+                "beforeBlockComment": true,
+                "beforeLineComment": true,
+                "allowBlockStart": true,
+                "allowClassStart": true,
+                "allowObjectStart": true,
+                "allowArrayStart": true,
+                "allowInterfaceStart": true,
+                "allowTypeStart": true,
+                "allowEnumStart": true,
+                "allowModuleStart": true
+            }
+        ],
         "jsdoc/check-alignment": "error",
         "jsdoc/check-indentation": "off",
-        "jsdoc/newline-after-description": "error",
         "jsdoc/require-param-type": "off",
         "jsdoc/require-returns-type": "off",
+        "jsdoc/no-undefined-types": "off",
         "jsdoc/tag-lines": [
             // Have to switch this off, as it is not good enough to be used.
             "off"

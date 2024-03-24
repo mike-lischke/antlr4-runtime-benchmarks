@@ -69,12 +69,23 @@ ParseServiceCpp::ParseServiceCpp(size_t serverVersion) : lexer(&input), tokens(&
   parser.sqlMode = lexer.sqlMode;
 }
 
-bool ParseServiceCpp::errorCheck(const std::string &text) {
-  parser.removeParseListeners();
+void ParseServiceCpp::tokenize(const std::string &text) {
   input.load(text);
+  lexer.reset();
+  lexer.setInputStream(&input); // Not just reset(), which only rewinds the current position.
+  tokens.setTokenSource(&lexer);
+  tokens.fill();
+}
+
+bool ParseServiceCpp::errorCheck() {
   startParsing(true);
 
   return errors.empty();
+}
+
+void ParseServiceCpp::clearDFA() {
+  lexer.getInterpreter<LexerATNSimulator>()->clearDFA();
+  parser.getInterpreter<ParserATNSimulator>()->clearDFA();
 }
 
 void ParseServiceCpp::determineStatementRanges(const char *sql, size_t length, const std::string &initialDelimiter,
@@ -270,11 +281,8 @@ void ParseServiceCpp::determineStatementRanges(const char *sql, size_t length, c
 
 ParseTree *ParseServiceCpp::startParsing(bool fast) {
   errors.clear();
-  lexer.reset();
-  lexer.setInputStream(&input); // Not just reset(), which only rewinds the current position.
-  tokens.setTokenSource(&lexer);
-
   parser.reset();
+  parser.setTokenStream(&tokens);
   parser.setBuildParseTree(!fast);
 
   // First parse with the bail error strategy to get quick feedback for correct queries.
