@@ -8,4 +8,4 @@ Each benchmark group has an own readme file, explaining the installation details
 
 Here's the list of benchmark groups:
 
-- MySQL: [readme](src/MySQL/readme.md)
+- MySQL: [readme](src/mysql/readme.md)
