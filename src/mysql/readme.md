@@ -7,7 +7,7 @@ All times are given in milliseconds. The 3 values in a table cell are: lexing⧸
 
 This table contains the results of a cold run of each runtime. Although all files are parsed in the same loop, a cold run is achieved by resetting both the lexer and the parser DFA for each file.
 
-|❄️|statements.txt|bitrix\_queries\_cut.sql|sakila-data.sql|Total|
+|❄️|statements.txt|bitrix-queries-cut.sql|sakila-data.sql|Total|
 |---|---|---|---|---|---|
 |antlr4-cpp|70⧸826⧸896|31⧸174⧸205|2782⧸421⧸3203|2883⧸1421⧸4304|
 |antlr4ng|202⧸2597⧸2799|101⧸536⧸637|7010⧸2091⧸9101|7313⧸5224⧸12537|
