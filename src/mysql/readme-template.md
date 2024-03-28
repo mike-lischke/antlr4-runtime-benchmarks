@@ -9,21 +9,13 @@ This table contains the results of a cold run of each runtime. Although all file
 
 |❄️|statements.txt|bitrix\_queries\_cut.sql|sakila-data.sql|Total|
 |:---:|---:|---:|---:|---:|---:|
-|antlr4-cpp|70⧸826⧸896|31⧸174⧸205|2782⧸421⧸3203|2883⧸1421⧸4304|
-|antlr4ng|202⧸2597⧸2799|101⧸536⧸637|7010⧸2091⧸9101|7313⧸5224⧸12537|
-|antlr4ts|310⧸2812⧸3122|128⧸518⧸646|10815⧸531⧸11346|11253⧸3861⧸15114|
-|antlr4|0⧸8323⧸8323|0⧸1111⧸1111|0⧸10714⧸10714|0⧸20148⧸20148|
-|antlr4wasm|390⧸3091⧸3481|176⧸885⧸1061|11345⧸24577⧸35922|11911⧸28553⧸40464|
+⫸cold table⫷
 
 This table contains the results of a warm run of each runtime. For this each parse run is executed 5 times (except for the WASM target, which has no stable memory houshold and crashes Node.js with more than 2 runs). The two slowest runs are then removed (except for the WASM runtime) and an average calculated for the rest.
 
 |🔥|statements.txt|bitrix\_queries\_cut.sql|sakila-data.sql|Total|
 |:---:|---:|---:|---:|---:|---:|
-|antlr4-cpp|57⧸18⧸75|28⧸14⧸42|2718⧸401⧸3120|2803⧸433⧸3236|
-|antlr4ng|143⧸99⧸242|69⧸75⧸143|7075⧸2086⧸9161|7286⧸2260⧸9546|
-|antlr4|0⧸225⧸225|0⧸107⧸107|0⧸10621⧸10621|0⧸10954⧸10954|
-|antlr4ts|224⧸40⧸264|108⧸22⧸130|10634⧸466⧸11100|10966⧸529⧸11495|
-|antlr4wasm|495⧸2113⧸2608|170⧸693⧸862|11515⧸28022⧸39537|12180⧸30827⧸43007|
+⫸warm table⫷
 
 Both tables are sorted by the total execution time, with the fastest at the top.
 

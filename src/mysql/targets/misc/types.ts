@@ -5,7 +5,7 @@
 
 /** Some code was taken from the MySQL Shell for VS Code extension. */
 
-export interface TextSpan {
+export interface ITextSpan {
     start: number;
     length: number;
 }
@@ -35,7 +35,7 @@ export interface IStatementSpan {
     delimiter?: string;
 
     /** Start and length of the entire statement, including leading whitespaces. */
-    span: TextSpan;
+    span: ITextSpan;
 
     contentStart: number;
 

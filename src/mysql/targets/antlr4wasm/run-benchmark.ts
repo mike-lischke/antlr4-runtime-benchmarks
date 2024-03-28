@@ -20,6 +20,6 @@ Object.keys(rdbmsInfo.characterSets).forEach((set: string) => {
 });
 
 const parseService = new ParseService(charSets);
-runBenchmark("antlr4wasm", parseService, 4);
+await runBenchmark("antlr4wasm", parseService, 3);
 
 parseService.cleanup();

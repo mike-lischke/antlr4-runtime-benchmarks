@@ -21,4 +21,4 @@ Object.keys(rdbmsInfo.characterSets).forEach((set: string) => {
 });
 
 const parseService = new ParseService(charSets);
-runBenchmark("antlr4ts", parseService, 6);
+await runBenchmark("antlr4ts", parseService, 6);

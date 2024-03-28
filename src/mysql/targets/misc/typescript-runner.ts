@@ -40,6 +40,19 @@ const relationMap = new Map<string, number>([
 ]);
 
 /**
+ * Allows to wait for the next Node.js run loop, after all I/O tasks, micro tasks and tick callbacks were processed.
+ *
+ * @returns A promise which fulfills when setTimeout callbacks are executed (which are the last tasks in a run loop).
+ */
+export const nextRunLoop = async (): Promise<void> => {
+    return new Promise((resolve) => {
+        setTimeout(() => {
+            resolve();
+        }, 0);
+    });
+};
+
+/**
  * Takes a block of SQL text and splits it into individual statements, by determining start position,
  * length and current delimiter for each. It is assumed the line break is a simple \n.
  * Note: the length includes anything up to (and including) the delimiter position.
@@ -431,8 +444,8 @@ const testFiles: ITestFile[] = [
  * @param parseService The service to use for parsing.
  * @param clearDFA If true the DFA is cleared before each file is parsed.
  */
-const parseFiles = (parseService: IParseService, clearDFA: boolean) => {
-    testFiles.forEach((entry) => {
+const parseFiles = async (parseService: IParseService, clearDFA: boolean) => {
+    for (const entry of testFiles) {
         const sql = fs.readFileSync(path.join(runnerPath, entry.name), { encoding: "utf-8" });
         const ranges = determineStatementRanges(sql, entry.initialDelimiter);
 
@@ -445,7 +458,9 @@ const parseFiles = (parseService: IParseService, clearDFA: boolean) => {
 
         let tokenizationTime = 0;
         let parseTime = 0;
-        ranges.forEach((range, index) => {
+        for (let i = 0; i < ranges.length; ++i) {
+            const range = ranges[i];
+
             // The delimiter is considered part of the statement (e.g. for editing purposes)
             // but must be ignored for parsing.
             const end = range.span.start + range.span.length - (range.delimiter?.length ?? 0);
@@ -468,18 +483,24 @@ const parseFiles = (parseService: IParseService, clearDFA: boolean) => {
                 }
 
                 if (error) {
-                    throw new Error(`This query failed to parse (${index}: ${checkResult.version}):\n${statement}\n` +
+                    throw new Error(`This query failed to parse: ${checkResult.version}):\n${statement}\n` +
                         `with error: ${error.message}, line: ${error.line - 1}, column: ${error.offset}`);
                 }
             } else {
                 // Ignore all other statements. Since we don't check for versions below 8.0 in the grammar they
                 // may unexpectedly succeed.
             }
-        });
+
+            if (i % 30 === 0) {
+                // Yield some time to the event loop every 30 statements. This allows progress indicators to update.
+                // Don't do that too often, though, as it has a performance impact.
+                await nextRunLoop();
+            }
+        }
 
         console.log(`    ${path.basename(entry.name)}: ${Math.round(tokenizationTime)} ms, ` +
             `${Math.round(parseTime)} ms`);
-    });
+    }
 };
 
 /**
@@ -491,12 +512,12 @@ const parseFiles = (parseService: IParseService, clearDFA: boolean) => {
  * @param parseService The service to use for parsing.
  * @param rounds The number of rounds to run (the wasm target cannot run 6 times, without crashing Node).
  */
-export const runBenchmark = (title: string, parseService: IParseService, rounds: number): void => {
+export const runBenchmark = async (title: string, parseService: IParseService, rounds: number): Promise<void> => {
     console.log("begin benchmark: " + title);
 
-    parseFiles(parseService, true);
+    await parseFiles(parseService, true);
     for (let i = 0; i < rounds - 1; ++i) {
-        parseFiles(parseService, false);
+        await parseFiles(parseService, false);
     }
 
     console.log("end benchmark: " + title + "\n");
