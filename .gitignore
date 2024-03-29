@@ -18,3 +18,5 @@ node_modules
 
 # Generated files
 #/tests/generated
+*.interp
+*.tokens

@@ -13,7 +13,9 @@
     ],
     "ignorePatterns": [
         "**/generated/*",
-        "node_modules"
+        "node_modules",
+        "src/**/*Parser.ts",
+        "src/**/*Lexer.ts"
     ],
     "parser": "@typescript-eslint/parser",
     "parserOptions": {

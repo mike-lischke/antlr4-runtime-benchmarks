@@ -1,0 +1,12 @@
+{
+    "type": "module",
+    "scripts": {
+        "generate-benchmark-parsers": "./generate.sh",
+        "build-cpp": "cd targets/antlr4-cpp/ && ./build.sh",
+        "run-cpp-benchmark": "cd targets/antlr4-cpp/ && ./mysql-benchmark",
+        "run-antlr4ng-benchmark": "node --no-warnings=ExperimentalWarning --loader ts-node/esm targets/antlr4ng/run-benchmark.ts",
+        "run-antlr4-benchmark": "node --no-warnings=ExperimentalWarning --loader ts-node/esm targets/antlr4/run-benchmark.ts",
+        "run-antlr4ts-benchmark": "node --no-warnings=ExperimentalWarning --loader ts-node/esm targets/antlr4ts/run-benchmark.ts",
+        "run-all-benchmarks": "node --max-old-space-size=8192 --no-warnings=ExperimentalWarning --loader ts-node/esm run-all-benchmarks.ts"
+    }
+}

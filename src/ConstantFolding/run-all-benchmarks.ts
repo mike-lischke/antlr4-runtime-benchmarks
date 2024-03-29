@@ -103,7 +103,7 @@ process.stdout.write("  Running the C++ benchmark...");
 const execAsync = util.promisify(exec);
 
 const spinnerInterval = startSpinner();
-const { stdout } = await execAsync("./mysql-benchmark", { cwd: "targets/antlr4-cpp" });
+const { stdout } = await execAsync("./constant-folding-benchmark", { cwd: "targets/antlr4-cpp" });
 stopSpinner(spinnerInterval);
 
 const result = stdout.toString().trim();
@@ -116,12 +116,11 @@ if (parsed) {
 await runTypeScriptBenchmark("antlr4ng");
 await runTypeScriptBenchmark("antlr4ts");
 await runTypeScriptBenchmark("antlr4");
-await runTypeScriptBenchmark("antlr4wasm");
 
 // Process the collected results and generate the output structure.
 
 // This is the list of test files we expect to see in the results, in this order.
-const expectedFiles = ["statements.txt", "bitrix_queries_cut.sql", "sakila-data.sql"];
+const expectedFiles = ["input"];
 
 const resultTableCold: IResultLine[] = [];
 const resultTableWarm: IResultLine[] = [];
