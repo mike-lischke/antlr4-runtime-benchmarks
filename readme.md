@@ -1,4 +1,4 @@
-# Benchmarking ANTLR4 With Different Runtimes And Grammars
+# ANTLR4 Benchmarks
 
 This repository consists of various benchmarks that can be used to measure the performance of certain ANTLR4 runtimes in conjunction with a selected grammar. 
 
@@ -27,6 +27,6 @@ As a scripting language there's nothing you need to prepare. If you have Node.js
 
 ### C++
 
-The C++ benchmark need a static library. You can either provide one yourself (e.g. from other projects) and copy that to the <root>/antlr4-cpp-runtime/lib folder. It must be named `antlr4-runtime` (plus the platform dependent extension like `.a` on Linux + macOS) so that the build scripts can find it for linking.
+The C++ benchmarks need the C++ runtime as a dynamic library. You can either provide one yourself (e.g. from other projects) and copy that to the <root>/antlr4-cpp-runtime/lib folder. It must be named `antlr4-runtime` (plus the platform dependent extension like `.so` on Linux or `.dylib` on macOS) so that the build scripts can find it for linking.
 
 Or you can use a build script from this project, which I plan to add a bit later.

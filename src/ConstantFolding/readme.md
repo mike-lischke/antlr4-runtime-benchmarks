@@ -1,6 +1,6 @@
 # Constant Folding Benchmarks
 
-In the benchmarks here we use a simple grammar with 64 tokens, all as alts in a single parser rule.
+This was copied from [another repository](https://github.com/KvanTTT/AntlrBenchmarks/tree/master/ConstantFoldingBenchmark) and adjusted for use here. It's a very simple grammar with 64 tokens, all as alts in a single parser rule, that executes very quickly in the original implmementation. Since execution times in the microseconds range are not reliable, the input has been adjusted (runtime generated) to increase the overall execution time.
 
 ## Results
 
@@ -10,21 +10,21 @@ This table contains the results of a cold run of each runtime. Although all file
 
 |❄️|input|Total|
 |:---:|---:|---:|
-|antlr4-cpp|173⧸39⧸212|173⧸39⧸212|
-|antlr4ts|192⧸68⧸260|192⧸68⧸260|
-|antlr4ng|217⧸56⧸273|217⧸56⧸273|
-|antlr4|0⧸303⧸303|0⧸303⧸303|
+|antlr4-cpp|171⧸39⧸210|171⧸39⧸210|
+|antlr4ts|183⧸56⧸239|183⧸56⧸239|
+|antlr4|0⧸266⧸266|0⧸266⧸266|
+|antlr4ng|225⧸55⧸280|225⧸55⧸280|
 
 This table contains the results of a warm run of each runtime. For this each parse run is executed 5 times. The two slowest runs are then removed and an average calculated for the rest.
 
 |🔥|input|Total|
 |:---:|---:|---:|
-|antlr4ts|143⧸70⧸214|143⧸70⧸214|
-|antlr4ng|192⧸49⧸241|192⧸49⧸241|
-|antlr4-cpp|183⧸72⧸255|183⧸72⧸255|
-|antlr4|0⧸264⧸264|0⧸264⧸264|
+|antlr4ts|161⧸55⧸216|161⧸55⧸216|
+|antlr4ng|198⧸49⧸247|198⧸49⧸247|
+|antlr4-cpp|184⧸73⧸256|184⧸73⧸256|
+|antlr4|0⧸289⧸289|0⧸289⧸289|
 
-Both tables are sorted by the total execution time, with the fastest at the top.
+Both tables are sorted by the total execution time, with the fastest at the top. However, because of the simple grammar used for these benchmarks the result are very close to each other (including C++) so that the order can easily change on the next run of the benchmarks.
 
 ### Notes on the Benchmarks
 
@@ -36,8 +36,6 @@ The runtime versions used for the benchmarks are:
     antlr4: 4.13.1-patch-1
     antlr4ng: 3.0.4
     antlr4ts: 0.5.0-alpha.4
-
-The test input is generated at runtime and consists of 10000 strings all with the same 64 tokens in a row, but in random order.
 
 ## Running the Benchmarks
 
@@ -67,6 +65,8 @@ Then build the C++ benchmark app, by executing:
 ```bash
 npm run build-cpp
 ```
+
+This app needs a static lib of the ANTLR4 runtime. Read the [main readme](../../readme.md) file for more details.
 
 Once all this has succeeded you are ready to run the benchmarks.
 
