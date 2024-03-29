@@ -89,6 +89,8 @@ and finally the WebAssembly:
 npm run build-wasm-release
 ```
 
+> Note: The antlr4wasm runtime needs its own copy of the C++ runtime files, because there are a number of changes required without which the WASM binary couldn't be built.
+
 Once all this has succeeded you are ready to run the benchmarks.
 
 ### Benchmarks Execution
