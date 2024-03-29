@@ -20,3 +20,5 @@ node_modules
 #/tests/generated
 *.interp
 *.tokens
+src/ConstantFolding/targets/antlr4-cpp/constant-folding-benchmark
+src/mysql/targets/antlr4-cpp/mysql-benchmark

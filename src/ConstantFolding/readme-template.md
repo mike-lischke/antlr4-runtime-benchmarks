@@ -62,6 +62,8 @@ Then build the C++ benchmark app, by executing:
 npm run build-cpp
 ```
 
+This app needs a static lib of the ANTLR4 runtime. Read the [main readme](../../readme.md) file for more details.
+
 Once all this has succeeded you are ready to run the benchmarks.
 
 ### Benchmarks Execution

@@ -15,3 +15,18 @@ It's not needed to measure times in micro seconds or even smaller time units, fo
 Here's the list of the existing grammar benchmarks:
 
 - MySQL: [readme](src/mysql/readme.md)
+
+
+## Runtime Prequisites
+
+Most runtimes must be built first, so that the benchmarks can use them. This section explains details for each of them.
+
+### TypeScript
+
+As a scripting language there's nothing you need to prepare. If you have Node.js installed you have everything you need for execution.
+
+### C++
+
+The C++ benchmark need a static library. You can either provide one yourself (e.g. from other projects) and copy that to the <root>/antlr4-cpp-runtime/lib folder. It must be named `antlr4-runtime` (plus the platform dependent extension like `.a` on Linux + macOS) so that the build scripts can find it for linking.
+
+Or you can use a build script from this project, which I plan to add a bit later.
