@@ -1,6 +1,6 @@
 # Constant Folding Benchmarks
 
-This was copied from [another repository](https://github.com/KvanTTT/AntlrBenchmarks/tree/master/ConstantFoldingBenchmark) and adjusted for use here. It's a very simple grammar with 64 tokens, all as alts in a single parser rule, that executes very quickly in the original implmementation. Since execution times in the microseconds range are not reliable, the input has been adjusted (runtime generated) to increase the overall execution time.
+This was copied from [another repository](https://github.com/KvanTTT/AntlrBenchmarks/tree/master/ConstantFoldingBenchmark) and adjusted for use here. It's a very simple grammar with 64 tokens, all as alts in a single parser rule, that executes very quickly in the original implementation. Since execution times in the microseconds range are not reliable, the input has been adjusted (runtime generated) to increase the overall execution time.
 
 ## Results
 
@@ -18,11 +18,11 @@ This table contains the results of a warm run of each runtime. For this each par
 |:---:|---:|---:|
 ⫸warm table⫷
 
-Both tables are sorted by the total execution time, with the fastest at the top. However, because of the simple grammar used for these benchmarks the result are very close to each other (including C++) so that the order can easily change on the next run of the benchmarks.
+Both tables are sorted by the total execution time, with the fastest at the top. However, because of the simple grammar used for these benchmarks the results are very close to each other (including C++) so that the order can easily change on the next run of the benchmarks.
 
 ### Notes on the Benchmarks
 
-The numbers were taken on a Mac Studio M1 Max (32GB RAM, 512GB SSD, Sonoma 14.3). There's currently no way to separate out the lexer execution time for the `antl4` TypeScript target. For this reason, the tables only list the total times for this target. Additionally, this runtime has a slight advantage in that it is not possible to clear the DFA.
+The numbers were taken on a Mac Studio M1 Max (32GB RAM, 512GB SSD, Sonoma 14.3). There's currently no way to separate out the lexer execution time for the `antlr4` TypeScript target. For this reason, the tables only list the total times for this target. Additionally, this runtime has a slight advantage in that it is not possible to clear the DFA.
 
 The runtime versions used for the benchmarks are:
 
@@ -60,7 +60,7 @@ Then build the C++ benchmark app, by executing:
 npm run build-cpp
 ```
 
-This app needs a static lib of the ANTLR4 runtime. Read the [main readme](../../readme.md) file for more details.
+This app needs the lib of the ANTLR4 runtime for linking. Read the [main readme](../../readme.md) file for more details.
 
 Once all this has succeeded you are ready to run the benchmarks.
 
@@ -69,7 +69,7 @@ Once all this has succeeded you are ready to run the benchmarks.
 There are two ways here to run the benchmarks:
 
 1. Execute the main script, which not only collects all numbers, but also updates this readme file (by using the readme-template.md file and filling the values there).
-2. By running the individual scripts for each target. 
+2. By running the individual scripts for each target.
 
 To run the main script open a terminal with the folder where this readme is in. Then run
 
