@@ -31,7 +31,7 @@
                 "--no-warnings=ExperimentalWarning",
                 "--loader",
                 "ts-node/esm",
-                "src/ConstantFolding/targets/antlr4ng/run-benchmark.ts",
+                "src/mysql/targets/antlr4ng/run-benchmark.ts",
             ],
             "console": "integratedTerminal"
         }

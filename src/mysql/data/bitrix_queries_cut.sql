@@ -1,31 +1,31 @@
 #begin 1
-SET NAMES 'utf8';
-SET collation_connection = "utf8_unicode_ci";
+SET NAMES 'utf8'$$$
+SET collation_connection = "utf8_unicode_ci"$$$
 
 				SELECT TAG
 				FROM b_cache_tag
 				WHERE SITE_ID = 's1'
 				AND CACHE_SALT = '/eda'
 				AND RELATIVE_PATH = '/s1/bitrix/menu/06f'
-			;
+			$$$
 
 				INSERT IGNORE INTO b_cache_tag (SITE_ID, CACHE_SALT, RELATIVE_PATH, TAG)
 				VALUES
-			('s1', '/eda', '/s1/bitrix/menu/06f', 'bitrix:menu');
-SELECT * FROM `b_forum_user` LIMIT 0;
-UPDATE b_forum_user SET LAST_VISIT=now()  WHERE USER_ID = 1;
-UPDATE b_forum_stat SET `USER_ID` = 1, `IP_ADDRESS` = '10.0.70.52', `SHOW_NAME` = 'admin', `LAST_VISIT` = now(), `SITE_ID` = 's1', `FORUM_ID` = 0, `TOPIC_ID` = 0 WHERE PHPSESSID='o50tf3qfh12hfbbfcpis0npeb2';
+			('s1', '/eda', '/s1/bitrix/menu/06f', 'bitrix:menu')$$$
+SELECT * FROM `b_forum_user` LIMIT 0$$$
+UPDATE b_forum_user SET LAST_VISIT=now()  WHERE USER_ID = 1$$$
+UPDATE b_forum_stat SET `USER_ID` = 1, `IP_ADDRESS` = '10.0.70.52', `SHOW_NAME` = 'admin', `LAST_VISIT` = now(), `SITE_ID` = 's1', `FORUM_ID` = 0, `TOPIC_ID` = 0 WHERE PHPSESSID='o50tf3qfh12hfbbfcpis0npeb2'$$$
 
 				SELECT TAG
 				FROM b_cache_tag
 				WHERE SITE_ID = 's1'
 				AND CACHE_SALT = '/eda'
 				AND RELATIVE_PATH = '/s1/bitrix/menu/345'
-			;
+			$$$
 
 				INSERT IGNORE INTO b_cache_tag (SITE_ID, CACHE_SALT, RELATIVE_PATH, TAG)
 				VALUES
-			('s1', '/eda', '/s1/bitrix/menu/345', 'bitrix:menu');
+			('s1', '/eda', '/s1/bitrix/menu/345', 'bitrix:menu')$$$
 
 			SELECT
 				COUNT(ST.ID) as CNT
@@ -34,12 +34,12 @@ UPDATE b_forum_stat SET `USER_ID` = 1, `IP_ADDRESS` = '10.0.70.52', `SHOW_NAME` 
 			WHERE
 				((ST.PERSONAL='Y' AND ST.CREATED_BY=1) OR ST.PERSONAL='N')
  AND ST.CLOSED='N' AND ST.DELETED='N' AND ST.SITE_ID='s1'
- AND ST.PAGE_URL='/forum/rules/';
-SET NAMES 'utf8';
-SET collation_connection = "utf8_unicode_ci";
-SELECT * FROM `b_forum_user` LIMIT 0;
-UPDATE b_forum_user SET LAST_VISIT=now()  WHERE USER_ID = 1;
-UPDATE b_forum_stat SET `USER_ID` = 1, `IP_ADDRESS` = '10.0.70.52', `SHOW_NAME` = 'admin', `LAST_VISIT` = now(), `SITE_ID` = 's1', `FORUM_ID` = 1, `TOPIC_ID` = 0 WHERE PHPSESSID='o50tf3qfh12hfbbfcpis0npeb2';
+ AND ST.PAGE_URL='/forum/rules/'$$$
+SET NAMES 'utf8'$$$
+SET collation_connection = "utf8_unicode_ci"$$$
+SELECT * FROM `b_forum_user` LIMIT 0$$$
+UPDATE b_forum_user SET LAST_VISIT=now()  WHERE USER_ID = 1$$$
+UPDATE b_forum_stat SET `USER_ID` = 1, `IP_ADDRESS` = '10.0.70.52', `SHOW_NAME` = 'admin', `LAST_VISIT` = now(), `SITE_ID` = 's1', `FORUM_ID` = 1, `TOPIC_ID` = 0 WHERE PHPSESSID='o50tf3qfh12hfbbfcpis0npeb2'$$$
 
 			SELECT BF.ID AS FORUM_ID , COUNT(FT_RENEW.ID) TCRENEW
 			FROM b_forum BF
@@ -93,16 +93,16 @@ UPDATE b_forum_stat SET `USER_ID` = 1, `IP_ADDRESS` = '10.0.70.52', `SHOW_NAME` 
 				)
 			)
 			GROUP BY BF.ID
-		;
+		$$$
 SELECT FST.*, FU.*, FSTAT.IP_ADDRESS, FSTAT.PHPSESSID, 
 	DATE_FORMAT(FSTAT.LAST_VISIT, '%d.%m.%Y %H:%i:%s') AS LAST_VISIT, 
 	FSTAT.FORUM_ID, FSTAT.TOPIC_ID, 
 	U.LOGIN, U.NAME, U.SECOND_NAME, U.LAST_NAME, 
 	FSTAT.SHOW_NAME
-  FROM (  SELECT FSTAT.USER_ID, MAX(FSTAT.ID) FST_ID, COUNT(FSTAT.PHPSESSID) COUNT_USER  FROM b_forum_stat FSTAT LEFT JOIN b_user U ON (FSTAT.USER_ID=U.ID) WHERE 1=1  AND (FSTAT.SITE_ID = 's1') AND (FSTAT.USER_ID = 0 OR U.ACTIVE = 'Y') AND (FROM_UNIXTIME(UNIX_TIMESTAMP(CURRENT_TIMESTAMP) - 600) <=  FSTAT.LAST_VISIT)  GROUP BY FSTAT.USER_ID) FST LEFT JOIN b_forum_stat FSTAT ON (FST.FST_ID = FSTAT.ID) LEFT JOIN b_forum_user FU ON (FST.USER_ID = FU.USER_ID) LEFT JOIN b_user U ON (FST.USER_ID = U.ID)  ORDER BY FSTAT.USER_ID DESC;
-SELECT COUNT('x') as C FROM b_user;
-SELECT COUNT(FU.ID) AS CNT FROM b_forum_user FU INNER JOIN b_user U ON (U.ID = FU.USER_ID) WHERE (U.ACTIVE = 'Y') ;
-SELECT COUNT(FU.ID) AS CNT FROM b_forum_user FU INNER JOIN b_user U ON (U.ID = FU.USER_ID) WHERE (NUM_POSTS > 0) AND (U.ACTIVE = 'Y') ;
+  FROM (  SELECT FSTAT.USER_ID, MAX(FSTAT.ID) FST_ID, COUNT(FSTAT.PHPSESSID) COUNT_USER  FROM b_forum_stat FSTAT LEFT JOIN b_user U ON (FSTAT.USER_ID=U.ID) WHERE 1=1  AND (FSTAT.SITE_ID = 's1') AND (FSTAT.USER_ID = 0 OR U.ACTIVE = 'Y') AND (FROM_UNIXTIME(UNIX_TIMESTAMP(CURRENT_TIMESTAMP) - 600) <=  FSTAT.LAST_VISIT)  GROUP BY FSTAT.USER_ID) FST LEFT JOIN b_forum_stat FSTAT ON (FST.FST_ID = FSTAT.ID) LEFT JOIN b_forum_user FU ON (FST.USER_ID = FU.USER_ID) LEFT JOIN b_user U ON (FST.USER_ID = U.ID)  ORDER BY FSTAT.USER_ID DESC$$$
+SELECT COUNT('x') as C FROM b_user$$$
+SELECT COUNT(FU.ID) AS CNT FROM b_forum_user FU INNER JOIN b_user U ON (U.ID = FU.USER_ID) WHERE (U.ACTIVE = 'Y') $$$
+SELECT COUNT(FU.ID) AS CNT FROM b_forum_user FU INNER JOIN b_user U ON (U.ID = FU.USER_ID) WHERE (NUM_POSTS > 0) AND (U.ACTIVE = 'Y') $$$
 SELECT F_FORUM.*, F.FORUM_GROUP_ID, F.NAME, F.DESCRIPTION, F.SORT, F.ACTIVE,
 				F.ALLOW_HTML, F.ALLOW_ANCHOR, F.ALLOW_BIU, F.ALLOW_IMG, F.ALLOW_VIDEO,
 				F.ALLOW_LIST, F.ALLOW_QUOTE, F.ALLOW_CODE, F.ALLOW_FONT, F.ALLOW_SMILES,
@@ -143,23 +143,23 @@ SELECT F_FORUM.*, F.FORUM_GROUP_ID, F.NAME, F.DESCRIPTION, F.SORT, F.ACTIVE,
 			LEFT JOIN b_forum_topic FT ON FM.TOPIC_ID = FT.ID
 			LEFT JOIN b_forum_message FM_ABS ON F.ABS_LAST_MESSAGE_ID = FM_ABS.ID
 			LEFT JOIN b_forum_topic FT_ABS ON FM_ABS.TOPIC_ID = FT_ABS.ID
-			;
-SET NAMES 'utf8';
-SET collation_connection = "utf8_unicode_ci";
+			$$$
+SET NAMES 'utf8'$$$
+SET collation_connection = "utf8_unicode_ci"$$$
 
 				SELECT TAG
 				FROM b_cache_tag
 				WHERE SITE_ID = 's1'
 				AND CACHE_SALT = '/6b3'
 				AND RELATIVE_PATH = '/s1/bitrix/menu/06f'
-			;
+			$$$
 
 				INSERT IGNORE INTO b_cache_tag (SITE_ID, CACHE_SALT, RELATIVE_PATH, TAG)
 				VALUES
-			('s1', '/6b3', '/s1/bitrix/menu/06f', 'bitrix:menu');
-SELECT * FROM `b_forum_user` LIMIT 0;
-UPDATE b_forum_user SET LAST_VISIT=now()  WHERE USER_ID = 1;
-UPDATE b_forum_stat SET `USER_ID` = 1, `IP_ADDRESS` = '10.0.70.52', `SHOW_NAME` = 'admin', `LAST_VISIT` = now(), `SITE_ID` = 's1', `FORUM_ID` = 0, `TOPIC_ID` = 0 WHERE PHPSESSID='o50tf3qfh12hfbbfcpis0npeb2';
+			('s1', '/6b3', '/s1/bitrix/menu/06f', 'bitrix:menu')$$$
+SELECT * FROM `b_forum_user` LIMIT 0$$$
+UPDATE b_forum_user SET LAST_VISIT=now()  WHERE USER_ID = 1$$$
+UPDATE b_forum_stat SET `USER_ID` = 1, `IP_ADDRESS` = '10.0.70.52', `SHOW_NAME` = 'admin', `LAST_VISIT` = now(), `SITE_ID` = 's1', `FORUM_ID` = 0, `TOPIC_ID` = 0 WHERE PHPSESSID='o50tf3qfh12hfbbfcpis0npeb2'$$$
 SELECT F_FORUM.*, F.FORUM_GROUP_ID, F.NAME, F.DESCRIPTION, F.SORT, F.ACTIVE,
 				F.ALLOW_HTML, F.ALLOW_ANCHOR, F.ALLOW_BIU, F.ALLOW_IMG, F.ALLOW_VIDEO,
 				F.ALLOW_LIST, F.ALLOW_QUOTE, F.ALLOW_CODE, F.ALLOW_FONT, F.ALLOW_SMILES,
@@ -199,8 +199,8 @@ SELECT F_FORUM.*, F.FORUM_GROUP_ID, F.NAME, F.DESCRIPTION, F.SORT, F.ACTIVE,
 			LEFT JOIN b_forum_topic FT ON FM.TOPIC_ID = FT.ID
 			LEFT JOIN b_forum_message FM_ABS ON F.ABS_LAST_MESSAGE_ID = FM_ABS.ID
 			LEFT JOIN b_forum_topic FT_ABS ON FM_ABS.TOPIC_ID = FT_ABS.ID
-			 ORDER BY  F.SORT ASC ;
-SELECT COUNT('x') as CNT  FROM b_forum_user FU LEFT JOIN b_user U ON (FU.USER_ID = U.ID) WHERE 1 = 1 ;
+			 ORDER BY  F.SORT ASC $$$
+SELECT COUNT('x') as CNT  FROM b_forum_user FU LEFT JOIN b_user U ON (FU.USER_ID = U.ID) WHERE 1 = 1 $$$
 SELECT FU.ID, U.ID as USER_ID, FU.SHOW_NAME, FU.DESCRIPTION, FU.IP_ADDRESS,
 				FU.REAL_IP_ADDRESS, FU.AVATAR, FU.NUM_POSTS, FU.POINTS as NUM_POINTS,
 				FU.INTERESTS, FU.SUBSC_GROUP_MESSAGE, FU.SUBSC_GET_MY_MESSAGE,
@@ -215,19 +215,19 @@ SELECT FU.ID, U.ID as USER_ID, FU.SHOW_NAME, FU.DESCRIPTION, FU.IP_ADDRESS,
 				U.PERSONAL_GENDER, FU.POINTS, FU.HIDE_FROM_ONLINE,
 				DATE_FORMAT(U.PERSONAL_BIRTHDAY, '%d.%m.%Y') as PERSONAL_BIRTHDAY ,
 CASE  WHEN (FU.USER_ID > 0  AND FU.SHOW_NAME = 'Y'  AND LENGTH(TRIM(CONCAT_WS('',U.NAME,' ',U.LAST_NAME))) > 0)  THEN TRIM(REPLACE(CONCAT_WS(' ',U.NAME,' ',U.LAST_NAME), '  ', ' ')) ELSE U.LOGIN  END AS SHOW_ABC FROM b_forum_user FU LEFT JOIN b_user U ON (FU.USER_ID = U.ID) WHERE 1 = 1  
- ORDER BY FU.NUM_POSTS DESC LIMIT 0, 20;
-SELECT UG.GROUP_ID FROM b_user_group UG WHERE UG.USER_ID = 1 	AND ((UG.DATE_ACTIVE_FROM IS NULL) OR (UG.DATE_ACTIVE_FROM <= now())) 	AND ((UG.DATE_ACTIVE_TO IS NULL) OR (UG.DATE_ACTIVE_TO >= now())) ;
+ ORDER BY FU.NUM_POSTS DESC LIMIT 0, 20$$$
+SELECT UG.GROUP_ID FROM b_user_group UG WHERE UG.USER_ID = 1 	AND ((UG.DATE_ACTIVE_FROM IS NULL) OR (UG.DATE_ACTIVE_FROM <= now())) 	AND ((UG.DATE_ACTIVE_TO IS NULL) OR (UG.DATE_ACTIVE_TO >= now())) $$$
 
 				SELECT TAG
 				FROM b_cache_tag
 				WHERE SITE_ID = 's1'
 				AND CACHE_SALT = '/6b3'
 				AND RELATIVE_PATH = '/s1/bitrix/menu/345'
-			;
+			$$$
 
 				INSERT IGNORE INTO b_cache_tag (SITE_ID, CACHE_SALT, RELATIVE_PATH, TAG)
 				VALUES
-			('s1', '/6b3', '/s1/bitrix/menu/345', 'bitrix:menu');
+			('s1', '/6b3', '/s1/bitrix/menu/345', 'bitrix:menu')$$$
 
 			SELECT
 				COUNT(ST.ID) as CNT
@@ -236,13 +236,13 @@ SELECT UG.GROUP_ID FROM b_user_group UG WHERE UG.USER_ID = 1 	AND ((UG.DATE_ACTI
 			WHERE
 				((ST.PERSONAL='Y' AND ST.CREATED_BY=1) OR ST.PERSONAL='N')
  AND ST.CLOSED='N' AND ST.DELETED='N' AND ST.SITE_ID='s1'
- AND ST.PAGE_URL='/forum/users/';
-SET NAMES 'utf8';
-SET collation_connection = "utf8_unicode_ci";
-SELECT * FROM `b_forum_user` LIMIT 0;
-UPDATE b_forum_user SET LAST_VISIT=now()  WHERE USER_ID = 1;
-UPDATE b_forum_stat SET `USER_ID` = 1, `IP_ADDRESS` = '10.0.70.52', `SHOW_NAME` = 'admin', `LAST_VISIT` = now(), `SITE_ID` = 's1', `FORUM_ID` = 0, `TOPIC_ID` = 0 WHERE PHPSESSID='o50tf3qfh12hfbbfcpis0npeb2';
-SELECT COUNT('x') as CNT  FROM b_forum_user FU LEFT JOIN b_user U ON (FU.USER_ID = U.ID) WHERE 1 = 1 ;
+ AND ST.PAGE_URL='/forum/users/'$$$
+SET NAMES 'utf8'$$$
+SET collation_connection = "utf8_unicode_ci"$$$
+SELECT * FROM `b_forum_user` LIMIT 0$$$
+UPDATE b_forum_user SET LAST_VISIT=now()  WHERE USER_ID = 1$$$
+UPDATE b_forum_stat SET `USER_ID` = 1, `IP_ADDRESS` = '10.0.70.52', `SHOW_NAME` = 'admin', `LAST_VISIT` = now(), `SITE_ID` = 's1', `FORUM_ID` = 0, `TOPIC_ID` = 0 WHERE PHPSESSID='o50tf3qfh12hfbbfcpis0npeb2'$$$
+SELECT COUNT('x') as CNT  FROM b_forum_user FU LEFT JOIN b_user U ON (FU.USER_ID = U.ID) WHERE 1 = 1 $$$
 SELECT FU.ID, U.ID as USER_ID, FU.SHOW_NAME, FU.DESCRIPTION, FU.IP_ADDRESS,
 				FU.REAL_IP_ADDRESS, FU.AVATAR, FU.NUM_POSTS, FU.POINTS as NUM_POINTS,
 				FU.INTERESTS, FU.SUBSC_GROUP_MESSAGE, FU.SUBSC_GET_MY_MESSAGE,
@@ -257,24 +257,24 @@ SELECT FU.ID, U.ID as USER_ID, FU.SHOW_NAME, FU.DESCRIPTION, FU.IP_ADDRESS,
 				U.PERSONAL_GENDER, FU.POINTS, FU.HIDE_FROM_ONLINE,
 				DATE_FORMAT(U.PERSONAL_BIRTHDAY, '%d.%m.%Y') as PERSONAL_BIRTHDAY ,
 CASE  WHEN (FU.USER_ID > 0  AND FU.SHOW_NAME = 'Y'  AND LENGTH(TRIM(CONCAT_WS('',U.NAME,' ',U.LAST_NAME))) > 0)  THEN TRIM(REPLACE(CONCAT_WS(' ',U.NAME,' ',U.LAST_NAME), '  ', ' ')) ELSE U.LOGIN  END AS SHOW_ABC FROM b_forum_user FU LEFT JOIN b_user U ON (FU.USER_ID = U.ID) WHERE 1 = 1  
- ORDER BY FU.NUM_POSTS DESC LIMIT 0, 20;
-SELECT UG.GROUP_ID FROM b_user_group UG WHERE UG.USER_ID = 1 	AND ((UG.DATE_ACTIVE_FROM IS NULL) OR (UG.DATE_ACTIVE_FROM <= now())) 	AND ((UG.DATE_ACTIVE_TO IS NULL) OR (UG.DATE_ACTIVE_TO >= now())) ;
-SET NAMES 'utf8';
-SET collation_connection = "utf8_unicode_ci";
+ ORDER BY FU.NUM_POSTS DESC LIMIT 0, 20$$$
+SELECT UG.GROUP_ID FROM b_user_group UG WHERE UG.USER_ID = 1 	AND ((UG.DATE_ACTIVE_FROM IS NULL) OR (UG.DATE_ACTIVE_FROM <= now())) 	AND ((UG.DATE_ACTIVE_TO IS NULL) OR (UG.DATE_ACTIVE_TO >= now())) $$$
+SET NAMES 'utf8'$$$
+SET collation_connection = "utf8_unicode_ci"$$$
 
 				SELECT TAG
 				FROM b_cache_tag
 				WHERE SITE_ID = 's1'
 				AND CACHE_SALT = '/f25'
 				AND RELATIVE_PATH = '/s1/bitrix/menu/06f'
-			;
+			$$$
 
 				INSERT IGNORE INTO b_cache_tag (SITE_ID, CACHE_SALT, RELATIVE_PATH, TAG)
 				VALUES
-			('s1', '/f25', '/s1/bitrix/menu/06f', 'bitrix:menu');
-SELECT * FROM `b_forum_user` LIMIT 0;
-UPDATE b_forum_user SET LAST_VISIT=now()  WHERE USER_ID = 1;
-UPDATE b_forum_stat SET `USER_ID` = 1, `IP_ADDRESS` = '10.0.70.52', `SHOW_NAME` = 'admin', `LAST_VISIT` = now(), `SITE_ID` = 's1', `FORUM_ID` = 0, `TOPIC_ID` = 0 WHERE PHPSESSID='o50tf3qfh12hfbbfcpis0npeb2';
+			('s1', '/f25', '/s1/bitrix/menu/06f', 'bitrix:menu')$$$
+SELECT * FROM `b_forum_user` LIMIT 0$$$
+UPDATE b_forum_user SET LAST_VISIT=now()  WHERE USER_ID = 1$$$
+UPDATE b_forum_stat SET `USER_ID` = 1, `IP_ADDRESS` = '10.0.70.52', `SHOW_NAME` = 'admin', `LAST_VISIT` = now(), `SITE_ID` = 's1', `FORUM_ID` = 0, `TOPIC_ID` = 0 WHERE PHPSESSID='o50tf3qfh12hfbbfcpis0npeb2'$$$
 SELECT U.*, DATE_FORMAT(U.TIMESTAMP_X, '%d.%m.%Y %H:%i:%s') TIMESTAMP_X, IF(U.LAST_ACTIVITY_DATE > DATE_SUB(NOW(), INTERVAL 120 SECOND), 'Y', 'N') IS_ONLINE, DATE_FORMAT(U.DATE_REGISTER, '%d.%m.%Y %H:%i:%s') DATE_REGISTER, DATE_FORMAT(U.LAST_LOGIN, '%d.%m.%Y %H:%i:%s') LAST_LOGIN, DATE_FORMAT(U.PERSONAL_BIRTHDAY, '%d.%m.%Y') PERSONAL_BIRTHDAY
 			
 		
@@ -289,7 +289,7 @@ SELECT U.*, DATE_FORMAT(U.TIMESTAMP_X, '%d.%m.%Y %H:%i:%s') TIMESTAMP_X, IF(U.LA
 						U.ID='1'
 					)
 					)
-			ORDER BY U.ID asc;
+			ORDER BY U.ID asc$$$
 SELECT FU.ID, FU.USER_ID, FU.SHOW_NAME, FU.DESCRIPTION, FU.IP_ADDRESS,
 					FU.REAL_IP_ADDRESS, FU.AVATAR, FU.NUM_POSTS, FU.POINTS as NUM_POINTS,
 					FU.INTERESTS, FU.HIDE_FROM_ONLINE, FU.SUBSC_GROUP_MESSAGE, FU.SUBSC_GET_MY_MESSAGE,
@@ -297,7 +297,7 @@ SELECT FU.ID, FU.USER_ID, FU.SHOW_NAME, FU.DESCRIPTION, FU.IP_ADDRESS,
 					DATE_FORMAT(FU.DATE_REG, '%d.%m.%Y') as DATE_REG,
 					DATE_FORMAT(FU.LAST_VISIT, '%d.%m.%Y %H:%i:%s') as LAST_VISIT
 				FROM b_forum_user FU
-				WHERE FU.USER_ID = 1;
+				WHERE FU.USER_ID = 1$$$
 SELECT F_FORUM.*, F.NAME, F.DESCRIPTION, F.ACTIVE, F.MODERATION, F.INDEXATION, F.DEDUPLICATION, F.ALLOW_MOVE_TOPIC, '' as LID,
 				F.TOPICS, F.POSTS, F.LAST_POSTER_ID, F.LAST_POSTER_NAME,
 				DATE_FORMAT(F.LAST_POST_DATE, '%d.%m.%Y %H:%i:%s') as LAST_POST_DATE,
@@ -320,13 +320,13 @@ SELECT F_FORUM.*, F.NAME, F.DESCRIPTION, F.ACTIVE, F.MODERATION, F.INDEXATION, F
 				GROUP BY F.ID
 			) F_FORUM
 			INNER JOIN b_forum F ON (F_FORUM.ID = F.ID)
-			;
-SELECT UG.GROUP_ID FROM b_user_group UG WHERE UG.USER_ID = 1 	AND ((UG.DATE_ACTIVE_FROM IS NULL) OR (UG.DATE_ACTIVE_FROM <= now())) 	AND ((UG.DATE_ACTIVE_TO IS NULL) OR (UG.DATE_ACTIVE_TO >= now())) ;
+			$$$
+SELECT UG.GROUP_ID FROM b_user_group UG WHERE UG.USER_ID = 1 	AND ((UG.DATE_ACTIVE_FROM IS NULL) OR (UG.DATE_ACTIVE_FROM <= now())) 	AND ((UG.DATE_ACTIVE_TO IS NULL) OR (UG.DATE_ACTIVE_TO >= now())) $$$
 
 				SELECT ENTITY_TYPE_ID, ENTITY_ID, PREVIOUS_VALUE, CURRENT_VALUE, PREVIOUS_POSITION, CURRENT_POSITION
 				FROM b_rating_results
 				WHERE RATING_ID = '2'  AND ENTITY_ID IN (1)
-			;
+			$$$
 
 		SELECT FMM.*, FT.TITLE, FT.DESCRIPTION, FT.VIEWS, FT.LAST_POSTER_ID,
 			TRIM(BOTH '-' FROM REPLACE(CONCAT_WS('-',FT.ID,FT.TITLE_SEO), '--', '-')) as TITLE_SEO,
@@ -344,19 +344,19 @@ SELECT UG.GROUP_ID FROM b_user_group UG WHERE UG.USER_ID = 1 	AND ((UG.DATE_ACTI
 			GROUP BY FM.TOPIC_ID
 		) FMM
 		LEFT JOIN b_forum_topic FT ON (FT.ID = FMM.TOPIC_ID)
-		ORDER BY FMM.LAST_POST DESC;
-SELECT FM.ID, DATE_FORMAT(FM.POST_DATE, '%d.%m.%Y %H:%i:%s') AS POST_DATE FROM b_forum_message FM WHERE FM.ID=7 OR FM.ID=7;
+		ORDER BY FMM.LAST_POST DESC$$$
+SELECT FM.ID, DATE_FORMAT(FM.POST_DATE, '%d.%m.%Y %H:%i:%s') AS POST_DATE FROM b_forum_message FM WHERE FM.ID=7 OR FM.ID=7$$$
 
 				SELECT TAG
 				FROM b_cache_tag
 				WHERE SITE_ID = 's1'
 				AND CACHE_SALT = '/f25'
 				AND RELATIVE_PATH = '/s1/bitrix/menu/345'
-			;
+			$$$
 
 				INSERT IGNORE INTO b_cache_tag (SITE_ID, CACHE_SALT, RELATIVE_PATH, TAG)
 				VALUES
-			('s1', '/f25', '/s1/bitrix/menu/345', 'bitrix:menu');
+			('s1', '/f25', '/s1/bitrix/menu/345', 'bitrix:menu')$$$
 
 			SELECT
 				COUNT(ST.ID) as CNT
@@ -365,37 +365,37 @@ SELECT FM.ID, DATE_FORMAT(FM.POST_DATE, '%d.%m.%Y %H:%i:%s') AS POST_DATE FROM b
 			WHERE
 				((ST.PERSONAL='Y' AND ST.CREATED_BY=1) OR ST.PERSONAL='N')
  AND ST.CLOSED='N' AND ST.DELETED='N' AND ST.SITE_ID='s1'
- AND ST.PAGE_URL='/forum/user/1/';
-SET NAMES 'utf8';
-SET collation_connection = "utf8_unicode_ci";
-SELECT L.*, L.LID as ID, L.LID as LANGUAGE_ID, 	C.FORMAT_DATE, C.FORMAT_DATETIME, C.FORMAT_NAME, C.WEEK_START, C.CHARSET, C.DIRECTION FROM b_language L, b_culture C WHERE C.ID = L.CULTURE_ID  AND (L.LID='ru')  AND (L.ACTIVE='Y')  ORDER BY L.SORT ;
-DELETE FROM b_admin_notify_lang WHERE NOTIFY_ID = 16;
-DELETE FROM b_admin_notify WHERE ID = 16;
-SELECT L.*, L.LID as ID, L.LID as LANGUAGE_ID, 	C.FORMAT_DATE, C.FORMAT_DATETIME, C.FORMAT_NAME, C.WEEK_START, C.CHARSET, C.DIRECTION FROM b_language L, b_culture C WHERE C.ID = L.CULTURE_ID  ORDER BY L.LID ;
-SET NAMES 'utf8';
-SET collation_connection = "utf8_unicode_ci";
+ AND ST.PAGE_URL='/forum/user/1/'$$$
+SET NAMES 'utf8'$$$
+SET collation_connection = "utf8_unicode_ci"$$$
+SELECT L.*, L.LID as ID, L.LID as LANGUAGE_ID, 	C.FORMAT_DATE, C.FORMAT_DATETIME, C.FORMAT_NAME, C.WEEK_START, C.CHARSET, C.DIRECTION FROM b_language L, b_culture C WHERE C.ID = L.CULTURE_ID  AND (L.LID='ru')  AND (L.ACTIVE='Y')  ORDER BY L.SORT $$$
+DELETE FROM b_admin_notify_lang WHERE NOTIFY_ID = 16$$$
+DELETE FROM b_admin_notify WHERE ID = 16$$$
+SELECT L.*, L.LID as ID, L.LID as LANGUAGE_ID, 	C.FORMAT_DATE, C.FORMAT_DATETIME, C.FORMAT_NAME, C.WEEK_START, C.CHARSET, C.DIRECTION FROM b_language L, b_culture C WHERE C.ID = L.CULTURE_ID  ORDER BY L.LID $$$
+SET NAMES 'utf8'$$$
+SET collation_connection = "utf8_unicode_ci"$$$
 
 				SELECT TAG
 				FROM b_cache_tag
 				WHERE SITE_ID = 's1'
 				AND CACHE_SALT = '/903'
 				AND RELATIVE_PATH = '/s1/bitrix/menu/06f'
-			;
+			$$$
 
 				INSERT IGNORE INTO b_cache_tag (SITE_ID, CACHE_SALT, RELATIVE_PATH, TAG)
 				VALUES
-			('s1', '/903', '/s1/bitrix/menu/06f', 'bitrix:menu');
+			('s1', '/903', '/s1/bitrix/menu/06f', 'bitrix:menu')$$$
 
 				SELECT TAG
 				FROM b_cache_tag
 				WHERE SITE_ID = 's1'
 				AND CACHE_SALT = '/903'
 				AND RELATIVE_PATH = '/s1/bitrix/menu/345'
-			;
+			$$$
 
 				INSERT IGNORE INTO b_cache_tag (SITE_ID, CACHE_SALT, RELATIVE_PATH, TAG)
 				VALUES
-			('s1', '/903', '/s1/bitrix/menu/345', 'bitrix:menu');
+			('s1', '/903', '/s1/bitrix/menu/345', 'bitrix:menu')$$$
 
 			SELECT
 				COUNT(ST.ID) as CNT
@@ -404,15 +404,15 @@ SET collation_connection = "utf8_unicode_ci";
 			WHERE
 				((ST.PERSONAL='Y' AND ST.CREATED_BY=1) OR ST.PERSONAL='N')
  AND ST.CLOSED='N' AND ST.DELETED='N' AND ST.SITE_ID='s1'
- AND ST.PAGE_URL='/events-calendar/';
+ AND ST.PAGE_URL='/events-calendar/'$$$
 SELECT AN.ID, AN.MODULE_ID, AN.TAG, AN.MESSAGE, AN.ENABLE_CLOSE, AN.PUBLIC_SECTION, ANL.MESSAGE as MESSAGE_LANG FROM b_admin_notify AN LEFT JOIN b_admin_notify_lang ANL ON (AN.ID = ANL.NOTIFY_ID AND ANL.LID = 'ru') WHERE (1=1
 					AND
 					(
 						AN.PUBLIC_SECTION='N'
 					)
-					)  ORDER BY AN.ID DESC;
-SET NAMES 'utf8';
-SET collation_connection = "utf8_unicode_ci";
+					)  ORDER BY AN.ID DESC$$$
+SET NAMES 'utf8'$$$
+SET collation_connection = "utf8_unicode_ci"$$$
 
 			SELECT 'x'
 			FROM b_agent
@@ -422,12 +422,12 @@ SET collation_connection = "utf8_unicode_ci";
 				AND (DATE_CHECK IS NULL OR DATE_CHECK <= now())
 				
 			LIMIT 1
-		;
-SELECT GET_LOCK('cff29ec0118154ee0dcf115d29478b29_agent', 0) as L;
-SELECT ID, NAME, AGENT_INTERVAL, IS_PERIOD, MODULE_ID FROM b_agent WHERE ACTIVE='Y' 	AND NEXT_EXEC<=now() 	AND (DATE_CHECK IS NULL OR DATE_CHECK<=now())  ORDER BY RUNNING ASC, SORT desc;
-UPDATE b_agent SET DATE_CHECK=DATE_ADD(IF(DATE_CHECK IS NULL, now(), DATE_CHECK), INTERVAL 600 SECOND) WHERE ID IN (6);
-SELECT RELEASE_LOCK('cff29ec0118154ee0dcf115d29478b29_agent');
-UPDATE b_agent SET RUNNING='Y' WHERE ID=6;
+		$$$
+SELECT GET_LOCK('cff29ec0118154ee0dcf115d29478b29_agent', 0) as L$$$
+SELECT ID, NAME, AGENT_INTERVAL, IS_PERIOD, MODULE_ID FROM b_agent WHERE ACTIVE='Y' 	AND NEXT_EXEC<=now() 	AND (DATE_CHECK IS NULL OR DATE_CHECK<=now())  ORDER BY RUNNING ASC, SORT desc$$$
+UPDATE b_agent SET DATE_CHECK=DATE_ADD(IF(DATE_CHECK IS NULL, now(), DATE_CHECK), INTERVAL 600 SECOND) WHERE ID IN (6)$$$
+SELECT RELEASE_LOCK('cff29ec0118154ee0dcf115d29478b29_agent')$$$
+UPDATE b_agent SET RUNNING='Y' WHERE ID=6$$$
 
 					UPDATE b_agent SET
 						NAME='\\Bitrix\\Main\\Analytics\\CounterDataTable::submitData();',
@@ -435,7 +435,7 @@ UPDATE b_agent SET RUNNING='Y' WHERE ID=6;
 						NEXT_EXEC=DATE_ADD(now(), INTERVAL 60 SECOND),
 						DATE_CHECK=NULL,
 						RUNNING='N'
-					WHERE ID=6;
+					WHERE ID=6$$$
 
 				SELECT DISTINCT
 					B.*
@@ -449,9 +449,9 @@ UPDATE b_agent SET RUNNING='Y' WHERE ID=6;
 				WHERE 1 = 1
 					
 					 AND  ((((B.ACTIVE='Y'))))  AND  ((((B.ID = '2')))) 
-			;
-SET NAMES 'utf8';
-SET collation_connection = "utf8_unicode_ci";
+			$$$
+SET NAMES 'utf8'$$$
+SET collation_connection = "utf8_unicode_ci"$$$
 
 			SELECT 'x'
 			FROM b_agent
@@ -461,13 +461,13 @@ SET collation_connection = "utf8_unicode_ci";
 				AND (DATE_CHECK IS NULL OR DATE_CHECK <= now())
 				
 			LIMIT 1
-		;
-SELECT UNIX_TIMESTAMP(MIN(NEXT_EXEC))-UNIX_TIMESTAMP(NOW()) DATE_DIFF FROM b_agent WHERE ACTIVE='Y' ;
-DELETE FROM b_admin_notify_lang WHERE NOTIFY_ID IN (SELECT ID FROM b_admin_notify WHERE TAG like '%PHOTOGALLERY_UPLOADER%');
-DELETE FROM b_admin_notify WHERE TAG like '%PHOTOGALLERY_UPLOADER%';
-SELECT L.*, L.LID as ID, L.LID as LANGUAGE_ID, 	C.FORMAT_DATE, C.FORMAT_DATETIME, C.FORMAT_NAME, C.WEEK_START, C.CHARSET, C.DIRECTION FROM b_language L, b_culture C WHERE C.ID = L.CULTURE_ID  ORDER BY L.LID ;
-SELECT * FROM `b_admin_notify` LIMIT 0;
-SELECT L.*, L.LID as ID, L.LID as LANGUAGE_ID, 	C.FORMAT_DATE, C.FORMAT_DATETIME, C.FORMAT_NAME, C.WEEK_START, C.CHARSET, C.DIRECTION FROM b_language L, b_culture C WHERE C.ID = L.CULTURE_ID  ORDER BY L.LID ;
+		$$$
+SELECT UNIX_TIMESTAMP(MIN(NEXT_EXEC))-UNIX_TIMESTAMP(NOW()) DATE_DIFF FROM b_agent WHERE ACTIVE='Y' $$$
+DELETE FROM b_admin_notify_lang WHERE NOTIFY_ID IN (SELECT ID FROM b_admin_notify WHERE TAG like '%PHOTOGALLERY_UPLOADER%')$$$
+DELETE FROM b_admin_notify WHERE TAG like '%PHOTOGALLERY_UPLOADER%'$$$
+SELECT L.*, L.LID as ID, L.LID as LANGUAGE_ID, 	C.FORMAT_DATE, C.FORMAT_DATETIME, C.FORMAT_NAME, C.WEEK_START, C.CHARSET, C.DIRECTION FROM b_language L, b_culture C WHERE C.ID = L.CULTURE_ID  ORDER BY L.LID $$$
+SELECT * FROM `b_admin_notify` LIMIT 0$$$
+SELECT L.*, L.LID as ID, L.LID as LANGUAGE_ID, 	C.FORMAT_DATE, C.FORMAT_DATETIME, C.FORMAT_NAME, C.WEEK_START, C.CHARSET, C.DIRECTION FROM b_language L, b_culture C WHERE C.ID = L.CULTURE_ID  ORDER BY L.LID $$$
 SELECT  BE.ID as ID,BE.IBLOCK_ID as IBLOCK_ID,BE.ACTIVE as ACTIVE
 			FROM 
 			b_iblock B
@@ -483,42 +483,42 @@ SELECT  BE.ID as ID,BE.IBLOCK_ID as IBLOCK_ID,BE.ACTIVE as ACTIVE
 			)
 			AND (((BE.WF_STATUS_ID=1 AND BE.WF_PARENT_ELEMENT_ID IS NULL)))
 			
-		 LIMIT 1;
+		 LIMIT 1$$$
 SELECT AN.ID, AN.MODULE_ID, AN.TAG, AN.MESSAGE, AN.ENABLE_CLOSE, AN.PUBLIC_SECTION, ANL.MESSAGE as MESSAGE_LANG FROM b_admin_notify AN LEFT JOIN b_admin_notify_lang ANL ON (AN.ID = ANL.NOTIFY_ID AND ANL.LID = 'ru') WHERE (1=1
 					AND
 					(
 						AN.PUBLIC_SECTION='N'
 					)
-					)  ORDER BY AN.ID DESC;
-SET NAMES 'utf8';
-SET collation_connection = "utf8_unicode_ci";
-DELETE FROM b_admin_notify_lang WHERE NOTIFY_ID IN (SELECT ID FROM b_admin_notify WHERE TAG like '%PHOTOGALLERY_UPLOADER%');
-DELETE FROM b_admin_notify WHERE TAG like '%PHOTOGALLERY_UPLOADER%';
-SELECT L.*, L.LID as ID, L.LID as LANGUAGE_ID, 	C.FORMAT_DATE, C.FORMAT_DATETIME, C.FORMAT_NAME, C.WEEK_START, C.CHARSET, C.DIRECTION FROM b_language L, b_culture C WHERE C.ID = L.CULTURE_ID  ORDER BY L.LID ;
-SELECT * FROM `b_admin_notify` LIMIT 0;
-SELECT L.*, L.LID as ID, L.LID as LANGUAGE_ID, 	C.FORMAT_DATE, C.FORMAT_DATETIME, C.FORMAT_NAME, C.WEEK_START, C.CHARSET, C.DIRECTION FROM b_language L, b_culture C WHERE C.ID = L.CULTURE_ID  ORDER BY L.LID ;
-SET NAMES 'utf8';
-SET collation_connection = "utf8_unicode_ci";
-SELECT L.*, BS.* FROM b_iblock_site BS, b_lang L WHERE L.LID=BS.SITE_ID AND BS.IBLOCK_ID=9;
-INSERT INTO b_cache_tag (SITE_ID, CACHE_SALT, RELATIVE_PATH, TAG) VALUES ('*', '*', '/bitrix/cache/photogallery.~853832', '*');
-SELECT A.ID, A.MODULE_ID, A.USER_ID, B.LOGIN, B.NAME as USER_NAME, B.LAST_NAME, A.SORT, A.NAME, A.ACTIVE, DATE_FORMAT(A.LAST_EXEC, '%d.%m.%Y %H:%i:%s') as LAST_EXEC, DATE_FORMAT(A.NEXT_EXEC, '%d.%m.%Y %H:%i:%s') as NEXT_EXEC, A.AGENT_INTERVAL, A.IS_PERIOD FROM b_agent A LEFT JOIN b_user B ON(A.USER_ID = B.ID) WHERE A.NAME LIKE '\\\\Bitrix\\\\Main\\\\Data\\\\CacheEngineFiles::delayedDelete(%' ORDER BY A.ID DESC;
+					)  ORDER BY AN.ID DESC$$$
+SET NAMES 'utf8'$$$
+SET collation_connection = "utf8_unicode_ci"$$$
+DELETE FROM b_admin_notify_lang WHERE NOTIFY_ID IN (SELECT ID FROM b_admin_notify WHERE TAG like '%PHOTOGALLERY_UPLOADER%')$$$
+DELETE FROM b_admin_notify WHERE TAG like '%PHOTOGALLERY_UPLOADER%'$$$
+SELECT L.*, L.LID as ID, L.LID as LANGUAGE_ID, 	C.FORMAT_DATE, C.FORMAT_DATETIME, C.FORMAT_NAME, C.WEEK_START, C.CHARSET, C.DIRECTION FROM b_language L, b_culture C WHERE C.ID = L.CULTURE_ID  ORDER BY L.LID $$$
+SELECT * FROM `b_admin_notify` LIMIT 0$$$
+SELECT L.*, L.LID as ID, L.LID as LANGUAGE_ID, 	C.FORMAT_DATE, C.FORMAT_DATETIME, C.FORMAT_NAME, C.WEEK_START, C.CHARSET, C.DIRECTION FROM b_language L, b_culture C WHERE C.ID = L.CULTURE_ID  ORDER BY L.LID $$$
+SET NAMES 'utf8'$$$
+SET collation_connection = "utf8_unicode_ci"$$$
+SELECT L.*, BS.* FROM b_iblock_site BS, b_lang L WHERE L.LID=BS.SITE_ID AND BS.IBLOCK_ID=9$$$
+INSERT INTO b_cache_tag (SITE_ID, CACHE_SALT, RELATIVE_PATH, TAG) VALUES ('*', '*', '/bitrix/cache/photogallery.~853832', '*')$$$
+SELECT A.ID, A.MODULE_ID, A.USER_ID, B.LOGIN, B.NAME as USER_NAME, B.LAST_NAME, A.SORT, A.NAME, A.ACTIVE, DATE_FORMAT(A.LAST_EXEC, '%d.%m.%Y %H:%i:%s') as LAST_EXEC, DATE_FORMAT(A.NEXT_EXEC, '%d.%m.%Y %H:%i:%s') as NEXT_EXEC, A.AGENT_INTERVAL, A.IS_PERIOD FROM b_agent A LEFT JOIN b_user B ON(A.USER_ID = B.ID) WHERE A.NAME LIKE '\\\\Bitrix\\\\Main\\\\Data\\\\CacheEngineFiles::delayedDelete(%' ORDER BY A.ID DESC$$$
 
 			SELECT ID
 			FROM b_agent
 			WHERE NAME = '\\Bitrix\\Main\\Data\\CacheEngineFiles::delayedDelete();'
-			AND USER_ID IS NULL;
-INSERT INTO b_cache_tag (SITE_ID, CACHE_SALT, RELATIVE_PATH, TAG) VALUES ('*', '*', '/bitrix/managed_cache/MYSQL/agents.~53033', '*');
-SELECT * FROM `b_agent` LIMIT 0;
-INSERT INTO b_agent(`MODULE_ID`, `SORT`, `NAME`, `ACTIVE`, `NEXT_EXEC`, `AGENT_INTERVAL`, `IS_PERIOD`, `USER_ID`) VALUES('main', '100', '\\Bitrix\\Main\\Data\\CacheEngineFiles::delayedDelete();', 'Y', CURRENT_DATE, '1', 'Y',  NULL );
-INSERT INTO b_cache_tag (SITE_ID, CACHE_SALT, RELATIVE_PATH, TAG) VALUES ('*', '*', '/bitrix/cache/s1/photogallery.~194981', '*');
-SET NAMES 'utf8';
-SET collation_connection = "utf8_unicode_ci";
-SELECT L.*, BS.* FROM b_iblock_site BS, b_lang L WHERE L.LID=BS.SITE_ID AND BS.IBLOCK_ID=9;
-SET NAMES 'utf8';
-SET collation_connection = "utf8_unicode_ci";
-SELECT L.*, BS.* FROM b_iblock_site BS, b_lang L WHERE L.LID=BS.SITE_ID AND BS.IBLOCK_ID=9;
-SET NAMES 'utf8';
-SET collation_connection = "utf8_unicode_ci";
+			AND USER_ID IS NULL$$$
+INSERT INTO b_cache_tag (SITE_ID, CACHE_SALT, RELATIVE_PATH, TAG) VALUES ('*', '*', '/bitrix/managed_cache/MYSQL/agents.~53033', '*')$$$
+SELECT * FROM `b_agent` LIMIT 0$$$
+INSERT INTO b_agent(`MODULE_ID`, `SORT`, `NAME`, `ACTIVE`, `NEXT_EXEC`, `AGENT_INTERVAL`, `IS_PERIOD`, `USER_ID`) VALUES('main', '100', '\\Bitrix\\Main\\Data\\CacheEngineFiles::delayedDelete();', 'Y', CURRENT_DATE, '1', 'Y',  NULL )$$$
+INSERT INTO b_cache_tag (SITE_ID, CACHE_SALT, RELATIVE_PATH, TAG) VALUES ('*', '*', '/bitrix/cache/s1/photogallery.~194981', '*')$$$
+SET NAMES 'utf8'$$$
+SET collation_connection = "utf8_unicode_ci"$$$
+SELECT L.*, BS.* FROM b_iblock_site BS, b_lang L WHERE L.LID=BS.SITE_ID AND BS.IBLOCK_ID=9$$$
+SET NAMES 'utf8'$$$
+SET collation_connection = "utf8_unicode_ci"$$$
+SELECT L.*, BS.* FROM b_iblock_site BS, b_lang L WHERE L.LID=BS.SITE_ID AND BS.IBLOCK_ID=9$$$
+SET NAMES 'utf8'$$$
+SET collation_connection = "utf8_unicode_ci"$$$
 
 			SELECT BP.*
 			FROM b_iblock_property BP
@@ -528,7 +528,7 @@ SET collation_connection = "utf8_unicode_ci";
 				AND BP.IBLOCK_ID = 9
 			
 				ORDER BY BP.SORT ASC
-			;
+			$$$
 SELECT  BE.ID as ID,BE.IBLOCK_ID as IBLOCK_ID
 			FROM 
 			b_iblock B
@@ -545,7 +545,7 @@ SELECT  BE.ID as ID,BE.IBLOCK_ID as IBLOCK_ID
 			)
 			AND (((BE.WF_STATUS_ID=1 AND BE.WF_PARENT_ELEMENT_ID IS NULL)))
 			
-		;
+		$$$
 
 			SELECT BP.*, BEP.ID as PROPERTY_VALUE_ID, BEP.VALUE, BEP.DESCRIPTION, BEPE.VALUE VALUE_ENUM, BEPE.XML_ID VALUE_XML_ID, BEPE.SORT VALUE_SORT
 			FROM b_iblock B
@@ -555,18 +555,18 @@ SELECT  BE.ID as ID,BE.IBLOCK_ID as IBLOCK_ID
 			WHERE B.ID = 9
 				AND BP.ACTIVE='Y'
 
-			 ORDER BY  BP.SORT asc, BP.ID asc, BEPE.SORT asc, BEP.ID asc;
+			 ORDER BY  BP.SORT asc, BP.ID asc, BEPE.SORT asc, BEP.ID asc$$$
 
 				SELECT TAG
 				FROM b_cache_tag
 				WHERE SITE_ID = 's1'
 				AND CACHE_SALT = '/c3f'
 				AND RELATIVE_PATH = '/s1/bitrix/iblock.vote/cd2'
-			;
-UPDATE b_iblock_element SET 	TIMESTAMP_X = TIMESTAMP_X, 	SHOW_COUNTER_START = ifnull(SHOW_COUNTER_START, now()), 	SHOW_COUNTER =  ifnull(SHOW_COUNTER, 0) + 1 WHERE ID=110;
-SELECT L.*, BS.* FROM b_iblock_site BS, b_lang L WHERE L.LID=BS.SITE_ID AND BS.IBLOCK_ID=9;
-SET NAMES 'utf8';
-SET collation_connection = "utf8_unicode_ci";
+			$$$
+UPDATE b_iblock_element SET 	TIMESTAMP_X = TIMESTAMP_X, 	SHOW_COUNTER_START = ifnull(SHOW_COUNTER_START, now()), 	SHOW_COUNTER =  ifnull(SHOW_COUNTER, 0) + 1 WHERE ID=110$$$
+SELECT L.*, BS.* FROM b_iblock_site BS, b_lang L WHERE L.LID=BS.SITE_ID AND BS.IBLOCK_ID=9$$$
+SET NAMES 'utf8'$$$
+SET collation_connection = "utf8_unicode_ci"$$$
 
 			SELECT BP.*
 			FROM b_iblock_property BP
@@ -576,7 +576,7 @@ SET collation_connection = "utf8_unicode_ci";
 				AND BP.IBLOCK_ID = 9
 			
 				ORDER BY BP.SORT ASC
-			;
+			$$$
 SELECT  BE.ID as ID,BE.IBLOCK_ID as IBLOCK_ID
 			FROM 
 			b_iblock B
@@ -593,7 +593,7 @@ SELECT  BE.ID as ID,BE.IBLOCK_ID as IBLOCK_ID
 			)
 			AND (((BE.WF_STATUS_ID=1 AND BE.WF_PARENT_ELEMENT_ID IS NULL)))
 			
-		;
+		$$$
 
 			SELECT BP.*, BEP.ID as PROPERTY_VALUE_ID, BEP.VALUE, BEP.DESCRIPTION, BEPE.VALUE VALUE_ENUM, BEPE.XML_ID VALUE_XML_ID, BEPE.SORT VALUE_SORT
 			FROM b_iblock B
@@ -603,18 +603,18 @@ SELECT  BE.ID as ID,BE.IBLOCK_ID as IBLOCK_ID
 			WHERE B.ID = 9
 				AND BP.ACTIVE='Y'
 
-			 ORDER BY  BP.SORT asc, BP.ID asc, BEPE.SORT asc, BEP.ID asc;
+			 ORDER BY  BP.SORT asc, BP.ID asc, BEPE.SORT asc, BEP.ID asc$$$
 
 				SELECT TAG
 				FROM b_cache_tag
 				WHERE SITE_ID = 's1'
 				AND CACHE_SALT = '/c3f'
 				AND RELATIVE_PATH = '/s1/bitrix/iblock.vote/cd2'
-			;
-UPDATE b_iblock_element SET 	TIMESTAMP_X = TIMESTAMP_X, 	SHOW_COUNTER_START = ifnull(SHOW_COUNTER_START, now()), 	SHOW_COUNTER =  ifnull(SHOW_COUNTER, 0) + 1 WHERE ID=111;
-SELECT L.*, BS.* FROM b_iblock_site BS, b_lang L WHERE L.LID=BS.SITE_ID AND BS.IBLOCK_ID=9;
-SET NAMES 'utf8';
-SET collation_connection = "utf8_unicode_ci";
+			$$$
+UPDATE b_iblock_element SET 	TIMESTAMP_X = TIMESTAMP_X, 	SHOW_COUNTER_START = ifnull(SHOW_COUNTER_START, now()), 	SHOW_COUNTER =  ifnull(SHOW_COUNTER, 0) + 1 WHERE ID=111$$$
+SELECT L.*, BS.* FROM b_iblock_site BS, b_lang L WHERE L.LID=BS.SITE_ID AND BS.IBLOCK_ID=9$$$
+SET NAMES 'utf8'$$$
+SET collation_connection = "utf8_unicode_ci"$$$
 
 			SELECT 'x'
 			FROM b_agent
@@ -624,20 +624,20 @@ SET collation_connection = "utf8_unicode_ci";
 				AND (DATE_CHECK IS NULL OR DATE_CHECK <= now())
 				
 			LIMIT 1
-		;
-SELECT GET_LOCK('cff29ec0118154ee0dcf115d29478b29_agent', 0) as L;
-SELECT ID, NAME, AGENT_INTERVAL, IS_PERIOD, MODULE_ID FROM b_agent WHERE ACTIVE='Y' 	AND NEXT_EXEC<=now() 	AND (DATE_CHECK IS NULL OR DATE_CHECK<=now())  ORDER BY RUNNING ASC, SORT desc;
-UPDATE b_agent SET DATE_CHECK=DATE_ADD(IF(DATE_CHECK IS NULL, now(), DATE_CHECK), INTERVAL 600 SECOND) WHERE ID IN (20);
-SELECT RELEASE_LOCK('cff29ec0118154ee0dcf115d29478b29_agent');
-UPDATE b_agent SET RUNNING='Y' WHERE ID=20;
+		$$$
+SELECT GET_LOCK('cff29ec0118154ee0dcf115d29478b29_agent', 0) as L$$$
+SELECT ID, NAME, AGENT_INTERVAL, IS_PERIOD, MODULE_ID FROM b_agent WHERE ACTIVE='Y' 	AND NEXT_EXEC<=now() 	AND (DATE_CHECK IS NULL OR DATE_CHECK<=now())  ORDER BY RUNNING ASC, SORT desc$$$
+UPDATE b_agent SET DATE_CHECK=DATE_ADD(IF(DATE_CHECK IS NULL, now(), DATE_CHECK), INTERVAL 600 SECOND) WHERE ID IN (20)$$$
+SELECT RELEASE_LOCK('cff29ec0118154ee0dcf115d29478b29_agent')$$$
+UPDATE b_agent SET RUNNING='Y' WHERE ID=20$$$
 SELECT SITE_ID, CACHE_SALT, RELATIVE_PATH, TAG from b_cache_tag WHERE TAG='*'
-LIMIT 0, 1;
+LIMIT 0, 1$$$
 
-SELECT SITE_ID, CACHE_SALT, RELATIVE_PATH, TAG from b_cache_tag WHERE TAG='**';
+SELECT SITE_ID, CACHE_SALT, RELATIVE_PATH, TAG from b_cache_tag WHERE TAG='**'$$$
 SELECT count(1) CNT from b_cache_tag WHERE TAG='*'
-LIMIT 0, 1;
+LIMIT 0, 1$$$
 
-UPDATE b_cache_tag SET RELATIVE_PATH='3:1469352763' WHERE TAG='**';
+UPDATE b_cache_tag SET RELATIVE_PATH='3:1469352763' WHERE TAG='**'$$$
 
 					UPDATE b_agent SET
 						NAME='\\Bitrix\\Main\\Data\\CacheEngineFiles::delayedDelete(1);',
@@ -645,22 +645,22 @@ UPDATE b_cache_tag SET RELATIVE_PATH='3:1469352763' WHERE TAG='**';
 						NEXT_EXEC=DATE_ADD(NEXT_EXEC, INTERVAL 1 SECOND),
 						DATE_CHECK=NULL,
 						RUNNING='N'
-					WHERE ID=20;
-SELECT B.ID, B.USER_ID, B.ALIAS, B.DESCRIPTION, B.AVATAR, B.INTERESTS, 	B.ALLOW_POST, 	DATE_FORMAT(B.LAST_VISIT, '%d.%m.%Y %H:%i:%s') as LAST_VISIT, 	DATE_FORMAT(B.DATE_REG, '%d.%m.%Y %H:%i:%s') as DATE_REG FROM b_blog_user B WHERE B.USER_ID = 1;
-SELECT * FROM `b_blog_user` LIMIT 0;
-UPDATE b_blog_user SET 	LAST_VISIT=now()  WHERE ID = 1 ;
-SELECT B.ID, B.NAME, B.DESCRIPTION, B.ACTIVE, B.OWNER_ID, B.URL, B.GROUP_ID, 	B.ENABLE_COMMENTS, B.ENABLE_IMG_VERIF, B.EMAIL_NOTIFY, B.ENABLE_RSS, B.REAL_URL, 	B.LAST_POST_ID, B.AUTO_GROUPS, B.ALLOW_HTML, B.SEARCH_INDEX, B.SOCNET_GROUP_ID, B.USE_SOCNET, 	DATE_FORMAT(B.DATE_CREATE, '%d.%m.%Y %H:%i:%s') as DATE_CREATE, 	DATE_FORMAT(B.DATE_UPDATE, '%d.%m.%Y %H:%i:%s') as DATE_UPDATE, 	DATE_FORMAT(B.LAST_POST_DATE, '%d.%m.%Y %H:%i:%s') as LAST_POST_DATE FROM b_blog B WHERE B.OWNER_ID = 1 	AND B.GROUP_ID IN (1);
-SELECT B.ID, B.USER_ID, B.ALIAS, B.DESCRIPTION, B.AVATAR, B.INTERESTS, 	B.ALLOW_POST, 	DATE_FORMAT(B.LAST_VISIT, '%d.%m.%Y %H:%i:%s') as LAST_VISIT, 	DATE_FORMAT(B.DATE_REG, '%d.%m.%Y %H:%i:%s') as DATE_REG FROM b_blog_user B WHERE B.USER_ID = 1;
-SELECT UG.GROUP_ID FROM b_user_group UG WHERE UG.USER_ID = 1 	AND ((UG.DATE_ACTIVE_FROM IS NULL) OR (UG.DATE_ACTIVE_FROM <= now())) 	AND ((UG.DATE_ACTIVE_TO IS NULL) OR (UG.DATE_ACTIVE_TO >= now())) ;
-SELECT B.ID, B.NAME, B.DESCRIPTION, B.ACTIVE, B.OWNER_ID, B.URL, B.GROUP_ID, 	B.ENABLE_COMMENTS, B.ENABLE_IMG_VERIF, B.EMAIL_NOTIFY, B.ENABLE_RSS, B.REAL_URL, 	B.LAST_POST_ID, B.AUTO_GROUPS, B.ALLOW_HTML, B.SEARCH_INDEX, B.SOCNET_GROUP_ID, B.USE_SOCNET, 	DATE_FORMAT(B.DATE_CREATE, '%d.%m.%Y %H:%i:%s') as DATE_CREATE, 	DATE_FORMAT(B.DATE_UPDATE, '%d.%m.%Y %H:%i:%s') as DATE_UPDATE, 	DATE_FORMAT(B.LAST_POST_DATE, '%d.%m.%Y %H:%i:%s') as LAST_POST_DATE FROM b_blog B WHERE B.OWNER_ID = 1 	AND B.GROUP_ID IN (1);
+					WHERE ID=20$$$
+SELECT B.ID, B.USER_ID, B.ALIAS, B.DESCRIPTION, B.AVATAR, B.INTERESTS, 	B.ALLOW_POST, 	DATE_FORMAT(B.LAST_VISIT, '%d.%m.%Y %H:%i:%s') as LAST_VISIT, 	DATE_FORMAT(B.DATE_REG, '%d.%m.%Y %H:%i:%s') as DATE_REG FROM b_blog_user B WHERE B.USER_ID = 1$$$
+SELECT * FROM `b_blog_user` LIMIT 0$$$
+UPDATE b_blog_user SET 	LAST_VISIT=now()  WHERE ID = 1 $$$
+SELECT B.ID, B.NAME, B.DESCRIPTION, B.ACTIVE, B.OWNER_ID, B.URL, B.GROUP_ID, 	B.ENABLE_COMMENTS, B.ENABLE_IMG_VERIF, B.EMAIL_NOTIFY, B.ENABLE_RSS, B.REAL_URL, 	B.LAST_POST_ID, B.AUTO_GROUPS, B.ALLOW_HTML, B.SEARCH_INDEX, B.SOCNET_GROUP_ID, B.USE_SOCNET, 	DATE_FORMAT(B.DATE_CREATE, '%d.%m.%Y %H:%i:%s') as DATE_CREATE, 	DATE_FORMAT(B.DATE_UPDATE, '%d.%m.%Y %H:%i:%s') as DATE_UPDATE, 	DATE_FORMAT(B.LAST_POST_DATE, '%d.%m.%Y %H:%i:%s') as LAST_POST_DATE FROM b_blog B WHERE B.OWNER_ID = 1 	AND B.GROUP_ID IN (1)$$$
+SELECT B.ID, B.USER_ID, B.ALIAS, B.DESCRIPTION, B.AVATAR, B.INTERESTS, 	B.ALLOW_POST, 	DATE_FORMAT(B.LAST_VISIT, '%d.%m.%Y %H:%i:%s') as LAST_VISIT, 	DATE_FORMAT(B.DATE_REG, '%d.%m.%Y %H:%i:%s') as DATE_REG FROM b_blog_user B WHERE B.USER_ID = 1$$$
+SELECT UG.GROUP_ID FROM b_user_group UG WHERE UG.USER_ID = 1 	AND ((UG.DATE_ACTIVE_FROM IS NULL) OR (UG.DATE_ACTIVE_FROM <= now())) 	AND ((UG.DATE_ACTIVE_TO IS NULL) OR (UG.DATE_ACTIVE_TO >= now())) $$$
+SELECT B.ID, B.NAME, B.DESCRIPTION, B.ACTIVE, B.OWNER_ID, B.URL, B.GROUP_ID, 	B.ENABLE_COMMENTS, B.ENABLE_IMG_VERIF, B.EMAIL_NOTIFY, B.ENABLE_RSS, B.REAL_URL, 	B.LAST_POST_ID, B.AUTO_GROUPS, B.ALLOW_HTML, B.SEARCH_INDEX, B.SOCNET_GROUP_ID, B.USE_SOCNET, 	DATE_FORMAT(B.DATE_CREATE, '%d.%m.%Y %H:%i:%s') as DATE_CREATE, 	DATE_FORMAT(B.DATE_UPDATE, '%d.%m.%Y %H:%i:%s') as DATE_UPDATE, 	DATE_FORMAT(B.LAST_POST_DATE, '%d.%m.%Y %H:%i:%s') as LAST_POST_DATE FROM b_blog B WHERE B.OWNER_ID = 1 	AND B.GROUP_ID IN (1)$$$
 SELECT AN.ID, AN.MODULE_ID, AN.TAG, AN.MESSAGE, AN.ENABLE_CLOSE, AN.PUBLIC_SECTION, ANL.MESSAGE as MESSAGE_LANG FROM b_admin_notify AN LEFT JOIN b_admin_notify_lang ANL ON (AN.ID = ANL.NOTIFY_ID AND ANL.LID = 'ru') WHERE (1=1
 					AND
 					(
 						AN.PUBLIC_SECTION='N'
 					)
-					)  ORDER BY AN.ID DESC;
-SET NAMES 'utf8';
-SET collation_connection = "utf8_unicode_ci";
+					)  ORDER BY AN.ID DESC$$$
+SET NAMES 'utf8'$$$
+SET collation_connection = "utf8_unicode_ci"$$$
 
 			SELECT 'x'
 			FROM b_agent
@@ -670,24 +670,24 @@ SET collation_connection = "utf8_unicode_ci";
 				AND (DATE_CHECK IS NULL OR DATE_CHECK <= now())
 				
 			LIMIT 1
-		;
-SELECT GET_LOCK('cff29ec0118154ee0dcf115d29478b29_agent', 0) as L;
-SELECT ID, NAME, AGENT_INTERVAL, IS_PERIOD, MODULE_ID FROM b_agent WHERE ACTIVE='Y' 	AND NEXT_EXEC<=now() 	AND (DATE_CHECK IS NULL OR DATE_CHECK<=now())  ORDER BY RUNNING ASC, SORT desc;
-UPDATE b_agent SET DATE_CHECK=DATE_ADD(IF(DATE_CHECK IS NULL, now(), DATE_CHECK), INTERVAL 600 SECOND) WHERE ID IN (20);
-SELECT RELEASE_LOCK('cff29ec0118154ee0dcf115d29478b29_agent');
-UPDATE b_agent SET RUNNING='Y' WHERE ID=20;
+		$$$
+SELECT GET_LOCK('cff29ec0118154ee0dcf115d29478b29_agent', 0) as L$$$
+SELECT ID, NAME, AGENT_INTERVAL, IS_PERIOD, MODULE_ID FROM b_agent WHERE ACTIVE='Y' 	AND NEXT_EXEC<=now() 	AND (DATE_CHECK IS NULL OR DATE_CHECK<=now())  ORDER BY RUNNING ASC, SORT desc$$$
+UPDATE b_agent SET DATE_CHECK=DATE_ADD(IF(DATE_CHECK IS NULL, now(), DATE_CHECK), INTERVAL 600 SECOND) WHERE ID IN (20)$$$
+SELECT RELEASE_LOCK('cff29ec0118154ee0dcf115d29478b29_agent')$$$
+UPDATE b_agent SET RUNNING='Y' WHERE ID=20$$$
 SELECT SITE_ID, CACHE_SALT, RELATIVE_PATH, TAG from b_cache_tag WHERE TAG='*'
-LIMIT 0, 1;
+LIMIT 0, 1$$$
 
 DELETE FROM b_cache_tag
 				WHERE SITE_ID = '*'
 				AND CACHE_SALT = '*'
-				AND RELATIVE_PATH = '/bitrix/cache/photogallery.~853832';
-SELECT SITE_ID, CACHE_SALT, RELATIVE_PATH, TAG from b_cache_tag WHERE TAG='**';
+				AND RELATIVE_PATH = '/bitrix/cache/photogallery.~853832'$$$
+SELECT SITE_ID, CACHE_SALT, RELATIVE_PATH, TAG from b_cache_tag WHERE TAG='**'$$$
 SELECT count(1) CNT from b_cache_tag WHERE TAG='*'
-LIMIT 0, 1;
+LIMIT 0, 1$$$
 
-UPDATE b_cache_tag SET RELATIVE_PATH='2:1469352770' WHERE TAG='**';
+UPDATE b_cache_tag SET RELATIVE_PATH='2:1469352770' WHERE TAG='**'$$$
 
 					UPDATE b_agent SET
 						NAME='\\Bitrix\\Main\\Data\\CacheEngineFiles::delayedDelete(1);',
@@ -695,16 +695,16 @@ UPDATE b_cache_tag SET RELATIVE_PATH='2:1469352770' WHERE TAG='**';
 						NEXT_EXEC=DATE_ADD(NEXT_EXEC, INTERVAL 1 SECOND),
 						DATE_CHECK=NULL,
 						RUNNING='N'
-					WHERE ID=20;
-SELECT B.ID, B.USER_ID, B.ALIAS, B.DESCRIPTION, B.AVATAR, B.INTERESTS, 	B.ALLOW_POST, 	DATE_FORMAT(B.LAST_VISIT, '%d.%m.%Y %H:%i:%s') as LAST_VISIT, 	DATE_FORMAT(B.DATE_REG, '%d.%m.%Y %H:%i:%s') as DATE_REG FROM b_blog_user B WHERE B.USER_ID = 1;
-SELECT * FROM `b_blog_user` LIMIT 0;
-UPDATE b_blog_user SET 	LAST_VISIT=now()  WHERE ID = 1 ;
-SELECT B.ID, B.NAME, B.DESCRIPTION, B.ACTIVE, B.OWNER_ID, B.URL, B.GROUP_ID, 	B.ENABLE_COMMENTS, B.ENABLE_IMG_VERIF, B.EMAIL_NOTIFY, B.ENABLE_RSS, B.REAL_URL, 	B.LAST_POST_ID, B.AUTO_GROUPS, B.ALLOW_HTML, B.SEARCH_INDEX, B.SOCNET_GROUP_ID, B.USE_SOCNET, 	DATE_FORMAT(B.DATE_CREATE, '%d.%m.%Y %H:%i:%s') as DATE_CREATE, 	DATE_FORMAT(B.DATE_UPDATE, '%d.%m.%Y %H:%i:%s') as DATE_UPDATE, 	DATE_FORMAT(B.LAST_POST_DATE, '%d.%m.%Y %H:%i:%s') as LAST_POST_DATE FROM b_blog B WHERE B.OWNER_ID = 1 	AND B.GROUP_ID IN (1);
-SELECT B.ID, B.USER_ID, B.ALIAS, B.DESCRIPTION, B.AVATAR, B.INTERESTS, 	B.ALLOW_POST, 	DATE_FORMAT(B.LAST_VISIT, '%d.%m.%Y %H:%i:%s') as LAST_VISIT, 	DATE_FORMAT(B.DATE_REG, '%d.%m.%Y %H:%i:%s') as DATE_REG FROM b_blog_user B WHERE B.USER_ID = 1;
-SELECT UG.GROUP_ID FROM b_user_group UG WHERE UG.USER_ID = 1 	AND ((UG.DATE_ACTIVE_FROM IS NULL) OR (UG.DATE_ACTIVE_FROM <= now())) 	AND ((UG.DATE_ACTIVE_TO IS NULL) OR (UG.DATE_ACTIVE_TO >= now())) ;
-SELECT B.ID, B.NAME, B.DESCRIPTION, B.ACTIVE, B.OWNER_ID, B.URL, B.GROUP_ID, 	B.ENABLE_COMMENTS, B.ENABLE_IMG_VERIF, B.EMAIL_NOTIFY, B.ENABLE_RSS, B.REAL_URL, 	B.LAST_POST_ID, B.AUTO_GROUPS, B.ALLOW_HTML, B.SEARCH_INDEX, B.SOCNET_GROUP_ID, B.USE_SOCNET, 	DATE_FORMAT(B.DATE_CREATE, '%d.%m.%Y %H:%i:%s') as DATE_CREATE, 	DATE_FORMAT(B.DATE_UPDATE, '%d.%m.%Y %H:%i:%s') as DATE_UPDATE, 	DATE_FORMAT(B.LAST_POST_DATE, '%d.%m.%Y %H:%i:%s') as LAST_POST_DATE FROM b_blog B WHERE B.OWNER_ID = 1 	AND B.GROUP_ID IN (1);
-SET NAMES 'utf8';
-SET collation_connection = "utf8_unicode_ci";
+					WHERE ID=20$$$
+SELECT B.ID, B.USER_ID, B.ALIAS, B.DESCRIPTION, B.AVATAR, B.INTERESTS, 	B.ALLOW_POST, 	DATE_FORMAT(B.LAST_VISIT, '%d.%m.%Y %H:%i:%s') as LAST_VISIT, 	DATE_FORMAT(B.DATE_REG, '%d.%m.%Y %H:%i:%s') as DATE_REG FROM b_blog_user B WHERE B.USER_ID = 1$$$
+SELECT * FROM `b_blog_user` LIMIT 0$$$
+UPDATE b_blog_user SET 	LAST_VISIT=now()  WHERE ID = 1 $$$
+SELECT B.ID, B.NAME, B.DESCRIPTION, B.ACTIVE, B.OWNER_ID, B.URL, B.GROUP_ID, 	B.ENABLE_COMMENTS, B.ENABLE_IMG_VERIF, B.EMAIL_NOTIFY, B.ENABLE_RSS, B.REAL_URL, 	B.LAST_POST_ID, B.AUTO_GROUPS, B.ALLOW_HTML, B.SEARCH_INDEX, B.SOCNET_GROUP_ID, B.USE_SOCNET, 	DATE_FORMAT(B.DATE_CREATE, '%d.%m.%Y %H:%i:%s') as DATE_CREATE, 	DATE_FORMAT(B.DATE_UPDATE, '%d.%m.%Y %H:%i:%s') as DATE_UPDATE, 	DATE_FORMAT(B.LAST_POST_DATE, '%d.%m.%Y %H:%i:%s') as LAST_POST_DATE FROM b_blog B WHERE B.OWNER_ID = 1 	AND B.GROUP_ID IN (1)$$$
+SELECT B.ID, B.USER_ID, B.ALIAS, B.DESCRIPTION, B.AVATAR, B.INTERESTS, 	B.ALLOW_POST, 	DATE_FORMAT(B.LAST_VISIT, '%d.%m.%Y %H:%i:%s') as LAST_VISIT, 	DATE_FORMAT(B.DATE_REG, '%d.%m.%Y %H:%i:%s') as DATE_REG FROM b_blog_user B WHERE B.USER_ID = 1$$$
+SELECT UG.GROUP_ID FROM b_user_group UG WHERE UG.USER_ID = 1 	AND ((UG.DATE_ACTIVE_FROM IS NULL) OR (UG.DATE_ACTIVE_FROM <= now())) 	AND ((UG.DATE_ACTIVE_TO IS NULL) OR (UG.DATE_ACTIVE_TO >= now())) $$$
+SELECT B.ID, B.NAME, B.DESCRIPTION, B.ACTIVE, B.OWNER_ID, B.URL, B.GROUP_ID, 	B.ENABLE_COMMENTS, B.ENABLE_IMG_VERIF, B.EMAIL_NOTIFY, B.ENABLE_RSS, B.REAL_URL, 	B.LAST_POST_ID, B.AUTO_GROUPS, B.ALLOW_HTML, B.SEARCH_INDEX, B.SOCNET_GROUP_ID, B.USE_SOCNET, 	DATE_FORMAT(B.DATE_CREATE, '%d.%m.%Y %H:%i:%s') as DATE_CREATE, 	DATE_FORMAT(B.DATE_UPDATE, '%d.%m.%Y %H:%i:%s') as DATE_UPDATE, 	DATE_FORMAT(B.LAST_POST_DATE, '%d.%m.%Y %H:%i:%s') as LAST_POST_DATE FROM b_blog B WHERE B.OWNER_ID = 1 	AND B.GROUP_ID IN (1)$$$
+SET NAMES 'utf8'$$$
+SET collation_connection = "utf8_unicode_ci"$$$
 
 			SELECT 'x'
 			FROM b_agent
@@ -714,18 +714,18 @@ SET collation_connection = "utf8_unicode_ci";
 				AND (DATE_CHECK IS NULL OR DATE_CHECK <= now())
 				
 			LIMIT 1
-		;
-SELECT GET_LOCK('cff29ec0118154ee0dcf115d29478b29_agent', 0) as L;
-SELECT ID, NAME, AGENT_INTERVAL, IS_PERIOD, MODULE_ID FROM b_agent WHERE ACTIVE='Y' 	AND NEXT_EXEC<=now() 	AND (DATE_CHECK IS NULL OR DATE_CHECK<=now())  ORDER BY RUNNING ASC, SORT desc;
-UPDATE b_agent SET DATE_CHECK=DATE_ADD(IF(DATE_CHECK IS NULL, now(), DATE_CHECK), INTERVAL 600 SECOND) WHERE ID IN (20);
-SELECT RELEASE_LOCK('cff29ec0118154ee0dcf115d29478b29_agent');
-UPDATE b_agent SET RUNNING='Y' WHERE ID=20;
+		$$$
+SELECT GET_LOCK('cff29ec0118154ee0dcf115d29478b29_agent', 0) as L$$$
+SELECT ID, NAME, AGENT_INTERVAL, IS_PERIOD, MODULE_ID FROM b_agent WHERE ACTIVE='Y' 	AND NEXT_EXEC<=now() 	AND (DATE_CHECK IS NULL OR DATE_CHECK<=now())  ORDER BY RUNNING ASC, SORT desc$$$
+UPDATE b_agent SET DATE_CHECK=DATE_ADD(IF(DATE_CHECK IS NULL, now(), DATE_CHECK), INTERVAL 600 SECOND) WHERE ID IN (20)$$$
+SELECT RELEASE_LOCK('cff29ec0118154ee0dcf115d29478b29_agent')$$$
+UPDATE b_agent SET RUNNING='Y' WHERE ID=20$$$
 SELECT SITE_ID, CACHE_SALT, RELATIVE_PATH, TAG from b_cache_tag WHERE TAG='*'
-LIMIT 0, 1;
+LIMIT 0, 1$$$
 
-SELECT SITE_ID, CACHE_SALT, RELATIVE_PATH, TAG from b_cache_tag WHERE TAG='**';
+SELECT SITE_ID, CACHE_SALT, RELATIVE_PATH, TAG from b_cache_tag WHERE TAG='**'$$$
 SELECT count(1) CNT from b_cache_tag WHERE TAG='*'
-LIMIT 0, 1;
+LIMIT 0, 1$$$
 
 
 					UPDATE b_agent SET
@@ -734,16 +734,16 @@ LIMIT 0, 1;
 						NEXT_EXEC=DATE_ADD(NEXT_EXEC, INTERVAL 1 SECOND),
 						DATE_CHECK=NULL,
 						RUNNING='N'
-					WHERE ID=20;
-SELECT B.ID, B.USER_ID, B.ALIAS, B.DESCRIPTION, B.AVATAR, B.INTERESTS, 	B.ALLOW_POST, 	DATE_FORMAT(B.LAST_VISIT, '%d.%m.%Y %H:%i:%s') as LAST_VISIT, 	DATE_FORMAT(B.DATE_REG, '%d.%m.%Y %H:%i:%s') as DATE_REG FROM b_blog_user B WHERE B.USER_ID = 1;
-SELECT * FROM `b_blog_user` LIMIT 0;
-UPDATE b_blog_user SET 	LAST_VISIT=now()  WHERE ID = 1 ;
-SELECT B.ID, B.NAME, B.DESCRIPTION, B.ACTIVE, B.OWNER_ID, B.URL, B.GROUP_ID, 	B.ENABLE_COMMENTS, B.ENABLE_IMG_VERIF, B.EMAIL_NOTIFY, B.ENABLE_RSS, B.REAL_URL, 	B.LAST_POST_ID, B.AUTO_GROUPS, B.ALLOW_HTML, B.SEARCH_INDEX, B.SOCNET_GROUP_ID, B.USE_SOCNET, 	DATE_FORMAT(B.DATE_CREATE, '%d.%m.%Y %H:%i:%s') as DATE_CREATE, 	DATE_FORMAT(B.DATE_UPDATE, '%d.%m.%Y %H:%i:%s') as DATE_UPDATE, 	DATE_FORMAT(B.LAST_POST_DATE, '%d.%m.%Y %H:%i:%s') as LAST_POST_DATE FROM b_blog B WHERE B.OWNER_ID = 1 	AND B.GROUP_ID IN (1);
-SELECT B.ID, B.USER_ID, B.ALIAS, B.DESCRIPTION, B.AVATAR, B.INTERESTS, 	B.ALLOW_POST, 	DATE_FORMAT(B.LAST_VISIT, '%d.%m.%Y %H:%i:%s') as LAST_VISIT, 	DATE_FORMAT(B.DATE_REG, '%d.%m.%Y %H:%i:%s') as DATE_REG FROM b_blog_user B WHERE B.USER_ID = 1;
-SELECT UG.GROUP_ID FROM b_user_group UG WHERE UG.USER_ID = 1 	AND ((UG.DATE_ACTIVE_FROM IS NULL) OR (UG.DATE_ACTIVE_FROM <= now())) 	AND ((UG.DATE_ACTIVE_TO IS NULL) OR (UG.DATE_ACTIVE_TO >= now())) ;
-SELECT B.ID, B.NAME, B.DESCRIPTION, B.ACTIVE, B.OWNER_ID, B.URL, B.GROUP_ID, 	B.ENABLE_COMMENTS, B.ENABLE_IMG_VERIF, B.EMAIL_NOTIFY, B.ENABLE_RSS, B.REAL_URL, 	B.LAST_POST_ID, B.AUTO_GROUPS, B.ALLOW_HTML, B.SEARCH_INDEX, B.SOCNET_GROUP_ID, B.USE_SOCNET, 	DATE_FORMAT(B.DATE_CREATE, '%d.%m.%Y %H:%i:%s') as DATE_CREATE, 	DATE_FORMAT(B.DATE_UPDATE, '%d.%m.%Y %H:%i:%s') as DATE_UPDATE, 	DATE_FORMAT(B.LAST_POST_DATE, '%d.%m.%Y %H:%i:%s') as LAST_POST_DATE FROM b_blog B WHERE B.OWNER_ID = 1 	AND B.GROUP_ID IN (1);
-SET NAMES 'utf8';
-SET collation_connection = "utf8_unicode_ci";
+					WHERE ID=20$$$
+SELECT B.ID, B.USER_ID, B.ALIAS, B.DESCRIPTION, B.AVATAR, B.INTERESTS, 	B.ALLOW_POST, 	DATE_FORMAT(B.LAST_VISIT, '%d.%m.%Y %H:%i:%s') as LAST_VISIT, 	DATE_FORMAT(B.DATE_REG, '%d.%m.%Y %H:%i:%s') as DATE_REG FROM b_blog_user B WHERE B.USER_ID = 1$$$
+SELECT * FROM `b_blog_user` LIMIT 0$$$
+UPDATE b_blog_user SET 	LAST_VISIT=now()  WHERE ID = 1 $$$
+SELECT B.ID, B.NAME, B.DESCRIPTION, B.ACTIVE, B.OWNER_ID, B.URL, B.GROUP_ID, 	B.ENABLE_COMMENTS, B.ENABLE_IMG_VERIF, B.EMAIL_NOTIFY, B.ENABLE_RSS, B.REAL_URL, 	B.LAST_POST_ID, B.AUTO_GROUPS, B.ALLOW_HTML, B.SEARCH_INDEX, B.SOCNET_GROUP_ID, B.USE_SOCNET, 	DATE_FORMAT(B.DATE_CREATE, '%d.%m.%Y %H:%i:%s') as DATE_CREATE, 	DATE_FORMAT(B.DATE_UPDATE, '%d.%m.%Y %H:%i:%s') as DATE_UPDATE, 	DATE_FORMAT(B.LAST_POST_DATE, '%d.%m.%Y %H:%i:%s') as LAST_POST_DATE FROM b_blog B WHERE B.OWNER_ID = 1 	AND B.GROUP_ID IN (1)$$$
+SELECT B.ID, B.USER_ID, B.ALIAS, B.DESCRIPTION, B.AVATAR, B.INTERESTS, 	B.ALLOW_POST, 	DATE_FORMAT(B.LAST_VISIT, '%d.%m.%Y %H:%i:%s') as LAST_VISIT, 	DATE_FORMAT(B.DATE_REG, '%d.%m.%Y %H:%i:%s') as DATE_REG FROM b_blog_user B WHERE B.USER_ID = 1$$$
+SELECT UG.GROUP_ID FROM b_user_group UG WHERE UG.USER_ID = 1 	AND ((UG.DATE_ACTIVE_FROM IS NULL) OR (UG.DATE_ACTIVE_FROM <= now())) 	AND ((UG.DATE_ACTIVE_TO IS NULL) OR (UG.DATE_ACTIVE_TO >= now())) $$$
+SELECT B.ID, B.NAME, B.DESCRIPTION, B.ACTIVE, B.OWNER_ID, B.URL, B.GROUP_ID, 	B.ENABLE_COMMENTS, B.ENABLE_IMG_VERIF, B.EMAIL_NOTIFY, B.ENABLE_RSS, B.REAL_URL, 	B.LAST_POST_ID, B.AUTO_GROUPS, B.ALLOW_HTML, B.SEARCH_INDEX, B.SOCNET_GROUP_ID, B.USE_SOCNET, 	DATE_FORMAT(B.DATE_CREATE, '%d.%m.%Y %H:%i:%s') as DATE_CREATE, 	DATE_FORMAT(B.DATE_UPDATE, '%d.%m.%Y %H:%i:%s') as DATE_UPDATE, 	DATE_FORMAT(B.LAST_POST_DATE, '%d.%m.%Y %H:%i:%s') as LAST_POST_DATE FROM b_blog B WHERE B.OWNER_ID = 1 	AND B.GROUP_ID IN (1)$$$
+SET NAMES 'utf8'$$$
+SET collation_connection = "utf8_unicode_ci"$$$
 
 			SELECT 'x'
 			FROM b_agent
@@ -753,24 +753,24 @@ SET collation_connection = "utf8_unicode_ci";
 				AND (DATE_CHECK IS NULL OR DATE_CHECK <= now())
 				
 			LIMIT 1
-		;
-SELECT GET_LOCK('cff29ec0118154ee0dcf115d29478b29_agent', 0) as L;
-SELECT ID, NAME, AGENT_INTERVAL, IS_PERIOD, MODULE_ID FROM b_agent WHERE ACTIVE='Y' 	AND NEXT_EXEC<=now() 	AND (DATE_CHECK IS NULL OR DATE_CHECK<=now())  ORDER BY RUNNING ASC, SORT desc;
-UPDATE b_agent SET DATE_CHECK=DATE_ADD(IF(DATE_CHECK IS NULL, now(), DATE_CHECK), INTERVAL 600 SECOND) WHERE ID IN (20);
-SELECT RELEASE_LOCK('cff29ec0118154ee0dcf115d29478b29_agent');
-UPDATE b_agent SET RUNNING='Y' WHERE ID=20;
+		$$$
+SELECT GET_LOCK('cff29ec0118154ee0dcf115d29478b29_agent', 0) as L$$$
+SELECT ID, NAME, AGENT_INTERVAL, IS_PERIOD, MODULE_ID FROM b_agent WHERE ACTIVE='Y' 	AND NEXT_EXEC<=now() 	AND (DATE_CHECK IS NULL OR DATE_CHECK<=now())  ORDER BY RUNNING ASC, SORT desc$$$
+UPDATE b_agent SET DATE_CHECK=DATE_ADD(IF(DATE_CHECK IS NULL, now(), DATE_CHECK), INTERVAL 600 SECOND) WHERE ID IN (20)$$$
+SELECT RELEASE_LOCK('cff29ec0118154ee0dcf115d29478b29_agent')$$$
+UPDATE b_agent SET RUNNING='Y' WHERE ID=20$$$
 SELECT SITE_ID, CACHE_SALT, RELATIVE_PATH, TAG from b_cache_tag WHERE TAG='*'
-LIMIT 0, 1;
+LIMIT 0, 1$$$
 
 DELETE FROM b_cache_tag
 				WHERE SITE_ID = '*'
 				AND CACHE_SALT = '*'
-				AND RELATIVE_PATH = '/bitrix/managed_cache/MYSQL/agents.~53033';
-SELECT SITE_ID, CACHE_SALT, RELATIVE_PATH, TAG from b_cache_tag WHERE TAG='**';
+				AND RELATIVE_PATH = '/bitrix/managed_cache/MYSQL/agents.~53033'$$$
+SELECT SITE_ID, CACHE_SALT, RELATIVE_PATH, TAG from b_cache_tag WHERE TAG='**'$$$
 SELECT count(1) CNT from b_cache_tag WHERE TAG='*'
-LIMIT 0, 1;
+LIMIT 0, 1$$$
 
-UPDATE b_cache_tag SET RELATIVE_PATH='1:1469352782' WHERE TAG='**';
+UPDATE b_cache_tag SET RELATIVE_PATH='1:1469352782' WHERE TAG='**'$$$
 
 					UPDATE b_agent SET
 						NAME='\\Bitrix\\Main\\Data\\CacheEngineFiles::delayedDelete(1);',
@@ -778,28 +778,28 @@ UPDATE b_cache_tag SET RELATIVE_PATH='1:1469352782' WHERE TAG='**';
 						NEXT_EXEC=DATE_ADD(NEXT_EXEC, INTERVAL 1 SECOND),
 						DATE_CHECK=NULL,
 						RUNNING='N'
-					WHERE ID=20;
+					WHERE ID=20$$$
 
 				SELECT TAG
 				FROM b_cache_tag
 				WHERE SITE_ID = 's1'
 				AND CACHE_SALT = '/f20'
 				AND RELATIVE_PATH = '/s1/bitrix/menu/06f'
-			;
+			$$$
 
 				INSERT IGNORE INTO b_cache_tag (SITE_ID, CACHE_SALT, RELATIVE_PATH, TAG)
 				VALUES
-			('s1', '/f20', '/s1/bitrix/menu/06f', 'bitrix:menu');
-SELECT B.ID, B.USER_ID, B.ALIAS, B.DESCRIPTION, B.AVATAR, B.INTERESTS, 	B.ALLOW_POST, 	DATE_FORMAT(B.LAST_VISIT, '%d.%m.%Y %H:%i:%s') as LAST_VISIT, 	DATE_FORMAT(B.DATE_REG, '%d.%m.%Y %H:%i:%s') as DATE_REG FROM b_blog_user B WHERE B.USER_ID = 1;
-SELECT * FROM `b_blog_user` LIMIT 0;
-UPDATE b_blog_user SET 	LAST_VISIT=now()  WHERE ID = 1 ;
-SELECT B.ID, B.NAME, B.DESCRIPTION, B.ACTIVE, B.OWNER_ID, B.URL, B.GROUP_ID, 	B.ENABLE_COMMENTS, B.ENABLE_IMG_VERIF, B.EMAIL_NOTIFY, B.ENABLE_RSS, B.REAL_URL, 	B.LAST_POST_ID, B.AUTO_GROUPS, B.ALLOW_HTML, B.SEARCH_INDEX, B.SOCNET_GROUP_ID, B.USE_SOCNET, 	DATE_FORMAT(B.DATE_CREATE, '%d.%m.%Y %H:%i:%s') as DATE_CREATE, 	DATE_FORMAT(B.DATE_UPDATE, '%d.%m.%Y %H:%i:%s') as DATE_UPDATE, 	DATE_FORMAT(B.LAST_POST_DATE, '%d.%m.%Y %H:%i:%s') as LAST_POST_DATE FROM b_blog B WHERE B.OWNER_ID = 1 	AND B.GROUP_ID IN (1);
-SELECT B.ID, B.NAME, B.DESCRIPTION, B.ACTIVE, B.OWNER_ID, B.URL, B.GROUP_ID, 	B.ENABLE_COMMENTS, B.ENABLE_IMG_VERIF, B.EMAIL_NOTIFY, B.ENABLE_RSS, B.REAL_URL, 	B.LAST_POST_ID, B.AUTO_GROUPS, B.ALLOW_HTML, B.SEARCH_INDEX, B.SOCNET_GROUP_ID, B.USE_SOCNET, 	DATE_FORMAT(B.DATE_CREATE, '%d.%m.%Y %H:%i:%s') as DATE_CREATE, 	DATE_FORMAT(B.DATE_UPDATE, '%d.%m.%Y %H:%i:%s') as DATE_UPDATE, 	DATE_FORMAT(B.LAST_POST_DATE, '%d.%m.%Y %H:%i:%s') as LAST_POST_DATE FROM b_blog B WHERE B.URL = 's1_blog_3' 	AND B.GROUP_ID IN (1);
-SELECT G.ID, G.NAME, G.SITE_ID FROM b_blog_group G WHERE G.ID = 1;
-SELECT  COUNT(P.ID) as ID  FROM b_blog_post P 	  WHERE ((((P.BLOG_ID = 2 )))) AND ((((P.PUBLISH_STATUS = 'K' )))) ;
-SELECT  COUNT(P.ID) as ID  FROM b_blog_post P 	  WHERE ((((P.BLOG_ID = 2 )))) AND ((((P.PUBLISH_STATUS = 'D' )))) AND ((((P.AUTHOR_ID = 1 )))) ;
-SELECT COUNT( B.ID) as CNT  FROM b_blog_user B 	INNER JOIN b_blog_user2user_group U2UG ON (B.USER_ID = U2UG.USER_ID) WHERE ((((B.USER_ID = 1 )))) AND ((((U2UG.BLOG_ID = 2 )))) ;
-SELECT B.ID, B.USER_ID, B.ALIAS, B.DESCRIPTION, B.AVATAR, B.INTERESTS, 	B.ALLOW_POST, 	DATE_FORMAT(B.LAST_VISIT, '%d.%m.%Y %H:%i:%s') as LAST_VISIT, 	DATE_FORMAT(B.DATE_REG, '%d.%m.%Y %H:%i:%s') as DATE_REG FROM b_blog_user B WHERE B.USER_ID = 3;
+			('s1', '/f20', '/s1/bitrix/menu/06f', 'bitrix:menu')$$$
+SELECT B.ID, B.USER_ID, B.ALIAS, B.DESCRIPTION, B.AVATAR, B.INTERESTS, 	B.ALLOW_POST, 	DATE_FORMAT(B.LAST_VISIT, '%d.%m.%Y %H:%i:%s') as LAST_VISIT, 	DATE_FORMAT(B.DATE_REG, '%d.%m.%Y %H:%i:%s') as DATE_REG FROM b_blog_user B WHERE B.USER_ID = 1$$$
+SELECT * FROM `b_blog_user` LIMIT 0$$$
+UPDATE b_blog_user SET 	LAST_VISIT=now()  WHERE ID = 1 $$$
+SELECT B.ID, B.NAME, B.DESCRIPTION, B.ACTIVE, B.OWNER_ID, B.URL, B.GROUP_ID, 	B.ENABLE_COMMENTS, B.ENABLE_IMG_VERIF, B.EMAIL_NOTIFY, B.ENABLE_RSS, B.REAL_URL, 	B.LAST_POST_ID, B.AUTO_GROUPS, B.ALLOW_HTML, B.SEARCH_INDEX, B.SOCNET_GROUP_ID, B.USE_SOCNET, 	DATE_FORMAT(B.DATE_CREATE, '%d.%m.%Y %H:%i:%s') as DATE_CREATE, 	DATE_FORMAT(B.DATE_UPDATE, '%d.%m.%Y %H:%i:%s') as DATE_UPDATE, 	DATE_FORMAT(B.LAST_POST_DATE, '%d.%m.%Y %H:%i:%s') as LAST_POST_DATE FROM b_blog B WHERE B.OWNER_ID = 1 	AND B.GROUP_ID IN (1)$$$
+SELECT B.ID, B.NAME, B.DESCRIPTION, B.ACTIVE, B.OWNER_ID, B.URL, B.GROUP_ID, 	B.ENABLE_COMMENTS, B.ENABLE_IMG_VERIF, B.EMAIL_NOTIFY, B.ENABLE_RSS, B.REAL_URL, 	B.LAST_POST_ID, B.AUTO_GROUPS, B.ALLOW_HTML, B.SEARCH_INDEX, B.SOCNET_GROUP_ID, B.USE_SOCNET, 	DATE_FORMAT(B.DATE_CREATE, '%d.%m.%Y %H:%i:%s') as DATE_CREATE, 	DATE_FORMAT(B.DATE_UPDATE, '%d.%m.%Y %H:%i:%s') as DATE_UPDATE, 	DATE_FORMAT(B.LAST_POST_DATE, '%d.%m.%Y %H:%i:%s') as LAST_POST_DATE FROM b_blog B WHERE B.URL = 's1_blog_3' 	AND B.GROUP_ID IN (1)$$$
+SELECT G.ID, G.NAME, G.SITE_ID FROM b_blog_group G WHERE G.ID = 1$$$
+SELECT  COUNT(P.ID) as ID  FROM b_blog_post P 	  WHERE ((((P.BLOG_ID = 2 )))) AND ((((P.PUBLISH_STATUS = 'K' )))) $$$
+SELECT  COUNT(P.ID) as ID  FROM b_blog_post P 	  WHERE ((((P.BLOG_ID = 2 )))) AND ((((P.PUBLISH_STATUS = 'D' )))) AND ((((P.AUTHOR_ID = 1 )))) $$$
+SELECT COUNT( B.ID) as CNT  FROM b_blog_user B 	INNER JOIN b_blog_user2user_group U2UG ON (B.USER_ID = U2UG.USER_ID) WHERE ((((B.USER_ID = 1 )))) AND ((((U2UG.BLOG_ID = 2 )))) $$$
+SELECT B.ID, B.USER_ID, B.ALIAS, B.DESCRIPTION, B.AVATAR, B.INTERESTS, 	B.ALLOW_POST, 	DATE_FORMAT(B.LAST_VISIT, '%d.%m.%Y %H:%i:%s') as LAST_VISIT, 	DATE_FORMAT(B.DATE_REG, '%d.%m.%Y %H:%i:%s') as DATE_REG FROM b_blog_user B WHERE B.USER_ID = 3$$$
 SELECT U.*, DATE_FORMAT(U.TIMESTAMP_X, '%d.%m.%Y %H:%i:%s') TIMESTAMP_X, IF(U.LAST_ACTIVITY_DATE > DATE_SUB(NOW(), INTERVAL 120 SECOND), 'Y', 'N') IS_ONLINE, DATE_FORMAT(U.DATE_REGISTER, '%d.%m.%Y %H:%i:%s') DATE_REGISTER, DATE_FORMAT(U.LAST_LOGIN, '%d.%m.%Y %H:%i:%s') LAST_LOGIN, DATE_FORMAT(U.PERSONAL_BIRTHDAY, '%d.%m.%Y') PERSONAL_BIRTHDAY
 			
 		
@@ -814,16 +814,16 @@ SELECT U.*, DATE_FORMAT(U.TIMESTAMP_X, '%d.%m.%Y %H:%i:%s') TIMESTAMP_X, IF(U.LA
 						U.ID='3'
 					)
 					)
-			ORDER BY U.ID asc;
-SELECT C.CATEGORY_ID as CATEGORY_ID, CC.NAME as NAME, COUNT( C.ID) as CNT FROM b_blog_post_category C 	LEFT JOIN b_blog_category CC ON (CC.ID = C.CATEGORY_ID) INNER JOIN b_blog_post P ON (P.ID = C.POST_ID) WHERE ((((C.BLOG_ID = 2 )))) AND ((((P.PUBLISH_STATUS = 'P' )))) GROUP BY C.CATEGORY_ID, CC.NAME ORDER BY CC.NAME ASC ;
-SELECT B.ID, B.NAME, B.DESCRIPTION, B.ACTIVE, B.OWNER_ID, B.URL, B.GROUP_ID, 	B.ENABLE_COMMENTS, B.ENABLE_IMG_VERIF, B.EMAIL_NOTIFY, B.ENABLE_RSS, B.REAL_URL, 	B.LAST_POST_ID, B.AUTO_GROUPS, B.ALLOW_HTML, B.SEARCH_INDEX, B.SOCNET_GROUP_ID, B.USE_SOCNET, 	DATE_FORMAT(B.DATE_CREATE, '%d.%m.%Y %H:%i:%s') as DATE_CREATE, 	DATE_FORMAT(B.DATE_UPDATE, '%d.%m.%Y %H:%i:%s') as DATE_UPDATE, 	DATE_FORMAT(B.LAST_POST_DATE, '%d.%m.%Y %H:%i:%s') as LAST_POST_DATE FROM b_blog B WHERE B.OWNER_ID = 1 	AND B.GROUP_ID IN (1);
-SELECT  COUNT(P.ID) as ID  FROM b_blog_post P 	  WHERE ((((P.BLOG_ID = 2 )))) AND ((((P.PUBLISH_STATUS = 'K' )))) ;
-SELECT  COUNT(P.ID) as ID  FROM b_blog_post P 	  WHERE ((((P.BLOG_ID = 2 )))) AND ((((P.PUBLISH_STATUS = 'D' )))) AND ((((P.AUTHOR_ID = 1 )))) ;
-SELECT COUNT( B.ID) as CNT  FROM b_blog_user B 	INNER JOIN b_blog_user2user_group U2UG ON (B.USER_ID = U2UG.USER_ID) WHERE ((((B.USER_ID = 1 )))) AND ((((U2UG.BLOG_ID = 2 )))) ;
-SELECT UG.ID, UG.USER_ID, UG.BLOG_ID, UG.USER_GROUP_ID FROM b_blog_user2user_group UG  WHERE UG.USER_ID = 1 	AND UG.BLOG_ID = 0 ;
-SELECT  DATE_FORMAT(P.DATE_PUBLISH, '%d.%m.%Y %H:%i:%s') as DATE_PUBLISH, P.ID as ID  FROM b_blog_post P 	  WHERE ((((P.BLOG_ID = 2 )))) AND ((((P.PUBLISH_STATUS = 'P' )))) ORDER BY P.DATE_PUBLISH ASC LIMIT 1;
-SELECT DATE_FORMAT(P.DATE_PUBLISH, '%Y-%m-%d') as DATE_PUBLISH1, COUNT(P.ID) as CNT FROM b_blog_post P  WHERE P.BLOG_ID = 2 	AND P.DATE_PUBLISH >= '2016-07-01' 	AND P.DATE_PUBLISH < '2016-08-01' 	AND P.PUBLISH_STATUS = 'P' 	 GROUP BY DATE_PUBLISH1 ORDER BY DATE_PUBLISH1 ;
-SELECT B.ID, B.NAME, B.DESCRIPTION, B.ACTIVE, B.OWNER_ID, B.URL, B.GROUP_ID, 	B.ENABLE_COMMENTS, B.ENABLE_IMG_VERIF, B.EMAIL_NOTIFY, B.ENABLE_RSS, B.REAL_URL, 	B.LAST_POST_ID, B.AUTO_GROUPS, B.ALLOW_HTML, B.SEARCH_INDEX, B.SOCNET_GROUP_ID, B.USE_SOCNET, 	DATE_FORMAT(B.DATE_CREATE, '%d.%m.%Y %H:%i:%s') as DATE_CREATE, 	DATE_FORMAT(B.DATE_UPDATE, '%d.%m.%Y %H:%i:%s') as DATE_UPDATE, 	DATE_FORMAT(B.LAST_POST_DATE, '%d.%m.%Y %H:%i:%s') as LAST_POST_DATE FROM b_blog B WHERE B.URL = 's1_blog_3' ;
+			ORDER BY U.ID asc$$$
+SELECT C.CATEGORY_ID as CATEGORY_ID, CC.NAME as NAME, COUNT( C.ID) as CNT FROM b_blog_post_category C 	LEFT JOIN b_blog_category CC ON (CC.ID = C.CATEGORY_ID) INNER JOIN b_blog_post P ON (P.ID = C.POST_ID) WHERE ((((C.BLOG_ID = 2 )))) AND ((((P.PUBLISH_STATUS = 'P' )))) GROUP BY C.CATEGORY_ID, CC.NAME ORDER BY CC.NAME ASC $$$
+SELECT B.ID, B.NAME, B.DESCRIPTION, B.ACTIVE, B.OWNER_ID, B.URL, B.GROUP_ID, 	B.ENABLE_COMMENTS, B.ENABLE_IMG_VERIF, B.EMAIL_NOTIFY, B.ENABLE_RSS, B.REAL_URL, 	B.LAST_POST_ID, B.AUTO_GROUPS, B.ALLOW_HTML, B.SEARCH_INDEX, B.SOCNET_GROUP_ID, B.USE_SOCNET, 	DATE_FORMAT(B.DATE_CREATE, '%d.%m.%Y %H:%i:%s') as DATE_CREATE, 	DATE_FORMAT(B.DATE_UPDATE, '%d.%m.%Y %H:%i:%s') as DATE_UPDATE, 	DATE_FORMAT(B.LAST_POST_DATE, '%d.%m.%Y %H:%i:%s') as LAST_POST_DATE FROM b_blog B WHERE B.OWNER_ID = 1 	AND B.GROUP_ID IN (1)$$$
+SELECT  COUNT(P.ID) as ID  FROM b_blog_post P 	  WHERE ((((P.BLOG_ID = 2 )))) AND ((((P.PUBLISH_STATUS = 'K' )))) $$$
+SELECT  COUNT(P.ID) as ID  FROM b_blog_post P 	  WHERE ((((P.BLOG_ID = 2 )))) AND ((((P.PUBLISH_STATUS = 'D' )))) AND ((((P.AUTHOR_ID = 1 )))) $$$
+SELECT COUNT( B.ID) as CNT  FROM b_blog_user B 	INNER JOIN b_blog_user2user_group U2UG ON (B.USER_ID = U2UG.USER_ID) WHERE ((((B.USER_ID = 1 )))) AND ((((U2UG.BLOG_ID = 2 )))) $$$
+SELECT UG.ID, UG.USER_ID, UG.BLOG_ID, UG.USER_GROUP_ID FROM b_blog_user2user_group UG  WHERE UG.USER_ID = 1 	AND UG.BLOG_ID = 0 $$$
+SELECT  DATE_FORMAT(P.DATE_PUBLISH, '%d.%m.%Y %H:%i:%s') as DATE_PUBLISH, P.ID as ID  FROM b_blog_post P 	  WHERE ((((P.BLOG_ID = 2 )))) AND ((((P.PUBLISH_STATUS = 'P' )))) ORDER BY P.DATE_PUBLISH ASC LIMIT 1$$$
+SELECT DATE_FORMAT(P.DATE_PUBLISH, '%Y-%m-%d') as DATE_PUBLISH1, COUNT(P.ID) as CNT FROM b_blog_post P  WHERE P.BLOG_ID = 2 	AND P.DATE_PUBLISH >= '2016-07-01' 	AND P.DATE_PUBLISH < '2016-08-01' 	AND P.PUBLISH_STATUS = 'P' 	 GROUP BY DATE_PUBLISH1 ORDER BY DATE_PUBLISH1 $$$
+SELECT B.ID, B.NAME, B.DESCRIPTION, B.ACTIVE, B.OWNER_ID, B.URL, B.GROUP_ID, 	B.ENABLE_COMMENTS, B.ENABLE_IMG_VERIF, B.EMAIL_NOTIFY, B.ENABLE_RSS, B.REAL_URL, 	B.LAST_POST_ID, B.AUTO_GROUPS, B.ALLOW_HTML, B.SEARCH_INDEX, B.SOCNET_GROUP_ID, B.USE_SOCNET, 	DATE_FORMAT(B.DATE_CREATE, '%d.%m.%Y %H:%i:%s') as DATE_CREATE, 	DATE_FORMAT(B.DATE_UPDATE, '%d.%m.%Y %H:%i:%s') as DATE_UPDATE, 	DATE_FORMAT(B.LAST_POST_DATE, '%d.%m.%Y %H:%i:%s') as LAST_POST_DATE FROM b_blog B WHERE B.URL = 's1_blog_3' $$$
 
 					SELECT
 						stags2.NAME
@@ -862,26 +862,26 @@ AND sc.PARAM2 = '2'
 					GROUP BY
 						stags2.NAME
 					 ORDER BY CNT DESC
-				LIMIT 30;
+				LIMIT 30$$$
 
 				SELECT TAG
 				FROM b_cache_tag
 				WHERE SITE_ID = 's1'
 				AND CACHE_SALT = '/f20'
 				AND RELATIVE_PATH = '/s1/bitrix/search.tags.cloud/f20'
-			;
+			$$$
 
 				INSERT IGNORE INTO b_cache_tag (SITE_ID, CACHE_SALT, RELATIVE_PATH, TAG)
 				VALUES
-			('s1', '/f20', '/s1/bitrix/search.tags.cloud/f20', 'bitrix:search.tags.cloud');
-SELECT UG.ID, UG.USER_ID, UG.BLOG_ID, UG.USER_GROUP_ID FROM b_blog_user2user_group UG  INNER JOIN b_blog B ON (UG.BLOG_ID = B.ID AND B.URL='s1_blog_3')  WHERE UG.USER_ID = 1 ;
-SELECT P.FAVORITE_SORT as FAVORITE_SORT, DATE_FORMAT(P.DATE_PUBLISH, '%d.%m.%Y %H:%i:%s') as DATE_PUBLISH, P.ID as ID, MAX('W') as PERMS, COUNT( P.ID) as CNT  FROM b_blog_post P 	  WHERE ((((P.PUBLISH_STATUS = 'P' )))) AND (((('W' > 'D' )))) AND ((((P.BLOG_ID = 2 )))) AND ((((P.FAVORITE_SORT > 0 )))) GROUP BY P.FAVORITE_SORT, P.DATE_PUBLISH, P.ID ORDER BY P.FAVORITE_SORT ASC, P.DATE_PUBLISH DESC LIMIT 25;
-SELECT COUNT(DISTINCT P.ID) as CNT FROM b_blog_post P 	  WHERE ((((P.PUBLISH_STATUS = 'P' )))) AND (((('W' > 'D' )))) AND ((((P.BLOG_ID = 2 )))) AND ((((P.DATE_PUBLISH <= '2016-07-24 12:33:02')))) GROUP BY P.DATE_PUBLISH, P.ID ;
-SELECT DATE_FORMAT(P.DATE_PUBLISH, '%d.%m.%Y %H:%i:%s') as DATE_PUBLISH, P.ID as ID, MAX('W') as PERMS, COUNT( P.ID) as CNT  FROM b_blog_post P 	  WHERE ((((P.PUBLISH_STATUS = 'P' )))) AND (((('W' > 'D' )))) AND ((((P.BLOG_ID = 2 )))) AND ((((P.DATE_PUBLISH <= '2016-07-24 12:33:02')))) GROUP BY P.DATE_PUBLISH, P.ID ORDER BY P.DATE_PUBLISH DESC, P.ID DESC  LIMIT 0, 27;
-SELECT P.*, IF(P.DATE_PUBLISH <= NOW(), 'Y', 'N') as DATE_PUBLISHED, 	DATE_FORMAT(P.DATE_CREATE, '%d.%m.%Y %H:%i:%s') as DATE_CREATE, 	DATE_FORMAT(P.DATE_PUBLISH, '%d.%m.%Y %H:%i:%s') as DATE_PUBLISH FROM b_blog_post P WHERE P.ID = 3;
-SELECT  G.ID as ID, G.FILE_ID as FILE_ID, G.POST_ID as POST_ID, G.BLOG_ID as BLOG_ID, G.USER_ID as USER_ID, G.TITLE as TITLE, DATE_FORMAT(G.TIMESTAMP_X, '%d.%m.%Y %H:%i:%s') as TIMESTAMP_X, G.IMAGE_SIZE as IMAGE_SIZE FROM b_blog_image G 	 WHERE ((((G.POST_ID = 3 )))) AND ((((G.BLOG_ID = 2 )))) AND ((((G.IS_COMMENT = 'N' )))) ORDER BY G.ID ASC ;
-SELECT G.* FROM b_blog_image G WHERE G.ID = 4;
-SELECT B.ID, B.USER_ID, B.ALIAS, B.DESCRIPTION, B.AVATAR, B.INTERESTS, 	B.ALLOW_POST, 	DATE_FORMAT(B.LAST_VISIT, '%d.%m.%Y %H:%i:%s') as LAST_VISIT, 	DATE_FORMAT(B.DATE_REG, '%d.%m.%Y %H:%i:%s') as DATE_REG FROM b_blog_user B WHERE B.USER_ID = 3;
+			('s1', '/f20', '/s1/bitrix/search.tags.cloud/f20', 'bitrix:search.tags.cloud')$$$
+SELECT UG.ID, UG.USER_ID, UG.BLOG_ID, UG.USER_GROUP_ID FROM b_blog_user2user_group UG  INNER JOIN b_blog B ON (UG.BLOG_ID = B.ID AND B.URL='s1_blog_3')  WHERE UG.USER_ID = 1 $$$
+SELECT P.FAVORITE_SORT as FAVORITE_SORT, DATE_FORMAT(P.DATE_PUBLISH, '%d.%m.%Y %H:%i:%s') as DATE_PUBLISH, P.ID as ID, MAX('W') as PERMS, COUNT( P.ID) as CNT  FROM b_blog_post P 	  WHERE ((((P.PUBLISH_STATUS = 'P' )))) AND (((('W' > 'D' )))) AND ((((P.BLOG_ID = 2 )))) AND ((((P.FAVORITE_SORT > 0 )))) GROUP BY P.FAVORITE_SORT, P.DATE_PUBLISH, P.ID ORDER BY P.FAVORITE_SORT ASC, P.DATE_PUBLISH DESC LIMIT 25$$$
+SELECT COUNT(DISTINCT P.ID) as CNT FROM b_blog_post P 	  WHERE ((((P.PUBLISH_STATUS = 'P' )))) AND (((('W' > 'D' )))) AND ((((P.BLOG_ID = 2 )))) AND ((((P.DATE_PUBLISH <= '2016-07-24 12:33:02')))) GROUP BY P.DATE_PUBLISH, P.ID $$$
+SELECT DATE_FORMAT(P.DATE_PUBLISH, '%d.%m.%Y %H:%i:%s') as DATE_PUBLISH, P.ID as ID, MAX('W') as PERMS, COUNT( P.ID) as CNT  FROM b_blog_post P 	  WHERE ((((P.PUBLISH_STATUS = 'P' )))) AND (((('W' > 'D' )))) AND ((((P.BLOG_ID = 2 )))) AND ((((P.DATE_PUBLISH <= '2016-07-24 12:33:02')))) GROUP BY P.DATE_PUBLISH, P.ID ORDER BY P.DATE_PUBLISH DESC, P.ID DESC  LIMIT 0, 27$$$
+SELECT P.*, IF(P.DATE_PUBLISH <= NOW(), 'Y', 'N') as DATE_PUBLISHED, 	DATE_FORMAT(P.DATE_CREATE, '%d.%m.%Y %H:%i:%s') as DATE_CREATE, 	DATE_FORMAT(P.DATE_PUBLISH, '%d.%m.%Y %H:%i:%s') as DATE_PUBLISH FROM b_blog_post P WHERE P.ID = 3$$$
+SELECT  G.ID as ID, G.FILE_ID as FILE_ID, G.POST_ID as POST_ID, G.BLOG_ID as BLOG_ID, G.USER_ID as USER_ID, G.TITLE as TITLE, DATE_FORMAT(G.TIMESTAMP_X, '%d.%m.%Y %H:%i:%s') as TIMESTAMP_X, G.IMAGE_SIZE as IMAGE_SIZE FROM b_blog_image G 	 WHERE ((((G.POST_ID = 3 )))) AND ((((G.BLOG_ID = 2 )))) AND ((((G.IS_COMMENT = 'N' )))) ORDER BY G.ID ASC $$$
+SELECT G.* FROM b_blog_image G WHERE G.ID = 4$$$
+SELECT B.ID, B.USER_ID, B.ALIAS, B.DESCRIPTION, B.AVATAR, B.INTERESTS, 	B.ALLOW_POST, 	DATE_FORMAT(B.LAST_VISIT, '%d.%m.%Y %H:%i:%s') as LAST_VISIT, 	DATE_FORMAT(B.DATE_REG, '%d.%m.%Y %H:%i:%s') as DATE_REG FROM b_blog_user B WHERE B.USER_ID = 3$$$
 SELECT U.*, DATE_FORMAT(U.TIMESTAMP_X, '%d.%m.%Y %H:%i:%s') TIMESTAMP_X, IF(U.LAST_ACTIVITY_DATE > DATE_SUB(NOW(), INTERVAL 120 SECOND), 'Y', 'N') IS_ONLINE, DATE_FORMAT(U.DATE_REGISTER, '%d.%m.%Y %H:%i:%s') DATE_REGISTER, DATE_FORMAT(U.LAST_LOGIN, '%d.%m.%Y %H:%i:%s') LAST_LOGIN, DATE_FORMAT(U.PERSONAL_BIRTHDAY, '%d.%m.%Y') PERSONAL_BIRTHDAY
 			
 		
@@ -896,11 +896,11 @@ SELECT U.*, DATE_FORMAT(U.TIMESTAMP_X, '%d.%m.%Y %H:%i:%s') TIMESTAMP_X, IF(U.LA
 						U.ID='3'
 					)
 					)
-			ORDER BY U.ID asc;
-SELECT C.ID, C.BLOG_ID, C.NAME FROM b_blog_category C WHERE C.ID = 9;
-SELECT C.ID, C.BLOG_ID, C.NAME FROM b_blog_category C WHERE C.ID = 10;
-SELECT C.ID, C.BLOG_ID, C.NAME FROM b_blog_category C WHERE C.ID = 7;
-SELECT C.ID, C.BLOG_ID, C.NAME FROM b_blog_category C WHERE C.ID = 11;
+			ORDER BY U.ID asc$$$
+SELECT C.ID, C.BLOG_ID, C.NAME FROM b_blog_category C WHERE C.ID = 9$$$
+SELECT C.ID, C.BLOG_ID, C.NAME FROM b_blog_category C WHERE C.ID = 10$$$
+SELECT C.ID, C.BLOG_ID, C.NAME FROM b_blog_category C WHERE C.ID = 7$$$
+SELECT C.ID, C.BLOG_ID, C.NAME FROM b_blog_category C WHERE C.ID = 11$$$
 
 			SELECT
 				UF.ID
@@ -928,12 +928,12 @@ SELECT C.ID, C.BLOG_ID, C.NAME FROM b_blog_category C WHERE C.ID = 11;
 				LEFT JOIN b_user_field_lang UFL on UFL.LANGUAGE_ID = 'ru' AND UFL.USER_FIELD_ID = UF.ID
 			
 WHERE UF.ENTITY_ID = 'BLOG_POST'
-ORDER BY UF.SORT ASC, UF.ID ASC;
-SELECT VALUE_ID, UF_BLOG_POST_DOC, UF_BLOG_POST_URL_PRV, UF_GRATITUDE FROM b_uts_blog_post WHERE VALUE_ID = 3;
-SELECT P.*, IF(P.DATE_PUBLISH <= NOW(), 'Y', 'N') as DATE_PUBLISHED, 	DATE_FORMAT(P.DATE_CREATE, '%d.%m.%Y %H:%i:%s') as DATE_CREATE, 	DATE_FORMAT(P.DATE_PUBLISH, '%d.%m.%Y %H:%i:%s') as DATE_PUBLISH FROM b_blog_post P WHERE P.ID = 2;
-SELECT  G.ID as ID, G.FILE_ID as FILE_ID, G.POST_ID as POST_ID, G.BLOG_ID as BLOG_ID, G.USER_ID as USER_ID, G.TITLE as TITLE, DATE_FORMAT(G.TIMESTAMP_X, '%d.%m.%Y %H:%i:%s') as TIMESTAMP_X, G.IMAGE_SIZE as IMAGE_SIZE FROM b_blog_image G 	 WHERE ((((G.POST_ID = 2 )))) AND ((((G.BLOG_ID = 2 )))) AND ((((G.IS_COMMENT = 'N' )))) ORDER BY G.ID ASC ;
-SELECT G.* FROM b_blog_image G WHERE G.ID = 3;
-SELECT B.ID, B.USER_ID, B.ALIAS, B.DESCRIPTION, B.AVATAR, B.INTERESTS, 	B.ALLOW_POST, 	DATE_FORMAT(B.LAST_VISIT, '%d.%m.%Y %H:%i:%s') as LAST_VISIT, 	DATE_FORMAT(B.DATE_REG, '%d.%m.%Y %H:%i:%s') as DATE_REG FROM b_blog_user B WHERE B.USER_ID = 3;
+ORDER BY UF.SORT ASC, UF.ID ASC$$$
+SELECT VALUE_ID, UF_BLOG_POST_DOC, UF_BLOG_POST_URL_PRV, UF_GRATITUDE FROM b_uts_blog_post WHERE VALUE_ID = 3$$$
+SELECT P.*, IF(P.DATE_PUBLISH <= NOW(), 'Y', 'N') as DATE_PUBLISHED, 	DATE_FORMAT(P.DATE_CREATE, '%d.%m.%Y %H:%i:%s') as DATE_CREATE, 	DATE_FORMAT(P.DATE_PUBLISH, '%d.%m.%Y %H:%i:%s') as DATE_PUBLISH FROM b_blog_post P WHERE P.ID = 2$$$
+SELECT  G.ID as ID, G.FILE_ID as FILE_ID, G.POST_ID as POST_ID, G.BLOG_ID as BLOG_ID, G.USER_ID as USER_ID, G.TITLE as TITLE, DATE_FORMAT(G.TIMESTAMP_X, '%d.%m.%Y %H:%i:%s') as TIMESTAMP_X, G.IMAGE_SIZE as IMAGE_SIZE FROM b_blog_image G 	 WHERE ((((G.POST_ID = 2 )))) AND ((((G.BLOG_ID = 2 )))) AND ((((G.IS_COMMENT = 'N' )))) ORDER BY G.ID ASC $$$
+SELECT G.* FROM b_blog_image G WHERE G.ID = 3$$$
+SELECT B.ID, B.USER_ID, B.ALIAS, B.DESCRIPTION, B.AVATAR, B.INTERESTS, 	B.ALLOW_POST, 	DATE_FORMAT(B.LAST_VISIT, '%d.%m.%Y %H:%i:%s') as LAST_VISIT, 	DATE_FORMAT(B.DATE_REG, '%d.%m.%Y %H:%i:%s') as DATE_REG FROM b_blog_user B WHERE B.USER_ID = 3$$$
 SELECT U.*, DATE_FORMAT(U.TIMESTAMP_X, '%d.%m.%Y %H:%i:%s') TIMESTAMP_X, IF(U.LAST_ACTIVITY_DATE > DATE_SUB(NOW(), INTERVAL 120 SECOND), 'Y', 'N') IS_ONLINE, DATE_FORMAT(U.DATE_REGISTER, '%d.%m.%Y %H:%i:%s') DATE_REGISTER, DATE_FORMAT(U.LAST_LOGIN, '%d.%m.%Y %H:%i:%s') LAST_LOGIN, DATE_FORMAT(U.PERSONAL_BIRTHDAY, '%d.%m.%Y') PERSONAL_BIRTHDAY
 			
 		
@@ -948,22 +948,22 @@ SELECT U.*, DATE_FORMAT(U.TIMESTAMP_X, '%d.%m.%Y %H:%i:%s') TIMESTAMP_X, IF(U.LA
 						U.ID='3'
 					)
 					)
-			ORDER BY U.ID asc;
-SELECT C.ID, C.BLOG_ID, C.NAME FROM b_blog_category C WHERE C.ID = 5;
-SELECT C.ID, C.BLOG_ID, C.NAME FROM b_blog_category C WHERE C.ID = 6;
-SELECT C.ID, C.BLOG_ID, C.NAME FROM b_blog_category C WHERE C.ID = 8;
-SELECT VALUE_ID, UF_BLOG_POST_DOC, UF_BLOG_POST_URL_PRV, UF_GRATITUDE FROM b_uts_blog_post WHERE VALUE_ID = 2;
+			ORDER BY U.ID asc$$$
+SELECT C.ID, C.BLOG_ID, C.NAME FROM b_blog_category C WHERE C.ID = 5$$$
+SELECT C.ID, C.BLOG_ID, C.NAME FROM b_blog_category C WHERE C.ID = 6$$$
+SELECT C.ID, C.BLOG_ID, C.NAME FROM b_blog_category C WHERE C.ID = 8$$$
+SELECT VALUE_ID, UF_BLOG_POST_DOC, UF_BLOG_POST_URL_PRV, UF_GRATITUDE FROM b_uts_blog_post WHERE VALUE_ID = 2$$$
 
 				SELECT TAG
 				FROM b_cache_tag
 				WHERE SITE_ID = 's1'
 				AND CACHE_SALT = '/f20'
 				AND RELATIVE_PATH = '/s1/bitrix/menu/345'
-			;
+			$$$
 
 				INSERT IGNORE INTO b_cache_tag (SITE_ID, CACHE_SALT, RELATIVE_PATH, TAG)
 				VALUES
-			('s1', '/f20', '/s1/bitrix/menu/345', 'bitrix:menu');
+			('s1', '/f20', '/s1/bitrix/menu/345', 'bitrix:menu')$$$
 
 			SELECT
 				COUNT(ST.ID) as CNT
@@ -972,9 +972,9 @@ SELECT VALUE_ID, UF_BLOG_POST_DOC, UF_BLOG_POST_URL_PRV, UF_GRATITUDE FROM b_uts
 			WHERE
 				((ST.PERSONAL='Y' AND ST.CREATED_BY=1) OR ST.PERSONAL='N')
  AND ST.CLOSED='N' AND ST.DELETED='N' AND ST.SITE_ID='s1'
- AND ST.PAGE_URL='/blogs/s1_blog_3/';
-SET NAMES 'utf8';
-SET collation_connection = "utf8_unicode_ci";
+ AND ST.PAGE_URL='/blogs/s1_blog_3/'$$$
+SET NAMES 'utf8'$$$
+SET collation_connection = "utf8_unicode_ci"$$$
 
 			SELECT 'x'
 			FROM b_agent
@@ -984,18 +984,18 @@ SET collation_connection = "utf8_unicode_ci";
 				AND (DATE_CHECK IS NULL OR DATE_CHECK <= now())
 				
 			LIMIT 1
-		;
-SELECT GET_LOCK('cff29ec0118154ee0dcf115d29478b29_agent', 0) as L;
-SELECT ID, NAME, AGENT_INTERVAL, IS_PERIOD, MODULE_ID FROM b_agent WHERE ACTIVE='Y' 	AND NEXT_EXEC<=now() 	AND (DATE_CHECK IS NULL OR DATE_CHECK<=now())  ORDER BY RUNNING ASC, SORT desc;
-UPDATE b_agent SET DATE_CHECK=DATE_ADD(IF(DATE_CHECK IS NULL, now(), DATE_CHECK), INTERVAL 600 SECOND) WHERE ID IN (20);
-SELECT RELEASE_LOCK('cff29ec0118154ee0dcf115d29478b29_agent');
-UPDATE b_agent SET RUNNING='Y' WHERE ID=20;
+		$$$
+SELECT GET_LOCK('cff29ec0118154ee0dcf115d29478b29_agent', 0) as L$$$
+SELECT ID, NAME, AGENT_INTERVAL, IS_PERIOD, MODULE_ID FROM b_agent WHERE ACTIVE='Y' 	AND NEXT_EXEC<=now() 	AND (DATE_CHECK IS NULL OR DATE_CHECK<=now())  ORDER BY RUNNING ASC, SORT desc$$$
+UPDATE b_agent SET DATE_CHECK=DATE_ADD(IF(DATE_CHECK IS NULL, now(), DATE_CHECK), INTERVAL 600 SECOND) WHERE ID IN (20)$$$
+SELECT RELEASE_LOCK('cff29ec0118154ee0dcf115d29478b29_agent')$$$
+UPDATE b_agent SET RUNNING='Y' WHERE ID=20$$$
 SELECT SITE_ID, CACHE_SALT, RELATIVE_PATH, TAG from b_cache_tag WHERE TAG='*'
-LIMIT 0, 1;
+LIMIT 0, 1$$$
 
-SELECT SITE_ID, CACHE_SALT, RELATIVE_PATH, TAG from b_cache_tag WHERE TAG='**';
+SELECT SITE_ID, CACHE_SALT, RELATIVE_PATH, TAG from b_cache_tag WHERE TAG='**'$$$
 SELECT count(1) CNT from b_cache_tag WHERE TAG='*'
-LIMIT 0, 1;
+LIMIT 0, 1$$$
 
 					UPDATE b_agent SET
 						NAME='\\Bitrix\\Main\\Data\\CacheEngineFiles::delayedDelete(1);',
@@ -1003,25 +1003,25 @@ LIMIT 0, 1;
 						NEXT_EXEC=DATE_ADD(NEXT_EXEC, INTERVAL 1 SECOND),
 						DATE_CHECK=NULL,
 						RUNNING='N'
-					WHERE ID=20;
-SELECT B.ID, B.USER_ID, B.ALIAS, B.DESCRIPTION, B.AVATAR, B.INTERESTS, 	B.ALLOW_POST, 	DATE_FORMAT(B.LAST_VISIT, '%d.%m.%Y %H:%i:%s') as LAST_VISIT, 	DATE_FORMAT(B.DATE_REG, '%d.%m.%Y %H:%i:%s') as DATE_REG FROM b_blog_user B WHERE B.USER_ID = 1;
-SELECT * FROM `b_blog_user` LIMIT 0;
-UPDATE b_blog_user SET 	LAST_VISIT=now()  WHERE ID = 1 ;
-SELECT B.ID, B.NAME, B.DESCRIPTION, B.ACTIVE, B.OWNER_ID, B.URL, B.GROUP_ID, 	B.ENABLE_COMMENTS, B.ENABLE_IMG_VERIF, B.EMAIL_NOTIFY, B.ENABLE_RSS, B.REAL_URL, 	B.LAST_POST_ID, B.AUTO_GROUPS, B.ALLOW_HTML, B.SEARCH_INDEX, B.SOCNET_GROUP_ID, B.USE_SOCNET, 	DATE_FORMAT(B.DATE_CREATE, '%d.%m.%Y %H:%i:%s') as DATE_CREATE, 	DATE_FORMAT(B.DATE_UPDATE, '%d.%m.%Y %H:%i:%s') as DATE_UPDATE, 	DATE_FORMAT(B.LAST_POST_DATE, '%d.%m.%Y %H:%i:%s') as LAST_POST_DATE FROM b_blog B WHERE B.OWNER_ID = 1 	AND B.GROUP_ID IN (1);
-SELECT B.ID, B.NAME, B.DESCRIPTION, B.ACTIVE, B.OWNER_ID, B.URL, B.GROUP_ID, 	B.ENABLE_COMMENTS, B.ENABLE_IMG_VERIF, B.EMAIL_NOTIFY, B.ENABLE_RSS, B.REAL_URL, 	B.LAST_POST_ID, B.AUTO_GROUPS, B.ALLOW_HTML, B.SEARCH_INDEX, B.SOCNET_GROUP_ID, B.USE_SOCNET, 	DATE_FORMAT(B.DATE_CREATE, '%d.%m.%Y %H:%i:%s') as DATE_CREATE, 	DATE_FORMAT(B.DATE_UPDATE, '%d.%m.%Y %H:%i:%s') as DATE_UPDATE, 	DATE_FORMAT(B.LAST_POST_DATE, '%d.%m.%Y %H:%i:%s') as LAST_POST_DATE FROM b_blog B WHERE B.URL = 's1_blog_3' 	AND B.GROUP_ID IN (1);
-SELECT G.ID, G.NAME, G.SITE_ID FROM b_blog_group G WHERE G.ID = 1;
-SELECT  COUNT(P.ID) as ID  FROM b_blog_post P 	  WHERE ((((P.BLOG_ID = 2 )))) AND ((((P.PUBLISH_STATUS = 'K' )))) ;
-SELECT  COUNT(P.ID) as ID  FROM b_blog_post P 	  WHERE ((((P.BLOG_ID = 2 )))) AND ((((P.PUBLISH_STATUS = 'D' )))) AND ((((P.AUTHOR_ID = 1 )))) ;
-SELECT COUNT( B.ID) as CNT  FROM b_blog_user B 	INNER JOIN b_blog_user2user_group U2UG ON (B.USER_ID = U2UG.USER_ID) WHERE ((((B.USER_ID = 1 )))) AND ((((U2UG.BLOG_ID = 2 )))) ;
-SELECT B.ID, B.NAME, B.DESCRIPTION, B.ACTIVE, B.OWNER_ID, B.URL, B.GROUP_ID, 	B.ENABLE_COMMENTS, B.ENABLE_IMG_VERIF, B.EMAIL_NOTIFY, B.ENABLE_RSS, B.REAL_URL, 	B.LAST_POST_ID, B.AUTO_GROUPS, B.ALLOW_HTML, B.SEARCH_INDEX, B.SOCNET_GROUP_ID, B.USE_SOCNET, 	DATE_FORMAT(B.DATE_CREATE, '%d.%m.%Y %H:%i:%s') as DATE_CREATE, 	DATE_FORMAT(B.DATE_UPDATE, '%d.%m.%Y %H:%i:%s') as DATE_UPDATE, 	DATE_FORMAT(B.LAST_POST_DATE, '%d.%m.%Y %H:%i:%s') as LAST_POST_DATE FROM b_blog B WHERE B.OWNER_ID = 1 	AND B.GROUP_ID IN (1);
-SELECT  COUNT(P.ID) as ID  FROM b_blog_post P 	  WHERE ((((P.BLOG_ID = 2 )))) AND ((((P.PUBLISH_STATUS = 'K' )))) ;
-SELECT  COUNT(P.ID) as ID  FROM b_blog_post P 	  WHERE ((((P.BLOG_ID = 2 )))) AND ((((P.PUBLISH_STATUS = 'D' )))) AND ((((P.AUTHOR_ID = 1 )))) ;
-SELECT COUNT( B.ID) as CNT  FROM b_blog_user B 	INNER JOIN b_blog_user2user_group U2UG ON (B.USER_ID = U2UG.USER_ID) WHERE ((((B.USER_ID = 1 )))) AND ((((U2UG.BLOG_ID = 2 )))) ;
-SELECT UG.ID, UG.USER_ID, UG.BLOG_ID, UG.USER_GROUP_ID FROM b_blog_user2user_group UG  WHERE UG.USER_ID = 1 	AND UG.BLOG_ID = 0 ;
-SELECT B.ID, B.NAME, B.DESCRIPTION, B.ACTIVE, B.OWNER_ID, B.URL, B.GROUP_ID, 	B.ENABLE_COMMENTS, B.ENABLE_IMG_VERIF, B.EMAIL_NOTIFY, B.ENABLE_RSS, B.REAL_URL, 	B.LAST_POST_ID, B.AUTO_GROUPS, B.ALLOW_HTML, B.SEARCH_INDEX, B.SOCNET_GROUP_ID, B.USE_SOCNET, 	DATE_FORMAT(B.DATE_CREATE, '%d.%m.%Y %H:%i:%s') as DATE_CREATE, 	DATE_FORMAT(B.DATE_UPDATE, '%d.%m.%Y %H:%i:%s') as DATE_UPDATE, 	DATE_FORMAT(B.LAST_POST_DATE, '%d.%m.%Y %H:%i:%s') as LAST_POST_DATE FROM b_blog B WHERE B.URL = 's1_blog_3' ;
-SELECT UG.ID, UG.USER_ID, UG.BLOG_ID, UG.USER_GROUP_ID FROM b_blog_user2user_group UG  INNER JOIN b_blog B ON (UG.BLOG_ID = B.ID AND B.URL='s1_blog_3')  WHERE UG.USER_ID = 1 ;
-SET NAMES 'utf8';
-SET collation_connection = "utf8_unicode_ci";
+					WHERE ID=20$$$
+SELECT B.ID, B.USER_ID, B.ALIAS, B.DESCRIPTION, B.AVATAR, B.INTERESTS, 	B.ALLOW_POST, 	DATE_FORMAT(B.LAST_VISIT, '%d.%m.%Y %H:%i:%s') as LAST_VISIT, 	DATE_FORMAT(B.DATE_REG, '%d.%m.%Y %H:%i:%s') as DATE_REG FROM b_blog_user B WHERE B.USER_ID = 1$$$
+SELECT * FROM `b_blog_user` LIMIT 0$$$
+UPDATE b_blog_user SET 	LAST_VISIT=now()  WHERE ID = 1 $$$
+SELECT B.ID, B.NAME, B.DESCRIPTION, B.ACTIVE, B.OWNER_ID, B.URL, B.GROUP_ID, 	B.ENABLE_COMMENTS, B.ENABLE_IMG_VERIF, B.EMAIL_NOTIFY, B.ENABLE_RSS, B.REAL_URL, 	B.LAST_POST_ID, B.AUTO_GROUPS, B.ALLOW_HTML, B.SEARCH_INDEX, B.SOCNET_GROUP_ID, B.USE_SOCNET, 	DATE_FORMAT(B.DATE_CREATE, '%d.%m.%Y %H:%i:%s') as DATE_CREATE, 	DATE_FORMAT(B.DATE_UPDATE, '%d.%m.%Y %H:%i:%s') as DATE_UPDATE, 	DATE_FORMAT(B.LAST_POST_DATE, '%d.%m.%Y %H:%i:%s') as LAST_POST_DATE FROM b_blog B WHERE B.OWNER_ID = 1 	AND B.GROUP_ID IN (1)$$$
+SELECT B.ID, B.NAME, B.DESCRIPTION, B.ACTIVE, B.OWNER_ID, B.URL, B.GROUP_ID, 	B.ENABLE_COMMENTS, B.ENABLE_IMG_VERIF, B.EMAIL_NOTIFY, B.ENABLE_RSS, B.REAL_URL, 	B.LAST_POST_ID, B.AUTO_GROUPS, B.ALLOW_HTML, B.SEARCH_INDEX, B.SOCNET_GROUP_ID, B.USE_SOCNET, 	DATE_FORMAT(B.DATE_CREATE, '%d.%m.%Y %H:%i:%s') as DATE_CREATE, 	DATE_FORMAT(B.DATE_UPDATE, '%d.%m.%Y %H:%i:%s') as DATE_UPDATE, 	DATE_FORMAT(B.LAST_POST_DATE, '%d.%m.%Y %H:%i:%s') as LAST_POST_DATE FROM b_blog B WHERE B.URL = 's1_blog_3' 	AND B.GROUP_ID IN (1)$$$
+SELECT G.ID, G.NAME, G.SITE_ID FROM b_blog_group G WHERE G.ID = 1$$$
+SELECT  COUNT(P.ID) as ID  FROM b_blog_post P 	  WHERE ((((P.BLOG_ID = 2 )))) AND ((((P.PUBLISH_STATUS = 'K' )))) $$$
+SELECT  COUNT(P.ID) as ID  FROM b_blog_post P 	  WHERE ((((P.BLOG_ID = 2 )))) AND ((((P.PUBLISH_STATUS = 'D' )))) AND ((((P.AUTHOR_ID = 1 )))) $$$
+SELECT COUNT( B.ID) as CNT  FROM b_blog_user B 	INNER JOIN b_blog_user2user_group U2UG ON (B.USER_ID = U2UG.USER_ID) WHERE ((((B.USER_ID = 1 )))) AND ((((U2UG.BLOG_ID = 2 )))) $$$
+SELECT B.ID, B.NAME, B.DESCRIPTION, B.ACTIVE, B.OWNER_ID, B.URL, B.GROUP_ID, 	B.ENABLE_COMMENTS, B.ENABLE_IMG_VERIF, B.EMAIL_NOTIFY, B.ENABLE_RSS, B.REAL_URL, 	B.LAST_POST_ID, B.AUTO_GROUPS, B.ALLOW_HTML, B.SEARCH_INDEX, B.SOCNET_GROUP_ID, B.USE_SOCNET, 	DATE_FORMAT(B.DATE_CREATE, '%d.%m.%Y %H:%i:%s') as DATE_CREATE, 	DATE_FORMAT(B.DATE_UPDATE, '%d.%m.%Y %H:%i:%s') as DATE_UPDATE, 	DATE_FORMAT(B.LAST_POST_DATE, '%d.%m.%Y %H:%i:%s') as LAST_POST_DATE FROM b_blog B WHERE B.OWNER_ID = 1 	AND B.GROUP_ID IN (1)$$$
+SELECT  COUNT(P.ID) as ID  FROM b_blog_post P 	  WHERE ((((P.BLOG_ID = 2 )))) AND ((((P.PUBLISH_STATUS = 'K' )))) $$$
+SELECT  COUNT(P.ID) as ID  FROM b_blog_post P 	  WHERE ((((P.BLOG_ID = 2 )))) AND ((((P.PUBLISH_STATUS = 'D' )))) AND ((((P.AUTHOR_ID = 1 )))) $$$
+SELECT COUNT( B.ID) as CNT  FROM b_blog_user B 	INNER JOIN b_blog_user2user_group U2UG ON (B.USER_ID = U2UG.USER_ID) WHERE ((((B.USER_ID = 1 )))) AND ((((U2UG.BLOG_ID = 2 )))) $$$
+SELECT UG.ID, UG.USER_ID, UG.BLOG_ID, UG.USER_GROUP_ID FROM b_blog_user2user_group UG  WHERE UG.USER_ID = 1 	AND UG.BLOG_ID = 0 $$$
+SELECT B.ID, B.NAME, B.DESCRIPTION, B.ACTIVE, B.OWNER_ID, B.URL, B.GROUP_ID, 	B.ENABLE_COMMENTS, B.ENABLE_IMG_VERIF, B.EMAIL_NOTIFY, B.ENABLE_RSS, B.REAL_URL, 	B.LAST_POST_ID, B.AUTO_GROUPS, B.ALLOW_HTML, B.SEARCH_INDEX, B.SOCNET_GROUP_ID, B.USE_SOCNET, 	DATE_FORMAT(B.DATE_CREATE, '%d.%m.%Y %H:%i:%s') as DATE_CREATE, 	DATE_FORMAT(B.DATE_UPDATE, '%d.%m.%Y %H:%i:%s') as DATE_UPDATE, 	DATE_FORMAT(B.LAST_POST_DATE, '%d.%m.%Y %H:%i:%s') as LAST_POST_DATE FROM b_blog B WHERE B.URL = 's1_blog_3' $$$
+SELECT UG.ID, UG.USER_ID, UG.BLOG_ID, UG.USER_GROUP_ID FROM b_blog_user2user_group UG  INNER JOIN b_blog B ON (UG.BLOG_ID = B.ID AND B.URL='s1_blog_3')  WHERE UG.USER_ID = 1 $$$
+SET NAMES 'utf8'$$$
+SET collation_connection = "utf8_unicode_ci"$$$
 
 			SELECT 'x'
 			FROM b_agent
@@ -1031,43 +1031,43 @@ SET collation_connection = "utf8_unicode_ci";
 				AND (DATE_CHECK IS NULL OR DATE_CHECK <= now())
 				
 			LIMIT 1
-		;
-SELECT GET_LOCK('cff29ec0118154ee0dcf115d29478b29_agent', 0) as L;
-SELECT ID, NAME, AGENT_INTERVAL, IS_PERIOD, MODULE_ID FROM b_agent WHERE ACTIVE='Y' 	AND NEXT_EXEC<=now() 	AND (DATE_CHECK IS NULL OR DATE_CHECK<=now())  ORDER BY RUNNING ASC, SORT desc;
-UPDATE b_agent SET DATE_CHECK=DATE_ADD(IF(DATE_CHECK IS NULL, now(), DATE_CHECK), INTERVAL 600 SECOND) WHERE ID IN (20);
-SELECT RELEASE_LOCK('cff29ec0118154ee0dcf115d29478b29_agent');
-UPDATE b_agent SET RUNNING='Y' WHERE ID=20;
+		$$$
+SELECT GET_LOCK('cff29ec0118154ee0dcf115d29478b29_agent', 0) as L$$$
+SELECT ID, NAME, AGENT_INTERVAL, IS_PERIOD, MODULE_ID FROM b_agent WHERE ACTIVE='Y' 	AND NEXT_EXEC<=now() 	AND (DATE_CHECK IS NULL OR DATE_CHECK<=now())  ORDER BY RUNNING ASC, SORT desc$$$
+UPDATE b_agent SET DATE_CHECK=DATE_ADD(IF(DATE_CHECK IS NULL, now(), DATE_CHECK), INTERVAL 600 SECOND) WHERE ID IN (20)$$$
+SELECT RELEASE_LOCK('cff29ec0118154ee0dcf115d29478b29_agent')$$$
+UPDATE b_agent SET RUNNING='Y' WHERE ID=20$$$
 SELECT SITE_ID, CACHE_SALT, RELATIVE_PATH, TAG from b_cache_tag WHERE TAG='*'
-LIMIT 0, 1;
+LIMIT 0, 1$$$
 
 DELETE FROM b_cache_tag
 				WHERE SITE_ID = '*'
 				AND CACHE_SALT = '*'
-				AND RELATIVE_PATH = '/bitrix/cache/s1/photogallery.~194981';
-SELECT SITE_ID, CACHE_SALT, RELATIVE_PATH, TAG from b_cache_tag WHERE TAG='**';
+				AND RELATIVE_PATH = '/bitrix/cache/s1/photogallery.~194981'$$$
+SELECT SITE_ID, CACHE_SALT, RELATIVE_PATH, TAG from b_cache_tag WHERE TAG='**'$$$
 SELECT count(1) CNT from b_cache_tag WHERE TAG='*'
-LIMIT 0, 1;
+LIMIT 0, 1$$$
 
-UPDATE b_cache_tag SET RELATIVE_PATH='0:1469352793' WHERE TAG='**';
-DELETE FROM b_agent WHERE ID=20;
-SELECT B.ID, B.USER_ID, B.ALIAS, B.DESCRIPTION, B.AVATAR, B.INTERESTS, 	B.ALLOW_POST, 	DATE_FORMAT(B.LAST_VISIT, '%d.%m.%Y %H:%i:%s') as LAST_VISIT, 	DATE_FORMAT(B.DATE_REG, '%d.%m.%Y %H:%i:%s') as DATE_REG FROM b_blog_user B WHERE B.USER_ID = 1;
-SELECT * FROM `b_blog_user` LIMIT 0;
-UPDATE b_blog_user SET 	LAST_VISIT=now()  WHERE ID = 1 ;
-SELECT B.ID, B.NAME, B.DESCRIPTION, B.ACTIVE, B.OWNER_ID, B.URL, B.GROUP_ID, 	B.ENABLE_COMMENTS, B.ENABLE_IMG_VERIF, B.EMAIL_NOTIFY, B.ENABLE_RSS, B.REAL_URL, 	B.LAST_POST_ID, B.AUTO_GROUPS, B.ALLOW_HTML, B.SEARCH_INDEX, B.SOCNET_GROUP_ID, B.USE_SOCNET, 	DATE_FORMAT(B.DATE_CREATE, '%d.%m.%Y %H:%i:%s') as DATE_CREATE, 	DATE_FORMAT(B.DATE_UPDATE, '%d.%m.%Y %H:%i:%s') as DATE_UPDATE, 	DATE_FORMAT(B.LAST_POST_DATE, '%d.%m.%Y %H:%i:%s') as LAST_POST_DATE FROM b_blog B WHERE B.OWNER_ID = 1 	AND B.GROUP_ID IN (1);
-SELECT B.ID, B.NAME, B.DESCRIPTION, B.ACTIVE, B.OWNER_ID, B.URL, B.GROUP_ID, 	B.ENABLE_COMMENTS, B.ENABLE_IMG_VERIF, B.EMAIL_NOTIFY, B.ENABLE_RSS, B.REAL_URL, 	B.LAST_POST_ID, B.AUTO_GROUPS, B.ALLOW_HTML, B.SEARCH_INDEX, B.SOCNET_GROUP_ID, B.USE_SOCNET, 	DATE_FORMAT(B.DATE_CREATE, '%d.%m.%Y %H:%i:%s') as DATE_CREATE, 	DATE_FORMAT(B.DATE_UPDATE, '%d.%m.%Y %H:%i:%s') as DATE_UPDATE, 	DATE_FORMAT(B.LAST_POST_DATE, '%d.%m.%Y %H:%i:%s') as LAST_POST_DATE FROM b_blog B WHERE B.URL = 's1_blog_3' 	AND B.GROUP_ID IN (1);
-SELECT G.ID, G.NAME, G.SITE_ID FROM b_blog_group G WHERE G.ID = 1;
-SELECT  COUNT(P.ID) as ID  FROM b_blog_post P 	  WHERE ((((P.BLOG_ID = 2 )))) AND ((((P.PUBLISH_STATUS = 'K' )))) ;
-SELECT  COUNT(P.ID) as ID  FROM b_blog_post P 	  WHERE ((((P.BLOG_ID = 2 )))) AND ((((P.PUBLISH_STATUS = 'D' )))) AND ((((P.AUTHOR_ID = 1 )))) ;
-SELECT COUNT( B.ID) as CNT  FROM b_blog_user B 	INNER JOIN b_blog_user2user_group U2UG ON (B.USER_ID = U2UG.USER_ID) WHERE ((((B.USER_ID = 1 )))) AND ((((U2UG.BLOG_ID = 2 )))) ;
-SELECT B.ID, B.NAME, B.DESCRIPTION, B.ACTIVE, B.OWNER_ID, B.URL, B.GROUP_ID, 	B.ENABLE_COMMENTS, B.ENABLE_IMG_VERIF, B.EMAIL_NOTIFY, B.ENABLE_RSS, B.REAL_URL, 	B.LAST_POST_ID, B.AUTO_GROUPS, B.ALLOW_HTML, B.SEARCH_INDEX, B.SOCNET_GROUP_ID, B.USE_SOCNET, 	DATE_FORMAT(B.DATE_CREATE, '%d.%m.%Y %H:%i:%s') as DATE_CREATE, 	DATE_FORMAT(B.DATE_UPDATE, '%d.%m.%Y %H:%i:%s') as DATE_UPDATE, 	DATE_FORMAT(B.LAST_POST_DATE, '%d.%m.%Y %H:%i:%s') as LAST_POST_DATE FROM b_blog B WHERE B.OWNER_ID = 1 	AND B.GROUP_ID IN (1);
-SELECT  COUNT(P.ID) as ID  FROM b_blog_post P 	  WHERE ((((P.BLOG_ID = 2 )))) AND ((((P.PUBLISH_STATUS = 'K' )))) ;
-SELECT  COUNT(P.ID) as ID  FROM b_blog_post P 	  WHERE ((((P.BLOG_ID = 2 )))) AND ((((P.PUBLISH_STATUS = 'D' )))) AND ((((P.AUTHOR_ID = 1 )))) ;
-SELECT COUNT( B.ID) as CNT  FROM b_blog_user B 	INNER JOIN b_blog_user2user_group U2UG ON (B.USER_ID = U2UG.USER_ID) WHERE ((((B.USER_ID = 1 )))) AND ((((U2UG.BLOG_ID = 2 )))) ;
-SELECT UG.ID, UG.USER_ID, UG.BLOG_ID, UG.USER_GROUP_ID FROM b_blog_user2user_group UG  WHERE UG.USER_ID = 1 	AND UG.BLOG_ID = 0 ;
-SELECT B.ID, B.NAME, B.DESCRIPTION, B.ACTIVE, B.OWNER_ID, B.URL, B.GROUP_ID, 	B.ENABLE_COMMENTS, B.ENABLE_IMG_VERIF, B.EMAIL_NOTIFY, B.ENABLE_RSS, B.REAL_URL, 	B.LAST_POST_ID, B.AUTO_GROUPS, B.ALLOW_HTML, B.SEARCH_INDEX, B.SOCNET_GROUP_ID, B.USE_SOCNET, 	DATE_FORMAT(B.DATE_CREATE, '%d.%m.%Y %H:%i:%s') as DATE_CREATE, 	DATE_FORMAT(B.DATE_UPDATE, '%d.%m.%Y %H:%i:%s') as DATE_UPDATE, 	DATE_FORMAT(B.LAST_POST_DATE, '%d.%m.%Y %H:%i:%s') as LAST_POST_DATE FROM b_blog B WHERE B.URL = 's1_blog_3' ;
-SELECT UG.ID, UG.USER_ID, UG.BLOG_ID, UG.USER_GROUP_ID FROM b_blog_user2user_group UG  INNER JOIN b_blog B ON (UG.BLOG_ID = B.ID AND B.URL='s1_blog_3')  WHERE UG.USER_ID = 1 ;
-SET NAMES 'utf8';
-SET collation_connection = "utf8_unicode_ci";
+UPDATE b_cache_tag SET RELATIVE_PATH='0:1469352793' WHERE TAG='**'$$$
+DELETE FROM b_agent WHERE ID=20$$$
+SELECT B.ID, B.USER_ID, B.ALIAS, B.DESCRIPTION, B.AVATAR, B.INTERESTS, 	B.ALLOW_POST, 	DATE_FORMAT(B.LAST_VISIT, '%d.%m.%Y %H:%i:%s') as LAST_VISIT, 	DATE_FORMAT(B.DATE_REG, '%d.%m.%Y %H:%i:%s') as DATE_REG FROM b_blog_user B WHERE B.USER_ID = 1$$$
+SELECT * FROM `b_blog_user` LIMIT 0$$$
+UPDATE b_blog_user SET 	LAST_VISIT=now()  WHERE ID = 1 $$$
+SELECT B.ID, B.NAME, B.DESCRIPTION, B.ACTIVE, B.OWNER_ID, B.URL, B.GROUP_ID, 	B.ENABLE_COMMENTS, B.ENABLE_IMG_VERIF, B.EMAIL_NOTIFY, B.ENABLE_RSS, B.REAL_URL, 	B.LAST_POST_ID, B.AUTO_GROUPS, B.ALLOW_HTML, B.SEARCH_INDEX, B.SOCNET_GROUP_ID, B.USE_SOCNET, 	DATE_FORMAT(B.DATE_CREATE, '%d.%m.%Y %H:%i:%s') as DATE_CREATE, 	DATE_FORMAT(B.DATE_UPDATE, '%d.%m.%Y %H:%i:%s') as DATE_UPDATE, 	DATE_FORMAT(B.LAST_POST_DATE, '%d.%m.%Y %H:%i:%s') as LAST_POST_DATE FROM b_blog B WHERE B.OWNER_ID = 1 	AND B.GROUP_ID IN (1)$$$
+SELECT B.ID, B.NAME, B.DESCRIPTION, B.ACTIVE, B.OWNER_ID, B.URL, B.GROUP_ID, 	B.ENABLE_COMMENTS, B.ENABLE_IMG_VERIF, B.EMAIL_NOTIFY, B.ENABLE_RSS, B.REAL_URL, 	B.LAST_POST_ID, B.AUTO_GROUPS, B.ALLOW_HTML, B.SEARCH_INDEX, B.SOCNET_GROUP_ID, B.USE_SOCNET, 	DATE_FORMAT(B.DATE_CREATE, '%d.%m.%Y %H:%i:%s') as DATE_CREATE, 	DATE_FORMAT(B.DATE_UPDATE, '%d.%m.%Y %H:%i:%s') as DATE_UPDATE, 	DATE_FORMAT(B.LAST_POST_DATE, '%d.%m.%Y %H:%i:%s') as LAST_POST_DATE FROM b_blog B WHERE B.URL = 's1_blog_3' 	AND B.GROUP_ID IN (1)$$$
+SELECT G.ID, G.NAME, G.SITE_ID FROM b_blog_group G WHERE G.ID = 1$$$
+SELECT  COUNT(P.ID) as ID  FROM b_blog_post P 	  WHERE ((((P.BLOG_ID = 2 )))) AND ((((P.PUBLISH_STATUS = 'K' )))) $$$
+SELECT  COUNT(P.ID) as ID  FROM b_blog_post P 	  WHERE ((((P.BLOG_ID = 2 )))) AND ((((P.PUBLISH_STATUS = 'D' )))) AND ((((P.AUTHOR_ID = 1 )))) $$$
+SELECT COUNT( B.ID) as CNT  FROM b_blog_user B 	INNER JOIN b_blog_user2user_group U2UG ON (B.USER_ID = U2UG.USER_ID) WHERE ((((B.USER_ID = 1 )))) AND ((((U2UG.BLOG_ID = 2 )))) $$$
+SELECT B.ID, B.NAME, B.DESCRIPTION, B.ACTIVE, B.OWNER_ID, B.URL, B.GROUP_ID, 	B.ENABLE_COMMENTS, B.ENABLE_IMG_VERIF, B.EMAIL_NOTIFY, B.ENABLE_RSS, B.REAL_URL, 	B.LAST_POST_ID, B.AUTO_GROUPS, B.ALLOW_HTML, B.SEARCH_INDEX, B.SOCNET_GROUP_ID, B.USE_SOCNET, 	DATE_FORMAT(B.DATE_CREATE, '%d.%m.%Y %H:%i:%s') as DATE_CREATE, 	DATE_FORMAT(B.DATE_UPDATE, '%d.%m.%Y %H:%i:%s') as DATE_UPDATE, 	DATE_FORMAT(B.LAST_POST_DATE, '%d.%m.%Y %H:%i:%s') as LAST_POST_DATE FROM b_blog B WHERE B.OWNER_ID = 1 	AND B.GROUP_ID IN (1)$$$
+SELECT  COUNT(P.ID) as ID  FROM b_blog_post P 	  WHERE ((((P.BLOG_ID = 2 )))) AND ((((P.PUBLISH_STATUS = 'K' )))) $$$
+SELECT  COUNT(P.ID) as ID  FROM b_blog_post P 	  WHERE ((((P.BLOG_ID = 2 )))) AND ((((P.PUBLISH_STATUS = 'D' )))) AND ((((P.AUTHOR_ID = 1 )))) $$$
+SELECT COUNT( B.ID) as CNT  FROM b_blog_user B 	INNER JOIN b_blog_user2user_group U2UG ON (B.USER_ID = U2UG.USER_ID) WHERE ((((B.USER_ID = 1 )))) AND ((((U2UG.BLOG_ID = 2 )))) $$$
+SELECT UG.ID, UG.USER_ID, UG.BLOG_ID, UG.USER_GROUP_ID FROM b_blog_user2user_group UG  WHERE UG.USER_ID = 1 	AND UG.BLOG_ID = 0 $$$
+SELECT B.ID, B.NAME, B.DESCRIPTION, B.ACTIVE, B.OWNER_ID, B.URL, B.GROUP_ID, 	B.ENABLE_COMMENTS, B.ENABLE_IMG_VERIF, B.EMAIL_NOTIFY, B.ENABLE_RSS, B.REAL_URL, 	B.LAST_POST_ID, B.AUTO_GROUPS, B.ALLOW_HTML, B.SEARCH_INDEX, B.SOCNET_GROUP_ID, B.USE_SOCNET, 	DATE_FORMAT(B.DATE_CREATE, '%d.%m.%Y %H:%i:%s') as DATE_CREATE, 	DATE_FORMAT(B.DATE_UPDATE, '%d.%m.%Y %H:%i:%s') as DATE_UPDATE, 	DATE_FORMAT(B.LAST_POST_DATE, '%d.%m.%Y %H:%i:%s') as LAST_POST_DATE FROM b_blog B WHERE B.URL = 's1_blog_3' $$$
+SELECT UG.ID, UG.USER_ID, UG.BLOG_ID, UG.USER_GROUP_ID FROM b_blog_user2user_group UG  INNER JOIN b_blog B ON (UG.BLOG_ID = B.ID AND B.URL='s1_blog_3')  WHERE UG.USER_ID = 1 $$$
+SET NAMES 'utf8'$$$
+SET collation_connection = "utf8_unicode_ci"$$$
 
 			SELECT 'x'
 			FROM b_agent
@@ -1077,27 +1077,27 @@ SET collation_connection = "utf8_unicode_ci";
 				AND (DATE_CHECK IS NULL OR DATE_CHECK <= now())
 				
 			LIMIT 1
-		;
-SELECT UNIX_TIMESTAMP(MIN(NEXT_EXEC))-UNIX_TIMESTAMP(NOW()) DATE_DIFF FROM b_agent WHERE ACTIVE='Y' ;
-SELECT B.ID, B.USER_ID, B.ALIAS, B.DESCRIPTION, B.AVATAR, B.INTERESTS, 	B.ALLOW_POST, 	DATE_FORMAT(B.LAST_VISIT, '%d.%m.%Y %H:%i:%s') as LAST_VISIT, 	DATE_FORMAT(B.DATE_REG, '%d.%m.%Y %H:%i:%s') as DATE_REG FROM b_blog_user B WHERE B.USER_ID = 1;
-SELECT * FROM `b_blog_user` LIMIT 0;
-UPDATE b_blog_user SET 	LAST_VISIT=now()  WHERE ID = 1 ;
-SELECT B.ID, B.NAME, B.DESCRIPTION, B.ACTIVE, B.OWNER_ID, B.URL, B.GROUP_ID, 	B.ENABLE_COMMENTS, B.ENABLE_IMG_VERIF, B.EMAIL_NOTIFY, B.ENABLE_RSS, B.REAL_URL, 	B.LAST_POST_ID, B.AUTO_GROUPS, B.ALLOW_HTML, B.SEARCH_INDEX, B.SOCNET_GROUP_ID, B.USE_SOCNET, 	DATE_FORMAT(B.DATE_CREATE, '%d.%m.%Y %H:%i:%s') as DATE_CREATE, 	DATE_FORMAT(B.DATE_UPDATE, '%d.%m.%Y %H:%i:%s') as DATE_UPDATE, 	DATE_FORMAT(B.LAST_POST_DATE, '%d.%m.%Y %H:%i:%s') as LAST_POST_DATE FROM b_blog B WHERE B.OWNER_ID = 1 	AND B.GROUP_ID IN (1);
-SELECT B.ID, B.NAME, B.DESCRIPTION, B.ACTIVE, B.OWNER_ID, B.URL, B.GROUP_ID, 	B.ENABLE_COMMENTS, B.ENABLE_IMG_VERIF, B.EMAIL_NOTIFY, B.ENABLE_RSS, B.REAL_URL, 	B.LAST_POST_ID, B.AUTO_GROUPS, B.ALLOW_HTML, B.SEARCH_INDEX, B.SOCNET_GROUP_ID, B.USE_SOCNET, 	DATE_FORMAT(B.DATE_CREATE, '%d.%m.%Y %H:%i:%s') as DATE_CREATE, 	DATE_FORMAT(B.DATE_UPDATE, '%d.%m.%Y %H:%i:%s') as DATE_UPDATE, 	DATE_FORMAT(B.LAST_POST_DATE, '%d.%m.%Y %H:%i:%s') as LAST_POST_DATE FROM b_blog B WHERE B.URL = 's1_blog_3' 	AND B.GROUP_ID IN (1);
-SELECT G.ID, G.NAME, G.SITE_ID FROM b_blog_group G WHERE G.ID = 1;
-SELECT  COUNT(P.ID) as ID  FROM b_blog_post P 	  WHERE ((((P.BLOG_ID = 2 )))) AND ((((P.PUBLISH_STATUS = 'K' )))) ;
-SELECT  COUNT(P.ID) as ID  FROM b_blog_post P 	  WHERE ((((P.BLOG_ID = 2 )))) AND ((((P.PUBLISH_STATUS = 'D' )))) AND ((((P.AUTHOR_ID = 1 )))) ;
-SELECT COUNT( B.ID) as CNT  FROM b_blog_user B 	INNER JOIN b_blog_user2user_group U2UG ON (B.USER_ID = U2UG.USER_ID) WHERE ((((B.USER_ID = 1 )))) AND ((((U2UG.BLOG_ID = 2 )))) ;
-SELECT B.ID, B.NAME, B.DESCRIPTION, B.ACTIVE, B.OWNER_ID, B.URL, B.GROUP_ID, 	B.ENABLE_COMMENTS, B.ENABLE_IMG_VERIF, B.EMAIL_NOTIFY, B.ENABLE_RSS, B.REAL_URL, 	B.LAST_POST_ID, B.AUTO_GROUPS, B.ALLOW_HTML, B.SEARCH_INDEX, B.SOCNET_GROUP_ID, B.USE_SOCNET, 	DATE_FORMAT(B.DATE_CREATE, '%d.%m.%Y %H:%i:%s') as DATE_CREATE, 	DATE_FORMAT(B.DATE_UPDATE, '%d.%m.%Y %H:%i:%s') as DATE_UPDATE, 	DATE_FORMAT(B.LAST_POST_DATE, '%d.%m.%Y %H:%i:%s') as LAST_POST_DATE FROM b_blog B WHERE B.OWNER_ID = 1 	AND B.GROUP_ID IN (1);
-SELECT  COUNT(P.ID) as ID  FROM b_blog_post P 	  WHERE ((((P.BLOG_ID = 2 )))) AND ((((P.PUBLISH_STATUS = 'K' )))) ;
-SELECT  COUNT(P.ID) as ID  FROM b_blog_post P 	  WHERE ((((P.BLOG_ID = 2 )))) AND ((((P.PUBLISH_STATUS = 'D' )))) AND ((((P.AUTHOR_ID = 1 )))) ;
-SELECT COUNT( B.ID) as CNT  FROM b_blog_user B 	INNER JOIN b_blog_user2user_group U2UG ON (B.USER_ID = U2UG.USER_ID) WHERE ((((B.USER_ID = 1 )))) AND ((((U2UG.BLOG_ID = 2 )))) ;
-SELECT UG.ID, UG.USER_ID, UG.BLOG_ID, UG.USER_GROUP_ID FROM b_blog_user2user_group UG  WHERE UG.USER_ID = 1 	AND UG.BLOG_ID = 0 ;
-SELECT B.ID, B.NAME, B.DESCRIPTION, B.ACTIVE, B.OWNER_ID, B.URL, B.GROUP_ID, 	B.ENABLE_COMMENTS, B.ENABLE_IMG_VERIF, B.EMAIL_NOTIFY, B.ENABLE_RSS, B.REAL_URL, 	B.LAST_POST_ID, B.AUTO_GROUPS, B.ALLOW_HTML, B.SEARCH_INDEX, B.SOCNET_GROUP_ID, B.USE_SOCNET, 	DATE_FORMAT(B.DATE_CREATE, '%d.%m.%Y %H:%i:%s') as DATE_CREATE, 	DATE_FORMAT(B.DATE_UPDATE, '%d.%m.%Y %H:%i:%s') as DATE_UPDATE, 	DATE_FORMAT(B.LAST_POST_DATE, '%d.%m.%Y %H:%i:%s') as LAST_POST_DATE FROM b_blog B WHERE B.URL = 's1_blog_3' ;
-SELECT UG.ID, UG.USER_ID, UG.BLOG_ID, UG.USER_GROUP_ID FROM b_blog_user2user_group UG  INNER JOIN b_blog B ON (UG.BLOG_ID = B.ID AND B.URL='s1_blog_3')  WHERE UG.USER_ID = 1 ;
-SELECT  C.ID as ID, C.BLOG_ID as BLOG_ID, C.USER_ID as USER_ID FROM b_blog_user2blog C 	 WHERE ((((C.BLOG_ID = 2 )))) AND ((((C.USER_ID = 1 )))) ;
-SELECT COUNT( B.ID) as CNT  FROM b_blog_user B 	INNER JOIN b_blog_user2user_group U2UG ON (B.USER_ID = U2UG.USER_ID) WHERE ((((B.USER_ID = 1 )))) AND ((((U2UG.BLOG_ID = 2 )))) ;
-SELECT B.ID, B.NAME, B.DESCRIPTION, B.ACTIVE, B.OWNER_ID, B.URL, B.GROUP_ID, 	B.ENABLE_COMMENTS, B.ENABLE_IMG_VERIF, B.EMAIL_NOTIFY, B.ENABLE_RSS, B.REAL_URL, 	B.LAST_POST_ID, B.AUTO_GROUPS, B.ALLOW_HTML, B.SEARCH_INDEX, B.SOCNET_GROUP_ID, B.USE_SOCNET, 	DATE_FORMAT(B.DATE_CREATE, '%d.%m.%Y %H:%i:%s') as DATE_CREATE, 	DATE_FORMAT(B.DATE_UPDATE, '%d.%m.%Y %H:%i:%s') as DATE_UPDATE, 	DATE_FORMAT(B.LAST_POST_DATE, '%d.%m.%Y %H:%i:%s') as LAST_POST_DATE FROM b_blog B WHERE B.ID = 2;
+		$$$
+SELECT UNIX_TIMESTAMP(MIN(NEXT_EXEC))-UNIX_TIMESTAMP(NOW()) DATE_DIFF FROM b_agent WHERE ACTIVE='Y' $$$
+SELECT B.ID, B.USER_ID, B.ALIAS, B.DESCRIPTION, B.AVATAR, B.INTERESTS, 	B.ALLOW_POST, 	DATE_FORMAT(B.LAST_VISIT, '%d.%m.%Y %H:%i:%s') as LAST_VISIT, 	DATE_FORMAT(B.DATE_REG, '%d.%m.%Y %H:%i:%s') as DATE_REG FROM b_blog_user B WHERE B.USER_ID = 1$$$
+SELECT * FROM `b_blog_user` LIMIT 0$$$
+UPDATE b_blog_user SET 	LAST_VISIT=now()  WHERE ID = 1 $$$
+SELECT B.ID, B.NAME, B.DESCRIPTION, B.ACTIVE, B.OWNER_ID, B.URL, B.GROUP_ID, 	B.ENABLE_COMMENTS, B.ENABLE_IMG_VERIF, B.EMAIL_NOTIFY, B.ENABLE_RSS, B.REAL_URL, 	B.LAST_POST_ID, B.AUTO_GROUPS, B.ALLOW_HTML, B.SEARCH_INDEX, B.SOCNET_GROUP_ID, B.USE_SOCNET, 	DATE_FORMAT(B.DATE_CREATE, '%d.%m.%Y %H:%i:%s') as DATE_CREATE, 	DATE_FORMAT(B.DATE_UPDATE, '%d.%m.%Y %H:%i:%s') as DATE_UPDATE, 	DATE_FORMAT(B.LAST_POST_DATE, '%d.%m.%Y %H:%i:%s') as LAST_POST_DATE FROM b_blog B WHERE B.OWNER_ID = 1 	AND B.GROUP_ID IN (1)$$$
+SELECT B.ID, B.NAME, B.DESCRIPTION, B.ACTIVE, B.OWNER_ID, B.URL, B.GROUP_ID, 	B.ENABLE_COMMENTS, B.ENABLE_IMG_VERIF, B.EMAIL_NOTIFY, B.ENABLE_RSS, B.REAL_URL, 	B.LAST_POST_ID, B.AUTO_GROUPS, B.ALLOW_HTML, B.SEARCH_INDEX, B.SOCNET_GROUP_ID, B.USE_SOCNET, 	DATE_FORMAT(B.DATE_CREATE, '%d.%m.%Y %H:%i:%s') as DATE_CREATE, 	DATE_FORMAT(B.DATE_UPDATE, '%d.%m.%Y %H:%i:%s') as DATE_UPDATE, 	DATE_FORMAT(B.LAST_POST_DATE, '%d.%m.%Y %H:%i:%s') as LAST_POST_DATE FROM b_blog B WHERE B.URL = 's1_blog_3' 	AND B.GROUP_ID IN (1)$$$
+SELECT G.ID, G.NAME, G.SITE_ID FROM b_blog_group G WHERE G.ID = 1$$$
+SELECT  COUNT(P.ID) as ID  FROM b_blog_post P 	  WHERE ((((P.BLOG_ID = 2 )))) AND ((((P.PUBLISH_STATUS = 'K' )))) $$$
+SELECT  COUNT(P.ID) as ID  FROM b_blog_post P 	  WHERE ((((P.BLOG_ID = 2 )))) AND ((((P.PUBLISH_STATUS = 'D' )))) AND ((((P.AUTHOR_ID = 1 )))) $$$
+SELECT COUNT( B.ID) as CNT  FROM b_blog_user B 	INNER JOIN b_blog_user2user_group U2UG ON (B.USER_ID = U2UG.USER_ID) WHERE ((((B.USER_ID = 1 )))) AND ((((U2UG.BLOG_ID = 2 )))) $$$
+SELECT B.ID, B.NAME, B.DESCRIPTION, B.ACTIVE, B.OWNER_ID, B.URL, B.GROUP_ID, 	B.ENABLE_COMMENTS, B.ENABLE_IMG_VERIF, B.EMAIL_NOTIFY, B.ENABLE_RSS, B.REAL_URL, 	B.LAST_POST_ID, B.AUTO_GROUPS, B.ALLOW_HTML, B.SEARCH_INDEX, B.SOCNET_GROUP_ID, B.USE_SOCNET, 	DATE_FORMAT(B.DATE_CREATE, '%d.%m.%Y %H:%i:%s') as DATE_CREATE, 	DATE_FORMAT(B.DATE_UPDATE, '%d.%m.%Y %H:%i:%s') as DATE_UPDATE, 	DATE_FORMAT(B.LAST_POST_DATE, '%d.%m.%Y %H:%i:%s') as LAST_POST_DATE FROM b_blog B WHERE B.OWNER_ID = 1 	AND B.GROUP_ID IN (1)$$$
+SELECT  COUNT(P.ID) as ID  FROM b_blog_post P 	  WHERE ((((P.BLOG_ID = 2 )))) AND ((((P.PUBLISH_STATUS = 'K' )))) $$$
+SELECT  COUNT(P.ID) as ID  FROM b_blog_post P 	  WHERE ((((P.BLOG_ID = 2 )))) AND ((((P.PUBLISH_STATUS = 'D' )))) AND ((((P.AUTHOR_ID = 1 )))) $$$
+SELECT COUNT( B.ID) as CNT  FROM b_blog_user B 	INNER JOIN b_blog_user2user_group U2UG ON (B.USER_ID = U2UG.USER_ID) WHERE ((((B.USER_ID = 1 )))) AND ((((U2UG.BLOG_ID = 2 )))) $$$
+SELECT UG.ID, UG.USER_ID, UG.BLOG_ID, UG.USER_GROUP_ID FROM b_blog_user2user_group UG  WHERE UG.USER_ID = 1 	AND UG.BLOG_ID = 0 $$$
+SELECT B.ID, B.NAME, B.DESCRIPTION, B.ACTIVE, B.OWNER_ID, B.URL, B.GROUP_ID, 	B.ENABLE_COMMENTS, B.ENABLE_IMG_VERIF, B.EMAIL_NOTIFY, B.ENABLE_RSS, B.REAL_URL, 	B.LAST_POST_ID, B.AUTO_GROUPS, B.ALLOW_HTML, B.SEARCH_INDEX, B.SOCNET_GROUP_ID, B.USE_SOCNET, 	DATE_FORMAT(B.DATE_CREATE, '%d.%m.%Y %H:%i:%s') as DATE_CREATE, 	DATE_FORMAT(B.DATE_UPDATE, '%d.%m.%Y %H:%i:%s') as DATE_UPDATE, 	DATE_FORMAT(B.LAST_POST_DATE, '%d.%m.%Y %H:%i:%s') as LAST_POST_DATE FROM b_blog B WHERE B.URL = 's1_blog_3' $$$
+SELECT UG.ID, UG.USER_ID, UG.BLOG_ID, UG.USER_GROUP_ID FROM b_blog_user2user_group UG  INNER JOIN b_blog B ON (UG.BLOG_ID = B.ID AND B.URL='s1_blog_3')  WHERE UG.USER_ID = 1 $$$
+SELECT  C.ID as ID, C.BLOG_ID as BLOG_ID, C.USER_ID as USER_ID FROM b_blog_user2blog C 	 WHERE ((((C.BLOG_ID = 2 )))) AND ((((C.USER_ID = 1 )))) $$$
+SELECT COUNT( B.ID) as CNT  FROM b_blog_user B 	INNER JOIN b_blog_user2user_group U2UG ON (B.USER_ID = U2UG.USER_ID) WHERE ((((B.USER_ID = 1 )))) AND ((((U2UG.BLOG_ID = 2 )))) $$$
+SELECT B.ID, B.NAME, B.DESCRIPTION, B.ACTIVE, B.OWNER_ID, B.URL, B.GROUP_ID, 	B.ENABLE_COMMENTS, B.ENABLE_IMG_VERIF, B.EMAIL_NOTIFY, B.ENABLE_RSS, B.REAL_URL, 	B.LAST_POST_ID, B.AUTO_GROUPS, B.ALLOW_HTML, B.SEARCH_INDEX, B.SOCNET_GROUP_ID, B.USE_SOCNET, 	DATE_FORMAT(B.DATE_CREATE, '%d.%m.%Y %H:%i:%s') as DATE_CREATE, 	DATE_FORMAT(B.DATE_UPDATE, '%d.%m.%Y %H:%i:%s') as DATE_UPDATE, 	DATE_FORMAT(B.LAST_POST_DATE, '%d.%m.%Y %H:%i:%s') as LAST_POST_DATE FROM b_blog B WHERE B.ID = 2$$$
 SELECT U.*, DATE_FORMAT(U.TIMESTAMP_X, '%d.%m.%Y %H:%i:%s') TIMESTAMP_X, IF(U.LAST_ACTIVITY_DATE > DATE_SUB(NOW(), INTERVAL 120 SECOND), 'Y', 'N') IS_ONLINE, DATE_FORMAT(U.DATE_REGISTER, '%d.%m.%Y %H:%i:%s') DATE_REGISTER, DATE_FORMAT(U.LAST_LOGIN, '%d.%m.%Y %H:%i:%s') LAST_LOGIN, DATE_FORMAT(U.PERSONAL_BIRTHDAY, '%d.%m.%Y') PERSONAL_BIRTHDAY
 			
 		
@@ -1112,11 +1112,11 @@ SELECT U.*, DATE_FORMAT(U.TIMESTAMP_X, '%d.%m.%Y %H:%i:%s') TIMESTAMP_X, IF(U.LA
 						U.ID='1'
 					)
 					)
-			ORDER BY U.ID asc;
-SELECT * FROM `b_blog_user2blog` LIMIT 0;
-INSERT INTO b_blog_user2blog(`USER_ID`, `BLOG_ID`) VALUES('1', '2');
-SELECT U2B.ID, U2B.BLOG_ID, U2B.USER_ID FROM b_blog_user2blog U2B WHERE U2B.ID = 1;
-SELECT B.ID, B.USER_ID, B.ALIAS, B.DESCRIPTION, B.AVATAR, B.INTERESTS, 	B.ALLOW_POST, 	DATE_FORMAT(B.LAST_VISIT, '%d.%m.%Y %H:%i:%s') as LAST_VISIT, 	DATE_FORMAT(B.DATE_REG, '%d.%m.%Y %H:%i:%s') as DATE_REG FROM b_blog_user B WHERE B.USER_ID = 1;
+			ORDER BY U.ID asc$$$
+SELECT * FROM `b_blog_user2blog` LIMIT 0$$$
+INSERT INTO b_blog_user2blog(`USER_ID`, `BLOG_ID`) VALUES('1', '2')$$$
+SELECT U2B.ID, U2B.BLOG_ID, U2B.USER_ID FROM b_blog_user2blog U2B WHERE U2B.ID = 1$$$
+SELECT B.ID, B.USER_ID, B.ALIAS, B.DESCRIPTION, B.AVATAR, B.INTERESTS, 	B.ALLOW_POST, 	DATE_FORMAT(B.LAST_VISIT, '%d.%m.%Y %H:%i:%s') as LAST_VISIT, 	DATE_FORMAT(B.DATE_REG, '%d.%m.%Y %H:%i:%s') as DATE_REG FROM b_blog_user B WHERE B.USER_ID = 1$$$
 SELECT U.*, DATE_FORMAT(U.TIMESTAMP_X, '%d.%m.%Y %H:%i:%s') TIMESTAMP_X, IF(U.LAST_ACTIVITY_DATE > DATE_SUB(NOW(), INTERVAL 120 SECOND), 'Y', 'N') IS_ONLINE, DATE_FORMAT(U.DATE_REGISTER, '%d.%m.%Y %H:%i:%s') DATE_REGISTER, DATE_FORMAT(U.LAST_LOGIN, '%d.%m.%Y %H:%i:%s') LAST_LOGIN, DATE_FORMAT(U.PERSONAL_BIRTHDAY, '%d.%m.%Y') PERSONAL_BIRTHDAY
 			
 		
@@ -1131,11 +1131,11 @@ SELECT U.*, DATE_FORMAT(U.TIMESTAMP_X, '%d.%m.%Y %H:%i:%s') TIMESTAMP_X, IF(U.LA
 						U.ID='3'
 					)
 					)
-			ORDER BY U.ID asc;
-SELECT * FROM `b_event` LIMIT 0;
-SELECT B.ID, B.NAME, B.DESCRIPTION, B.ACTIVE, B.OWNER_ID, B.URL, B.GROUP_ID, 	B.ENABLE_COMMENTS, B.ENABLE_IMG_VERIF, B.EMAIL_NOTIFY, B.ENABLE_RSS, B.REAL_URL, 	B.LAST_POST_ID, B.AUTO_GROUPS, B.ALLOW_HTML, B.SEARCH_INDEX, B.SOCNET_GROUP_ID, B.USE_SOCNET, 	DATE_FORMAT(B.DATE_CREATE, '%d.%m.%Y %H:%i:%s') as DATE_CREATE, 	DATE_FORMAT(B.DATE_UPDATE, '%d.%m.%Y %H:%i:%s') as DATE_UPDATE, 	DATE_FORMAT(B.LAST_POST_DATE, '%d.%m.%Y %H:%i:%s') as LAST_POST_DATE FROM b_blog B WHERE B.OWNER_ID = 1 	AND B.GROUP_ID IN (1);
-SET NAMES 'utf8';
-SET collation_connection = "utf8_unicode_ci";
+			ORDER BY U.ID asc$$$
+SELECT * FROM `b_event` LIMIT 0$$$
+SELECT B.ID, B.NAME, B.DESCRIPTION, B.ACTIVE, B.OWNER_ID, B.URL, B.GROUP_ID, 	B.ENABLE_COMMENTS, B.ENABLE_IMG_VERIF, B.EMAIL_NOTIFY, B.ENABLE_RSS, B.REAL_URL, 	B.LAST_POST_ID, B.AUTO_GROUPS, B.ALLOW_HTML, B.SEARCH_INDEX, B.SOCNET_GROUP_ID, B.USE_SOCNET, 	DATE_FORMAT(B.DATE_CREATE, '%d.%m.%Y %H:%i:%s') as DATE_CREATE, 	DATE_FORMAT(B.DATE_UPDATE, '%d.%m.%Y %H:%i:%s') as DATE_UPDATE, 	DATE_FORMAT(B.LAST_POST_DATE, '%d.%m.%Y %H:%i:%s') as LAST_POST_DATE FROM b_blog B WHERE B.OWNER_ID = 1 	AND B.GROUP_ID IN (1)$$$
+SET NAMES 'utf8'$$$
+SET collation_connection = "utf8_unicode_ci"$$$
 
 			SELECT 'x'
 			FROM b_agent
@@ -1145,43 +1145,43 @@ SET collation_connection = "utf8_unicode_ci";
 				AND (DATE_CHECK IS NULL OR DATE_CHECK <= now())
 				
 			LIMIT 1
-		;
-SELECT UNIX_TIMESTAMP(MIN(NEXT_EXEC))-UNIX_TIMESTAMP(NOW()) DATE_DIFF FROM b_agent WHERE ACTIVE='Y' ;
-SELECT B.ID, B.USER_ID, B.ALIAS, B.DESCRIPTION, B.AVATAR, B.INTERESTS, 	B.ALLOW_POST, 	DATE_FORMAT(B.LAST_VISIT, '%d.%m.%Y %H:%i:%s') as LAST_VISIT, 	DATE_FORMAT(B.DATE_REG, '%d.%m.%Y %H:%i:%s') as DATE_REG FROM b_blog_user B WHERE B.USER_ID = 1;
-SELECT * FROM `b_blog_user` LIMIT 0;
-UPDATE b_blog_user SET 	LAST_VISIT=now()  WHERE ID = 1 ;
-SELECT B.ID, B.NAME, B.DESCRIPTION, B.ACTIVE, B.OWNER_ID, B.URL, B.GROUP_ID, 	B.ENABLE_COMMENTS, B.ENABLE_IMG_VERIF, B.EMAIL_NOTIFY, B.ENABLE_RSS, B.REAL_URL, 	B.LAST_POST_ID, B.AUTO_GROUPS, B.ALLOW_HTML, B.SEARCH_INDEX, B.SOCNET_GROUP_ID, B.USE_SOCNET, 	DATE_FORMAT(B.DATE_CREATE, '%d.%m.%Y %H:%i:%s') as DATE_CREATE, 	DATE_FORMAT(B.DATE_UPDATE, '%d.%m.%Y %H:%i:%s') as DATE_UPDATE, 	DATE_FORMAT(B.LAST_POST_DATE, '%d.%m.%Y %H:%i:%s') as LAST_POST_DATE FROM b_blog B WHERE B.OWNER_ID = 1 	AND B.GROUP_ID IN (1);
-SELECT B.ID, B.NAME, B.DESCRIPTION, B.ACTIVE, B.OWNER_ID, B.URL, B.GROUP_ID, 	B.ENABLE_COMMENTS, B.ENABLE_IMG_VERIF, B.EMAIL_NOTIFY, B.ENABLE_RSS, B.REAL_URL, 	B.LAST_POST_ID, B.AUTO_GROUPS, B.ALLOW_HTML, B.SEARCH_INDEX, B.SOCNET_GROUP_ID, B.USE_SOCNET, 	DATE_FORMAT(B.DATE_CREATE, '%d.%m.%Y %H:%i:%s') as DATE_CREATE, 	DATE_FORMAT(B.DATE_UPDATE, '%d.%m.%Y %H:%i:%s') as DATE_UPDATE, 	DATE_FORMAT(B.LAST_POST_DATE, '%d.%m.%Y %H:%i:%s') as LAST_POST_DATE FROM b_blog B WHERE B.URL = 's1_blog_3' 	AND B.GROUP_ID IN (1);
-SELECT G.ID, G.NAME, G.SITE_ID FROM b_blog_group G WHERE G.ID = 1;
-SELECT  COUNT(P.ID) as ID  FROM b_blog_post P 	  WHERE ((((P.BLOG_ID = 2 )))) AND ((((P.PUBLISH_STATUS = 'K' )))) ;
-SELECT  COUNT(P.ID) as ID  FROM b_blog_post P 	  WHERE ((((P.BLOG_ID = 2 )))) AND ((((P.PUBLISH_STATUS = 'D' )))) AND ((((P.AUTHOR_ID = 1 )))) ;
-SELECT COUNT( B.ID) as CNT  FROM b_blog_user B 	INNER JOIN b_blog_user2user_group U2UG ON (B.USER_ID = U2UG.USER_ID) WHERE ((((B.USER_ID = 1 )))) AND ((((U2UG.BLOG_ID = 2 )))) ;
-SELECT B.ID, B.NAME, B.DESCRIPTION, B.ACTIVE, B.OWNER_ID, B.URL, B.GROUP_ID, 	B.ENABLE_COMMENTS, B.ENABLE_IMG_VERIF, B.EMAIL_NOTIFY, B.ENABLE_RSS, B.REAL_URL, 	B.LAST_POST_ID, B.AUTO_GROUPS, B.ALLOW_HTML, B.SEARCH_INDEX, B.SOCNET_GROUP_ID, B.USE_SOCNET, 	DATE_FORMAT(B.DATE_CREATE, '%d.%m.%Y %H:%i:%s') as DATE_CREATE, 	DATE_FORMAT(B.DATE_UPDATE, '%d.%m.%Y %H:%i:%s') as DATE_UPDATE, 	DATE_FORMAT(B.LAST_POST_DATE, '%d.%m.%Y %H:%i:%s') as LAST_POST_DATE FROM b_blog B WHERE B.OWNER_ID = 1 	AND B.GROUP_ID IN (1);
-SELECT  COUNT(P.ID) as ID  FROM b_blog_post P 	  WHERE ((((P.BLOG_ID = 2 )))) AND ((((P.PUBLISH_STATUS = 'K' )))) ;
-SELECT  COUNT(P.ID) as ID  FROM b_blog_post P 	  WHERE ((((P.BLOG_ID = 2 )))) AND ((((P.PUBLISH_STATUS = 'D' )))) AND ((((P.AUTHOR_ID = 1 )))) ;
-SELECT COUNT( B.ID) as CNT  FROM b_blog_user B 	INNER JOIN b_blog_user2user_group U2UG ON (B.USER_ID = U2UG.USER_ID) WHERE ((((B.USER_ID = 1 )))) AND ((((U2UG.BLOG_ID = 2 )))) ;
-SELECT UG.ID, UG.USER_ID, UG.BLOG_ID, UG.USER_GROUP_ID FROM b_blog_user2user_group UG  WHERE UG.USER_ID = 1 	AND UG.BLOG_ID = 0 ;
-SELECT B.ID, B.NAME, B.DESCRIPTION, B.ACTIVE, B.OWNER_ID, B.URL, B.GROUP_ID, 	B.ENABLE_COMMENTS, B.ENABLE_IMG_VERIF, B.EMAIL_NOTIFY, B.ENABLE_RSS, B.REAL_URL, 	B.LAST_POST_ID, B.AUTO_GROUPS, B.ALLOW_HTML, B.SEARCH_INDEX, B.SOCNET_GROUP_ID, B.USE_SOCNET, 	DATE_FORMAT(B.DATE_CREATE, '%d.%m.%Y %H:%i:%s') as DATE_CREATE, 	DATE_FORMAT(B.DATE_UPDATE, '%d.%m.%Y %H:%i:%s') as DATE_UPDATE, 	DATE_FORMAT(B.LAST_POST_DATE, '%d.%m.%Y %H:%i:%s') as LAST_POST_DATE FROM b_blog B WHERE B.URL = 's1_blog_3' ;
-SELECT UG.ID, UG.USER_ID, UG.BLOG_ID, UG.USER_GROUP_ID FROM b_blog_user2user_group UG  INNER JOIN b_blog B ON (UG.BLOG_ID = B.ID AND B.URL='s1_blog_3')  WHERE UG.USER_ID = 1 ;
-SELECT 'x' FROM b_event WHERE SUCCESS_EXEC='N' LIMIT 1;
-SELECT GET_LOCK('cff29ec0118154ee0dcf115d29478b29_event', 0) as L;
+		$$$
+SELECT UNIX_TIMESTAMP(MIN(NEXT_EXEC))-UNIX_TIMESTAMP(NOW()) DATE_DIFF FROM b_agent WHERE ACTIVE='Y' $$$
+SELECT B.ID, B.USER_ID, B.ALIAS, B.DESCRIPTION, B.AVATAR, B.INTERESTS, 	B.ALLOW_POST, 	DATE_FORMAT(B.LAST_VISIT, '%d.%m.%Y %H:%i:%s') as LAST_VISIT, 	DATE_FORMAT(B.DATE_REG, '%d.%m.%Y %H:%i:%s') as DATE_REG FROM b_blog_user B WHERE B.USER_ID = 1$$$
+SELECT * FROM `b_blog_user` LIMIT 0$$$
+UPDATE b_blog_user SET 	LAST_VISIT=now()  WHERE ID = 1 $$$
+SELECT B.ID, B.NAME, B.DESCRIPTION, B.ACTIVE, B.OWNER_ID, B.URL, B.GROUP_ID, 	B.ENABLE_COMMENTS, B.ENABLE_IMG_VERIF, B.EMAIL_NOTIFY, B.ENABLE_RSS, B.REAL_URL, 	B.LAST_POST_ID, B.AUTO_GROUPS, B.ALLOW_HTML, B.SEARCH_INDEX, B.SOCNET_GROUP_ID, B.USE_SOCNET, 	DATE_FORMAT(B.DATE_CREATE, '%d.%m.%Y %H:%i:%s') as DATE_CREATE, 	DATE_FORMAT(B.DATE_UPDATE, '%d.%m.%Y %H:%i:%s') as DATE_UPDATE, 	DATE_FORMAT(B.LAST_POST_DATE, '%d.%m.%Y %H:%i:%s') as LAST_POST_DATE FROM b_blog B WHERE B.OWNER_ID = 1 	AND B.GROUP_ID IN (1)$$$
+SELECT B.ID, B.NAME, B.DESCRIPTION, B.ACTIVE, B.OWNER_ID, B.URL, B.GROUP_ID, 	B.ENABLE_COMMENTS, B.ENABLE_IMG_VERIF, B.EMAIL_NOTIFY, B.ENABLE_RSS, B.REAL_URL, 	B.LAST_POST_ID, B.AUTO_GROUPS, B.ALLOW_HTML, B.SEARCH_INDEX, B.SOCNET_GROUP_ID, B.USE_SOCNET, 	DATE_FORMAT(B.DATE_CREATE, '%d.%m.%Y %H:%i:%s') as DATE_CREATE, 	DATE_FORMAT(B.DATE_UPDATE, '%d.%m.%Y %H:%i:%s') as DATE_UPDATE, 	DATE_FORMAT(B.LAST_POST_DATE, '%d.%m.%Y %H:%i:%s') as LAST_POST_DATE FROM b_blog B WHERE B.URL = 's1_blog_3' 	AND B.GROUP_ID IN (1)$$$
+SELECT G.ID, G.NAME, G.SITE_ID FROM b_blog_group G WHERE G.ID = 1$$$
+SELECT  COUNT(P.ID) as ID  FROM b_blog_post P 	  WHERE ((((P.BLOG_ID = 2 )))) AND ((((P.PUBLISH_STATUS = 'K' )))) $$$
+SELECT  COUNT(P.ID) as ID  FROM b_blog_post P 	  WHERE ((((P.BLOG_ID = 2 )))) AND ((((P.PUBLISH_STATUS = 'D' )))) AND ((((P.AUTHOR_ID = 1 )))) $$$
+SELECT COUNT( B.ID) as CNT  FROM b_blog_user B 	INNER JOIN b_blog_user2user_group U2UG ON (B.USER_ID = U2UG.USER_ID) WHERE ((((B.USER_ID = 1 )))) AND ((((U2UG.BLOG_ID = 2 )))) $$$
+SELECT B.ID, B.NAME, B.DESCRIPTION, B.ACTIVE, B.OWNER_ID, B.URL, B.GROUP_ID, 	B.ENABLE_COMMENTS, B.ENABLE_IMG_VERIF, B.EMAIL_NOTIFY, B.ENABLE_RSS, B.REAL_URL, 	B.LAST_POST_ID, B.AUTO_GROUPS, B.ALLOW_HTML, B.SEARCH_INDEX, B.SOCNET_GROUP_ID, B.USE_SOCNET, 	DATE_FORMAT(B.DATE_CREATE, '%d.%m.%Y %H:%i:%s') as DATE_CREATE, 	DATE_FORMAT(B.DATE_UPDATE, '%d.%m.%Y %H:%i:%s') as DATE_UPDATE, 	DATE_FORMAT(B.LAST_POST_DATE, '%d.%m.%Y %H:%i:%s') as LAST_POST_DATE FROM b_blog B WHERE B.OWNER_ID = 1 	AND B.GROUP_ID IN (1)$$$
+SELECT  COUNT(P.ID) as ID  FROM b_blog_post P 	  WHERE ((((P.BLOG_ID = 2 )))) AND ((((P.PUBLISH_STATUS = 'K' )))) $$$
+SELECT  COUNT(P.ID) as ID  FROM b_blog_post P 	  WHERE ((((P.BLOG_ID = 2 )))) AND ((((P.PUBLISH_STATUS = 'D' )))) AND ((((P.AUTHOR_ID = 1 )))) $$$
+SELECT COUNT( B.ID) as CNT  FROM b_blog_user B 	INNER JOIN b_blog_user2user_group U2UG ON (B.USER_ID = U2UG.USER_ID) WHERE ((((B.USER_ID = 1 )))) AND ((((U2UG.BLOG_ID = 2 )))) $$$
+SELECT UG.ID, UG.USER_ID, UG.BLOG_ID, UG.USER_GROUP_ID FROM b_blog_user2user_group UG  WHERE UG.USER_ID = 1 	AND UG.BLOG_ID = 0 $$$
+SELECT B.ID, B.NAME, B.DESCRIPTION, B.ACTIVE, B.OWNER_ID, B.URL, B.GROUP_ID, 	B.ENABLE_COMMENTS, B.ENABLE_IMG_VERIF, B.EMAIL_NOTIFY, B.ENABLE_RSS, B.REAL_URL, 	B.LAST_POST_ID, B.AUTO_GROUPS, B.ALLOW_HTML, B.SEARCH_INDEX, B.SOCNET_GROUP_ID, B.USE_SOCNET, 	DATE_FORMAT(B.DATE_CREATE, '%d.%m.%Y %H:%i:%s') as DATE_CREATE, 	DATE_FORMAT(B.DATE_UPDATE, '%d.%m.%Y %H:%i:%s') as DATE_UPDATE, 	DATE_FORMAT(B.LAST_POST_DATE, '%d.%m.%Y %H:%i:%s') as LAST_POST_DATE FROM b_blog B WHERE B.URL = 's1_blog_3' $$$
+SELECT UG.ID, UG.USER_ID, UG.BLOG_ID, UG.USER_GROUP_ID FROM b_blog_user2user_group UG  INNER JOIN b_blog B ON (UG.BLOG_ID = B.ID AND B.URL='s1_blog_3')  WHERE UG.USER_ID = 1 $$$
+SELECT 'x' FROM b_event WHERE SUCCESS_EXEC='N' LIMIT 1$$$
+SELECT GET_LOCK('cff29ec0118154ee0dcf115d29478b29_event', 0) as L$$$
 
 				SELECT ID, C_FIELDS, EVENT_NAME, MESSAGE_ID, LID, DATE_FORMAT(DATE_INSERT, '%d.%m.%Y %H:%i:%s') as DATE_INSERT, DUPLICATE
 				FROM b_event
 				WHERE SUCCESS_EXEC='N'
 				ORDER BY ID
-				LIMIT 5;
+				LIMIT 5$$$
 SELECT 
 	`main_mail_internal_event_attachment`.`FILE_ID` AS `FILE_ID`
 FROM `b_event_attachment` `main_mail_internal_event_attachment` 
 
-WHERE `main_mail_internal_event_attachment`.`EVENT_ID` = 1;
+WHERE `main_mail_internal_event_attachment`.`EVENT_ID` = 1$$$
 SELECT 
 	`main_site`.`SERVER_NAME` AS `SERVER_NAME`,
 	`main_site_culture`.`CHARSET` AS `CULTURE_CHARSET`
 FROM `b_lang` `main_site` 
 LEFT JOIN `b_culture` `main_site_culture` ON `main_site`.`CULTURE_ID` = `main_site_culture`.`ID`
-WHERE (UPPER(`main_site`.`LID`) like upper('s1'));
+WHERE (UPPER(`main_site`.`LID`) like upper('s1'))$$$
 SELECT 
 	`main_mail_internal_event_message`.`ID` AS `ID`
 FROM `b_event_message` `main_mail_internal_event_message` 
@@ -1189,7 +1189,7 @@ LEFT JOIN `b_event_message_site` `main_mail_internal_event_message_event_message
 WHERE UPPER(`main_mail_internal_event_message`.`ACTIVE`) like upper('Y')
 AND UPPER(`main_mail_internal_event_message`.`EVENT_NAME`) like upper('BLOG_YOU_TO_BLOG')
 AND (UPPER(`main_mail_internal_event_message_event_message_site`.`SITE_ID`) like upper('s1'))
-GROUP BY `main_mail_internal_event_message`.`ID`;
+GROUP BY `main_mail_internal_event_message`.`ID`$$$
 SELECT 
 	`main_mail_internal_event_message`.`ID` AS `ID`,
 	`main_mail_internal_event_message`.`TIMESTAMP_X` AS `TIMESTAMP_X`,
@@ -1215,18 +1215,18 @@ SELECT
 	`main_mail_internal_event_message`.`ADDITIONAL_FIELD` AS `ADDITIONAL_FIELD`
 FROM `b_event_message` `main_mail_internal_event_message` 
 
-WHERE `main_mail_internal_event_message`.`ID` = 14;
+WHERE `main_mail_internal_event_message`.`ID` = 14$$$
 SELECT 
 	`main_mail_internal_event_message_attachment`.`FILE_ID` AS `FILE_ID`
 FROM `b_event_message_attachment` `main_mail_internal_event_message_attachment` 
 
-WHERE `main_mail_internal_event_message_attachment`.`EVENT_MESSAGE_ID` = 14;
+WHERE `main_mail_internal_event_message_attachment`.`EVENT_MESSAGE_ID` = 14$$$
 SELECT 
 	`main_mail_internal_event_message_site`.`SITE_ID` AS `SITE_ID`
 FROM `b_event_message_site` `main_mail_internal_event_message_site` 
 
 WHERE `main_mail_internal_event_message_site`.`EVENT_MESSAGE_ID` = 14
-AND (UPPER(`main_mail_internal_event_message_site`.`SITE_ID`) like upper('s1'));
+AND (UPPER(`main_mail_internal_event_message_site`.`SITE_ID`) like upper('s1'))$$$
 SELECT 
 	`main_site`.`LID` AS `LID`,
 	`main_site`.`SORT` AS `SORT`,
@@ -1243,9 +1243,9 @@ SELECT
 	`main_site`.`CULTURE_ID` AS `CULTURE_ID`
 FROM `b_lang` `main_site` 
 
-WHERE `main_site`.`LID` = 's1';
-SET NAMES 'utf8';
-SET collation_connection = "utf8_unicode_ci";
+WHERE `main_site`.`LID` = 's1'$$$
+SET NAMES 'utf8'$$$
+SET collation_connection = "utf8_unicode_ci"$$$
 
 			SELECT 'x'
 			FROM b_agent
@@ -1255,10 +1255,10 @@ SET collation_connection = "utf8_unicode_ci";
 				AND (DATE_CHECK IS NULL OR DATE_CHECK <= now())
 				
 			LIMIT 1
-		;
-SELECT UNIX_TIMESTAMP(MIN(NEXT_EXEC))-UNIX_TIMESTAMP(NOW()) DATE_DIFF FROM b_agent WHERE ACTIVE='Y' ;
-SET NAMES 'utf8';
-SET collation_connection = "utf8_unicode_ci";
+		$$$
+SELECT UNIX_TIMESTAMP(MIN(NEXT_EXEC))-UNIX_TIMESTAMP(NOW()) DATE_DIFF FROM b_agent WHERE ACTIVE='Y' $$$
+SET NAMES 'utf8'$$$
+SET collation_connection = "utf8_unicode_ci"$$$
 
 			SELECT 'x'
 			FROM b_agent
@@ -1268,21 +1268,21 @@ SET collation_connection = "utf8_unicode_ci";
 				AND (DATE_CHECK IS NULL OR DATE_CHECK <= now())
 				
 			LIMIT 1
-		;
-SELECT UNIX_TIMESTAMP(MIN(NEXT_EXEC))-UNIX_TIMESTAMP(NOW()) DATE_DIFF FROM b_agent WHERE ACTIVE='Y' ;
-SELECT * FROM `b_event` LIMIT 0;
-UPDATE b_event SET `DATE_EXEC` = '2016-07-24 12:33:27', `SUCCESS_EXEC` = 'Y' WHERE `ID` = '1';
+		$$$
+SELECT UNIX_TIMESTAMP(MIN(NEXT_EXEC))-UNIX_TIMESTAMP(NOW()) DATE_DIFF FROM b_agent WHERE ACTIVE='Y' $$$
+SELECT * FROM `b_event` LIMIT 0$$$
+UPDATE b_event SET `DATE_EXEC` = '2016-07-24 12:33:27', `SUCCESS_EXEC` = 'Y' WHERE `ID` = '1'$$$
 SELECT 
 	`main_mail_internal_event_attachment`.`FILE_ID` AS `FILE_ID`
 FROM `b_event_attachment` `main_mail_internal_event_attachment` 
 
-WHERE `main_mail_internal_event_attachment`.`EVENT_ID` = 2;
+WHERE `main_mail_internal_event_attachment`.`EVENT_ID` = 2$$$
 SELECT 
 	`main_site`.`SERVER_NAME` AS `SERVER_NAME`,
 	`main_site_culture`.`CHARSET` AS `CULTURE_CHARSET`
 FROM `b_lang` `main_site` 
 LEFT JOIN `b_culture` `main_site_culture` ON `main_site`.`CULTURE_ID` = `main_site_culture`.`ID`
-WHERE (UPPER(`main_site`.`LID`) like upper('s1'));
+WHERE (UPPER(`main_site`.`LID`) like upper('s1'))$$$
 SELECT 
 	`main_mail_internal_event_message`.`ID` AS `ID`
 FROM `b_event_message` `main_mail_internal_event_message` 
@@ -1290,7 +1290,7 @@ LEFT JOIN `b_event_message_site` `main_mail_internal_event_message_event_message
 WHERE UPPER(`main_mail_internal_event_message`.`ACTIVE`) like upper('Y')
 AND UPPER(`main_mail_internal_event_message`.`EVENT_NAME`) like upper('BLOG_USER_TO_YOUR_BLOG')
 AND (UPPER(`main_mail_internal_event_message_event_message_site`.`SITE_ID`) like upper('s1'))
-GROUP BY `main_mail_internal_event_message`.`ID`;
+GROUP BY `main_mail_internal_event_message`.`ID`$$$
 SELECT 
 	`main_mail_internal_event_message`.`ID` AS `ID`,
 	`main_mail_internal_event_message`.`TIMESTAMP_X` AS `TIMESTAMP_X`,
@@ -1316,18 +1316,18 @@ SELECT
 	`main_mail_internal_event_message`.`ADDITIONAL_FIELD` AS `ADDITIONAL_FIELD`
 FROM `b_event_message` `main_mail_internal_event_message` 
 
-WHERE `main_mail_internal_event_message`.`ID` = 16;
+WHERE `main_mail_internal_event_message`.`ID` = 16$$$
 SELECT 
 	`main_mail_internal_event_message_attachment`.`FILE_ID` AS `FILE_ID`
 FROM `b_event_message_attachment` `main_mail_internal_event_message_attachment` 
 
-WHERE `main_mail_internal_event_message_attachment`.`EVENT_MESSAGE_ID` = 16;
+WHERE `main_mail_internal_event_message_attachment`.`EVENT_MESSAGE_ID` = 16$$$
 SELECT 
 	`main_mail_internal_event_message_site`.`SITE_ID` AS `SITE_ID`
 FROM `b_event_message_site` `main_mail_internal_event_message_site` 
 
 WHERE `main_mail_internal_event_message_site`.`EVENT_MESSAGE_ID` = 16
-AND (UPPER(`main_mail_internal_event_message_site`.`SITE_ID`) like upper('s1'));
+AND (UPPER(`main_mail_internal_event_message_site`.`SITE_ID`) like upper('s1'))$$$
 SELECT 
 	`main_site`.`LID` AS `LID`,
 	`main_site`.`SORT` AS `SORT`,
@@ -1344,9 +1344,9 @@ SELECT
 	`main_site`.`CULTURE_ID` AS `CULTURE_ID`
 FROM `b_lang` `main_site` 
 
-WHERE `main_site`.`LID` = 's1';
-UPDATE b_event SET `DATE_EXEC` = '2016-07-24 12:33:37', `SUCCESS_EXEC` = 'Y' WHERE `ID` = '2';
-SELECT RELEASE_LOCK('cff29ec0118154ee0dcf115d29478b29_event');
+WHERE `main_site`.`LID` = 's1'$$$
+UPDATE b_event SET `DATE_EXEC` = '2016-07-24 12:33:37', `SUCCESS_EXEC` = 'Y' WHERE `ID` = '2'$$$
+SELECT RELEASE_LOCK('cff29ec0118154ee0dcf115d29478b29_event')$$$
 
 				SELECT DISTINCT
 					B.*
@@ -1360,7 +1360,7 @@ SELECT RELEASE_LOCK('cff29ec0118154ee0dcf115d29478b29_event');
 				WHERE 1 = 1
 					
 					 AND  ((((B.ACTIVE='Y'))))  AND  ((((B.ID = '2')))) 
-			;
+			$$$
 
 				SELECT DISTINCT
 					B.*
@@ -1374,26 +1374,26 @@ SELECT RELEASE_LOCK('cff29ec0118154ee0dcf115d29478b29_event');
 				WHERE 1 = 1
 					
 					 AND  ((((B.ACTIVE='Y'))))  AND  ((((B.ID = '2')))) 
-			;
-SELECT 'x' FROM b_event WHERE SUCCESS_EXEC='N' LIMIT 1;
-SELECT B.ID, B.USER_ID, B.ALIAS, B.DESCRIPTION, B.AVATAR, B.INTERESTS, 	B.ALLOW_POST, 	DATE_FORMAT(B.LAST_VISIT, '%d.%m.%Y %H:%i:%s') as LAST_VISIT, 	DATE_FORMAT(B.DATE_REG, '%d.%m.%Y %H:%i:%s') as DATE_REG FROM b_blog_user B WHERE B.USER_ID = 1;
-SELECT * FROM `b_blog_user` LIMIT 0;
-UPDATE b_blog_user SET 	LAST_VISIT=now()  WHERE ID = 1 ;
-SELECT B.ID, B.NAME, B.DESCRIPTION, B.ACTIVE, B.OWNER_ID, B.URL, B.GROUP_ID, 	B.ENABLE_COMMENTS, B.ENABLE_IMG_VERIF, B.EMAIL_NOTIFY, B.ENABLE_RSS, B.REAL_URL, 	B.LAST_POST_ID, B.AUTO_GROUPS, B.ALLOW_HTML, B.SEARCH_INDEX, B.SOCNET_GROUP_ID, B.USE_SOCNET, 	DATE_FORMAT(B.DATE_CREATE, '%d.%m.%Y %H:%i:%s') as DATE_CREATE, 	DATE_FORMAT(B.DATE_UPDATE, '%d.%m.%Y %H:%i:%s') as DATE_UPDATE, 	DATE_FORMAT(B.LAST_POST_DATE, '%d.%m.%Y %H:%i:%s') as LAST_POST_DATE FROM b_blog B WHERE B.OWNER_ID = 1 	AND B.GROUP_ID IN (1);
-SELECT B.ID, B.NAME, B.DESCRIPTION, B.ACTIVE, B.OWNER_ID, B.URL, B.GROUP_ID, 	B.ENABLE_COMMENTS, B.ENABLE_IMG_VERIF, B.EMAIL_NOTIFY, B.ENABLE_RSS, B.REAL_URL, 	B.LAST_POST_ID, B.AUTO_GROUPS, B.ALLOW_HTML, B.SEARCH_INDEX, B.SOCNET_GROUP_ID, B.USE_SOCNET, 	DATE_FORMAT(B.DATE_CREATE, '%d.%m.%Y %H:%i:%s') as DATE_CREATE, 	DATE_FORMAT(B.DATE_UPDATE, '%d.%m.%Y %H:%i:%s') as DATE_UPDATE, 	DATE_FORMAT(B.LAST_POST_DATE, '%d.%m.%Y %H:%i:%s') as LAST_POST_DATE FROM b_blog B WHERE B.URL = 's1_blog_3' 	AND B.GROUP_ID IN (1);
-SELECT G.ID, G.NAME, G.SITE_ID FROM b_blog_group G WHERE G.ID = 1;
-SELECT  COUNT(P.ID) as ID  FROM b_blog_post P 	  WHERE ((((P.BLOG_ID = 2 )))) AND ((((P.PUBLISH_STATUS = 'K' )))) ;
-SELECT  COUNT(P.ID) as ID  FROM b_blog_post P 	  WHERE ((((P.BLOG_ID = 2 )))) AND ((((P.PUBLISH_STATUS = 'D' )))) AND ((((P.AUTHOR_ID = 1 )))) ;
-SELECT COUNT( B.ID) as CNT  FROM b_blog_user B 	INNER JOIN b_blog_user2user_group U2UG ON (B.USER_ID = U2UG.USER_ID) WHERE ((((B.USER_ID = 1 )))) AND ((((U2UG.BLOG_ID = 2 )))) ;
-SELECT B.ID, B.NAME, B.DESCRIPTION, B.ACTIVE, B.OWNER_ID, B.URL, B.GROUP_ID, 	B.ENABLE_COMMENTS, B.ENABLE_IMG_VERIF, B.EMAIL_NOTIFY, B.ENABLE_RSS, B.REAL_URL, 	B.LAST_POST_ID, B.AUTO_GROUPS, B.ALLOW_HTML, B.SEARCH_INDEX, B.SOCNET_GROUP_ID, B.USE_SOCNET, 	DATE_FORMAT(B.DATE_CREATE, '%d.%m.%Y %H:%i:%s') as DATE_CREATE, 	DATE_FORMAT(B.DATE_UPDATE, '%d.%m.%Y %H:%i:%s') as DATE_UPDATE, 	DATE_FORMAT(B.LAST_POST_DATE, '%d.%m.%Y %H:%i:%s') as LAST_POST_DATE FROM b_blog B WHERE B.OWNER_ID = 1 	AND B.GROUP_ID IN (1);
-SELECT  COUNT(P.ID) as ID  FROM b_blog_post P 	  WHERE ((((P.BLOG_ID = 2 )))) AND ((((P.PUBLISH_STATUS = 'K' )))) ;
-SELECT  COUNT(P.ID) as ID  FROM b_blog_post P 	  WHERE ((((P.BLOG_ID = 2 )))) AND ((((P.PUBLISH_STATUS = 'D' )))) AND ((((P.AUTHOR_ID = 1 )))) ;
-SELECT COUNT( B.ID) as CNT  FROM b_blog_user B 	INNER JOIN b_blog_user2user_group U2UG ON (B.USER_ID = U2UG.USER_ID) WHERE ((((B.USER_ID = 1 )))) AND ((((U2UG.BLOG_ID = 2 )))) ;
-SELECT UG.ID, UG.USER_ID, UG.BLOG_ID, UG.USER_GROUP_ID FROM b_blog_user2user_group UG  WHERE UG.USER_ID = 1 	AND UG.BLOG_ID = 0 ;
-SELECT B.ID, B.NAME, B.DESCRIPTION, B.ACTIVE, B.OWNER_ID, B.URL, B.GROUP_ID, 	B.ENABLE_COMMENTS, B.ENABLE_IMG_VERIF, B.EMAIL_NOTIFY, B.ENABLE_RSS, B.REAL_URL, 	B.LAST_POST_ID, B.AUTO_GROUPS, B.ALLOW_HTML, B.SEARCH_INDEX, B.SOCNET_GROUP_ID, B.USE_SOCNET, 	DATE_FORMAT(B.DATE_CREATE, '%d.%m.%Y %H:%i:%s') as DATE_CREATE, 	DATE_FORMAT(B.DATE_UPDATE, '%d.%m.%Y %H:%i:%s') as DATE_UPDATE, 	DATE_FORMAT(B.LAST_POST_DATE, '%d.%m.%Y %H:%i:%s') as LAST_POST_DATE FROM b_blog B WHERE B.URL = 's1_blog_3' ;
-SELECT UG.ID, UG.USER_ID, UG.BLOG_ID, UG.USER_GROUP_ID FROM b_blog_user2user_group UG  INNER JOIN b_blog B ON (UG.BLOG_ID = B.ID AND B.URL='s1_blog_3')  WHERE UG.USER_ID = 1 ;
-SET NAMES 'utf8';
-SET collation_connection = "utf8_unicode_ci";
+			$$$
+SELECT 'x' FROM b_event WHERE SUCCESS_EXEC='N' LIMIT 1$$$
+SELECT B.ID, B.USER_ID, B.ALIAS, B.DESCRIPTION, B.AVATAR, B.INTERESTS, 	B.ALLOW_POST, 	DATE_FORMAT(B.LAST_VISIT, '%d.%m.%Y %H:%i:%s') as LAST_VISIT, 	DATE_FORMAT(B.DATE_REG, '%d.%m.%Y %H:%i:%s') as DATE_REG FROM b_blog_user B WHERE B.USER_ID = 1$$$
+SELECT * FROM `b_blog_user` LIMIT 0$$$
+UPDATE b_blog_user SET 	LAST_VISIT=now()  WHERE ID = 1 $$$
+SELECT B.ID, B.NAME, B.DESCRIPTION, B.ACTIVE, B.OWNER_ID, B.URL, B.GROUP_ID, 	B.ENABLE_COMMENTS, B.ENABLE_IMG_VERIF, B.EMAIL_NOTIFY, B.ENABLE_RSS, B.REAL_URL, 	B.LAST_POST_ID, B.AUTO_GROUPS, B.ALLOW_HTML, B.SEARCH_INDEX, B.SOCNET_GROUP_ID, B.USE_SOCNET, 	DATE_FORMAT(B.DATE_CREATE, '%d.%m.%Y %H:%i:%s') as DATE_CREATE, 	DATE_FORMAT(B.DATE_UPDATE, '%d.%m.%Y %H:%i:%s') as DATE_UPDATE, 	DATE_FORMAT(B.LAST_POST_DATE, '%d.%m.%Y %H:%i:%s') as LAST_POST_DATE FROM b_blog B WHERE B.OWNER_ID = 1 	AND B.GROUP_ID IN (1)$$$
+SELECT B.ID, B.NAME, B.DESCRIPTION, B.ACTIVE, B.OWNER_ID, B.URL, B.GROUP_ID, 	B.ENABLE_COMMENTS, B.ENABLE_IMG_VERIF, B.EMAIL_NOTIFY, B.ENABLE_RSS, B.REAL_URL, 	B.LAST_POST_ID, B.AUTO_GROUPS, B.ALLOW_HTML, B.SEARCH_INDEX, B.SOCNET_GROUP_ID, B.USE_SOCNET, 	DATE_FORMAT(B.DATE_CREATE, '%d.%m.%Y %H:%i:%s') as DATE_CREATE, 	DATE_FORMAT(B.DATE_UPDATE, '%d.%m.%Y %H:%i:%s') as DATE_UPDATE, 	DATE_FORMAT(B.LAST_POST_DATE, '%d.%m.%Y %H:%i:%s') as LAST_POST_DATE FROM b_blog B WHERE B.URL = 's1_blog_3' 	AND B.GROUP_ID IN (1)$$$
+SELECT G.ID, G.NAME, G.SITE_ID FROM b_blog_group G WHERE G.ID = 1$$$
+SELECT  COUNT(P.ID) as ID  FROM b_blog_post P 	  WHERE ((((P.BLOG_ID = 2 )))) AND ((((P.PUBLISH_STATUS = 'K' )))) $$$
+SELECT  COUNT(P.ID) as ID  FROM b_blog_post P 	  WHERE ((((P.BLOG_ID = 2 )))) AND ((((P.PUBLISH_STATUS = 'D' )))) AND ((((P.AUTHOR_ID = 1 )))) $$$
+SELECT COUNT( B.ID) as CNT  FROM b_blog_user B 	INNER JOIN b_blog_user2user_group U2UG ON (B.USER_ID = U2UG.USER_ID) WHERE ((((B.USER_ID = 1 )))) AND ((((U2UG.BLOG_ID = 2 )))) $$$
+SELECT B.ID, B.NAME, B.DESCRIPTION, B.ACTIVE, B.OWNER_ID, B.URL, B.GROUP_ID, 	B.ENABLE_COMMENTS, B.ENABLE_IMG_VERIF, B.EMAIL_NOTIFY, B.ENABLE_RSS, B.REAL_URL, 	B.LAST_POST_ID, B.AUTO_GROUPS, B.ALLOW_HTML, B.SEARCH_INDEX, B.SOCNET_GROUP_ID, B.USE_SOCNET, 	DATE_FORMAT(B.DATE_CREATE, '%d.%m.%Y %H:%i:%s') as DATE_CREATE, 	DATE_FORMAT(B.DATE_UPDATE, '%d.%m.%Y %H:%i:%s') as DATE_UPDATE, 	DATE_FORMAT(B.LAST_POST_DATE, '%d.%m.%Y %H:%i:%s') as LAST_POST_DATE FROM b_blog B WHERE B.OWNER_ID = 1 	AND B.GROUP_ID IN (1)$$$
+SELECT  COUNT(P.ID) as ID  FROM b_blog_post P 	  WHERE ((((P.BLOG_ID = 2 )))) AND ((((P.PUBLISH_STATUS = 'K' )))) $$$
+SELECT  COUNT(P.ID) as ID  FROM b_blog_post P 	  WHERE ((((P.BLOG_ID = 2 )))) AND ((((P.PUBLISH_STATUS = 'D' )))) AND ((((P.AUTHOR_ID = 1 )))) $$$
+SELECT COUNT( B.ID) as CNT  FROM b_blog_user B 	INNER JOIN b_blog_user2user_group U2UG ON (B.USER_ID = U2UG.USER_ID) WHERE ((((B.USER_ID = 1 )))) AND ((((U2UG.BLOG_ID = 2 )))) $$$
+SELECT UG.ID, UG.USER_ID, UG.BLOG_ID, UG.USER_GROUP_ID FROM b_blog_user2user_group UG  WHERE UG.USER_ID = 1 	AND UG.BLOG_ID = 0 $$$
+SELECT B.ID, B.NAME, B.DESCRIPTION, B.ACTIVE, B.OWNER_ID, B.URL, B.GROUP_ID, 	B.ENABLE_COMMENTS, B.ENABLE_IMG_VERIF, B.EMAIL_NOTIFY, B.ENABLE_RSS, B.REAL_URL, 	B.LAST_POST_ID, B.AUTO_GROUPS, B.ALLOW_HTML, B.SEARCH_INDEX, B.SOCNET_GROUP_ID, B.USE_SOCNET, 	DATE_FORMAT(B.DATE_CREATE, '%d.%m.%Y %H:%i:%s') as DATE_CREATE, 	DATE_FORMAT(B.DATE_UPDATE, '%d.%m.%Y %H:%i:%s') as DATE_UPDATE, 	DATE_FORMAT(B.LAST_POST_DATE, '%d.%m.%Y %H:%i:%s') as LAST_POST_DATE FROM b_blog B WHERE B.URL = 's1_blog_3' $$$
+SELECT UG.ID, UG.USER_ID, UG.BLOG_ID, UG.USER_GROUP_ID FROM b_blog_user2user_group UG  INNER JOIN b_blog B ON (UG.BLOG_ID = B.ID AND B.URL='s1_blog_3')  WHERE UG.USER_ID = 1 $$$
+SET NAMES 'utf8'$$$
+SET collation_connection = "utf8_unicode_ci"$$$
 
 			SELECT 'x'
 			FROM b_agent
@@ -1403,12 +1403,12 @@ SET collation_connection = "utf8_unicode_ci";
 				AND (DATE_CHECK IS NULL OR DATE_CHECK <= now())
 				
 			LIMIT 1
-		;
-SELECT GET_LOCK('cff29ec0118154ee0dcf115d29478b29_agent', 0) as L;
-SELECT ID, NAME, AGENT_INTERVAL, IS_PERIOD, MODULE_ID FROM b_agent WHERE ACTIVE='Y' 	AND NEXT_EXEC<=now() 	AND (DATE_CHECK IS NULL OR DATE_CHECK<=now())  ORDER BY RUNNING ASC, SORT desc;
-UPDATE b_agent SET DATE_CHECK=DATE_ADD(IF(DATE_CHECK IS NULL, now(), DATE_CHECK), INTERVAL 600 SECOND) WHERE ID IN (6);
-SELECT RELEASE_LOCK('cff29ec0118154ee0dcf115d29478b29_agent');
-UPDATE b_agent SET RUNNING='Y' WHERE ID=6;
+		$$$
+SELECT GET_LOCK('cff29ec0118154ee0dcf115d29478b29_agent', 0) as L$$$
+SELECT ID, NAME, AGENT_INTERVAL, IS_PERIOD, MODULE_ID FROM b_agent WHERE ACTIVE='Y' 	AND NEXT_EXEC<=now() 	AND (DATE_CHECK IS NULL OR DATE_CHECK<=now())  ORDER BY RUNNING ASC, SORT desc$$$
+UPDATE b_agent SET DATE_CHECK=DATE_ADD(IF(DATE_CHECK IS NULL, now(), DATE_CHECK), INTERVAL 600 SECOND) WHERE ID IN (6)$$$
+SELECT RELEASE_LOCK('cff29ec0118154ee0dcf115d29478b29_agent')$$$
+UPDATE b_agent SET RUNNING='Y' WHERE ID=6$$$
 
 					UPDATE b_agent SET
 						NAME='\\Bitrix\\Main\\Analytics\\CounterDataTable::submitData();',
@@ -1416,7 +1416,7 @@ UPDATE b_agent SET RUNNING='Y' WHERE ID=6;
 						NEXT_EXEC=DATE_ADD(now(), INTERVAL 60 SECOND),
 						DATE_CHECK=NULL,
 						RUNNING='N'
-					WHERE ID=6;
+					WHERE ID=6$$$
 
 			SELECT Q.*,
 				DATE_FORMAT(Q.TIMESTAMP_X, '%d.%m.%Y') TIMESTAMP_X
@@ -1432,55 +1432,55 @@ UPDATE b_agent SET RUNNING='Y' WHERE ID=6;
 						Q.VOTE_ID = 1
 					)
 					)
-			ORDER BY Q.C_SORT ASC;
+			ORDER BY Q.C_SORT ASC$$$
 
 			SELECT V.CHANNEL_ID, VQ.VOTE_ID, VA.*
 			FROM b_vote_answer VA
 				INNER JOIN b_vote_question VQ ON (VA.QUESTION_ID = VQ.ID)
 				INNER JOIN b_vote V ON (VQ.VOTE_ID = V.ID)
-			WHERE 1=1   AND ((VQ.VOTE_ID = 1)) AND ((VA.ACTIVE = 'Y')) AND ((VA.QUESTION_ID IN (1)))   ORDER BY VA.C_SORT ASC;
-SELECT VEQ.QUESTION_ID, VEA.ANSWER_ID, COUNT(VEA.ID) as COUNTER, MIN(TIMESTAMPDIFF(SECOND, VE.DATE_VOTE, NOW())) AS LAST_VOTE FROM b_vote_event VE  INNER JOIN b_vote_event_question VEQ ON (VEQ.EVENT_ID = VE.ID)  INNER JOIN b_vote_event_answer VEA ON (VEA.EVENT_QUESTION_ID = VEQ.ID)  LEFT JOIN b_vote_user VU ON (VU.ID = VE.VOTE_USER_ID) WHERE 1=1  AND ((VE.VOTE_ID = 1)) AND ((VE.VALID = 'Y' ))  GROUP BY VEQ.QUESTION_ID, VEA.ANSWER_ID ORDER BY COUNTER DESC;
-UPDATE b_vote_user SET `LAST_IP` = '10.0.70.52', `DATE_LAST` = now(), `STAT_GUEST_ID` = '0', `AUTH_USER_ID` = '1' WHERE (ID='1') AND (AUTH_USER_ID='1');
-INSERT INTO b_vote_event(`VOTE_ID`, `VOTE_USER_ID`, `DATE_VOTE`, `STAT_SESSION_ID`, `IP`, `VALID`) VALUES (1, 1, now(), 0, '10.0.70.52', 'Y');
-INSERT INTO b_vote_event_question(`EVENT_ID`, `QUESTION_ID`) VALUES (2, 1);
-INSERT INTO b_vote_event_answer(`ANSWER_ID`, `EVENT_QUESTION_ID`) VALUES (1, 2);
-UPDATE b_vote SET `COUNTER` = COUNTER+1 WHERE ID='1';
-UPDATE b_vote_question SET `COUNTER` = COUNTER+1 WHERE ID in (1);
-UPDATE b_vote_answer SET `COUNTER` = COUNTER+1 WHERE ID in (1);
-UPDATE b_vote_user SET `DATE_LAST` = now(), `COUNTER` = COUNTER+1 WHERE ID='1';
-SELECT * FROM b_cache_tag  WHERE TAG = 'vote_form_vote_1';
-DELETE FROM b_cache_tag  WHERE TAG = 'vote_form_vote_1';
+			WHERE 1=1   AND ((VQ.VOTE_ID = 1)) AND ((VA.ACTIVE = 'Y')) AND ((VA.QUESTION_ID IN (1)))   ORDER BY VA.C_SORT ASC$$$
+SELECT VEQ.QUESTION_ID, VEA.ANSWER_ID, COUNT(VEA.ID) as COUNTER, MIN(TIMESTAMPDIFF(SECOND, VE.DATE_VOTE, NOW())) AS LAST_VOTE FROM b_vote_event VE  INNER JOIN b_vote_event_question VEQ ON (VEQ.EVENT_ID = VE.ID)  INNER JOIN b_vote_event_answer VEA ON (VEA.EVENT_QUESTION_ID = VEQ.ID)  LEFT JOIN b_vote_user VU ON (VU.ID = VE.VOTE_USER_ID) WHERE 1=1  AND ((VE.VOTE_ID = 1)) AND ((VE.VALID = 'Y' ))  GROUP BY VEQ.QUESTION_ID, VEA.ANSWER_ID ORDER BY COUNTER DESC$$$
+UPDATE b_vote_user SET `LAST_IP` = '10.0.70.52', `DATE_LAST` = now(), `STAT_GUEST_ID` = '0', `AUTH_USER_ID` = '1' WHERE (ID='1') AND (AUTH_USER_ID='1')$$$
+INSERT INTO b_vote_event(`VOTE_ID`, `VOTE_USER_ID`, `DATE_VOTE`, `STAT_SESSION_ID`, `IP`, `VALID`) VALUES (1, 1, now(), 0, '10.0.70.52', 'Y')$$$
+INSERT INTO b_vote_event_question(`EVENT_ID`, `QUESTION_ID`) VALUES (2, 1)$$$
+INSERT INTO b_vote_event_answer(`ANSWER_ID`, `EVENT_QUESTION_ID`) VALUES (1, 2)$$$
+UPDATE b_vote SET `COUNTER` = COUNTER+1 WHERE ID='1'$$$
+UPDATE b_vote_question SET `COUNTER` = COUNTER+1 WHERE ID in (1)$$$
+UPDATE b_vote_answer SET `COUNTER` = COUNTER+1 WHERE ID in (1)$$$
+UPDATE b_vote_user SET `DATE_LAST` = now(), `COUNTER` = COUNTER+1 WHERE ID='1'$$$
+SELECT * FROM b_cache_tag  WHERE TAG = 'vote_form_vote_1'$$$
+DELETE FROM b_cache_tag  WHERE TAG = 'vote_form_vote_1'$$$
 
 				DELETE FROM b_cache_tag
 				WHERE SITE_ID = 's1'
 				AND CACHE_SALT = '/e25'
 				AND RELATIVE_PATH = '/s1/bitrix/voting.current/ANKETA_s1/'
-			;
-INSERT INTO b_cache_tag (SITE_ID, CACHE_SALT, RELATIVE_PATH, TAG) VALUES ('*', '*', '/bitrix/cache/s1/bitrix/voting.current/ANKETA_s1.~619977', '*');
-SELECT A.ID, A.MODULE_ID, A.USER_ID, B.LOGIN, B.NAME as USER_NAME, B.LAST_NAME, A.SORT, A.NAME, A.ACTIVE, DATE_FORMAT(A.LAST_EXEC, '%d.%m.%Y %H:%i:%s') as LAST_EXEC, DATE_FORMAT(A.NEXT_EXEC, '%d.%m.%Y %H:%i:%s') as NEXT_EXEC, A.AGENT_INTERVAL, A.IS_PERIOD FROM b_agent A LEFT JOIN b_user B ON(A.USER_ID = B.ID) WHERE A.NAME LIKE '\\\\Bitrix\\\\Main\\\\Data\\\\CacheEngineFiles::delayedDelete(%' ORDER BY A.ID DESC;
+			$$$
+INSERT INTO b_cache_tag (SITE_ID, CACHE_SALT, RELATIVE_PATH, TAG) VALUES ('*', '*', '/bitrix/cache/s1/bitrix/voting.current/ANKETA_s1.~619977', '*')$$$
+SELECT A.ID, A.MODULE_ID, A.USER_ID, B.LOGIN, B.NAME as USER_NAME, B.LAST_NAME, A.SORT, A.NAME, A.ACTIVE, DATE_FORMAT(A.LAST_EXEC, '%d.%m.%Y %H:%i:%s') as LAST_EXEC, DATE_FORMAT(A.NEXT_EXEC, '%d.%m.%Y %H:%i:%s') as NEXT_EXEC, A.AGENT_INTERVAL, A.IS_PERIOD FROM b_agent A LEFT JOIN b_user B ON(A.USER_ID = B.ID) WHERE A.NAME LIKE '\\\\Bitrix\\\\Main\\\\Data\\\\CacheEngineFiles::delayedDelete(%' ORDER BY A.ID DESC$$$
 
 			SELECT ID
 			FROM b_agent
 			WHERE NAME = '\\Bitrix\\Main\\Data\\CacheEngineFiles::delayedDelete();'
-			AND USER_ID IS NULL;
-INSERT INTO b_cache_tag (SITE_ID, CACHE_SALT, RELATIVE_PATH, TAG) VALUES ('*', '*', '/bitrix/managed_cache/MYSQL/agents.~947835', '*');
-SELECT * FROM `b_agent` LIMIT 0;
-INSERT INTO b_agent(`MODULE_ID`, `SORT`, `NAME`, `ACTIVE`, `NEXT_EXEC`, `AGENT_INTERVAL`, `IS_PERIOD`, `USER_ID`) VALUES('main', '100', '\\Bitrix\\Main\\Data\\CacheEngineFiles::delayedDelete();', 'Y', CURRENT_DATE, '1', 'Y',  NULL );
+			AND USER_ID IS NULL$$$
+INSERT INTO b_cache_tag (SITE_ID, CACHE_SALT, RELATIVE_PATH, TAG) VALUES ('*', '*', '/bitrix/managed_cache/MYSQL/agents.~947835', '*')$$$
+SELECT * FROM `b_agent` LIMIT 0$$$
+INSERT INTO b_agent(`MODULE_ID`, `SORT`, `NAME`, `ACTIVE`, `NEXT_EXEC`, `AGENT_INTERVAL`, `IS_PERIOD`, `USER_ID`) VALUES('main', '100', '\\Bitrix\\Main\\Data\\CacheEngineFiles::delayedDelete();', 'Y', CURRENT_DATE, '1', 'Y',  NULL )$$$
 
 				DELETE FROM b_cache_tag
 				WHERE SITE_ID = 's1'
 				AND CACHE_SALT = '/e25'
 				AND RELATIVE_PATH = '/s1/bitrix/voting.result/1'
-			;
-INSERT INTO b_cache_tag (SITE_ID, CACHE_SALT, RELATIVE_PATH, TAG) VALUES ('*', '*', '/bitrix/cache/s1/bitrix/voting.result/1.~485621', '*');
+			$$$
+INSERT INTO b_cache_tag (SITE_ID, CACHE_SALT, RELATIVE_PATH, TAG) VALUES ('*', '*', '/bitrix/cache/s1/bitrix/voting.result/1.~485621', '*')$$$
 
 				DELETE FROM b_cache_tag
 				WHERE SITE_ID = 's1'
 				AND CACHE_SALT = '/e25'
 				AND RELATIVE_PATH = '/s1/bitrix/voting.form'
-			;
-INSERT INTO b_cache_tag (SITE_ID, CACHE_SALT, RELATIVE_PATH, TAG) VALUES ('*', '*', '/bitrix/cache/s1/bitrix/voting.form.~227422', '*');
-INSERT INTO b_cache_tag (SITE_ID, CACHE_SALT, RELATIVE_PATH, TAG) VALUES ('*', '*', '/bitrix/managed_cache/MYSQL/b_vote.~855528', '*');
+			$$$
+INSERT INTO b_cache_tag (SITE_ID, CACHE_SALT, RELATIVE_PATH, TAG) VALUES ('*', '*', '/bitrix/cache/s1/bitrix/voting.form.~227422', '*')$$$
+INSERT INTO b_cache_tag (SITE_ID, CACHE_SALT, RELATIVE_PATH, TAG) VALUES ('*', '*', '/bitrix/managed_cache/MYSQL/b_vote.~855528', '*')$$$
 
 				SELECT DISTINCT
 					B.*
@@ -1494,7 +1494,7 @@ INSERT INTO b_cache_tag (SITE_ID, CACHE_SALT, RELATIVE_PATH, TAG) VALUES ('*', '
 				WHERE 1 = 1
 					
 					 AND  ((((B.ACTIVE='Y'))))  AND  ((((B.ID = '2')))) 
-			;
+			$$$
 
 				SELECT DISTINCT
 					B.*
@@ -1508,7 +1508,7 @@ INSERT INTO b_cache_tag (SITE_ID, CACHE_SALT, RELATIVE_PATH, TAG) VALUES ('*', '
 				WHERE 1 = 1
 					
 					 AND  ((((B.ACTIVE='Y'))))  AND  ((((B.ID = '2')))) 
-			;
+			$$$
 
 			SELECT VV.*, C.TITLE as CHANNEL_TITLE, C.ACTIVE as CHANNEL_ACTIVE,
 				C.HIDDEN as CHANNEL_HIDDEN, V.*,
@@ -1541,20 +1541,20 @@ INSERT INTO b_cache_tag (SITE_ID, CACHE_SALT, RELATIVE_PATH, TAG) VALUES ('*', '
 					GROUP BY V.ID
 			) VV
 			INNER JOIN b_vote V ON (V.ID = VV.ID)
-			INNER JOIN b_vote_channel C ON (C.ID = V.CHANNEL_ID) ORDER BY V.ID desc ;
-SELECT MAX(V.ID) AS ACTIVE_VOTE_ID  FROM b_vote V  WHERE V.CHANNEL_ID=1 AND V.ACTIVE = 'Y' AND  NOW() >= V.DATE_START AND V.DATE_END >= NOW();
+			INNER JOIN b_vote_channel C ON (C.ID = V.CHANNEL_ID) ORDER BY V.ID desc $$$
+SELECT MAX(V.ID) AS ACTIVE_VOTE_ID  FROM b_vote V  WHERE V.CHANNEL_ID=1 AND V.ACTIVE = 'Y' AND  NOW() >= V.DATE_START AND V.DATE_END >= NOW()$$$
 
 				SELECT TAG
 				FROM b_cache_tag
 				WHERE SITE_ID = 's1'
 				AND CACHE_SALT = '/e25'
 				AND RELATIVE_PATH = '/s1/bitrix/voting.current/ANKETA_s1/'
-			;
+			$$$
 
 				INSERT IGNORE INTO b_cache_tag (SITE_ID, CACHE_SALT, RELATIVE_PATH, TAG)
 				VALUES
 			('s1', '/e25', '/s1/bitrix/voting.current/ANKETA_s1/', 'vote_form_channel_1'),
-('s1', '/e25', '/s1/bitrix/voting.current/ANKETA_s1/', 'vote_form_vote_1');
+('s1', '/e25', '/s1/bitrix/voting.current/ANKETA_s1/', 'vote_form_vote_1')$$$
 
 			SELECT V.*,
 				C.TITLE as CHANNEL_TITLE,
@@ -1575,7 +1575,7 @@ SELECT MAX(V.ID) AS ACTIVE_VOTE_ID  FROM b_vote V  WHERE V.CHANNEL_ID=1 AND V.AC
 				END AS LAMP
 			FROM b_vote V
 			INNER JOIN b_vote_channel C ON (V.CHANNEL_ID = C.ID)
-			WHERE 1=1  AND ((V.ID = 1))  ORDER BY V.ID ASC;
+			WHERE 1=1  AND ((V.ID = 1))  ORDER BY V.ID ASC$$$
 
 			SELECT Q.*,
 				DATE_FORMAT(Q.TIMESTAMP_X, '%d.%m.%Y') TIMESTAMP_X
@@ -1591,29 +1591,29 @@ SELECT MAX(V.ID) AS ACTIVE_VOTE_ID  FROM b_vote V  WHERE V.CHANNEL_ID=1 AND V.AC
 						Q.VOTE_ID = 1
 					)
 					)
-			ORDER BY Q.C_SORT ASC;
+			ORDER BY Q.C_SORT ASC$$$
 
 			SELECT V.CHANNEL_ID, VQ.VOTE_ID, VA.*
 			FROM b_vote_answer VA
 				INNER JOIN b_vote_question VQ ON (VA.QUESTION_ID = VQ.ID)
 				INNER JOIN b_vote V ON (VQ.VOTE_ID = V.ID)
-			WHERE 1=1   AND ((VQ.VOTE_ID = 1)) AND ((VA.ACTIVE = 'Y')) AND ((VA.QUESTION_ID IN (1)))   ORDER BY VA.C_SORT ASC;
-SELECT VEQ.QUESTION_ID, VEA.ANSWER_ID, COUNT(VEA.ID) as COUNTER, MIN(TIMESTAMPDIFF(SECOND, VE.DATE_VOTE, NOW())) AS LAST_VOTE FROM b_vote_event VE  INNER JOIN b_vote_event_question VEQ ON (VEQ.EVENT_ID = VE.ID)  INNER JOIN b_vote_event_answer VEA ON (VEA.EVENT_QUESTION_ID = VEQ.ID)  LEFT JOIN b_vote_user VU ON (VU.ID = VE.VOTE_USER_ID) WHERE 1=1  AND ((VE.VOTE_ID = 1)) AND ((VE.VALID = 'Y' ))  GROUP BY VEQ.QUESTION_ID, VEA.ANSWER_ID ORDER BY COUNTER DESC;
+			WHERE 1=1   AND ((VQ.VOTE_ID = 1)) AND ((VA.ACTIVE = 'Y')) AND ((VA.QUESTION_ID IN (1)))   ORDER BY VA.C_SORT ASC$$$
+SELECT VEQ.QUESTION_ID, VEA.ANSWER_ID, COUNT(VEA.ID) as COUNTER, MIN(TIMESTAMPDIFF(SECOND, VE.DATE_VOTE, NOW())) AS LAST_VOTE FROM b_vote_event VE  INNER JOIN b_vote_event_question VEQ ON (VEQ.EVENT_ID = VE.ID)  INNER JOIN b_vote_event_answer VEA ON (VEA.EVENT_QUESTION_ID = VEQ.ID)  LEFT JOIN b_vote_user VU ON (VU.ID = VE.VOTE_USER_ID) WHERE 1=1  AND ((VE.VOTE_ID = 1)) AND ((VE.VALID = 'Y' ))  GROUP BY VEQ.QUESTION_ID, VEA.ANSWER_ID ORDER BY COUNTER DESC$$$
 
 				SELECT TAG
 				FROM b_cache_tag
 				WHERE SITE_ID = 's1'
 				AND CACHE_SALT = '/e25'
 				AND RELATIVE_PATH = '/s1/bitrix/voting.result/1'
-			;
+			$$$
 
 				INSERT IGNORE INTO b_cache_tag (SITE_ID, CACHE_SALT, RELATIVE_PATH, TAG)
 				VALUES
 			('s1', '/e25', '/s1/bitrix/voting.result/1', 'vote_form_channel_1'),
 ('s1', '/e25', '/s1/bitrix/voting.result/1', 'vote_form_vote_1'),
-('s1', '/e25', '/s1/bitrix/voting.result/1', 'vote_form_question_1');
-SET NAMES 'utf8';
-SET collation_connection = "utf8_unicode_ci";
+('s1', '/e25', '/s1/bitrix/voting.result/1', 'vote_form_question_1')$$$
+SET NAMES 'utf8'$$$
+SET collation_connection = "utf8_unicode_ci"$$$
 
 			SELECT 'x'
 			FROM b_agent
@@ -1623,20 +1623,20 @@ SET collation_connection = "utf8_unicode_ci";
 				AND (DATE_CHECK IS NULL OR DATE_CHECK <= now())
 				
 			LIMIT 1
-		;
-SELECT GET_LOCK('cff29ec0118154ee0dcf115d29478b29_agent', 0) as L;
-SELECT ID, NAME, AGENT_INTERVAL, IS_PERIOD, MODULE_ID FROM b_agent WHERE ACTIVE='Y' 	AND NEXT_EXEC<=now() 	AND (DATE_CHECK IS NULL OR DATE_CHECK<=now())  ORDER BY RUNNING ASC, SORT desc;
-UPDATE b_agent SET DATE_CHECK=DATE_ADD(IF(DATE_CHECK IS NULL, now(), DATE_CHECK), INTERVAL 600 SECOND) WHERE ID IN (21);
-SELECT RELEASE_LOCK('cff29ec0118154ee0dcf115d29478b29_agent');
-UPDATE b_agent SET RUNNING='Y' WHERE ID=21;
+		$$$
+SELECT GET_LOCK('cff29ec0118154ee0dcf115d29478b29_agent', 0) as L$$$
+SELECT ID, NAME, AGENT_INTERVAL, IS_PERIOD, MODULE_ID FROM b_agent WHERE ACTIVE='Y' 	AND NEXT_EXEC<=now() 	AND (DATE_CHECK IS NULL OR DATE_CHECK<=now())  ORDER BY RUNNING ASC, SORT desc$$$
+UPDATE b_agent SET DATE_CHECK=DATE_ADD(IF(DATE_CHECK IS NULL, now(), DATE_CHECK), INTERVAL 600 SECOND) WHERE ID IN (21)$$$
+SELECT RELEASE_LOCK('cff29ec0118154ee0dcf115d29478b29_agent')$$$
+UPDATE b_agent SET RUNNING='Y' WHERE ID=21$$$
 SELECT SITE_ID, CACHE_SALT, RELATIVE_PATH, TAG from b_cache_tag WHERE TAG='*'
-LIMIT 0, 1;
+LIMIT 0, 1$$$
 
-SELECT SITE_ID, CACHE_SALT, RELATIVE_PATH, TAG from b_cache_tag WHERE TAG='**';
+SELECT SITE_ID, CACHE_SALT, RELATIVE_PATH, TAG from b_cache_tag WHERE TAG='**'$$$
 SELECT count(1) CNT from b_cache_tag WHERE TAG='*'
-LIMIT 0, 1;
+LIMIT 0, 1$$$
 
-UPDATE b_cache_tag SET RELATIVE_PATH='5:1469352825' WHERE TAG='**';
+UPDATE b_cache_tag SET RELATIVE_PATH='5:1469352825' WHERE TAG='**'$$$
 
 					UPDATE b_agent SET
 						NAME='\\Bitrix\\Main\\Data\\CacheEngineFiles::delayedDelete(1);',
@@ -1644,7 +1644,7 @@ UPDATE b_cache_tag SET RELATIVE_PATH='5:1469352825' WHERE TAG='**';
 						NEXT_EXEC=DATE_ADD(NEXT_EXEC, INTERVAL 1 SECOND),
 						DATE_CHECK=NULL,
 						RUNNING='N'
-					WHERE ID=21;
+					WHERE ID=21$$$
 
 				SELECT DISTINCT
 					B.*
@@ -1658,7 +1658,7 @@ UPDATE b_cache_tag SET RELATIVE_PATH='5:1469352825' WHERE TAG='**';
 				WHERE 1 = 1
 					
 					 AND  ((((B.ACTIVE='Y'))))  AND  ((((B.ID = '2')))) 
-			;
+			$$$
 
 				SELECT DISTINCT
 					B.*
@@ -1672,7 +1672,7 @@ UPDATE b_cache_tag SET RELATIVE_PATH='5:1469352825' WHERE TAG='**';
 				WHERE 1 = 1
 					
 					 AND  ((((B.ACTIVE='Y'))))  AND  ((((B.ID = '2')))) 
-			;
+			$$$
 
 			SELECT Q.*,
 				DATE_FORMAT(Q.TIMESTAMP_X, '%d.%m.%Y') TIMESTAMP_X
@@ -1688,35 +1688,35 @@ UPDATE b_cache_tag SET RELATIVE_PATH='5:1469352825' WHERE TAG='**';
 						Q.VOTE_ID = 1
 					)
 					)
-			ORDER BY Q.C_SORT ASC;
+			ORDER BY Q.C_SORT ASC$$$
 
 			SELECT V.CHANNEL_ID, VQ.VOTE_ID, VA.*
 			FROM b_vote_answer VA
 				INNER JOIN b_vote_question VQ ON (VA.QUESTION_ID = VQ.ID)
 				INNER JOIN b_vote V ON (VQ.VOTE_ID = V.ID)
-			WHERE 1=1   AND ((VQ.VOTE_ID = 1)) AND ((VA.ACTIVE = 'Y')) AND ((VA.QUESTION_ID IN (1)))   ORDER BY VA.C_SORT ASC;
-SELECT VEQ.QUESTION_ID, VEA.ANSWER_ID, COUNT(VEA.ID) as COUNTER, MIN(TIMESTAMPDIFF(SECOND, VE.DATE_VOTE, NOW())) AS LAST_VOTE FROM b_vote_event VE  INNER JOIN b_vote_event_question VEQ ON (VEQ.EVENT_ID = VE.ID)  INNER JOIN b_vote_event_answer VEA ON (VEA.EVENT_QUESTION_ID = VEQ.ID)  LEFT JOIN b_vote_user VU ON (VU.ID = VE.VOTE_USER_ID) WHERE 1=1  AND ((VE.VOTE_ID = 1)) AND ((VE.VALID = 'Y' ))  GROUP BY VEQ.QUESTION_ID, VEA.ANSWER_ID ORDER BY COUNTER DESC;
+			WHERE 1=1   AND ((VQ.VOTE_ID = 1)) AND ((VA.ACTIVE = 'Y')) AND ((VA.QUESTION_ID IN (1)))   ORDER BY VA.C_SORT ASC$$$
+SELECT VEQ.QUESTION_ID, VEA.ANSWER_ID, COUNT(VEA.ID) as COUNTER, MIN(TIMESTAMPDIFF(SECOND, VE.DATE_VOTE, NOW())) AS LAST_VOTE FROM b_vote_event VE  INNER JOIN b_vote_event_question VEQ ON (VEQ.EVENT_ID = VE.ID)  INNER JOIN b_vote_event_answer VEA ON (VEA.EVENT_QUESTION_ID = VEQ.ID)  LEFT JOIN b_vote_user VU ON (VU.ID = VE.VOTE_USER_ID) WHERE 1=1  AND ((VE.VOTE_ID = 1)) AND ((VE.VALID = 'Y' ))  GROUP BY VEQ.QUESTION_ID, VEA.ANSWER_ID ORDER BY COUNTER DESC$$$
 
 				SELECT TAG
 				FROM b_cache_tag
 				WHERE SITE_ID = 's1'
 				AND CACHE_SALT = '/e25'
 				AND RELATIVE_PATH = '/s1/bitrix/voting.form'
-			;
+			$$$
 
 				INSERT IGNORE INTO b_cache_tag (SITE_ID, CACHE_SALT, RELATIVE_PATH, TAG)
 				VALUES
-			('s1', '/e25', '/s1/bitrix/voting.form', 'vote_form_channel_1');
+			('s1', '/e25', '/s1/bitrix/voting.form', 'vote_form_channel_1')$$$
 
 				INSERT IGNORE INTO b_cache_tag (SITE_ID, CACHE_SALT, RELATIVE_PATH, TAG)
 				VALUES
-			('s1', '/e25', '/s1/bitrix/voting.form', 'vote_form_vote_1');
+			('s1', '/e25', '/s1/bitrix/voting.form', 'vote_form_vote_1')$$$
 
 				INSERT IGNORE INTO b_cache_tag (SITE_ID, CACHE_SALT, RELATIVE_PATH, TAG)
 				VALUES
-			('s1', '/e25', '/s1/bitrix/voting.form', 'vote_form_question_1');
-SET NAMES 'utf8';
-SET collation_connection = "utf8_unicode_ci";
+			('s1', '/e25', '/s1/bitrix/voting.form', 'vote_form_question_1')$$$
+SET NAMES 'utf8'$$$
+SET collation_connection = "utf8_unicode_ci"$$$
 
 			SELECT 'x'
 			FROM b_agent
@@ -1726,24 +1726,24 @@ SET collation_connection = "utf8_unicode_ci";
 				AND (DATE_CHECK IS NULL OR DATE_CHECK <= now())
 				
 			LIMIT 1
-		;
-SELECT GET_LOCK('cff29ec0118154ee0dcf115d29478b29_agent', 0) as L;
-SELECT ID, NAME, AGENT_INTERVAL, IS_PERIOD, MODULE_ID FROM b_agent WHERE ACTIVE='Y' 	AND NEXT_EXEC<=now() 	AND (DATE_CHECK IS NULL OR DATE_CHECK<=now())  ORDER BY RUNNING ASC, SORT desc;
-UPDATE b_agent SET DATE_CHECK=DATE_ADD(IF(DATE_CHECK IS NULL, now(), DATE_CHECK), INTERVAL 600 SECOND) WHERE ID IN (21);
-SELECT RELEASE_LOCK('cff29ec0118154ee0dcf115d29478b29_agent');
-UPDATE b_agent SET RUNNING='Y' WHERE ID=21;
+		$$$
+SELECT GET_LOCK('cff29ec0118154ee0dcf115d29478b29_agent', 0) as L$$$
+SELECT ID, NAME, AGENT_INTERVAL, IS_PERIOD, MODULE_ID FROM b_agent WHERE ACTIVE='Y' 	AND NEXT_EXEC<=now() 	AND (DATE_CHECK IS NULL OR DATE_CHECK<=now())  ORDER BY RUNNING ASC, SORT desc$$$
+UPDATE b_agent SET DATE_CHECK=DATE_ADD(IF(DATE_CHECK IS NULL, now(), DATE_CHECK), INTERVAL 600 SECOND) WHERE ID IN (21)$$$
+SELECT RELEASE_LOCK('cff29ec0118154ee0dcf115d29478b29_agent')$$$
+UPDATE b_agent SET RUNNING='Y' WHERE ID=21$$$
 SELECT SITE_ID, CACHE_SALT, RELATIVE_PATH, TAG from b_cache_tag WHERE TAG='*'
-LIMIT 0, 1;
+LIMIT 0, 1$$$
 
 DELETE FROM b_cache_tag
 				WHERE SITE_ID = '*'
 				AND CACHE_SALT = '*'
-				AND RELATIVE_PATH = '/bitrix/cache/s1/bitrix/voting.current/ANKETA_s1.~619977';
-SELECT SITE_ID, CACHE_SALT, RELATIVE_PATH, TAG from b_cache_tag WHERE TAG='**';
+				AND RELATIVE_PATH = '/bitrix/cache/s1/bitrix/voting.current/ANKETA_s1.~619977'$$$
+SELECT SITE_ID, CACHE_SALT, RELATIVE_PATH, TAG from b_cache_tag WHERE TAG='**'$$$
 SELECT count(1) CNT from b_cache_tag WHERE TAG='*'
-LIMIT 0, 1;
+LIMIT 0, 1$$$
 
-UPDATE b_cache_tag SET RELATIVE_PATH='4:1469352827' WHERE TAG='**';
+UPDATE b_cache_tag SET RELATIVE_PATH='4:1469352827' WHERE TAG='**'$$$
 
 					UPDATE b_agent SET
 						NAME='\\Bitrix\\Main\\Data\\CacheEngineFiles::delayedDelete(1);',
@@ -1751,7 +1751,7 @@ UPDATE b_cache_tag SET RELATIVE_PATH='4:1469352827' WHERE TAG='**';
 						NEXT_EXEC=DATE_ADD(NEXT_EXEC, INTERVAL 1 SECOND),
 						DATE_CHECK=NULL,
 						RUNNING='N'
-					WHERE ID=21;
+					WHERE ID=21$$$
 
 				SELECT DISTINCT
 					B.*
@@ -1765,7 +1765,7 @@ UPDATE b_cache_tag SET RELATIVE_PATH='4:1469352827' WHERE TAG='**';
 				WHERE 1 = 1
 					
 					 AND  ((((B.ACTIVE='Y'))))  AND  ((((B.ID = '2')))) 
-			;
+			$$$
 
 				SELECT DISTINCT
 					B.*
@@ -1779,9 +1779,9 @@ UPDATE b_cache_tag SET RELATIVE_PATH='4:1469352827' WHERE TAG='**';
 				WHERE 1 = 1
 					
 					 AND  ((((B.ACTIVE='Y'))))  AND  ((((B.ID = '2')))) 
-			;
-SET NAMES 'utf8';
-SET collation_connection = "utf8_unicode_ci";
+			$$$
+SET NAMES 'utf8'$$$
+SET collation_connection = "utf8_unicode_ci"$$$
 
 			SELECT 'x'
 			FROM b_agent
@@ -1791,18 +1791,18 @@ SET collation_connection = "utf8_unicode_ci";
 				AND (DATE_CHECK IS NULL OR DATE_CHECK <= now())
 				
 			LIMIT 1
-		;
-SELECT GET_LOCK('cff29ec0118154ee0dcf115d29478b29_agent', 0) as L;
-SELECT ID, NAME, AGENT_INTERVAL, IS_PERIOD, MODULE_ID FROM b_agent WHERE ACTIVE='Y' 	AND NEXT_EXEC<=now() 	AND (DATE_CHECK IS NULL OR DATE_CHECK<=now())  ORDER BY RUNNING ASC, SORT desc;
-UPDATE b_agent SET DATE_CHECK=DATE_ADD(IF(DATE_CHECK IS NULL, now(), DATE_CHECK), INTERVAL 600 SECOND) WHERE ID IN (21);
-SELECT RELEASE_LOCK('cff29ec0118154ee0dcf115d29478b29_agent');
-UPDATE b_agent SET RUNNING='Y' WHERE ID=21;
+		$$$
+SELECT GET_LOCK('cff29ec0118154ee0dcf115d29478b29_agent', 0) as L$$$
+SELECT ID, NAME, AGENT_INTERVAL, IS_PERIOD, MODULE_ID FROM b_agent WHERE ACTIVE='Y' 	AND NEXT_EXEC<=now() 	AND (DATE_CHECK IS NULL OR DATE_CHECK<=now())  ORDER BY RUNNING ASC, SORT desc$$$
+UPDATE b_agent SET DATE_CHECK=DATE_ADD(IF(DATE_CHECK IS NULL, now(), DATE_CHECK), INTERVAL 600 SECOND) WHERE ID IN (21)$$$
+SELECT RELEASE_LOCK('cff29ec0118154ee0dcf115d29478b29_agent')$$$
+UPDATE b_agent SET RUNNING='Y' WHERE ID=21$$$
 SELECT SITE_ID, CACHE_SALT, RELATIVE_PATH, TAG from b_cache_tag WHERE TAG='*'
-LIMIT 0, 1;
+LIMIT 0, 1$$$
 
-SELECT SITE_ID, CACHE_SALT, RELATIVE_PATH, TAG from b_cache_tag WHERE TAG='**';
+SELECT SITE_ID, CACHE_SALT, RELATIVE_PATH, TAG from b_cache_tag WHERE TAG='**'$$$
 SELECT count(1) CNT from b_cache_tag WHERE TAG='*'
-LIMIT 0, 1;
+LIMIT 0, 1$$$
 
 
 					UPDATE b_agent SET
@@ -1811,12 +1811,12 @@ LIMIT 0, 1;
 						NEXT_EXEC=DATE_ADD(NEXT_EXEC, INTERVAL 1 SECOND),
 						DATE_CHECK=NULL,
 						RUNNING='N'
-					WHERE ID=21;
-DELETE FROM b_admin_notify_lang WHERE NOTIFY_ID IN (SELECT ID FROM b_admin_notify WHERE TAG like '%PHOTOGALLERY_UPLOADER%');
-DELETE FROM b_admin_notify WHERE TAG like '%PHOTOGALLERY_UPLOADER%';
-SELECT L.*, L.LID as ID, L.LID as LANGUAGE_ID, 	C.FORMAT_DATE, C.FORMAT_DATETIME, C.FORMAT_NAME, C.WEEK_START, C.CHARSET, C.DIRECTION FROM b_language L, b_culture C WHERE C.ID = L.CULTURE_ID  ORDER BY L.LID ;
-SELECT * FROM `b_admin_notify` LIMIT 0;
-SELECT L.*, L.LID as ID, L.LID as LANGUAGE_ID, 	C.FORMAT_DATE, C.FORMAT_DATETIME, C.FORMAT_NAME, C.WEEK_START, C.CHARSET, C.DIRECTION FROM b_language L, b_culture C WHERE C.ID = L.CULTURE_ID  ORDER BY L.LID ;
+					WHERE ID=21$$$
+DELETE FROM b_admin_notify_lang WHERE NOTIFY_ID IN (SELECT ID FROM b_admin_notify WHERE TAG like '%PHOTOGALLERY_UPLOADER%')$$$
+DELETE FROM b_admin_notify WHERE TAG like '%PHOTOGALLERY_UPLOADER%'$$$
+SELECT L.*, L.LID as ID, L.LID as LANGUAGE_ID, 	C.FORMAT_DATE, C.FORMAT_DATETIME, C.FORMAT_NAME, C.WEEK_START, C.CHARSET, C.DIRECTION FROM b_language L, b_culture C WHERE C.ID = L.CULTURE_ID  ORDER BY L.LID $$$
+SELECT * FROM `b_admin_notify` LIMIT 0$$$
+SELECT L.*, L.LID as ID, L.LID as LANGUAGE_ID, 	C.FORMAT_DATE, C.FORMAT_DATETIME, C.FORMAT_NAME, C.WEEK_START, C.CHARSET, C.DIRECTION FROM b_language L, b_culture C WHERE C.ID = L.CULTURE_ID  ORDER BY L.LID $$$
 SELECT DISTINCT BS.ID AS ID,
 BS.ACTIVE AS ACTIVE,
 BS.CREATED_BY AS CREATED_BY,
@@ -1842,7 +1842,7 @@ DATE_FORMAT(BS.TIMESTAMP_X, '%d.%m.%Y %H:%i:%s') AS TIMESTAMP_X
 				AND  ((((B.ID = '9')))) 
 				AND  ((((B.ACTIVE='Y')))) 
 			
-				ORDER BY  BS.TIMESTAMP_X desc ,  BS.ID desc ;
+				ORDER BY  BS.TIMESTAMP_X desc ,  BS.ID desc $$$
 
 			SELECT BP.*
 			FROM b_iblock_property BP
@@ -1852,7 +1852,7 @@ DATE_FORMAT(BS.TIMESTAMP_X, '%d.%m.%Y %H:%i:%s') AS TIMESTAMP_X
 				AND BP.IBLOCK_ID = 9
 			
 				ORDER BY BP.SORT ASC
-			;
+			$$$
 SELECT COUNT('x') as C 
 			FROM 
 			b_iblock B
@@ -1879,7 +1879,7 @@ SELECT COUNT('x') as C
 			)
 			AND (((BE.WF_STATUS_ID=1 AND BE.WF_PARENT_ELEMENT_ID IS NULL)))
 			
-		;
+		$$$
 SELECT  BE.ID as ID,BE.CODE as CODE,BE.IBLOCK_ID as IBLOCK_ID,BE.IBLOCK_SECTION_ID as IBLOCK_SECTION_ID,BE.NAME as NAME,BE.ACTIVE as ACTIVE,BE.DETAIL_PICTURE as DETAIL_PICTURE,BE.PREVIEW_PICTURE as PREVIEW_PICTURE,BE.PREVIEW_TEXT as PREVIEW_TEXT,BE.DETAIL_TEXT as DETAIL_TEXT,DATE_FORMAT(BE.DATE_CREATE, '%d.%m.%Y %H:%i:%s') as DATE_CREATE,BE.CREATED_BY as CREATED_BY,BE.SHOW_COUNTER as SHOW_COUNTER,BE.SORT as SORT,BE.TAGS as TAGS,DATE_FORMAT(BE.DATE_CREATE, '%Y.%m.%d') as CREATED_DATE,BE.DETAIL_TEXT_TYPE as DETAIL_TEXT_TYPE,BE.PREVIEW_TEXT_TYPE as PREVIEW_TEXT_TYPE
 			FROM 
 			b_iblock B
@@ -1906,7 +1906,7 @@ SELECT  BE.ID as ID,BE.CODE as CODE,BE.IBLOCK_ID as IBLOCK_ID,BE.IBLOCK_SECTION_
 			)
 			AND (((BE.WF_STATUS_ID=1 AND BE.WF_PARENT_ELEMENT_ID IS NULL)))
 			
-		 ORDER BY DATE_FORMAT(BE.DATE_CREATE, '%Y.%m.%d') desc ,BE.ID asc  LIMIT 0, 45;
+		 ORDER BY DATE_FORMAT(BE.DATE_CREATE, '%Y.%m.%d') desc ,BE.ID asc  LIMIT 0, 45$$$
 
 			SELECT BP.*, BEP.ID as PROPERTY_VALUE_ID, BEP.VALUE, BEP.DESCRIPTION, BEPE.VALUE VALUE_ENUM, BEPE.XML_ID VALUE_XML_ID, BEPE.SORT VALUE_SORT
 			FROM b_iblock B
@@ -1916,7 +1916,7 @@ SELECT  BE.ID as ID,BE.CODE as CODE,BE.IBLOCK_ID as IBLOCK_ID,BE.IBLOCK_SECTION_
 			WHERE B.ID = 9
 				AND BP.ACTIVE='Y'
 
-			 ORDER BY  BP.SORT asc, BP.ID asc, BEPE.SORT asc, BEP.ID asc;
+			 ORDER BY  BP.SORT asc, BP.ID asc, BEPE.SORT asc, BEP.ID asc$$$
 SELECT DISTINCT BS.ID AS ID,
 BS.LEFT_MARGIN AS LEFT_MARGIN,
 BS.RIGHT_MARGIN AS RIGHT_MARGIN,
@@ -1932,7 +1932,7 @@ BS.ACTIVE AS ACTIVE
 				AND  ((((BS.IBLOCK_ID = '9')))) 
 				AND  ((((BS.ID = '96')))) 
 				AND  ((((B.ID = '9')))) 
-			;
+			$$$
 SELECT DISTINCT 
 				BS.*,
 				B.LIST_PAGE_URL,
@@ -1955,7 +1955,7 @@ SELECT DISTINCT
 				AND  ((((BS.ID = '96')))) 
 				AND  ((((B.ACTIVE='Y')))) 
 				AND  ((((B.ID = '9')))) 
-			;
+			$$$
 
 			SELECT STRAIGHT_JOIN COUNT(DISTINCT BE.ID) as CNT
 			FROM b_iblock_section BS
@@ -1969,7 +1969,7 @@ SELECT DISTINCT
 				AND ((BE.WF_STATUS_ID=1 AND BE.WF_PARENT_ELEMENT_ID IS NULL )
 				 OR BE.WF_NEW='Y' )
 				
-				;
+				$$$
 
 					SELECT
 						
@@ -1986,7 +1986,7 @@ SELECT DISTINCT
 						INNER JOIN b_iblock B ON B.ID = BS.IBLOCK_ID
 					WHERE BS.ID=96
 						AND BS.IBLOCK_ID=9
-				;
+				$$$
 
 					SELECT
 						
@@ -2002,5 +2002,5 @@ SELECT DISTINCT
 						b_iblock_section BS
 						INNER JOIN b_iblock B ON B.ID = BS.IBLOCK_ID
 					WHERE BS.ID=95
-						AND BS.IBLOCK_ID=9;
-#end
+						AND BS.IBLOCK_ID=9$$$
+#en

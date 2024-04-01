@@ -20,22 +20,16 @@ using namespace antlr4::tree;
 
 std::shared_ptr<ParseServiceCpp> service = std::make_shared<ParseServiceCpp>(80400);
 
-struct TestFile {
-  std::string name;
-  const char *line_break;
-  const char *initial_delimiter;
-};
-
-static const std::vector<TestFile> testFiles = {
+static const std::vector<std::string> testFiles = {
   // Large set of all possible query types in different combinations and versions.
-  { "statements.txt", "\n", "$$" },
+  "statements.txt",
 
   // The largest of the example files from the grammar repository:
   // (https://github.com/antlr/grammars-v4/tree/master/sql/mysql/Positive-Technologies/examples)
-  { "bitrix_queries_cut.sql", "\n", ";" },
+  "bitrix_queries_cut.sql",
 
   // Not so many, but some very long insert statements.
-  { "sakila-db/sakila-data.sql", "\n", ";" }
+  "sakila-db/sakila-data.sql"
 };
 
 std::string basename(const std::string& path, const std::string& extension = "") {
@@ -54,52 +48,10 @@ std::string basename(const std::string& path, const std::string& extension = "")
     return filename;
 }
 
-/**
- * Determines if the version info in the statement matches the given version (if there's version info at all).
- * The version info is removed from the statement, if any.
- */
-static bool versionMatches(std::string &statement, unsigned long serverVersion) {
-  static std::regex versionPattern("^\\[(<|<=|>|>=|=)(\\d{5})\\]");
-  static std::map<std::string, int> relationMap = { { "<", 0 }, { "<=", 1 }, { "=", 2 }, { ">=", 3 }, { ">", 4 } };
-
-  std::smatch matches;
-  if (std::regex_search(statement, matches, versionPattern)) {
-    auto relation = matches[1].str();
-    unsigned long targetVersion = std::stoul(matches[2].str());
-
-    switch (relationMap[relation]) {
-      case 0:
-        if (serverVersion >= targetVersion)
-          return false;
-        break;
-      case 1:
-        if (serverVersion > targetVersion)
-          return false;
-        break;
-      case 2:
-        if (serverVersion != targetVersion)
-          return false;
-        break;
-      case 3:
-        if (serverVersion < targetVersion)
-          return false;
-        break;
-      case 4:
-        if (serverVersion <= targetVersion)
-          return false;
-        break;
-    }
-
-    statement = std::regex_replace(statement, versionPattern, "");
-  }
-
-  return true;
-}
-
 void parseFiles(bool clearDFA) {
   auto index = 0;
   for (auto entry : testFiles) {
-    std::string fileName = "../../data/" + entry.name;
+    std::string fileName = "../../data/" + entry;
 
 #ifdef _MSC_VER
     std::ifstream stream(base::string_to_wstring(fileName), std::ios::binary);
@@ -108,8 +60,17 @@ void parseFiles(bool clearDFA) {
 #endif
     std::string sql((std::istreambuf_iterator<char>(stream)), std::istreambuf_iterator<char>());
 
-    std::vector<StatementRange> ranges;
-    service->determineStatementRanges(sql.c_str(), sql.size(), entry.initial_delimiter, ranges, entry.line_break);
+    std::vector<std::string> statements;
+    std::string statement;
+
+    std::string delimiter = "$$$";
+    size_t pos = 0;
+
+    while ((pos = sql.find(delimiter)) != std::string::npos) {
+        statement = sql.substr(0, pos);
+        statements.push_back(statement);
+        sql.erase(0, pos + delimiter.length());
+    }
 
     if (clearDFA) {
       service->clearDFA();
@@ -117,31 +78,27 @@ void parseFiles(bool clearDFA) {
 
     double tokenizationTime = 0;
     double parseTime = 0;
-    for (auto &range : ranges) {
-      std::string statement(sql.c_str() + range.start, range.length);
+    for (auto &statement : statements) {
+      auto start = std::chrono::high_resolution_clock::now();
+      service->tokenize(statement);
+      auto stop = std::chrono::high_resolution_clock::now();
+      auto duration = std::chrono::duration_cast<std::chrono::microseconds>(stop - start);
+      tokenizationTime += duration.count();
 
-      if (versionMatches(statement, 80400)) {
-        auto start = std::chrono::high_resolution_clock::now();
-        service->tokenize(statement);
-        auto stop = std::chrono::high_resolution_clock::now();
-        auto duration = std::chrono::duration_cast<std::chrono::microseconds>(stop - start);
-        tokenizationTime += duration.count();
+      start = std::chrono::high_resolution_clock::now();
+      bool succeeded = service->errorCheck();
+      stop = std::chrono::high_resolution_clock::now();
+      duration = std::chrono::duration_cast<std::chrono::microseconds>(stop - start);
+      parseTime += duration.count();
 
-        start = std::chrono::high_resolution_clock::now();
-        bool succeeded = service->errorCheck();
-        stop = std::chrono::high_resolution_clock::now();
-        duration = std::chrono::duration_cast<std::chrono::microseconds>(stop - start);
-        parseTime += duration.count();
-
-        if (!succeeded) {
-          throw "This query failed to parse:\n" + statement;
-        }
+      if (!succeeded) {
+        throw "This query failed to parse:\n" + statement;
       }
     }
 
     tokenizationTime = std::round(tokenizationTime / 1000.0);
     parseTime = std::round(parseTime / 1000.0);
-    std::cout << "    " << basename(entry.name) << ": "
+    std::cout << "    " << basename(entry) << ": "
         << tokenizationTime << " ms, " << parseTime << " ms" << std::endl;
   }
 }
