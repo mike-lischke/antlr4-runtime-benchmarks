@@ -8,22 +8,22 @@ All times are given in milliseconds. The 3 values in a table cell are: lexing⧸
 This table contains the results of a cold run of each runtime. Although all files are parsed in the same loop, a cold run is achieved by resetting both the lexer and the parser DFA for each file.
 
 |❄️|statements.txt|bitrix\_queries\_cut.sql|sakila-data.sql|Total|
-|:---:|---:|---:|---:|---:|
-|antlr4-cpp|70⧸826⧸896|31⧸174⧸205|2782⧸421⧸3203|2883⧸1421⧸4304|
-|antlr4ng|202⧸2597⧸2799|101⧸536⧸637|7010⧸2091⧸9101|7313⧸5224⧸12537|
-|antlr4ts|310⧸2812⧸3122|128⧸518⧸646|10815⧸531⧸11346|11253⧸3861⧸15114|
-|antlr4|0⧸8323⧸8323|0⧸1111⧸1111|0⧸10714⧸10714|0⧸20148⧸20148|
-|antlr4wasm|390⧸3091⧸3481|176⧸885⧸1061|11345⧸24577⧸35922|11911⧸28553⧸40464|
+|:---:|---:|---:|---:|---:|---:|
+|antlr4-cpp|101⧸1215⧸1316|43⧸253⧸296|4258⧸669⧸4927|4402⧸2137⧸6539|
+|antlr4ng|184⧸2151⧸2335|83⧸461⧸544|6119⧸2036⧸8155|6386⧸4648⧸11034|
+|antlr4ts|331⧸3222⧸3553|141⧸564⧸705|11309⧸501⧸11810|11781⧸4287⧸16068|
+|antlr4|0⧸8258⧸8258|0⧸1122⧸1122|0⧸11418⧸11418|0⧸20798⧸20798|
+|antlr4wasm|392⧸3156⧸3548|178⧸894⧸1072|11250⧸26082⧸37332|11820⧸30132⧸41952|
 
 This table contains the results of a warm run of each runtime. For this each parse run is executed 5 times (except for the WASM target, which has no stable memory houshold and crashes Node.js with more than 2 runs). The two slowest runs are then removed (except for the WASM runtime) and an average calculated for the rest.
 
 |🔥|statements.txt|bitrix\_queries\_cut.sql|sakila-data.sql|Total|
-|:---:|---:|---:|---:|---:|
-|antlr4-cpp|57⧸18⧸75|28⧸14⧸42|2718⧸401⧸3120|2803⧸433⧸3236|
-|antlr4ng|143⧸99⧸242|69⧸75⧸143|7075⧸2086⧸9161|7286⧸2260⧸9546|
-|antlr4|0⧸225⧸225|0⧸107⧸107|0⧸10621⧸10621|0⧸10954⧸10954|
-|antlr4ts|224⧸40⧸264|108⧸22⧸130|10634⧸466⧸11100|10966⧸529⧸11495|
-|antlr4wasm|495⧸2113⧸2608|170⧸693⧸862|11515⧸28022⧸39537|12180⧸30827⧸43007|
+|:---:|---:|---:|---:|---:|---:|
+|antlr4-cpp|81⧸27⧸108|40⧸18⧸58|3837⧸584⧸4421|3958⧸629⧸4587|
+|antlr4ng|130⧸92⧸221|63⧸66⧸129|6178⧸2020⧸8197|6370⧸2178⧸8548|
+|antlr4|0⧸224⧸224|0⧸107⧸107|0⧸10700⧸10700|0⧸11031⧸11031|
+|antlr4ts|230⧸43⧸272|112⧸24⧸136|11336⧸477⧸11813|11677⧸544⧸12221|
+|antlr4wasm|463⧸2287⧸2750|289⧸1799⧸2088|11683⧸29955⧸41638|12435⧸34041⧸46476|
 
 Both tables are sorted by the total execution time, with the fastest at the top.
 
@@ -96,6 +96,8 @@ and finally the WebAssembly:
 ```bash
 npm run build-wasm-release
 ```
+
+> Note: The antlr4wasm runtime needs its own copy of the C++ runtime files, because there are a number of changes required without which the WASM binary couldn't be built.
 
 Once all this has succeeded you are ready to run the benchmarks.
 

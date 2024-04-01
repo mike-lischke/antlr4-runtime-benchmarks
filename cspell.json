@@ -21,11 +21,17 @@
         "ambig",
         "antlr",
         "antlrcpp",
+        "armscii",
         "bitrix",
         "embind",
         "emscripten",
+        "eucjpms",
+        "geostd",
         "interp",
+        "keybcs",
         "localctx",
+        "macce",
+        "macroman",
         "nvae",
         "parentctx",
         "precpred",
@@ -34,7 +40,8 @@
         "sakila",
         "seealso",
         "sempred",
-        "sempreds"
+        "sempreds",
+        "ujis"
     ],
     "import": [],
     "ignorePaths": [

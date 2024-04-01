@@ -10,19 +10,19 @@ This table contains the results of a cold run of each runtime. Although all file
 
 |❄️|input|Total|
 |:---:|---:|---:|
-|antlr4-cpp|171⧸39⧸210|171⧸39⧸210|
-|antlr4ts|184⧸67⧸251|184⧸67⧸251|
-|antlr4|0⧸285⧸285|0⧸285⧸285|
-|antlr4ng|230⧸56⧸286|230⧸56⧸286|
+|antlr4-cpp|178⧸44⧸222|178⧸44⧸222|
+|antlr4ts|193⧸58⧸251|193⧸58⧸251|
+|antlr4ng|224⧸55⧸279|224⧸55⧸279|
+|antlr4|0⧸293⧸293|0⧸293⧸293|
 
 This table contains the results of a warm run of each runtime. For this each parse run is executed 5 times. The two slowest runs are then removed and an average calculated for the rest.
 
 |🔥|input|Total|
 |:---:|---:|---:|
-|antlr4ts|141⧸55⧸197|141⧸55⧸197|
-|antlr4ng|197⧸49⧸246|197⧸49⧸246|
-|antlr4-cpp|183⧸73⧸256|183⧸73⧸256|
-|antlr4|0⧸300⧸300|0⧸300⧸300|
+|antlr4ts|142⧸66⧸208|142⧸66⧸208|
+|antlr4ng|200⧸47⧸247|200⧸47⧸247|
+|antlr4-cpp|186⧸71⧸257|186⧸71⧸257|
+|antlr4|0⧸266⧸266|0⧸266⧸266|
 
 Both tables are sorted by the total execution time, with the fastest at the top. However, because of the simple grammar used for these benchmarks the results are very close to each other (including C++) so that the order can easily change on the next run of the benchmarks.
 
