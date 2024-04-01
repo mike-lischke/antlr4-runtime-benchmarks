@@ -8,7 +8,7 @@ All times are given in milliseconds. The 3 values in a table cell are: lexing⧸
 This table contains the results of a cold run of each runtime. Although all files are parsed in the same loop, a cold run is achieved by resetting both the lexer and the parser DFA for each file.
 
 |❄️|statements.txt|bitrix\_queries\_cut.sql|sakila-data.sql|Total|
-|:---:|---:|---:|---:|---:|---:|
+|:---:|---:|---:|---:|---:|
 |antlr4-cpp|102⧸1211⧸1313|44⧸253⧸297|4346⧸671⧸5017|4492⧸2135⧸6627|
 |antlr4ng|187⧸2123⧸2310|78⧸459⧸537|6162⧸2040⧸8202|6427⧸4622⧸11049|
 |antlr4ts|314⧸2833⧸3147|134⧸518⧸652|10814⧸500⧸11314|11262⧸3851⧸15113|
@@ -18,7 +18,7 @@ This table contains the results of a cold run of each runtime. Although all file
 This table contains the results of a warm run of each runtime. For this each parse run is executed 5 times (except for the WASM target, which has no stable memory houshold and crashes Node.js with more than 2 runs). The two slowest runs are then removed (except for the WASM runtime) and an average calculated for the rest.
 
 |🔥|statements.txt|bitrix\_queries\_cut.sql|sakila-data.sql|Total|
-|:---:|---:|---:|---:|---:|---:|
+|:---:|---:|---:|---:|---:|
 |antlr4-cpp|80⧸26⧸105|39⧸17⧸56|3855⧸584⧸4439|3974⧸627⧸4601|
 |antlr4ng|132⧸99⧸231|64⧸67⧸131|6216⧸2046⧸8263|6412⧸2213⧸8625|
 |antlr4|0⧸237⧸237|0⧸108⧸108|0⧸10517⧸10517|0⧸10862⧸10862|

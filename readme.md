@@ -15,7 +15,7 @@ It's not needed to measure times in micro seconds or even smaller time units, fo
 Here's the list of the existing grammar benchmarks:
 
 - MySQL: [readme](src/mysql/readme.md)
-
+- ConstantFolding: [readme](src/ConstantFolding/readme.md)
 
 ## Runtime Prequisites
 

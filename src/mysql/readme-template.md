@@ -8,13 +8,13 @@ All times are given in milliseconds. The 3 values in a table cell are: lexing⧸
 This table contains the results of a cold run of each runtime. Although all files are parsed in the same loop, a cold run is achieved by resetting both the lexer and the parser DFA for each file.
 
 |❄️|statements.txt|bitrix\_queries\_cut.sql|sakila-data.sql|Total|
-|:---:|---:|---:|---:|---:|---:|
+|:---:|---:|---:|---:|---:|
 ⫸cold table⫷
 
 This table contains the results of a warm run of each runtime. For this each parse run is executed 5 times (except for the WASM target, which has no stable memory houshold and crashes Node.js with more than 2 runs). The two slowest runs are then removed (except for the WASM runtime) and an average calculated for the rest.
 
 |🔥|statements.txt|bitrix\_queries\_cut.sql|sakila-data.sql|Total|
-|:---:|---:|---:|---:|---:|---:|
+|:---:|---:|---:|---:|---:|
 ⫸warm table⫷
 
 Both tables are sorted by the total execution time, with the fastest at the top.
