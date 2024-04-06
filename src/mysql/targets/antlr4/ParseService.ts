@@ -71,6 +71,7 @@ export class ParseService implements IParseService {
         const tokenStream = new CommonTokenStream(lexer);
         lexer.serverVersion = serverVersion;
         lexer.sqlModeFromString(sqlMode);
+        lexer.charSets = charSets;
         lexer.removeErrorListeners();
         lexer.addErrorListener(this.errorListener);
 
@@ -89,9 +90,7 @@ export class ParseService implements IParseService {
 
         // We have to create everything from scratch for each run, because we cannot reset the token stream
         // (which would be the better way to do it, like in the other runtimes).
-        // This makes parsing slower than it could be.
-        // Because of that we cannot exclude the lexing time from the parse run. However, that should not have a
-        // big impact as we have a warm lexer DFA at this point (because of previous calls to `tokenize()`).
+        // This makes parsing slower than it could be and we cannot separate parsing and lexing times.
         const stream = CharStreams.fromString(text);
         const lexer = new MySQLLexer(stream);
         const tokenStream = new CommonTokenStream(lexer);
@@ -99,21 +98,18 @@ export class ParseService implements IParseService {
         lexer.removeErrorListeners();
         lexer.addErrorListener(this.errorListener);
 
+        lexer.serverVersion = serverVersion;
+        lexer.sqlModeFromString(sqlMode);
+        lexer.charSets = charSets;
+
         //this.parser.removeParseListeners();
         parser.removeErrorListeners();
         parser.addErrorListener(this.errorListener);
-
-        lexer.charSets = charSets;
-
         parser.buildParseTrees = !fast;
 
-        lexer.serverVersion = serverVersion;
-        lexer.sqlModeFromString(sqlMode);
         parser.serverVersion = serverVersion;
         parser.sqlModes = lexer.sqlModes;
 
-        // First parse with the bail error strategy to get quick feedback for correct queries.
-        // Note: there's no need to delete the strategy instance. The error handler will take care.
         parser._errHandler = new BailErrorStrategy();
         parser._interp.predictionMode = PredictionMode.SLL;
 
