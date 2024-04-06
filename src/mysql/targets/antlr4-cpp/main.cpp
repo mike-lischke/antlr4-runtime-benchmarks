@@ -11,7 +11,7 @@
 #include "antlr4-runtime.h"
 #include "MySQLLexer.h"
 #include "MySQLParser.h"
-#include "ParseServiceCpp.h"
+#include "ParseService.h"
 
 using namespace parsers;
 using namespace antlr4;

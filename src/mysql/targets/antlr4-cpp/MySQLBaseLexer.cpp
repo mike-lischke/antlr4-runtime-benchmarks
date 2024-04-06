@@ -29,142 +29,16 @@
 using namespace antlr4;
 using namespace parsers;
 
-//----------------------------------------------------------------------------------------------------------------------
-
 MySQLBaseLexer::MySQLBaseLexer(CharStream *input) : Lexer(input) {
   serverVersion = 0;
   sqlMode = NoMode;
   inVersionComment = false;
 }
 
-//----------------------------------------------------------------------------------------------------------------------
-
 void MySQLBaseLexer::reset() {
   inVersionComment = false;
   Lexer::reset();
 }
-
-//----------------------------------------------------------------------------------------------------------------------
-
-/**
- *  Helper for the query type determination.
- */
-std::unique_ptr<antlr4::Token> MySQLBaseLexer::nextDefaultChannelToken() {
-  do {
-    std::unique_ptr<Token> token = nextToken();
-    if (token->getChannel() == ParserToken::DEFAULT_CHANNEL)
-      return token;
-  } while (true);
-}
-
-//--------------------------------------------------------------------------------------------------
-
-bool MySQLBaseLexer::isRelation(size_t type) {
-  switch (type) {
-    case MySQLLexer::EQUAL_OPERATOR:
-    case MySQLLexer::ASSIGN_OPERATOR:
-    case MySQLLexer::NULL_SAFE_EQUAL_OPERATOR:
-    case MySQLLexer::GREATER_OR_EQUAL_OPERATOR:
-    case MySQLLexer::GREATER_THAN_OPERATOR:
-    case MySQLLexer::LESS_OR_EQUAL_OPERATOR:
-    case MySQLLexer::LESS_THAN_OPERATOR:
-    case MySQLLexer::NOT_EQUAL_OPERATOR:
-    case MySQLLexer::NOT_EQUAL2_OPERATOR:
-    case MySQLLexer::PLUS_OPERATOR:
-    case MySQLLexer::MINUS_OPERATOR:
-    case MySQLLexer::MULT_OPERATOR:
-    case MySQLLexer::DIV_OPERATOR:
-    case MySQLLexer::MOD_OPERATOR:
-    case MySQLLexer::LOGICAL_NOT_OPERATOR:
-    case MySQLLexer::BITWISE_NOT_OPERATOR:
-    case MySQLLexer::SHIFT_LEFT_OPERATOR:
-    case MySQLLexer::SHIFT_RIGHT_OPERATOR:
-    case MySQLLexer::LOGICAL_AND_OPERATOR:
-    case MySQLLexer::BITWISE_AND_OPERATOR:
-    case MySQLLexer::BITWISE_XOR_OPERATOR:
-    case MySQLLexer::LOGICAL_OR_OPERATOR:
-    case MySQLLexer::BITWISE_OR_OPERATOR:
-
-    case MySQLLexer::OR_SYMBOL:
-    case MySQLLexer::XOR_SYMBOL:
-    case MySQLLexer::AND_SYMBOL:
-    case MySQLLexer::IS_SYMBOL:
-    case MySQLLexer::BETWEEN_SYMBOL:
-    case MySQLLexer::LIKE_SYMBOL:
-    case MySQLLexer::REGEXP_SYMBOL:
-    case MySQLLexer::IN_SYMBOL:
-    case MySQLLexer::SOUNDS_SYMBOL:
-    case MySQLLexer::NOT_SYMBOL:
-      return true;
-
-    default:
-      return false;
-  }
-}
-
-//----------------------------------------------------------------------------------------------------------------------
-
-bool MySQLBaseLexer::isNumber(size_t type) {
-  switch (type) {
-    case MySQLLexer::INT_NUMBER:
-    case MySQLLexer::LONG_NUMBER:
-    case MySQLLexer::ULONGLONG_NUMBER:
-    case MySQLLexer::FLOAT_NUMBER:
-    case MySQLLexer::HEX_NUMBER:
-    case MySQLLexer::BIN_NUMBER:
-    case MySQLLexer::DECIMAL_NUMBER:
-      return true;
-
-    default:
-      return false;
-  }
-}
-
-//----------------------------------------------------------------------------------------------------------------------
-
-bool MySQLBaseLexer::isOperator(size_t type) {
-  switch (type) {
-    case MySQLLexer::EQUAL_OPERATOR:
-    case MySQLLexer::ASSIGN_OPERATOR:
-    case MySQLLexer::NULL_SAFE_EQUAL_OPERATOR:
-    case MySQLLexer::GREATER_OR_EQUAL_OPERATOR:
-    case MySQLLexer::GREATER_THAN_OPERATOR:
-    case MySQLLexer::LESS_OR_EQUAL_OPERATOR:
-    case MySQLLexer::LESS_THAN_OPERATOR:
-    case MySQLLexer::NOT_EQUAL_OPERATOR:
-    case MySQLLexer::NOT_EQUAL2_OPERATOR:
-    case MySQLLexer::PLUS_OPERATOR:
-    case MySQLLexer::MINUS_OPERATOR:
-    case MySQLLexer::MULT_OPERATOR:
-    case MySQLLexer::DIV_OPERATOR:
-    case MySQLLexer::MOD_OPERATOR:
-    case MySQLLexer::LOGICAL_NOT_OPERATOR:
-    case MySQLLexer::BITWISE_NOT_OPERATOR:
-    case MySQLLexer::SHIFT_LEFT_OPERATOR:
-    case MySQLLexer::SHIFT_RIGHT_OPERATOR:
-    case MySQLLexer::LOGICAL_AND_OPERATOR:
-    case MySQLLexer::BITWISE_AND_OPERATOR:
-    case MySQLLexer::BITWISE_XOR_OPERATOR:
-    case MySQLLexer::LOGICAL_OR_OPERATOR:
-    case MySQLLexer::BITWISE_OR_OPERATOR:
-
-    case MySQLLexer::DOT_SYMBOL:
-    case MySQLLexer::COMMA_SYMBOL:
-    case MySQLLexer::SEMICOLON_SYMBOL:
-    case MySQLLexer::COLON_SYMBOL:
-    case MySQLLexer::OPEN_PAR_SYMBOL:
-    case MySQLLexer::CLOSE_PAR_SYMBOL:
-    case MySQLLexer::AT_SIGN_SYMBOL:
-    case MySQLLexer::AT_AT_SIGN_SYMBOL:
-    case MySQLLexer::PARAM_MARKER:
-      return true;
-
-    default:
-      return false;
-  }
-}
-
-//----------------------------------------------------------------------------------------------------------------------
 
 /**
  * Allow a grammar rule to emit as many tokens as it needs.
@@ -189,8 +63,6 @@ std::unique_ptr<antlr4::Token> MySQLBaseLexer::nextToken() {
   return next;
 }
 
-//----------------------------------------------------------------------------------------------------------------------
-
 bool MySQLBaseLexer::checkMySQLVersion(const std::string &text) {
   if (text.size() < 8) // Minimum is: /*!12345
     return false;
@@ -203,8 +75,6 @@ bool MySQLBaseLexer::checkMySQLVersion(const std::string &text) {
   }
   return false;
 }
-
-//----------------------------------------------------------------------------------------------------------------------
 
 size_t MySQLBaseLexer::determineFunction(size_t proposed) {
   // Skip any whitespace character if the sql mode says they should be ignored,
@@ -221,8 +91,6 @@ size_t MySQLBaseLexer::determineFunction(size_t proposed) {
 
   return _input->LA(1) == '(' ? proposed : MySQLLexer::IDENTIFIER;
 }
-
-//----------------------------------------------------------------------------------------------------------------------
 
 size_t MySQLBaseLexer::determineNumericType(const std::string &text) {
   static const char *long_str = "2147483647";
@@ -304,13 +172,9 @@ size_t MySQLBaseLexer::determineNumericType(const std::string &text) {
   return ((unsigned char)str[-1] <= (unsigned char)cmp[-1]) ? smaller : bigger;
 }
 
-//----------------------------------------------------------------------------------------------------------------------
-
 size_t MySQLBaseLexer::checkCharset(const std::string &text) {
   return charsets.count(text) > 0 ? MySQLLexer::UNDERSCORE_CHARSET : MySQLLexer::IDENTIFIER;
 }
-
-//----------------------------------------------------------------------------------------------------------------------
 
 /**
  * Puts a DOT token onto the pending token list.

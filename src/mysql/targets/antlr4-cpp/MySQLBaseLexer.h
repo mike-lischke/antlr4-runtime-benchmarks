@@ -26,7 +26,6 @@
 #include <list>
 #include "Lexer.h"
 #include "MySQLRecognizerCommon.h"
-#include "mysql-recognition-types.h"
 
 namespace antlr4 {
   class PARSERS_PUBLIC_TYPE Lexer;
@@ -34,7 +33,7 @@ namespace antlr4 {
 
 namespace parsers {
 
-  // The base lexer class provides a number of function needed in actions in the lexer (grammar).
+  // The base lexer class provides a number of functions needed in actions in the lexer (grammar).
   class PARSERS_PUBLIC_TYPE MySQLBaseLexer : public antlr4::Lexer, public MySQLRecognizerCommon {
   public:
     std::set<std::string> charsets; // Used to check repertoires.
@@ -43,10 +42,6 @@ namespace parsers {
     MySQLBaseLexer(antlr4::CharStream *input);
 
     virtual void reset() override;
-
-    static bool isRelation(size_t type);
-    static bool isNumber(size_t type);
-    static bool isOperator(size_t type);
 
     virtual std::unique_ptr<antlr4::Token> nextToken() override;
 
@@ -71,9 +66,6 @@ namespace parsers {
 
   private:
     std::list<std::unique_ptr<antlr4::Token>> _pendingTokens;
-    std::map<std::string, size_t> _symbols; // A list of all defined symbols for lookup.
-
-    std::unique_ptr<antlr4::Token> nextDefaultChannelToken();
   };
 
 } // namespace parsers

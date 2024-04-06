@@ -23,24 +23,22 @@
 
 #pragma once
 
-#include "parsers-common.h"
+#ifdef _MSC_VER
+#ifdef PARSERS_EXPORTS
+#define PARSERS_PUBLIC_TYPE __declspec(dllexport)
+#else
+#define PARSERS_PUBLIC_TYPE __declspec(dllimport)
+#endif
+#else
+#define PARSERS_PUBLIC_TYPE
+#endif
 
-namespace antlr4 {
-  class RuleContext;
-  class ParserRuleContext;
-
-  namespace tree {
-    class ParseTree;
-  }
-
-  namespace dfa {
-    class Vocabulary;
-  }
-} // namespace antlr4
+#include <string>
+#include <stack>
+#include <vector>
+#include <limits>
 
 namespace parsers {
-
-  class PARSERS_PUBLIC_TYPE MySQLLexer;
 
   // A class containing definitions and members used by both lexer and parser classes.
   class PARSERS_PUBLIC_TYPE MySQLRecognizerCommon {
@@ -55,25 +53,13 @@ namespace parsers {
       NoBackslashEscapes = 1 << 4
     };
 
-    // For parameterizing the parsing process.
+    // To parameterize the parsing process.
     long serverVersion;
     SqlMode sqlMode; // A collection of flags indicating which of relevant SQL modes are active.
 
     // Returns true if the given mode (one of the enums above) is set.
     bool isSqlModeActive(size_t mode);
     void sqlModeFromString(std::string modes);
-
-    static std::string dumpTree(antlr4::RuleContext *context, const antlr4::dfa::Vocabulary &vocabulary);
-    static std::string sourceTextForContext(antlr4::ParserRuleContext *ctx, bool keepQuotes = false);
-    static std::string sourceTextForRange(antlr4::Token *start, antlr4::Token *stop, bool keepQuotes = false);
-    static std::string sourceTextForRange(antlr4::tree::ParseTree *start, antlr4::tree::ParseTree *stop,
-                                          bool keepQuotes = false);
-
-    static antlr4::tree::ParseTree *getPrevious(antlr4::tree::ParseTree *tree);
-    static antlr4::tree::ParseTree *getNext(antlr4::tree::ParseTree *tree);
-    static antlr4::tree::ParseTree *terminalFromPosition(antlr4::tree::ParseTree *root,
-                                                         std::pair<size_t, size_t> position);
-    static antlr4::tree::ParseTree *contextFromPosition(antlr4::tree::ParseTree *root, size_t position);
   };
 
 } // namespace parsers
