@@ -22,3 +22,11 @@ node_modules
 *.tokens
 src/ConstantFolding/targets/antlr4-cpp/constant-folding-benchmark
 src/mysql/targets/antlr4-cpp/mysql-benchmark
+
+# IntelliJ IDE
+.idea/
+*.iml
+
+# Java binaries 
+out/
+*.class
