@@ -55,6 +55,7 @@ You first have to install all dependencies needed for building and running the b
 
 - C++ Runtime: you need `clang` installed on your box. Use your package manager or similar to install that if necessary.
 - JS and TS runtimes: you need `Node.js` installed on your box (download it from https://nodejs.org). Then run `npm i` in the root of the project, which will install the antlr4, antlr4ts and antlr4ng packages.
+- Rust runtime (`antlr-rust-runtime`): you need a Rust toolchain (install via https://rustup.rs). The ANTLR runtime is a normal crates.io dependency, so no extra setup is needed — see `targets/antlr-rust/README.md`, build with `targets/antlr-rust/build.sh`.
 - C++ WASM Runtime: this is the most complex one to set up. Follow the [Getting Started](https://emscripten.org/docs/getting_started/downloads.html) description on how to install emscripten.
 
 > Note: it is **not** necessary to install all dependencies, if you are only interested in a particular runtime. Each benchmark comes with an own build script (where necessary) and a run script.
